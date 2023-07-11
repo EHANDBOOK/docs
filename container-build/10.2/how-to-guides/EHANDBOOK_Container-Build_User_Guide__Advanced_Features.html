@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Advanced Features of EHB-CB :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="http://etas.com/ehandbook/docs/container-build/10.2/how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://etas.com/ehandbook/docs">
+        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+      </a>
+      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="container-build" data-version="10.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">EHANDBOOK Container-Build</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../index.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about_this_doc.html">Classification of Safety Messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../safety_notice.html">Safety Notice</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ETAS_contacts.html">ETAS Contacts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats_new.html">What&#8217;s New</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../EHANDBOOK_Container-Build_User_Guide__Known_Issues.html">Known Issues</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start.html#_quick_start_demos">Quick Start Demos</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quick_start.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorials/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorials/dir-ascet-6/contents.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorials/dir-simulink/contents.html">Simulink</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorials/dir-ccode/contents.html">C-Code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorials/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/index.html">Explanations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/model_languages/overview.html"><strong>Model Languages</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/model_languages/ascet6.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/model_languages/c_code.html">C-Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/automotive_standards/overview.html"><strong>Automotive Standards</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html"><strong>Setup</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_download">Download</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_installation">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/platforms.html"><strong>Supported Platforms</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/platforms.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/platforms.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb_cb_features.html"><strong>Features</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">How-to guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Interactive Models</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#root-level-skipping">Root-Level Skipping</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#_model_depth_skip">Model Depth</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#view-concept">View Concept</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Label-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#label-configuration">Label Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#label-amendment">Label Amendment</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#configure-simulink-blocks">Configuration of Simulink Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#doc-block-support">Simulink DocBlocks in the documentation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#ccode-configuration">C-Code Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Textual Contents</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#click-pic">ClickPic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_function_overview_diagram">Function Overview Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#table-configuration">Label Table Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize EHB Containers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#container-encryption">Password-Protection and Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#_structure_data_type_support">Structure Data Type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Attachments.html#_dir_based_ehb_cb">Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../references/index.html">References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHB-CB Usage in General</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../references/other_input_formats.html">Other Input Formats</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../references/styling.html">Styling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../references/02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK Container-Build</span>
+    <span class="version">10.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../11.1/index.html">EHANDBOOK Container-Build</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../11.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK Container-Build</a></li>
+    <li><a href="index.html">How-to guides</a></li>
+    <li>How to customize Interactive Models</li>
+    <li>Visual Appearance &amp; Level of Detail</li>
+    <li><a href="#root-level-skipping">Root-Level Skipping</a></li>
+  </ul>
+</nav>
+
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
+
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">10.2</button>
+  <div class="version-menu">
+    <a class="version is-missing" href="../../11.1/index.html">11.1</a>
+    <a class="version is-missing" href="../../11.0/index.html">11.0</a>
+    <a class="version is-missing" href="../../10.3/index.html">10.3</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html">10.2</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://bitbucket.etas-dev.com/projects/EHB/repos/ehandbook-docs-contents/browse/modules/how-to-guides/pages/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.adoc?at&#x3D;refs%2Fheads%2Frelease/10.2">✎ Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Advanced Features of EHB-CB</h1>
+<div class="sect1">
+<h2 id="intermediate-hierarchy-filtering"><a class="anchor" href="#intermediate-hierarchy-filtering"></a>Intermediate Hierarchy Filtering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This feature is sold as a separate option on request and is not part of the standard EHB-CB tool. There is the request, that the interactive ASCET model of a function only contains sub hierarchies for which an image screenshot in the documentation is also available. However, to allow a continuous model navigation, also intermediate hierarchies without documentation has to be handled and shown in an appropriate way.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image10.png" alt="image10">
+</div>
+</div>
+<div class="paragraph">
+<p>White list [H1, H3]: Hierarchies whose image screenshots are present in the documentation.</p>
+</div>
+<div class="paragraph">
+<p>Intermediate list [H2]: Hierarchies whose parent [H1] is a white listed hierarchy and whose one or more child hierarchies [H3] are also white listed. But H2 is not present in the documentation.</p>
+</div>
+<div class="paragraph">
+<p>To allow now a model navigation from H1 to H3, H2 will be still shown, but its contents of it are filtered out to maintain minimalist information.</p>
+</div>
+<div class="paragraph">
+<p>Without the option -ihf, only H1 will be part of the interactive model.</p>
+</div>
+<div class="paragraph">
+<p>The ihf feature is only an emergency solution and has some limitations. The better way would be to use the build-in view mechanisms of ASCET upfront, see chapter <a href="#view-concept">View Concept</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Known limitations:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SVG image will not be generated for filtered sub-hierarchies.</p>
+</li>
+<li>
+<p>For resolving all white listed class definition paths with “ihf” the model conversion may take significantly longer. The time increases exponentially as the number of references and *.amd files increases.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the ASCET model contains about 1000 references (Class instance entries) the time is increased by a factor of 5 and if model has more than 150 *.amd file entries the time is increased by a factor of 10.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="root-level-skipping"><a class="anchor" href="#root-level-skipping"></a>Root Level Skipping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Typically, an ASCET, ASCET-DEVELOPER or Simulink model starts with some first wrapping hierarchies, which were of no interest to the EHB-NAV user. In addition, for the seamless function wallpaper feature, it just wastes space and makes it complex. Therefore, EHB-CB provides the flexibility to change the entry level of a model type (ASCET, ASCET-DEVELOPER, SIMULINK) by using a JSON configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Considering the example below without skipping:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image11.png" alt="image11">
+</div>
+<div class="title">Figure 1. Since level (1) and (2) does not contain any information the user can directly view level (3) of the model using this feature.</div>
+</div>
+<div class="paragraph">
+<p>Same example with skipping of the first two root levels:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image12.png" alt="image12">
+</div>
+</div>
+<div class="paragraph">
+<p>With the JSON file shown below (plain ASCII format), all ASCET models in the container are opened with its 2<sup>nd</sup> and ASCET-DEVELOPER, SIMULINK with 1<sup>st</sup> level.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"rootLevel": {
+		"ASCET": "2",
+		"Simulink": "1",
+		"ASCET-DEVELOPER": "1",
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Conditions for level skipping:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Level exceeds<br>
+In case the level specified in JSON file is exceeding the one available in the model, then the tool stops at the last available level in the model.</p>
+</li>
+<li>
+<p>Multiple sub levels in parallel<br>
+In case of multiple expandable sub levels exist in an upper level, the tool stops at the immediate parent level, as there is a conflict of unambiguousness.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To activate this feature, the command line option <strong>-rootlevel</strong> “path_to_jsonfile\name.json” has to be provided.</p>
+</div>
+<div class="paragraph">
+<p>A sample file is available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\RootLevel.json)</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For the C-Code models, root-level skip cannot be applied.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="container-encryption"><a class="anchor" href="#container-encryption"></a>Container Encryption</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This feature is sold as a separate option on request and is not part of the standard EHB-CB tool. Encrypted containers can be generated by using the command parameter <strong>-epwd</strong> or <strong>-epwdf</strong>.
+The password can be passed either in the command line e.g. <strong>–epwd "qwertz"</strong> or within a password file e.g. <strong>-epwdf ./my_password_file.txt</strong>. If using a separate password file, the password must be surrounded with % characters e.g. <strong>%my_secret%</strong> as content of the password file. The password file is deleted after container encryption.</p>
+</div>
+<div class="paragraph">
+<p>The password should satisfy the following credentials:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Password length: minimum 4; maximum 255 characters</p>
+</li>
+<li>
+<p>Password characters: alphanumeric, special characters are allowed</p>
+</li>
+<li>
+<p>Password pattern: No special pattern is required</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The container gets the new file extension .ehbcrypt. It can be opened in the EHB-NAV in the same way. But after section of the container file, the user will be prompted for the correct password to be typed in.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="click-pic"><a class="anchor" href="#click-pic"></a>ClickPic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK Container-Build is capable to generate graphics out of a model and link it with its corresponding interactive model hierarchy. In addition, these graphics are linked between each others in the Function Documentation Window in EHB-NAV, the so called ClickPic navigation feature.
+To visualize these graphics, some special keywords have to be added in the text source files.</p>
+</div>
+<div class="paragraph">
+<p>RTF input files:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[ehbmodelref]
+Model hierarchy path in text style of type “Caption”</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>AsciiDoc input files:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ehbmodelref::model_path[image_title]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ASAM input files:</p>
+</div>
+<div class="paragraph">
+<p>In FSX, the FIGURE’s &lt;SHORT-NAME&gt; for the model graphic contains the model hierarchy path directly in a mandatory format i.e. “X.Y.Z”.</p>
+</div>
+<div class="paragraph">
+<p>More details about this can be found in the separate specification documents, which are located in the sub folder ../documentation of your EHB-CB installation folder.</p>
+</div>
+<div class="paragraph">
+<p>To allow EHB-CB generated graphics and ClickPic containers must be generated by using the command parameter <strong>-gensvg</strong>, otherwise this feature will not work!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image14.png" alt="image14">
+</div>
+<div class="title">Figure 2. Navigable blocks indicated by arrow and orange frame</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="view-concept"><a class="anchor" href="#view-concept"></a>View Concept</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For know-how protection purposes, ASCET allows designing the models for different views, e.g. it is possible to hide some element for a defined view. EHB supports this concept. With the command line option <strong>-viewtype “ViewName</strong>” you are setting, for which view the model and its screenshots should be generated. The command line option <strong>-ascetview “config-file.xml”</strong> locates the file, where for every view name the corresponding model appearance is configured in a given format.</p>
+</div>
+<div class="paragraph">
+<p>You can export a view file from ASCET:</p>
+</div>
+<div class="paragraph">
+<p><strong>Tools</strong> (ASCET Main Window) <strong>Views</strong> &#8594; Select the view names to be exported (multiple selection allowed) &#8594; Click <strong>Export</strong> button and choose destination and name of the file.</p>
+</div>
+<div class="paragraph">
+<p>The following elements are supported in EHB for the views:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 51%;">
+<col style="width: 49%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>ASCET View contents</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Support in EHB</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>BDE Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>Show Unused Sequence Calls</p>
+</div>
+<div class="paragraph">
+<p>Show Used Sequence Calls</p>
+</div>
+<div class="paragraph">
+<p>Show Graphical Comments</p>
+</div>
+<div class="paragraph">
+<p>Show Process Name Locals</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All settings supported</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Default settings for Elements</strong></p>
+</div>
+<div class="paragraph">
+<p>As Line<br>
+Invisible</p>
+</div>
+<div class="paragraph">
+<p>Contour<br>
+Hide Contents</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element properties of type ‘Implementation Cast’ is supported only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Documentation Settings</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Implemented</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In ASAM-CCX, you can also define a view name in the tag &lt;SD GID=<strong>"view"</strong>&gt;<strong>Name</strong>&lt;/SD&gt;. It supersedes the command line option <strong>–viewtype</strong>. For details, please refer to the document <em>ASAM Format Specification for EHB</em>, which is located in the sub folder ../documentation of your EHB-CB installation folder.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The view name provided by -viewtype has to match to the view name specified in corresponding view file, otherwise no view is applied.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For c-code the same method is used with the parameter <strong>–ccodeview “config-file.xml”</strong>. Here the same xml format as for ASCET is used, but you can only specify, if process sequence calls are visible in the interactive model or not. These calls are showing the computation order of the c-code.</p>
+</div>
+<div class="paragraph">
+<p>Sample files are available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\AscetFiguresView.xml, CCodeViews.xml)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configure-simulink-blocks"><a class="anchor" href="#configure-simulink-blocks"></a>Configure Simulink Blocks as Non-Expandable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For know-how protection reasons or for a better readability, Simulink blocks can be specified as non-expandable for interactive models in EHB during container generation. To enable the global configuration feature, the command line option <strong><em>-simulinkview</em></strong> that takes “path_to_jsonfile\name.json” as argument is used. The json-file specifies the behavior of the blocks then, see samples below.</p>
+</div>
+<div class="paragraph">
+<p>Makes referenced blocks with masks non-expandable (e.g. libraries):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"GlobalView": {
+		"HideContents": [
+			{
+				"BlockType": "Reference",
+				"Simulink.Mask": "true"
+			}
+		]
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Makes all subsystems with masks non-expandable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"GlobalView": {
+		"HideContents": [
+			{
+				"BlockType": "SubSystem",
+				"Simulink.Mask": "true"
+			}
+		]
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Makes any masked Simulink block non-expandable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"GlobalView": {
+		"HideContents": [
+			{
+				"Simulink.Mask": "true"
+			}
+		]
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Makes any subsystem non-expandable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"GlobalView": {
+		"HideContents": [
+			{
+				"BlockType": "SubSystem"
+			}
+		]
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A sample file is available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\SimulinkGlobalView.json)</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The feature above works only if the key word Simulink.Mask is used inside the model file. This is the case for MATLAB 2012b onwards. For older versions (2012a and below) the key word MaskDisplay is used, which is currently not supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_model_depth_skip"><a class="anchor" href="#_model_depth_skip"></a>Model Depth Skip</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Model depth skip can be used to convert all Simulink models till a particular model hierarchy level starting from the root level. This may be useful, to hide know-sensitive information in deeper model hierarchies.</p>
+</div>
+<div class="paragraph">
+<p>For this feature, the same command line parameter <strong>-simulinkview</strong> and JSON file as for the feature above is used. In this JSON file, an additional section “ModelDepth” with the required level can be provided:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"GlobalView": {
+		"ModelDepth" : 5
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>“ModelDepth” value must be in integers.</p>
+</div>
+<div class="paragraph">
+<p>In this example, all Simulink models within a container will be converted up to 5 levels from the root level.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="label-amendment"><a class="anchor" href="#label-amendment"></a>Label Amendment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Several features of EHANDBOOK-NAVIGATOR are based on the notion that the label names visible in interactive models correspond to label names in an A2L file. Also the function overview in NAV works purely name based. This means, the variable name from an exporting function has to match to the name of the importing function.</p>
+</div>
+<div class="paragraph">
+<p>There can be cases, however, where the strings that are visible in an ASCET or Simulink model do not directly correspond to an A2L label name or match between functions. In this case, features like label pop-up, INCA visualization or function overview will not work in EHB-NAV.</p>
+</div>
+<div class="paragraph">
+<p>By means of amending the names of labels in interactive models and the generated screenshots, models and screenshots can be "patched" such that the visible strings do match the expected A2L label names. It works in such a way that during the generation of an interactive model from a source ASCET or Simulink model the strings resembling label names are analyzed and transformed according to a specific set of rules. The rules are specified in a JSON file and passed via an argument to EHB-CB or UGG. The command line parameter is</p>
+</div>
+<div class="paragraph">
+<p><strong>-labelamendment</strong> with “path_to_json_file/name.json” as argument.</p>
+</div>
+<div class="paragraph">
+<p>The rules for renaming are specified in a JSON file format:</p>
+</div>
+<div class="paragraph">
+<p><strong>Exact Replacements</strong></p>
+</div>
+<div class="paragraph">
+<p>Exact replacements are specified as key-value pairs of strings in rule groups marked with the key word "exact". They work straight-forward - the string in the key is replaced by the string in the value:</p>
+</div>
+<div class="paragraph">
+<p><strong>“Original_Name” : “New_Name”</strong></p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example for a set of exact replacement rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"exact": {
+		"Epm_rpmEngSpd_Sim_changed" : "Epm_rpmEngSpd_Sim"
+		"Two-point-controller_changed" : "Two-point-controller",
+		"Lamsoni_Sim_changed" : "Lamsoni_Sim"
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Pattern-based Replacements</strong></p>
+</div>
+<div class="paragraph">
+<p>Pattern-based replacement are specified as key value pairs of strings in rule groups marked with the key word "pattern". The keys make use of regular expressions to match strings that shall be amended. The values denote replacement strings. The latter can make use of the match groups defined in the regular expression.</p>
+</div>
+<div class="paragraph">
+<p><strong>“Target_Pattern” : “Substitude_Pattern”</strong></p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example for a set of pattern based replacement rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"pattern": {
+		"(.*)_write": "$1",
+		"read_(.*)": "$1",
+		"read_(.*)_write": "$1",
+		"(.*)_middle_(.*)": "$1_$2"
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the single character ‘.’ is used for a regular expression it must be escaped by ‘\\’</p>
+</div>
+<div class="paragraph">
+<p>"prefix_(.*)\\.postfix" : "$1_postfix",</p>
+</div>
+<div class="paragraph">
+<p>Here a sample Internet page with further information about regular expressions in general and online testing possibilities: <a href="https://freeformatter.com/regex-tester.html" class="bare">https://freeformatter.com/regex-tester.html</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Order in which replacements are applied</strong></p>
+</div>
+<div class="paragraph">
+<p>The order of rules as well as rule groups is of relevance. Rules within a rule group are applied in sequence. The same applies to rule groups; they are also applied in the sequence specified in the JSON file. Through this, even multiple rules can be applied during a transformation.</p>
+</div>
+<div class="paragraph">
+<p>A sample file is available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\LabelAmendment.json)</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On application of label amendment to model hierarchies, clickPic for backward navigation and “open interactive model” does not work!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_function_overview_diagram"><a class="anchor" href="#_function_overview_diagram"></a>Function Overview Diagram</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHB-CB is capable to generate a Function Overview Diagram with all input- and output signals automatically. Besides one single function, there are also multiple functions possible, showing the dependency and relation between them.</p>
+</div>
+<div class="paragraph">
+<p>The generated Function Overview diagram will appear in EHB-NAV in the Function Documentation Window with a new navigation button named “Open function overview”. On click of this button, the model explorer tab opens with combined Function Overview of the functions appearing the image.</p>
+</div>
+<div class="paragraph">
+<p>The separate chapters Function Overview Diagram in the TOC of EHB-NAV are generated by default without any additional configurations during container generation, independent of this feature.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image15.png" alt="image15">
+</div>
+</div>
+<div class="paragraph">
+<p>Required changes to achieve this functionality are described in the separate documents <em>RTF format Specification</em> and <em>AsciiDoc format Specification</em> for directory based EHB-CB and in <em>ASAM format Specification</em> for the ASAM based EHB-CB. These documents are located in the sub folder ../documentation of your EHB-CB installation folder.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Creating function overviews with &gt; 30 functions is not advised as all the functions might not fit into canvas.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_structure_data_type_support"><a class="anchor" href="#_structure_data_type_support"></a>Structure Data Type Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK supports configuration of structure data types for Simulink. Structures are mapped to Simulink buses. Structures can be defined in MDX following the MDX specification. For details please refer to the document <em>ASAM Format Specification for EHB-CB</em>, which is located in the sub folder ../documentation of your EHB-CB installation folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ccode-configuration"><a class="anchor" href="#ccode-configuration"></a>Configuration for C-Code Visualization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The visualization of C-Code as block diagram can be customized through several configurations. These can be adapted in such a way that the program logic is represented more precisely and that the graphical visualization can be understood more easily.</p>
+</div>
+<div class="paragraph">
+<p>The configuration options are provided through a central configuration file in XML format. The configuration file is to be passed using the command-line option –ccodemeta with</p>
+</div>
+<div class="paragraph">
+<p>“path_to_meta_file/name.xml” as argument.</p>
+</div>
+<div class="paragraph">
+<p>The following shows the XML template for the C-Code configuration options.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;functionmetadata:FunctionMetadataRoot
+	xmi:version="2.0"
+	xmlns:functionmetadata="http://www.etas.com/ehandbook/functionmetadata"
+	xmlns:xmi="http://www.omg.org/XMI"&gt;
+
+	&lt;globalConfiguration
+		libraryPath="../lib"
+		inlineFunctions="true"
+		simplifyDiagram="true"
+		generateHierarchies="true"
+		maxIterationForDataflowAnalysis="50000"/&gt;
+
+&lt;/functionmetadata:FunctionMetadataRoot&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The configuration options are described in the following:</p>
+</div>
+<div class="paragraph">
+<p><strong>libraryPath</strong></p>
+</div>
+<div class="paragraph">
+<p>For a given ECU function, having a set of C-files with implementations, the C-functions call other C-functions as sub-routines or service routines.</p>
+</div>
+<div class="paragraph">
+<p>A suitable way to arrange such ECU specific C-files and global sub-routines is to configure where C-files for ECU functions are placed, and where the global sub-routines are placed.</p>
+</div>
+<div class="paragraph">
+<p>This configuration specifies the location of all such global sub-routines or other C functions which could be present in a true either .c files or .h files.</p>
+</div>
+<div class="paragraph">
+<p>These files typically contain helper or utility functions for the ECU specific C-files.</p>
+</div>
+<div class="paragraph">
+<p><strong>inlineFunctions</strong></p>
+</div>
+<div class="paragraph">
+<p>This configuration can be set to true/false in order to enable/disable the graphical inlining of called C-functions into the context of the calling C-functions.</p>
+</div>
+<div class="paragraph">
+<p>Default setting: inlineFunctions=false</p>
+</div>
+<div class="paragraph">
+<p>If set to true, the model visualizes the called function (e.g. global sub-routine/other C functions) as an expandable block within the block of the calling function.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For clearness, the Inlined C-functions are removed from the top level. Therefore, no model screenshots for these functions can created via –gensvg.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example: The C-function mul is called from C-function main.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image16.png" alt="image16">
+</div>
+</div>
+<div class="paragraph">
+<p>If set to false, the model visualizes the called function (e.g. global sub-routine/other C functions) as non-expandable block within the block of the calling function. Note that the called functions are visualized as top-level expandable blocks.</p>
+</div>
+<div class="paragraph">
+<p>This configuration can be used to obtain visualizations of C-libraries, for example.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image17.png" alt="image17">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>simplifyDiagram</strong></p>
+</div>
+<div class="paragraph">
+<p>This configuration takes in a true/false to enable/disable simplification of C-Code model. When enabled, unused variables and code from visualization are omitted, thereby decluttering and consequently simplifying the model visualization. However, the simplification can be disabled to view the actual model aiding in verifying the correctness of the model in comparison to the original source code, if required.</p>
+</div>
+<div class="paragraph">
+<p>Default setting: simplifyDiagram=true</p>
+</div>
+<div class="paragraph">
+<p><strong>generateHierarchies</strong></p>
+</div>
+<div class="paragraph">
+<p>This configuration takes in a true/false to enable/disable artificial hierarchies in C-Code model. When enabled, artificial hierarchies are placed to logically group the elements. However, it could be disabled to have no hierarchies and view the model as it is in the original source code.</p>
+</div>
+<div class="paragraph">
+<p>Default setting: generateHierarchies=true</p>
+</div>
+<div class="paragraph">
+<p>Below, is an image depicting artificial hierarchies being created in the upper part. Here “True” which is expanded to show the contents, is an artificial hierarchy. The bottom part of the image shows C-code model with hierarchy generation being disabled, hence appears flat.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image18.png" alt="image18">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>maxIterationForDataflowAnalysis</strong></p>
+</div>
+<div class="paragraph">
+<p>C-Code is converted to a data structure, which can be visualized as block diagram.</p>
+</div>
+<div class="paragraph">
+<p>A part of the underlying algorithm is to calculate the connections between the blocks that represent the variables and operators of the C code functions. This is referred to as “Dataflow Analysis”.</p>
+</div>
+<div class="paragraph">
+<p><em>maxIterationForDataflowAnalysis</em> is a configuration parameter to tweak the calculation of the connections through an iterative Dataflow Analysis.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A too high value can lead to high memory consumption and longer runtime than necessary in order to calculate all connections.</p>
+</li>
+<li>
+<p>A too low value can result is unconnected blocks due to missing connections. The algorithm terminates before all connections have been calculated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The value should be chosen such that it represents the minimal number of iterations even for the most complex C-code sources of a given ECU program.</p>
+</div>
+<div class="paragraph">
+<p>Default setting: maxIterationForDataflowAnalysis=50000</p>
+</div>
+<div class="paragraph">
+<p>A sample file is available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\CCodeConfig.xml)</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When <strong><em>maxIterationForDataflowAnalysis</em></strong> is exceeded, an "Error" will be logged in the log file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="table-configuration"><a class="anchor" href="#table-configuration"></a>Label Table Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Per FC, there is always one generic chapter with the default name Systemconstant-Parameter-Variable-Classinstance-Structure. This chapter contains the tables for all the elements, which are specified in the corresponding MDX or xls-file. The name of the chapter and the appearance of the tables can be configured with the command line parameter <strong>-tableconfig “file_path\file.json”.</strong> The JSON file defines the view as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"chapter": "Name of the chapter in EHB-NAV",
+	"tables": [
+		{
+			"title": "Variable",
+			"filters": [
+				{
+					"id": "ehb_element_type",
+					"value": "ehb_variable"
+				}
+			],
+			"columns": [
+				{
+					"title": "Name",
+					"id": "ehb_name",
+					"width": "20%"
+				},
+				{
+					"title": "Description",
+					"id": "ehb_desc",
+					"width": "40%"
+				},
+				{
+					"title": "Unit",
+					"id": "Unit",
+					"width": "10%"
+				},
+				{
+					"title": "Data Type",
+					"id": "Type",
+					"width": "10%"
+				},
+				{
+					"title": "Mode",
+					"id": "ehb_mode",
+					"width": "20%"
+				}
+			]
+		},
+		{
+			"title": "Calibration/Parameter",
+			"filters": [
+				{
+					"id": "ehb_element_type",
+					"value": "ehb_parameter"
+				}
+			],
+			"columns": [
+				{
+					"...": "..."
+				}
+			]
+		}
+	]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong><em>“tables”: []</em></strong> section defines the appearance of each table.</p>
+</div>
+<div class="paragraph">
+<p>Each table begins with a title entry: <strong><em>“title”: “Name of the table title in EHB-NAV”</em></strong></p>
+</div>
+<div class="paragraph">
+<p>In the section <strong><em>“filters”: [ “id”: “ehb_element_type”</em></strong> you specify the table element type by defining one of the following key words for <strong><em>“value”:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 27%;">
+<col style="width: 22%;">
+<col style="width: 29%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Type of table</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Matching key words for “value”: “&#8230;&#8203;”</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponding entry in xls</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponding entry in MDX</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Variables</p>
+</div>
+<div class="paragraph">
+<p>Parameters</p>
+</div>
+<div class="paragraph">
+<p>System Constants</p>
+</div>
+<div class="paragraph">
+<p>Class Instances</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>“ehb_variable”</p>
+</div>
+<div class="paragraph">
+<p>“ehb_parameter”</p>
+</div>
+<div class="paragraph">
+<p>“ehb_system_constant”</p>
+</div>
+<div class="paragraph">
+<p>“ehb_class_instance”</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sheet “Signal”</p>
+</div>
+<div class="paragraph">
+<p>Sheet “Calibration”</p>
+</div>
+<div class="paragraph">
+<p>N.A.</p>
+</div>
+<div class="paragraph">
+<p>N.A.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>&lt;SW-VARIABLE&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;SW-CALPRMS&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;SW-SYSTEMCONST&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;SW-CLASS-INSTANCE&gt;</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In the section <strong><em>“columns”: [ ]</em></strong> per column entry, a “title” &amp; “id” pair defines the column content:</p>
+</div>
+<div class="paragraph">
+<p><strong><em>“title”: “column name”</em></strong> defines the name of the column in EHB-NAV</p>
+</div>
+<div class="paragraph">
+<p><strong><em>“id”:</em></strong> “Input source value from MDX or xls to be shown”.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>“width”:</em></strong> Defines width of the table column that can be configured in PDF. “width” is denoted in percentage.</p>
+</div>
+<div class="paragraph">
+<p>For the “id” values, fixed pre-defined key words are used:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 31%;">
+<col style="width: 26%;">
+<col style="width: 43%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Key word for “id”: “&#8230;&#8203;” in JSON</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponds to column in xls</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponds to key word in MDX</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_name”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“Name”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SHORT-NAME&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_desc”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“Description”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;LONG-NAME&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_mode”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“Xref”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No tag avail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_access”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N.A.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;SW-CALIBRATION-ACCESS&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_data_type”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“Class”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;BASE-TYPE-REF&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_reference”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N.A.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No tag avail. used for class instance table only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_category”</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N.A.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entry in &lt;CATEGORY&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For other element properties, defined in further column entries in the xls file, the identical name is used in the JSON file as “id” value also. The same applies for MDX entries used for properties.</p>
+</div>
+<div class="paragraph">
+<p>You can define as many “title” &amp; “id” pairs as you want, but you have to consider the page width in EHB-NAV and especially in PDF if printing is required.</p>
+</div>
+<div class="paragraph">
+<p>The order of the “title” &amp; “id” pairs in the JSON file are defining the order of the columns in EHB-NAV from left to right.</p>
+</div>
+<div class="paragraph">
+<p>The order of the tables in the JSON file are defining the order of the tables in EHB-NAV from top to bottom.</p>
+</div>
+<div class="paragraph">
+<p>You can divide the tables into different ones by adding additional filter attributes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"title": "Input Variables",
+"filters": [
+	{
+		"id": "ehb_element_type",
+		"value": "ehb_variable"
+	},
+	{
+		"id": "ehb_mode",
+		"value": "import"
+	},
+	{
+		"..." : "..."
+	}
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A filter criterion can be configured as “id” &amp; “value” pairs</p>
+</div>
+<div class="paragraph">
+<p><strong><em>“id”: “type”</em></strong> defines the type for the filtering</p>
+</div>
+<div class="paragraph">
+<p><strong><em>“value”: “value of type”</em></strong> defines the content of type, which should match the filter criteria</p>
+</div>
+<div class="paragraph">
+<p>For “type” and “value” fixed pre-defined key words are used:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 19%;">
+<col style="width: 26%;">
+<col style="width: 22%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Key word for “id”: “&#8230;&#8203;”</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Matching key words for “value”: “&#8230;&#8203;”</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponding entry in xls</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Corresponding entry in MDX</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“ehb_mode”</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>“import”</p>
+</div>
+<div class="paragraph">
+<p>“export”</p>
+</div>
+<div class="paragraph">
+<p>“local”</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>IN</p>
+</div>
+<div class="paragraph">
+<p>OUT</p>
+</div>
+<div class="paragraph">
+<p>LOC</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>&lt;IMPORT&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;EXPORT&gt;</p>
+</div>
+<div class="paragraph">
+<p>&lt;SW-FEATURE-OWNED-ELEMENT-SET&gt;</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For other element properties required for as filter criterion, the corresponding column entry in the xls file can be used. Here the identical column name is required in the JSON file as “id”: “type” also. In addition, the text entry in the column must be identical in the JSON “value”: “text entry”. The same applies for MDX entries used for filtering.</p>
+</div>
+<div class="paragraph">
+<p>Multiple filter criteria can be used. They are combined as logical AND, e.g. element_type=variable &amp; mode=exported &amp; type=float.</p>
+</div>
+<div class="paragraph">
+<p>You can define as many tables as you want, with any combination of filters, but limited to the pre-defined key words ehb_element_type and ehb_mode.</p>
+</div>
+<div class="paragraph">
+<p>All key words and value entries are handled case insensitive but have to be exact. There is no error handling for wrongly spelled entries.</p>
+</div>
+<div class="paragraph">
+<p>A sample file is available in the examples sub folder of the EHB-CB installation directory. (..\examples\configuration\TableConfiguration.json)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="label-configuration"><a class="anchor" href="#label-configuration"></a>Label Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In a model, you have multiple possibilities how to name a label. ASCET 6 and ASCET-DEVELOPER tools provide certain options to configure the composition of an element name. E.g. the element name can be appended with their parent elements and the order of the name parts can be defined.  So the name my differ from the name in the a2l file and  MCD features like INCA connectivity will not work.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, EHB-CB provides the flexibility to configure the label names by using a JSON configuration file (plain ASCII, UTF8 format), so that it matches the names in A2L file. There is one single JSON file with individual configuration possibilites per model type (ASCET 6, ASCET DEVELOPER, Simulink)</p>
+</div>
+<div class="paragraph">
+<p>See sample LabelConfig.json in the sub folder .\examples\configuration of your EHB-CB installation directory.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Please ensure, that the configuration parameters in ASCET and in the JSON file are matching. Otherwise labels from a2l-file or from INCA could not be shown in EHB-NAV.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_for_ascet_developer"><a class="anchor" href="#_for_ascet_developer"></a>For ASCET-DEVELOPER</h3>
+<div class="paragraph">
+<p>The element name could be placed first or last, when appended with their parent elements or package names could be omitted.</p>
+</div>
+<div class="paragraph">
+<p>With the JSON file shown below (plain ASCII, UTF8 format), ASCET-DEVELOPER models in the container will have the element name placed last and will not be appended with the package name. This is also the default, if no label configuration is provided.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"ASCET-DEVELOPER": {
+		"elementNameFirst": false,
+		"includePackageName": false
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, a class element “signal” within class “Component”, placed inside package “components” would have the name as in the below table according to the various combinations provide in JSON file. This name is used to connect to INCA on EHANDBOOK-NAVIGATOR.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28%;">
+<col style="width: 36%;">
+<col style="width: 36%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" rowspan="2"><p class="tableblock">includePackageName</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">elementNameFirst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">signal.Component.components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components.Component.signal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">signal.Component</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component.signal</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In the above JSON file, ‘elementNameFirst’ parameter corresponds to the ‘Model symbolic name format’ in the ASAM MCD section under the ‘ASAM’ tab in the launch configuration for ECU code generation in ASCET-DEVELOPER tool as shown below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image19.png" alt="image19">
+</div>
+</div>
+<div class="paragraph">
+<p>While the ‘includePackageName’ corresponds to the ‘Legacy code generation’ option in ‘Naming convention’ section under the ‘Options’ tab in the run configuration as shown below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image20.png" alt="image20">
+</div>
+</div>
+<div class="paragraph">
+<p>If the checkbox is selected, then ASCET Classic naming convention is used where the package names are omitted, while de-selecting it will have the package name being included in the label.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_ascet_6"><a class="anchor" href="#_for_ascet_6"></a>For ASCET 6</h3>
+<div class="paragraph">
+<p>The element names could be placed first or last and their parent elements module and project names or their class instance names could be appended also.</p>
+</div>
+<div class="paragraph">
+<p>With the JSON file shown below, models in the container will have the element name placed last and will be appended with the class instance names. This is al-so the default, if no label configuration is provided.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"ASCET": {
+		"elementNameFirst": false,
+		"includeModuleName": false,
+		"includeProjectName": false,
+		"includeClassInstanceName": true
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, an instance “componentInstance” of class “Component” having a class element “signal”, placed within a module “RootModule” of project “Project” would have the name as in the below table according to the various combinations provide in JSON file. This name is used to connect to INCA on EHANDBOOK-NAVIGATOR.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 30%;">
+<col style="width: 20%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" rowspan="2"><p class="tableblock">includeProjectName</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">elementNameFirst</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">includeModuleName</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">signal.componentInstance.RootModule.Project</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project.RootModule.componentInstance.signal</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">signal.componentInstance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentInstance.signal</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="label-configuration-for-Simulink"><a class="anchor" href="#label-configuration-for-Simulink"></a>For Simulink</h3>
+<div class="paragraph">
+<p>EHB-CB provides the option to add a configurable and invisible unique name to blocks and buses in the Simulink model. This hidden unique name is then used for MCD features like INCA connectivity in EHB-NAV.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"Simulink": {
+		"blockRules": [
+			{
+				"selectors": [
+	                                  				{
+						"parameter": "BlockType",
+						"value": "Inport"
+					}
+				],
+				"replacements": [
+					{
+						"parameter": "Name",
+						"regex": "(.*)",
+						"replacement": "$1__TestSuffix"
+					}
+				],
+				"uniqueName": "Test_prefix.${Name}"
+			}
+		],
+		"nonVirtualBusRules": [
+			{
+				"busNameSelector": {
+					"value": "signalBus"
+				},
+				"busElementNameSelector": {
+					"regex": "signal__(.*)"
+				},
+				"busNameReplacement": {
+					"regex": "prefix_(.*)_suffix",
+					"replacement": "$1"
+				},
+				"busElementNameReplacement": {
+					"regex": "(.*)__(.*)",
+					"replacement": "$1"
+				},
+				"uniqueName": "${busNameReplacement}.${busElementNameReplacement}"
+			}
+		]
+	}
+}</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_for_blockrules"><a class="anchor" href="#_configuration_for_blockrules"></a>Configuration for blockRules</h4>
+<div class="paragraph">
+<p>BlockRules assist to configure "uniqueName" for any type of Simulink blocks based on "selectors" and "replacements" configurations.
+It is possible to provide list of blockRules [0&#8230;&#8203;n].</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>selectors</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>"selectors" are the filters, applied to select the block based on the below key-value pairs.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 31%;">
+<col style="width: 43%;">
+<col style="width: 26%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Key</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid Simulink block parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simulink block parameter value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">regex</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simulink block parameter value regex pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Selectors are composed of either parameter and value combination or parameter and regex combination.
+It is possible to provide list of selectors [0&#8230;&#8203;n].
+If blockRule does not contain any selectors, then uniqueName will be created for all the blocks.
+To construct an uniqueName from blockRules, all the defined selectors are to satisfied.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>replacements</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>"replacements" are optional.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 31%;">
+<col style="width: 43%;">
+<col style="width: 26%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Key</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid Simulink block parameter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">regex</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simulink block parameter value regex pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">replacement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prepare an unique name using regex groups or text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>replacement is composed of "parameter" and "regex" applied on "parameter".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"replacements": [
+	{
+		"parameter": "Name",
+		"regex": "(.*)",
+		"replacement": "$1__Suffix"
+	}
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example if the "parameter" (name of Simulink block) is "Name", "regex" pattern applied on "parameter" to collect all the characters of the "parameter" and "replacement" replaces "parameter" with defined replacement (in the example "parameter" is appended by _Suffix &#8658; Name_Suffix)</p>
+</div>
+<div class="paragraph">
+<p>"replacement"  is used as expression in the uniqueName.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unique name configuration</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>uniqueName is a mandatory key. "uniqueName" labels are not created if "uniqueName" is not provided in json file.</p>
+</div>
+<div class="paragraph">
+<p>uniqueName is composed of expressions. An expression starts with "$" followed by "{" and ends with "}".</p>
+</div>
+<div class="paragraph">
+<p>Example for uniqueName:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$\{Sample1}_$\{Sample2}_suffix
+prefix_$\{Sample1}_$\{Sample2}_suffix
+prefix.$\{Sample1}.midfix.$\{Sample2}.suffix</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>1) Sample1,Sample2  is always valid block parameter of Simulink</p>
+</div>
+<div class="paragraph">
+<p>2) If  the replacements are provided for Sample1 or Sample2 it will replace expression using "replacement" value otherwise "block parameter" value is considered.</p>
+</div>
+<div class="paragraph">
+<p>If "${Sample1}  "abc" and ${Sample2}  "efg", then unique names are as follows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$\{Sample1}_$\{Sample2}_suffix //abc_efg_suffix
+prefix_$\{Sample1}_$\{Sample2}_suffix //prefix_abc_efg_suffix
+prefix.$\{Sample1}.midfix.$\{Sample2}.suffix // prefix.abc.midfix.efg.suffix</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_for_nonvirtualbusrules"><a class="anchor" href="#_configuration_for_nonvirtualbusrules"></a>Configuration for nonVirtualBusRules</h4>
+<div class="paragraph">
+<p>nonVirtualBusRules assist to configure "uniqueName" for any type of Simulink buses based on "busNameSelector", "busElementNameSelector" and "busNameReplacement", "busElementNameReplacement" configurations.
+It is possible to provide list of nonVirtualBusRules [0&#8230;&#8203;n].</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>busNameSelector
+"busNameSelector" is a filter, applied on the bus name, provided by value or regex configuration.</p>
+</li>
+<li>
+<p>busElementNameSelector
+"busElementNameSelector" is a filter, applied on the bus element name (bus member), provided by value or regex configuration.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If nonVirtualBusRule does not contain any selectors, then uniqueName will be created for all the buses.
+To construct an uniqueName from nonVirtualBusRules, all the defined selectors are to satisfied.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>busNameReplacement
+busNameReplacement is applied on the bus name by using regex, replacement.</p>
+</li>
+<li>
+<p>busElementNameReplacement
+busElementNameReplacement is applied on the bus element name by using regex, replacement.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the regex pattern, 2 fixed expressions are allowed - ${busName}, ${busElementName}
+These expressions are updated before processing regex and replacement</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">"busElementNameReplacement": {
+	"regex": "${busName}_(.*)",
+	"replacement": "$1"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example if we consider busName as "Hello", the regex is updated with Hello_(.*)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>uniqueName
+uniqueName is composed of fixed expressions and text.
+  4 optional fixed expressions are  ${busNameReplacement}, ${busElementNameReplacement}, ${busElementName}, ${busName}</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"busNameSelector": {
+		"value": "signalBus"
+	},
+	"busElementNameSelector": {
+		"regex": "signal__(.*)"
+	},
+	"busNameReplacement": {
+		"regex": "prefix_(.*)_suffix",
+		"replacement": "$1"
+	},
+	"busElementNameReplacement": {
+		"regex": "(.*)__(.*)",
+		"replacement": "$1"
+	},
+	"uniqueName": "${busNameReplacement}.${busElementNameReplacement}"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Expression</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${busName}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replaced with bus name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${busElementName}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replaced with bus member name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${busNameReplacement}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replacement provided in the non-virtual bus rule</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">${busElementNameReplacement}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Replacement provided in the non-virtual bus rule</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="label-configuration-autosar"><a class="anchor" href="#label-configuration-autosar"></a>For AUTOSAR</h4>
+<div class="paragraph">
+<p>EHANDBOOK Container-Build provides the option to add a configurable and invisible unique name to AUTOSAR ports and its interfaces in the interface function overview. This hidden unique name is then used for MCD features like INCA connectivity in EHANDBOOK NAVIGATOR.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"AUTOSAR":
+		{
+		"includeSwcInstanceName": true,
+		"includePortName": true
+		}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above JSON file, ‘includeSwcInstanceName’ parameter applies the instance name of the component to be included in the name of port and interface. 'includePortName' parameter applies the port name to be added in the name of the interface.</p>
+</div>
+<div class="paragraph">
+<p>For example, a component instance “component” containing a port "port" having an interface "interface" would have the name as in the below table according to the various combinations provide in JSON file.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28%;">
+<col style="width: 36%;">
+<col style="width: 36%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" rowspan="2"><p class="tableblock">includeSwcInstanceName</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">includePortName</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>true</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">component.port.interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">component.interface</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>false</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">port.interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">interface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_excluding_packages_for_ascet_developer"><a class="anchor" href="#_excluding_packages_for_ascet_developer"></a>Excluding Packages for ASCET-DEVELOPER</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the workspace of an ASCET-DEVELOPER project, block diagrams are organized by means of so-called packages. When the EHANDBOOK documentation is generated for such models, the content for certain Class Instance blocks should not be included in certain cases. Typical cases are:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>a Class Instance is of a library type Class where details are not required to understand the meaning of the block</p>
+</li>
+<li>
+<p>a Class Instance block contains details which are subject to know-how protection</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the corresponding interactive model, such Class Instances should then be non-expandable such that no details are exposed, and subsequently the textual documentation for the sub blocks of that Class Instance block need to be excluded from documentation as well.</p>
+</div>
+<div class="paragraph">
+<p>Excluding packages also have s significant improvement on RAM consumption and generation time during the container build.</p>
+</div>
+<div class="paragraph">
+<p>In order to achieve this, EHANDBOOK-CONTAINER build offers an optional command line argument <strong><em>-ascetdeveloperexcludepackages</em></strong>. The CLI argument must point to the path of a configuration file in JSON format that contains the list of ASCET-DEVELOPER packages to exclude from document generation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "packages":[
+        "packageX",
+        "packageA.packageB"
+    ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See sample ExcludePackages.json in the sub folder .\examples\configuration of your EHB-CB installation directory.</p>
+</div>
+<div class="paragraph">
+<p>In case of nested packages, fully qualified name of the package separated by “<strong>.</strong>” (DOT) needs to be provided.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="include-documentation-for-nested-class-in-ascet-developer"><a class="anchor" href="#include-documentation-for-nested-class-in-ascet-developer"></a>Include Documentation for Nested Classed in ASCET-DEVELOPER</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ASCET-DEVELOPER apps are built from a set of static entry-point classes.
+To re-use algorithms, these can be specified as classes and instantiated where required.
+When classes contain instances of other classes, this creates so-called <em>nested classes</em>.</p>
+</div>
+<div class="paragraph">
+<p>Each class can be associated with some textual documentation in the form of an AsciiDoc file.
+Through this, the behavior of a class can be documented once.</p>
+</div>
+<div class="paragraph">
+<p>To obtain a full documentation for a static class with EHANDBOOK Container-Build, also the textual contents associated with all instantiated and nested classes can be considered.</p>
+</div>
+<div class="paragraph">
+<p>In order to achieve this, EHANDBOOK-CONTAINER build offers an optional command line argument <strong><em>-ascetdevelopernestedclasses</em></strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Depending on the usage of nested classes, this option can lead to significant increase in EHANDBOOK generation time as each class instance gets documented at the place where it is used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="doc-block-support"><a class="anchor" href="#doc-block-support"></a>Support for Simulink Doc blocks in documentation for Simulink Addon</h3>
+<div class="paragraph">
+<p>In Simulink Addon, the content of the Simulink doc block is extracted from the model and added as documentation(AsciiDoc) for the respective subsystem along with its screen-shot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_explicitly_specify_tables_of_contents_directory_based_ehandbook_container_build"><a class="anchor" href="#_how_to_explicitly_specify_tables_of_contents_directory_based_ehandbook_container_build"></a>How to explicitly specify tables of contents (Directory-based EHANDBOOK Container-Build)</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This how-to guide applies to the Directory-based EHANDBOOK Container-Build approach.
+For ASAM-based EHANDBOOK Container-Build approach, refer to the <a href="../references/EHANDBOOK_Container-Build_ASAM_Specification.html#_the_ccx_file_structure" class="xref page">ASAM CCX</a> specification and the <a href="../references/EHANDBOOK_Container-Build_ASAM_Specification.html#_toc_ablock_usage" class="xref page">usage of ABLOCKs for TOCs</a> in particular.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The approach described in this how-to guide for Directory-based EHANDBOOK Container-Build approach can also be applied when generating EHANDBOOK Containers for ASCET-DEVELOPER apps.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_background"><a class="anchor" href="#_background"></a>Background</h4>
+<div class="paragraph">
+<p>Each EHANDBOOK Container comes with one or multiple tables of contents.
+A table of contents provides a high-level navigation structure for the textual contents of an EHANDBOOK Container.
+In EHANDBOOK-NAVIGATOR, the contents of a table of contents is shown in the Document Explorer.</p>
+</div>
+<div class="paragraph">
+<p>EHANDBOOK supports to specify multiple tables of contents such that different users of the ECU software documentation can use different navigation structures.
+In EHANDBOOK-NAVIGATOR, users can switch between the provided tables of contents.
+Through this, they can choose a navigation structure depending on their use case or personal preference.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer.png" alt="Document Explorer">
+</div>
+<div class="title">Figure 3. Document Explorer of EHANDBOOK-NAVIGATOR, showing a table of contents</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer_Switch_ToC.png" alt="Document Explorer Switch ToC">
+</div>
+<div class="title">Figure 4. Button to switch to other tables of contents</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer_Select_ToC.png" alt="Document Explorer Select ToC">
+</div>
+<div class="title">Figure 5. Select a table of contents to be shown</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_tables_of_contents_are_derived_by_default"><a class="anchor" href="#_how_tables_of_contents_are_derived_by_default"></a>How tables of contents are derived by default</h4>
+<div class="paragraph">
+<p>The directory-based EHANDBOOK Conainer-Build tool-chain has a built-in feature to automatically derive two standard tables of contents:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Alphabetically list of functions</strong>: This is a flat list of ECU functions or software components in alphabetic order</p>
+</li>
+<li>
+<p><strong>Software architecture view</strong>: This is a hierarchical structure that mimics the ECU software architecture as specified by the directory structure</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Benefits are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No effort to specify a table of contents at all</p>
+</li>
+<li>
+<p>Standard tables of contents are created automatically</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_tables_of_contents_can_be_specified_explicitly"><a class="anchor" href="#_how_tables_of_contents_can_be_specified_explicitly"></a>How tables of contents can be specified explicitly</h4>
+<div class="paragraph">
+<p>Starting with EHANDBOOK 10.2, it is possible to specify the tables of contents explicitly.
+Through this, the automatically generated tables of contents can be replaced with customized ones.</p>
+</div>
+<div class="paragraph">
+<p>The format of the configuration file is <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="_tocs_yaml_a_yaml_file_to_specify_table_of_contents"><a class="anchor" href="#_tocs_yaml_a_yaml_file_to_specify_table_of_contents"></a>tocs.yaml - a YAML file to specify table of contents</h5>
+<div class="paragraph">
+<p>To specify the structure of the tables of contents, a configuration file with the name <code>tocs.yaml</code> has to be provided in the root directory that is passed to EHANDBOOK Container-Build.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">└── 📒 ECU_SW_XYZ <i class="conum" data-value="1"></i><b>(1)</b>
+    └── 📒 SWC_1
+    ├── 📒 SWC_2
+    .
+    .
+    .
+    ├── 📒 SWC_n
+    ├── 📒 Composition_1
+    ├── 📒 Composition_2
+    └── 📄 tocs.yaml <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Root input directory to be passed to EHANDBOOK Container-Build</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>File with explicit specification of tables of contents</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For ASCET-DEVELOPER, the <code>tocs.yaml</code> file must be placed in the same directory as the <code>.app</code> file for which an EHANDBOOK Container shall be generated.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/ASCET_DEVELOPER_tocs_yaml.png" alt="ASCET DEVELOPER tocs yaml">
+</div>
+<div class="title">Figure 6. Placement of <code>tocs.yaml</code> for ASCET-DEVELOPER apps</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_syntax_of_tocs_yaml"><a class="anchor" href="#_syntax_of_tocs_yaml"></a>Syntax of tocs.yaml</h5>
+<div class="paragraph">
+<p>The following listing shows an example for the syntax of the YAML file.
+You can download the file from <a href="_attachments/specify-explicit-tocs/tocs.yaml" class="xref attachment"><strong>here</strong></a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-YAML hljs" data-lang="YAML">docuUnits:                                  <i class="conum" data-value="1"></i><b>(1)</b>
+  - id: SWC_1                               <i class="conum" data-value="2"></i><b>(2)</b>
+    displayName: "Software Component 1"     <i class="conum" data-value="3"></i><b>(3)</b>
+  - id: SWC_2
+    displayName: "Software Component 2"
+  - id: SWC_n
+    displayName: "Software Component n"
+  - id: Composition_1
+    displayName: "Composition 1"
+  - id: Composition_2
+    displayName: "Composition 2"
+tocs:                                       <i class="conum" data-value="4"></i><b>(4)</b>
+  - displayName: Alphabetic list of software components         <i class="conum" data-value="5"></i><b>(5)</b>
+    contents:                               <i class="conum" data-value="6"></i><b>(6)</b>
+    - idRef: SWC_1                          <i class="conum" data-value="7"></i><b>(7)</b>
+    - idRef: SWC_2
+    - idRef: SWC_n
+  - displayName: Software architecture
+    contents:
+    - idRef: Composition_1
+      contents:                             <i class="conum" data-value="8"></i><b>(8)</b>
+      - idRef: SWC_1
+      - idRef: SWC_2
+    - idRef: Composition_2
+      contents:
+      - idRef: SWC_n</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><strong>docuUnits</strong>: List of documentation untis from which tables of contents can be specified.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><strong>id</strong>: Identifier of the documentation unit. This complies to the name of the directory that represents the software component, composition or any other documentation chapter.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><strong>displayName</strong>: The human-readable name that shall be displayed in the table of contents.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><strong>tocs</strong>: Start of YAML section where the tables of contents for the EHANDBOOK Container are specified.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><strong>displayName</strong>: The human-readable name that shall be displayed for a table of contents.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><strong>contents</strong>: Start of YAML section where entries for the tables of contents are specified.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><strong>idRef</strong>: Reference to a documentation unit.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td><strong>contents</strong>: Nested YAML section with entries for sub-chapters. Useful for creating navigation hierarchies, e.g. to resemble the software architecture of an ECU.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_custom_tables_of_contents_in_ehandbook_navigator"><a class="anchor" href="#_custom_tables_of_contents_in_ehandbook_navigator"></a>Custom tables of contents in EHANDBOOK-NAVIGATOR</h5>
+<div class="paragraph">
+<p>The following screenshot shows the Document Explorer after the generated EHANDBOOK Container is loaded in EHANDBOOK-NAVIGATOR. The first tables of contents - <em>Alphabetic list of software components</em> - is shown.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer_Custom_ToC_1.png" alt="Document Explorer Custom ToC 1">
+</div>
+<div class="title">Figure 7. Document Explorer of EHANDBOOK-NAVIGATOR, showing custom table of contents for "Alphabetic list of software components"</div>
+</div>
+<div class="paragraph">
+<p>Using the select button, users can explore and switch to another table of contents.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer_Custom_ToC_Select.png" alt="Document Explorer Custom ToC Select">
+</div>
+<div class="title">Figure 8. Document Explorer of EHANDBOOK-NAVIGATOR, showing selection between available tables of contents</div>
+</div>
+<div class="paragraph">
+<p>This is how the <em>Software architecture</em> looks like.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/specify-explicit-tocs/Document_Explorer_Custom_ToC_2.png" alt="Document Explorer Custom ToC 2">
+</div>
+<div class="title">Figure 9. Document Explorer of EHANDBOOK-NAVIGATOR, showing custom table of contents for "Software architecture"</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_benefits"><a class="anchor" href="#_benefits"></a>Benefits</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Define an arbitrary set of tables of contents (one or multiple)</p>
+</li>
+<li>
+<p>Provide a custom order of the tables of contents (first table of contents will be shown when the EHANDBOOK Container is opened)</p>
+</li>
+<li>
+<p>Provide custom names for the entries in the tables of contents</p>
+</li>
+<li>
+<p>Provide custom ordering of entries in the tables of contents</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <!--
+  <img src="../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
+  -->
+
+  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
+  <div class="d-flex align-items-center justify-content-center flex-wrap">
+    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
+          </path>
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+      href="https://twitter.com/ETAS_global" title="Go to: Twitter"><i><svg xmlns="http://www.w3.org/2000/svg"
+          width="24" height="20" viewBox="0 0 24 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M24,2.36764 C23.118155,2.7692295 22.16869,3.040805 21.17274,3.16215 C22.18982,2.5381 22.97024,1.54857 23.33791,0.369805 C22.38563,0.94763 21.33333,1.368 20.20919,1.59335 C19.313255,0.61249 18.03275,-5e-06 16.6156,-5e-06 C13.89822,-5e-06 11.693605,2.26074 11.693605,5.048745 C11.693605,5.444556 11.735866,5.82881 11.820388,6.19862 C7.728118,5.9877135 4.100738,3.97977 1.670738,0.92162 C1.24672,1.669905 1.004423,2.53809 1.004423,3.46261 C1.004423,5.213425 1.873593,6.759105 3.194948,7.66485 C2.389173,7.6402925 1.628473,7.4106065 0.963568,7.03502 L0.963568,7.0971365 C0.963568,9.5442315 2.661048,11.5854015 4.914968,12.0476615 C4.502219,12.166116 4.066933,12.225343 3.617558,12.225343 C3.3006005,12.225343 2.990688,12.1950075 2.690633,12.13578 C3.317503,14.140835 5.134723,15.60129 7.290033,15.640295 C5.605228,16.995295 3.480913,17.80281 1.174883,17.80281 C0.77763,17.80281 0.384603,17.779697 2.8e-05,17.733471 C2.179283,19.163591 4.768473,19.999991 7.547828,19.999991 C16.605778,19.999991 21.557328,12.307691 21.557328,5.635241 C21.557328,5.415667 21.553102,5.196093 21.5446495,4.980851 C22.5067895,4.268681 23.3421495,3.380271 24.0000095,2.367631">
+          </path>
+        </svg></i> <span class="etas-sr-only">Twitter</span></a> <a target="_socialmedia" class="etas-social-link"
+      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
+          width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
+            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
+        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  </div>
+  <div class="etas-footer-separator"></div>
+  <span>
+    <b>© ETAS 2023</b>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+  </span>
+</footer><script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
