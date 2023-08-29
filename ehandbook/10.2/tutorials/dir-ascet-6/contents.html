@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tutorial: Directory-based EHB-CB for ASCET 6 :: EHANDBOOK Docs &amp; Tutorials</title>
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/docs">
+        <img class="navbar-item" src="../../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+      </a>
+      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="10.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../about_this_doc.html">Classification of Safety Messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../safety_notice.html">Safety Notice</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../copyrights.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ETAS_contacts.html">ETAS Contacts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../whats-new/index.html">What&#8217;s New</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../container_build.html">Container-Build</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start.html#_quick_start_demos">Quick Start Demos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ascet-developer/contents.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="contents.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dir-simulink/contents.html">Simulink</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dir-ccode/contents.html">C-Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/index.html">Explanations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/model_languages/overview.html"><strong>Model Languages</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/ascet6.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/c_code.html">C-Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/automotive_standards/overview.html"><strong>Automotive Standards</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html"><strong>Setup</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_download">Download</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_installation">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/platforms.html"><strong>Supported Platforms</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/platforms.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/platforms.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb_cb_features.html"><strong>Features</strong></a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../how-to-guides/index.html">How-to guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Interactive Models</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#_model_depth_skip">Model Depth</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#view-concept">View Concept</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Label-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#label-configuration">Label Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#label-amendment">Label Amendment</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Language-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#configure-simulink-blocks">Configuration of Simulink Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Textual Contents</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#click-pic">ClickPic</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#table-configuration">Label Table Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize EHB Containers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_dir_based_ehb_cb">Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/index.html">References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHB-CB Usage in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/other_input_formats.html">Other Input Formats</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/styling.html">Styling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../EHANDBOOK_Container-Build_User_Guide__Known_Issues.html">Known Issues</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">10.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../11.1/index.html">EHANDBOOK</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../11.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">EHANDBOOK</a></li>
+    <li><a href="../../container_build.html">Container-Build</a></li>
+    <li><a href="../index.html">Tutorials</a></li>
+    <li><a href="contents.html">ASCET 6</a></li>
+  </ul>
+</nav>
+
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
+
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">10.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../../11.1/tutorials/dir-ascet-6/contents.html">11.1</a>
+    <a class="version" href="../../../11.0/tutorials/dir-ascet-6/contents.html">11.0</a>
+    <a class="version" href="../../../10.3/tutorials/dir-ascet-6/contents.html">10.3</a>
+    <a class="version is-current" href="contents.html">10.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tutorial: Directory-based EHB-CB for ASCET 6</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Welcome to EHANDBOOK! If you don&#8217;t know about EHANDBOOK yet, check out the overview at <a href="http://www.etas.com/ehandbook">www.etas.com/ehandbook</a> to get a background on what EHANDBOOK is, the problems it addresses and the benefits it provides.</p>
+</div>
+<div class="paragraph">
+<p>In this tutorial, we are going to build a small EHANDBOOK Container for a single ECU function modeled with <strong>ASCET 6</strong> using the <strong>Directory-based EHANDBOOK Container-Build tool-chain</strong>.</p>
+</div>
+<div class="paragraph">
+<p>If you are interested in <strong>ASCET-DEVELOPER</strong>, <strong>Simulink models</strong> or <strong>C-Code</strong>, there are similar tutorials available as this one. Also, if you are more interested in ASAM-based XML formats for ECU software documentation, there is another EHANDBOOK Container-Build tool-chain available with a separate set of tutorials.</p>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s get started!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>In order to install and execute EHANDBOOK tools, you need a PC (or laptop) with Microsoft Windows 8, 8.1 or 10.</p>
+</div>
+<div class="paragraph">
+<p>You also need administrator rights to install the tools and license keys. For license keys, please contact your local ETAS sales office.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_of_ehandbook_container_build_tools"><a class="anchor" href="#_installation_of_ehandbook_container_build_tools"></a>Installation of EHANDBOOK Container-Build tools</h3>
+<div class="paragraph">
+<p>For this tutorial, we&#8217;ll use the <strong>Directory-based EHANDBOOK Container-Build tools</strong>.
+You can download the latest version from the <a href="https://www.etas.com/de/portfolio/download_center.php?doctype=null&amp;product=1A39E8F6A5E34D0DB79C68D1FDBEB964&amp;productfamily=15DD9F45D74045ADAB26E6BBE8F3C9C8&amp;sortby=date_desc&amp;resPointer=0">ETAS Download Center</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_of_ehandbook_navigator"><a class="anchor" href="#_installation_of_ehandbook_navigator"></a>Installation of EHANDBOOK-NAVIGATOR</h3>
+<div class="paragraph">
+<p>To explore the generated EHB Container, you also need <strong>EHANDBOOK-NAVIGATOR</strong> installed.
+You can download the latest version from the <a href="https://www.etas.com/de/portfolio/download_center.php?doctype=null&amp;product=1A39E8F6A5E34D0DB79C68D1FDBEB964&amp;productfamily=15DD9F45D74045ADAB26E6BBE8F3C9C8&amp;sortby=date_desc&amp;resPointer=0">ETAS Download Center</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_license_keys"><a class="anchor" href="#_license_keys"></a>License keys</h3>
+<div class="paragraph">
+<p>ETAS EHANDBOOK products are protected by electonic license keys. Please ensure that you have valid license keys to operate the tools.</p>
+</div>
+<div class="paragraph">
+<p>For trial purposes, you can <a href="https://license.etas.com/LandingPage/htm/evalproducts.jsp?lang=English">obtain evaluation licenses</a> for a limited time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_the_input_data"><a class="anchor" href="#_setting_up_the_input_data"></a>Setting up the input data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To generate EHB Containers using the Directory-based EHANDBOOK Container-Build tools, the input data such as models, interface and label descriptions as well as textual documentation must be arranged in a directory structure. The directory structure must follow a specific convention:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A root directory: This directory is passed to EHB-CB tool-chain as input directory</p>
+</li>
+<li>
+<p>One or more sub-directories: Each sub-directory represents a separate function</p>
+</li>
+<li>
+<p>Within each sub-directory, files with model data, interface and label description as well as textual description is placed</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>└── ECU_SW_XYZ
+    ├── Function1
+    │   ├── function_1_model.axl
+    │   ├── interface_and_labels.xlsx
+    │   └── textual_description.adoc
+    .
+    .
+    .
+    └── Function_n
+        ├── function_n_model.axl
+        ├── interface_and_labels.xlsx
+        └── textual_description.adoc</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_directory_structure_for_the_input_data"><a class="anchor" href="#_directory_structure_for_the_input_data"></a>Directory structure for the input data</h3>
+<div class="paragraph">
+<p>Create a new directory <code>EHB_ASCET6_Example_V1</code> to hold the input data for the EHB Container.
+Within that directory, create a sub-directory <code>Function 1</code> to hold the sources of the ECU function we want to document. The sub-directory resembles a so-called <code>documentation unit</code>, i.e. an entity which contains all information required to document an ECU function.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ascet_6_model"><a class="anchor" href="#_ascet_6_model"></a>ASCET 6 model</h3>
+<div class="paragraph">
+<p>We&#8217;ll start with a small ASCET 6 model.</p>
+</div>
+<div class="paragraph">
+<p>You can either create your own ASCET 6 model or download the ASCET 6 model depicted below <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V1/Function_1/function_model.axl" class="xref attachment">here</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_0.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>Place the ASCET 6 model file in the directory holding the input data the ECU function <code>Function 1</code>.</p>
+</div>
+<div class="paragraph">
+<p>Your directory structure should look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>└── EHB_ASCET6_Example_V1
+    └── Function 1
+       └── function_model.axl</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generating_the_first_ehb_container"><a class="anchor" href="#_generating_the_first_ehb_container"></a>Generating the first EHB Container</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We&#8217;ll use the Directory-based EHANDBOOK Container-Build tool in GUI (Graphical User Interface) mode to generate the first EHANDBOOK Container for our example.</p>
+</div>
+<div class="paragraph">
+<p>In the installation directory, double-click on the <code>eHandbookCB.exe</code> to launch the tool in GUI mode. Alternatively, invoke <code>eHandbookCB.exe</code> from the command line, but without any arguments.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_cb_directory_gui.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>Specify the directory <code>&lt;path&gt;\EHB_ASCET6_Example_V1</code> with the input data as input directory.</p>
+</div>
+<div class="paragraph">
+<p>Then, chose a directory where you want the generated EHB Container to be placed. A good convetion is to create a directory named <code>outputs</code> or <code>EHB Containers</code> next to the directory with the inputs.</p>
+</div>
+<div class="paragraph">
+<p>Specify <code>EHB_ASCET6_Example_V1</code> as the name for the to be generated EHB Container.</p>
+</div>
+<div class="paragraph">
+<p>Press <strong>Generate container</strong> to start the generation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_cb_directory_gui_progress.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>After the generation is completed, you can either open the output directory or directly open the EHB Container.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_cb_directory_gui_finish.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>You can download the corresponding EHB Container <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V1.ehb" class="xref attachment">here</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_exploring_the_ehb_container_in_ehb_nav"><a class="anchor" href="#_exploring_the_ehb_container_in_ehb_nav"></a>Exploring the EHB Container in EHB-NAV</h3>
+<div class="paragraph">
+<p>Let&#8217;s open the EHB Container and inspect the example.</p>
+</div>
+<div class="paragraph">
+<p>The EHANDBOOK Container contains exactly one ECU function - <code>Function 1</code>. When selecting the function in the table of contents, the chapter is empty because we have not added any textual description yet. We&#8217;ll do that later.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>When expanding the contents of <code>Function 1</code>, you can see one sub-entry with a special icon:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1_toc.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>The entry links to the ASCET 6-based interactive model.</p>
+</div>
+<div class="paragraph">
+<p>Click on the sub-entry to open the ASCET 6-based interactive model. The model is opened in a new tab.</p>
+</div>
+<div class="paragraph">
+<p>The ASCET 6-based interactive model directly resembles the original ASCET 6 model, hence the root-level is shown.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1_modelview_1.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>Click on the <code>+</code> button to expand the contents.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1_modelview_2.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>EHANDBOOK-NAVIGATOR now unfolds the contents of the subsystem and embeds them in the context. Note that there are some gaps between the input and output ports and the input and output blocks of the subsystem.</p>
+</div>
+<div class="paragraph">
+<p>Click on the <code>+</code> button of the class instance block <code>AddSrvClassInstannce</code> to expand its contents.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1_modelview_3.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>Click on the <code>Auto-Layout</code> button in the toolbar or select <code>Auto Layout</code> from the context menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_1_modelview_4.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>The contents of the diagram is now layouted using an automatic layout algorithm. This also allows drawing additional connections to obtain a seamless signal flow depiction across subsystems. Also, the diagram is now more compact.</p>
+</div>
+<div class="paragraph">
+<p>When switching to the Model Explorer, you can inspect the hierarchies of the complete ECU function as a tree view.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summary_and_next_steps"><a class="anchor" href="#_summary_and_next_steps"></a>Summary and next steps</h3>
+<div class="paragraph">
+<p>Our first example is already functional, but not yet complete. It lacks two more pieces of information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a <strong>textual description</strong> to describe what the ECU function does</p>
+</li>
+<li>
+<p>an <strong>interface and label specification</strong> to denote how the ECU function connects to other ECU functions</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s add them in the next sections.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_label_information_and_interface_specifciation"><a class="anchor" href="#_adding_label_information_and_interface_specifciation"></a>Adding label information and interface specifciation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In our example, the function reads two variables - <code>a</code>  and <code>b</code> from global memory and writes the output to a global variable <code>result</code>. The global variables denote the interface of the ECU function.</p>
+</div>
+<div class="paragraph">
+<p>To document this appropriately, EHANDBOOK offers the possibility to express this information as <strong>structured tables for variables and parameters</strong>. Furthermore, a graphical visualization can be derived by means of a <strong>function overview</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="_input_data_for_label_information_and_interface_specification"><a class="anchor" href="#_input_data_for_label_information_and_interface_specification"></a>Input data for label information and interface specification</h3>
+<div class="paragraph">
+<p>To document information about the labels used by the ECU function as well as the interface specification in the EHB Container, this has to be described in the form of an Excel file which is stored in the same directory as the ASCET 6 model sources.</p>
+</div>
+<div class="paragraph">
+<p>The Excel file template comes with two sheets: one for <strong>signals</strong> and one for <strong>calibrations</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Signals are global variables which can be measured with the help of measurement tools such as ETAS INCA. Signals which are read and written by an ECU function are used to exchange data with other ECU functions.</p>
+</div>
+<div class="paragraph">
+<p>Calibrations are variables for which the values can be changed / fine-tuned with the help of calibration tools such as ETAS INCA. Calibrations can be e.g. single scalar values take the form of curves or maps which are interpreted by 1D or 2D interpolation routines.</p>
+</div>
+<div class="paragraph">
+<p>For our example, create an Excel file with the following two sheets and store it in the directory where the ASCET 6 model file is located.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_2_excel_table_signals.png" alt="Excel sheet for signals">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_2_excel_table_calibrations.png" alt="Excel sheet for calibrations">
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V2/Function_1/interface_and_labels.xlsx" class="xref attachment">download the filled in Excel file here.</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_generating_the_ehandbook_container"><a class="anchor" href="#_generating_the_ehandbook_container"></a>Generating the EHANDBOOK Container</h3>
+<div class="paragraph">
+<p>To generate the EHANDBOOK Container using the EHB-CB tool, follow the same steps as described earlier.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the EHB-CB tool in GUI mode</p>
+</li>
+<li>
+<p>Specify the directory with the input data as input location</p>
+</li>
+<li>
+<p>Specify a directory as the output location</p>
+</li>
+<li>
+<p>Start the generation</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also download the corresponding EHB Container <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V2.ehb" class="xref attachment">here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exploring_the_ehandbook_container_in_ehb_nav"><a class="anchor" href="#_exploring_the_ehandbook_container_in_ehb_nav"></a>Exploring the EHANDBOOK Container in EHB-NAV</h3>
+<div class="paragraph">
+<p>When you open the EHB Container in EHB-NAV, the first difference you will notice to the first example is that there is some textual content in the documentation for <code>Function 1</code>.</p>
+</div>
+<div class="paragraph">
+<p>For signals and calibrations, EHANDBOOK Container Build automatically generates an additional sub-section and lists the details for these labels as structured tables.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_2.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>When you double-click on the entry <strong>Function Overview</strong>, a new tab is opened which shows the external interface of the ECU function as a model view.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_2_function_overview.png" alt="EHB-CB GUI">
+</div>
+</div>
+<div class="paragraph">
+<p>You can now start to expand the function overview block. This will expose the details of the Simulink based interactive model.
+Notice that the input and output signals used by the system <code>function_model</code> are connected to the so-called label ports of the function overview. Through this, the ECU function can be connected to other ECU functions, establishing a seamless signal flow diagram.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_2_function_wallpaper.png" alt="EHB-CB GUI">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_summary_and_next_steps_2"><a class="anchor" href="#_summary_and_next_steps_2"></a>Summary and next steps</h3>
+<div class="paragraph">
+<p>The first example now also conains the interface as well as label specification for the ECU function. The interactive models are now fully complete.</p>
+</div>
+<div class="paragraph">
+<p>In the next section, we&#8217;ll add a textual description for the ECU function.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_textual_documentation"><a class="anchor" href="#_adding_a_textual_documentation"></a>Adding a textual documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Textual descriptions are typically used to explain the purpose of the ECU function to the reader.</p>
+</div>
+<div class="sect2">
+<h3 id="_textual_documentation_as_asciidoc_file"><a class="anchor" href="#_textual_documentation_as_asciidoc_file"></a>Textual documentation as AsciiDoc file</h3>
+<div class="paragraph">
+<p>To add a textual description, you have to place a document in AsciiDoc format (.adoc) in the directory of the ECU function.</p>
+</div>
+<div class="paragraph">
+<p>You can write a new document from scratch using a text editor or IDE (e.g., Visual Studio Code) and save it as <code>.adoc</code> file.</p>
+</div>
+<div class="paragraph">
+<p>EHANDBOOK supports basic features of AsciiDoc such as document structure in the form of chapters and sub-sections. You can write paragraphs, include raster images (e.g., JPEG format) and add tables.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V3/Function_1/description.adoc" class="xref attachment">download an example AsciiDoc document here.</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_referencing_to_model_screenshots"><a class="anchor" href="#_referencing_to_model_screenshots"></a>Referencing to model screenshots</h3>
+<div class="paragraph">
+<p>In order to document ECU functions, it is often helpful to have a model screenshot followed by some textual explanation.</p>
+</div>
+<div class="paragraph">
+<p>EHANDBOOK Container-Build can automatically generate a screenshots from Simulink based interactive models that can be embedded in the textual documentation.</p>
+</div>
+<div class="paragraph">
+<p>To generate a screenshot, you have to create a model reference to the Simulink model and the  subsystem you want to depict. This can be achieved with the EHANDBOOK model reference directive:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ehbmodelref:&lt;ascet-6-model/hierarchy-path&gt;[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, to obtain a model screenshot for the block diagram of the <code>Subsystem</code> subsystem in the Simulink model file <code>function_model</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ehbmodelref::"Project/Main/Module/Main"[Project/Main/Module/Main]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_generating_the_ehandbook_container_2"><a class="anchor" href="#_generating_the_ehandbook_container_2"></a>Generating the EHANDBOOK Container</h3>
+<div class="paragraph">
+<p>To generate the EHANDBOOK Container using the EHB-CB tool, follow the same steps as described earlier.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Launch the EHB-CB tool in GUI mode</p>
+</li>
+<li>
+<p>Specify the directory with the input data as input location</p>
+</li>
+<li>
+<p>Specify a directory as the output location</p>
+</li>
+<li>
+<p>Start the generation</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also download the corresponding EHB Container <a href="../_attachments/dir-ascet-6/EHB_ASCET6_Example_V3.ehb" class="xref attachment">here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exploring_the_ehandbook_container_in_ehb_nav_2"><a class="anchor" href="#_exploring_the_ehandbook_container_in_ehb_nav_2"></a>Exploring the EHANDBOOK Container in EHB-NAV</h3>
+<div class="paragraph">
+<p>When you open the EHB Container in EHB-NAV, the chapter now also contains a chapter <code>Function_1</code> with sub-section <code>Function Description</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_3.png" alt="EHANDBOOK including textual documentation">
+</div>
+</div>
+<div class="paragraph">
+<p>In the section <code>Function Description</code>, we had given a brief textual explanation of what the ECU function does. Furthermore, we had given a reference to the subsystem <code>Subsystem</code>. EHANDBOOK Container-Build has generated a model screenshot and integrated this a the place of the model reference.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, the model screenshot is linked to the interactive model. By clicking on the button <strong>Open interactive model</strong>, the block diagram for the subsystem is opened in a new model viewer tab where it can be further explored.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ascet-6/ehb_nav_ascet_6_example_3_open_interactive_model.png" alt="Interactive Model can be opened from the linked screenshot">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Congratulations! The example EHB Container is now complete.</p>
+</div>
+<div class="paragraph">
+<p>The EHB Container includes a textual documentation with <strong>automatically generated model screenshot</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, the labels of the ECU function are documented by means of structured tables. For the interface, an automatic generated <strong>function overview</strong> is available. The latter is directly linked to the <strong>interactive model</strong> which has been generated from the Simulink model.</p>
+</div>
+<div class="paragraph">
+<p>Here are few things you can do now:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create more EHB Containers with different models. You can load and combine them in EHANDBOOK-NAVIGATOR.</p>
+</li>
+<li>
+<p>Create a single EHANDBOOK Container with multiple functions. For this, create sibling directories next to the directory for your one ECU function, add your input data and run EHB-CB.</p>
+</li>
+<li>
+<p>Generate a PDF documentation for the contents of your EHANDBOOK Container. Check the command-line option <code>-pdf</code>.</p>
+</li>
+<li>
+<p>Apply custom styling and branding to your EHANDBOOK Container.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <!--
+  <img src="../../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
+  -->
+
+  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
+  <div class="d-flex align-items-center justify-content-center flex-wrap">
+    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
+          </path>
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+      href="https://twitter.com/ETAS_global" title="Go to: Twitter"><i><svg xmlns="http://www.w3.org/2000/svg"
+          width="24" height="20" viewBox="0 0 24 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M24,2.36764 C23.118155,2.7692295 22.16869,3.040805 21.17274,3.16215 C22.18982,2.5381 22.97024,1.54857 23.33791,0.369805 C22.38563,0.94763 21.33333,1.368 20.20919,1.59335 C19.313255,0.61249 18.03275,-5e-06 16.6156,-5e-06 C13.89822,-5e-06 11.693605,2.26074 11.693605,5.048745 C11.693605,5.444556 11.735866,5.82881 11.820388,6.19862 C7.728118,5.9877135 4.100738,3.97977 1.670738,0.92162 C1.24672,1.669905 1.004423,2.53809 1.004423,3.46261 C1.004423,5.213425 1.873593,6.759105 3.194948,7.66485 C2.389173,7.6402925 1.628473,7.4106065 0.963568,7.03502 L0.963568,7.0971365 C0.963568,9.5442315 2.661048,11.5854015 4.914968,12.0476615 C4.502219,12.166116 4.066933,12.225343 3.617558,12.225343 C3.3006005,12.225343 2.990688,12.1950075 2.690633,12.13578 C3.317503,14.140835 5.134723,15.60129 7.290033,15.640295 C5.605228,16.995295 3.480913,17.80281 1.174883,17.80281 C0.77763,17.80281 0.384603,17.779697 2.8e-05,17.733471 C2.179283,19.163591 4.768473,19.999991 7.547828,19.999991 C16.605778,19.999991 21.557328,12.307691 21.557328,5.635241 C21.557328,5.415667 21.553102,5.196093 21.5446495,4.980851 C22.5067895,4.268681 23.3421495,3.380271 24.0000095,2.367631">
+          </path>
+        </svg></i> <span class="etas-sr-only">Twitter</span></a> <a target="_socialmedia" class="etas-social-link"
+      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
+          width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
+            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
+        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  </div>
+  <div class="etas-footer-separator"></div>
+  <span>
+    <b>© ETAS 2023</b>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+  </span>
+</footer><script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../search-index.js"></script>
+  </body>
+</html>
