@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tutorial: EHB-CB for ASCET-DEVELOPER :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/tutorials-cb/ascet-developer/contents.html">
+    <meta name="generator" content="Antora 3.1.8">
+<link rel="stylesheet" href="../../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+        <img class="navbar-item" src="../../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+      </a>
+      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+<div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="12.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../safety_and_privacy_information.html">Safety and Privacy Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../intended_use.html">Intended Use</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../target_group.html">Target Group</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../classification_of_safety_messages.html">Classification of Safety Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../safety_information.html">Safety Information</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ehb_cb_warning_messages.html">Warning Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../privacy.html">Privacy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../copyrights.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ETAS_contacts.html">ETAS Contacts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../whats-new/index.html">What&#8217;s New</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_11_3.html">Version 11.3 (December 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_11_2.html">Version 11.2 (September 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_11_1.html">Version 11.1 (June 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_11_0.html">Version 11.0 (March 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_3.html">Version 10.3 (December 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../container_build.html">Container-Build</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_container_build.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_container_build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_container_build.html#_quick_start_demos">Quick Start Demos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_container_build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_container_build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="contents.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dir-ascet-6/contents.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dir-simulink/contents.html">Simulink</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dir-ccode/contents.html">C-Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/index.html">Explanations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/model_languages/overview.html">Model Languages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/ascet6.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow / TargetLink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/model_languages/c_code.html">C-Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/automotive_standards/overview.html">Automotive Standards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_download">Download</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_installation">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/platforms.html">Supported Platforms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/platforms.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/platforms.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../explanations/ehb_cb_features.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../how-to-guides/index.html">How-to guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/how-to-support-simulink-libraries-in-ehb.html">How to configure EHB-CB for Simulink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/how-to-support-targetlink-models.html">How to support TargetLink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../how-to-guides/how-to-customize-interactive-models.html">How to customize Interactive Models</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Simulink</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support">Passing Simulink library paths to EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ASCET-DEVELOPER</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">C-Code</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_model_depth_skip">Model Depth</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept">View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/simulink_libraries_configuration_using_simulinkView.html">Configure appearance of Simulink library blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/simulink-view-concept.html">Simulink View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks">Configuration of details shown for Simulink subsystem-based blocks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Label-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration">Label Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment">Label Amendment</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Textual Contents</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic">ClickPic</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration">Label Table Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize EHB Containers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_dir_based_ehb_cb">Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">How to support Asian languages in EHANDBOOK generated PDF documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/index.html">References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/other_input_formats.html">Other Input Formats</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../references/styling.html">Styling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../references/EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../navigator.html">Navigator</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../about_navigator.html">About Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../quick_start_navigator.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_navigator.html#_installing_navigator">Installing Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_navigator.html#_licensing_the_software">Licensing the Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_navigator.html#_getting_started">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../quick_start_navigator.html#_troubleshooting">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../user-interface/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/menus.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/toolbar.html">Toolbars</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/document_views.html">Document Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/model_views.html">Model Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/bookmarks.html">Bookmark Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/search_views.html">Search Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/label_popup.html">Label Popup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/other_views.html">Other Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../user-interface/pref_dialogs.html">Preference Dialogs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../how-to-navigator/how_to_navigator.html">How-to guides</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tutorials-nav/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/interactive_models.html">Interactive Models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tutorials-nav/software_function_navigation.html">Software Function Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../tutorials-nav/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../tutorials-nav/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/searching.html">Searching</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/dependency_analysis.html">Dependency Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../tutorials-nav/devices_and_rasters.html">Devices and Rasters</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../known-issues/known_issues.html">Known Issues</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../known-issues/known_issues_navigator.html">Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../EHANDBOOK_Container-Build_User_Guide__Known_Issues.html">Container-Build</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">12.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">12.1</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">EHANDBOOK</a></li>
+    <li><a href="../../container_build.html">Container-Build</a></li>
+    <li><a href="../index.html">Tutorials</a></li>
+    <li><a href="contents.html">ASCET-DEVELOPER</a></li>
+  </ul>
+</nav>
+
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
+
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">12.0</button>
+  <div class="version-menu">
+    <a class="version" href="../../../tutorials-cb/ascet-developer/contents.html">12.1</a>
+    <a class="version is-current" href="contents.html">12.0</a>
+    <a class="version is-missing" href="../../../11.3/index.html">11.3</a>
+    <a class="version is-missing" href="../../../11.2/index.html">11.2</a>
+    <a class="version is-missing" href="../../../11.1/index.html">11.1</a>
+    <a class="version is-missing" href="../../../11.0/index.html">11.0</a>
+    <a class="version is-missing" href="../../../10.3/index.html">10.3</a>
+    <a class="version is-missing" href="../../../10.2/index.html">10.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tutorial: EHB-CB for ASCET-DEVELOPER</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this tutorial, you will learn how to generate EHANDBOOK Containers for apps developed in <strong>ASCET-DEVELOPER</strong> using the <strong>EHANDBOOK Container-Build tools</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>For this tutorial, you will need the following tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ASCET-DEVELOPER 7.6</p>
+</li>
+<li>
+<p>EHANDBOOK-NAVIGATOR 10.0 or higher</p>
+</li>
+<li>
+<p>EHANDBOOK Container-Build tool-chain 10.0 or higher</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation_of_tools_license_keys"><a class="anchor" href="#_installation_of_tools_license_keys"></a>Installation of tools &amp; license keys</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ascet_developer"><a class="anchor" href="#_ascet_developer"></a>ASCET-DEVELOPER</h3>
+<div class="paragraph">
+<p>To install ASCET-DEVELOPER, download the installation package from the <a href="https://etas.com/ascet">ETAS download center</a> and run the setup.exe.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ehandbook_container_build_tools"><a class="anchor" href="#_ehandbook_container_build_tools"></a>EHANDBOOK Container-Build tools</h3>
+<div class="paragraph">
+<p>The installation and setup of the EHANDBOOK Container-Build tools is conducted in two steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Download the installation package and unzip it into a location of your preferences. As a default location, it is recommended to install ETAS products under <code>c:\etas\</code>. This could for example be <code>C:\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows</code>.</p>
+</li>
+<li>
+<p>Registration of license keys: Go to the installation directory where you have unzipped the tool and execute <code>EHANDBOOK-Container-Build_x.x.x_License-Management_setup.exe</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ehandbook_navigator"><a class="anchor" href="#_ehandbook_navigator"></a>EHANDBOOK-NAVIGATOR</h3>
+<div class="paragraph">
+<p>To install EHANDBOOK-NAVIGATOR, download the installation package from the <a href="https://etas.com/ascet">ETAS download center</a> and run the setup.exe.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license_keys"><a class="anchor" href="#_license_keys"></a>License keys</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To operate the ETAS products, you need suitable license keys for the different features that are used in the tutorial.
+For trial purposes, you can obtain license keys from ETAS free of charge. Go to the <a href="http://license.etas.com">ETAS license and download portal</a> for obtaining the tools and license keys.</p>
+</div>
+<div class="paragraph">
+<p>After installing the tools and setting up the license keys, you can inspect if all required license keys are available in the ETAS License Manager:</p>
+</div>
+<div class="paragraph">
+<p>License keys required for ASCET-DEVELOPER:
+<span class="image"><img src="../_images/ascet-developer/ascet7_license_keys.jpg" alt="License keys required for ASCET-DEVELOPER"></span></p>
+</div>
+<div class="paragraph">
+<p>License keys required for EHANDBOOK Container-Build tools:
+<span class="image"><img src="../_images/ascet-developer/ehb_cb_license_keys.jpg" alt="License keys required for EHANDBOOK Container-Build tools"></span></p>
+</div>
+<div class="paragraph">
+<p>License keys required for EHANDBOOK-NAVIGATOR:
+<span class="image"><img src="../_images/ascet-developer/ehb_nav_license_keys.jpg" alt="License keys required for EHANDBOOK-NAVIGATOR"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_the_demo_app_in_ascet_developer"><a class="anchor" href="#_setting_up_the_demo_app_in_ascet_developer"></a>Setting up the demo app in ASCET-DEVELOPER</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this tutorial, we will use the <strong>BoardComputer demo app</strong> that ships with ASCET-DEVELOPER.</p>
+</div>
+<div class="paragraph">
+<p>To set up the demo, launch ASCET-DEVELOPER and select a workspace that you want to use. You can use an existing workspace or create a new one.</p>
+</div>
+<div class="paragraph">
+<p>Create a new workspace by going to <strong>File -&gt; Switch Workspace -&gt; Other</strong> and then specifying a new directory for your workspace.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_workspace_creation.jpg" alt="Creation of a new workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>To install the <strong>BoardComputer demo app</strong>, open the Eclipse Welcome Page via <strong>Help -&gt; Welcome</strong> and click on samples.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_welcome_page.jpg" alt="Creation of a new workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>On the next page, select the <strong>ASCET-DEVELOPER Samples</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_welcome_page_ascet_samples.jpg" alt="Creation of a new workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>From the dialog, select the <strong>Board Computer</strong> app, then press Next and Finish.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/ascet-developer/ascet7_welcome_page_samples_board_computer_step1.jpg" alt="Creation of a new workspace"></span>
+<span class="image"><img src="../_images/ascet-developer/ascet7_welcome_page_samples_board_computer_step2.jpg" alt="Creation of a new workspace"></span></p>
+</div>
+<div class="paragraph">
+<p>After the BoardComputer app is installed, you should see a set of projects in the Project Explorer and the main block diagram of the app.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet_7_board_computer_demo.jpg" alt="Creation of a new workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>Expand the project BoardComputer and the directory components to see the .app file. Then double-click on the <code>BoardComputer.app</code> file. In the corresponding editor, you can see the entry point classes of the app as well as the operating system (OS) schedule that has been configured.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet_7_board_computer_demo_app_with_entry_point_classes.jpg" alt="Creation of a new workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>It is this BoardComputer.app file which is the starting point for generating an EHANDBOOK Container.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_launch_configuration_for_ehandbook_container_build"><a class="anchor" href="#_creating_a_launch_configuration_for_ehandbook_container_build"></a>Creating a launch configuration for EHANDBOOK Container-Build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To generate an EHANDBOOK container for the BoardComputer app, we need to create a new launch configuration.</p>
+</div>
+<div class="paragraph">
+<p>Go to <strong>Run -&gt; Run As -&gt; EHANDBOOK Container-Build &#8230;&#8203;</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_new_launch_config.jpg" alt="ascet7 boardcomputer new launch config">
+</div>
+</div>
+<div class="paragraph">
+<p>In the dialog, we have to configure a few settings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Name:</strong> This is the name of the launch configuration. This will also be used for the EHANDBOOK Container file name, i.e. the generated output.</p>
+</li>
+<li>
+<p><strong>ASCET application:</strong> Here you can select the ASCET app file for which you want to generate an EHANDBOOK Container. In our case, this is the BoardComputer.app, and it is already pre-selected.</p>
+</li>
+<li>
+<p><strong>Generate results into folder:</strong> Here we have to specify a directory where the EHB Container-Build results shall be generated. This can be a location within the workspace or project, or another location on your system.</p>
+</li>
+<li>
+<p><strong>EHB Container-Build Path:</strong> Here we have to specify the path to the specific EHANDBOOK Container-Build tool that shall be invoked for generating the EHB Container file. This path must point to the <code>eHandbookCB.exe</code> of the EHANDBOOK Container-Build tool we installed earlier.</p>
+</li>
+<li>
+<p><strong>Additional Commands</strong>: Here you can provide additional command-line parameters to the EHANDBOOK Container-Build tool. For the BoardComputer demo app, we will use the <code>-splitapp</code> option. This will generate an EHANDBOOK Container where the entry point classes are represented as individual function building blocks in EHANDBOOK. Furthermore, we will use the <code>-gensvg</code> option. This will generate SVG images for both function overviews as well as block diagram models.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following image shows the dialog filled with the necessary entries.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_new_launch_config_dialog_filled.jpg" alt="ascet7 boardcomputer new launch config dialog filled">
+</div>
+</div>
+<div class="paragraph">
+<p>Click on <strong>Apply</strong> to save the lauch configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_an_ehandbook_container_build"><a class="anchor" href="#_running_an_ehandbook_container_build"></a>Running an EHANDBOOK Container-Build</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To trigger an EHANDBOOK Container-Build for the BoardComputer app, click on <strong>Run</strong> in the launch configuration.</p>
+</div>
+<div class="paragraph">
+<p>You can observe the outputs of the EHANDBOOK Container-Build process in the Console window.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_ehb_cb_console_outputs.jpg" alt="ascet7 boardcomputer ehb cb console outputs">
+</div>
+</div>
+<div class="paragraph">
+<p>After the build has finished, you can find the EHANDBOOK Container file <strong>BoardComputer_EHB_Gen.ehb</strong> in the previously defined location.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_ehb_cb_finished.jpg" alt="ascet7 boardcomputer ehb cb finished">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inspecting_the_ehandbook_container_in_ehandbook_navigator"><a class="anchor" href="#_inspecting_the_ehandbook_container_in_ehandbook_navigator"></a>Inspecting the EHANDBOOK Container in EHANDBOOK-NAVIGATOR</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After the EHANDBOOK Container file has been generated, let&#8217;s inspect it in EHANDBOOK-NAVIGATOR.</p>
+</div>
+<div class="paragraph">
+<p>To launch the tool and open the EHANDBOOK Container file, simply double-click on the <strong>BoardComputer_EHB_Gen.ehb</strong> file.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_ehb_cb_finished.jpg" alt="ascet7 boardcomputer ehb cb finished">
+</div>
+</div>
+<div class="paragraph">
+<p>After the EHANDBOOK Container is loaded, you will see the following things in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <strong>title page</strong> with some information when the EHANDBOOK Container was generated and for which app. In our case, the BoardComputer demo app. (Note that the title page can be fully customized using the optional styling and branding configurations offered by EHANDBOOK Container-Build tools.)</p>
+</li>
+<li>
+<p>A <strong>table of contents</strong> with all entry point classes of the BoardComputer app, sorted in alphabetic order. Note that these are referred to as <strong>functions</strong> in EHANDBOOK (i.e., the entry point classes of the ASCET-DEVELOPER app have been converted to functions in EHANDBOOK).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen1.jpg" alt="ehb nav boardcomputer screen1">
+</div>
+</div>
+<div class="paragraph">
+<p>For each <strong>function</strong>, the following entries are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Function Overview</strong>: This section provides a graphical depiction of the function with its inputs and outputs.</p>
+</li>
+<li>
+<p><strong>Systemconstant-Parameter-Variable-Classinstance-Structure</strong>: This section provides a set of tables for system constants, parameters, variables and class instances of the function. Note that the tables can be configured via the table configuration feature of EHANDBOOK Container-Build.</p>
+</li>
+<li>
+<p><strong><em>Function</em></strong>: This entry directly links to the interactive model and opens a model viewer window.</p>
+</li>
+<li>
+<p><strong>Function Overview</strong>: This entry directly links to the function overview as interactive model and opens a model viewer window.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen2.jpg" alt="ehb nav boardcomputer screen2">
+</div>
+</div>
+<div class="paragraph">
+<p>Expand the entry <strong>BoardComputer</strong> and click on the entry with the model icon.</p>
+</div>
+<div class="paragraph">
+<p>This will open a new Model Viewer tab in EHANDBOOK-NAVIGATOR. Note that the entry point class is shown with it&#8217;s outer layout first.  Double-click onto the block to navigate in.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen3.jpg" alt="ehb nav boardcomputer screen3">
+</div>
+</div>
+<div class="paragraph">
+<p>The next level shows the different <em>diagrams</em> that are available for the <em>block diagram specifications</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen4.jpg" alt="ehb nav boardcomputer screen4">
+</div>
+</div>
+<div class="paragraph">
+<p>Double-click on the block with <em>_10ms</em> to navigate in. Here, you can see the same block diagram as in ASCET-DEVELOPER - now as interactive model in EHANDBOOK-NAVIGATOR.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen5.jpg" alt="ehb nav boardcomputer screen5">
+</div>
+</div>
+<div class="paragraph">
+<p>Note that when you switch to the Model Explorer view, you can see the full hierarchy of the interactive model, i.e. all diagrasms and all nesting levels of the block diagram. By double-clicking on a specific entry, you can also navigate to a specific location.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen6.jpg" alt="ehb nav boardcomputer screen6">
+</div>
+</div>
+<div class="paragraph">
+<p>You can also create function overview diagrams with multiple interconnected functions and trace signals across them.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen7.jpg" alt="ehb nav boardcomputer screen7">
+</div>
+</div>
+<div class="paragraph">
+<p>The block diagrams from the static classes are contained within the functions. Through this, you can trace signal flows within and across functions.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_screen8.jpg" alt="ehb nav boardcomputer screen8">
+</div>
+</div>
+<div class="paragraph">
+<p>For more features, such as the connectivity to INCA 7 or MDA 8, check out the videos on the Welcome Page of EHANDBOOK-NAVIGATOR or the <a href="https://www.youtube.com/playlist?list=PLdK8AlEjocsX3lrfL0TUT24buW16oagWL">EHANDBOOK playlist on the ETAS YouTube channel</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ascet_developer_authoring_styles"><a class="anchor" href="#_ascet_developer_authoring_styles"></a>ASCET-DEVELOPER authoring styles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK supports two styles for how to author and interpret documentation contents which are attached to ASCET-DEVELOPER apps.
+In both approaches, the documentation link files (.dlk) files provided by ASCET-DEVELOPER keep track of the linking between model elements and documentation files.</p>
+</div>
+<div class="sect2">
+<h3 id="_snippet_mode"><a class="anchor" href="#_snippet_mode"></a>Snippet mode</h3>
+<div class="paragraph">
+<p>With ASCET-DEVELOPER, you can attach documentation snippets to all kinds of model artifacts such as ESDL files, block diagrams, specifications, containers or statement blocks, and even methods. Through this, small pieces of information are attached to the individual model elements that shall be documented.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/explanation_snippet_mode.jpg" alt="explanation snippet mode">
+</div>
+</div>
+<div class="paragraph">
+<p>EHANDBOOK Container-Build can collect all documentation snippets and aggregate them into a single documentation chapter. Furthermore, you can obtain an automatically generated model screenshot which is embedded along with the documentation snippet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_expert_authoring_mode"><a class="anchor" href="#_expert_authoring_mode"></a>Expert authoring mode</h3>
+<div class="paragraph">
+<p>In this approach, a single documentation file is attached to the block diagram or ESDL class that represents a static entry point class. The documentation file contains all your contents for the complete static entry point class. As an expert author, you have the complete degree of freedom for how to structure the contents of your documentation chapter. For generating model screenshots which are automatically embedded at the places of your choice, you can add EHANDBOOK-specific ASCIIDoc markers.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/explanation_expert_authoring_mode.jpg" alt="explanation expert authoring mode">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_the_documentation_infrastructure_for_the_boardcomputer_app"><a class="anchor" href="#_setting_up_the_documentation_infrastructure_for_the_boardcomputer_app"></a>Setting up the documentation infrastructure for the BoardComputer app</h3>
+<div class="paragraph">
+<p>At first, we need to set up the documentation infrastructure support for the BoardComputer app.
+This is done by ASCET-DEVELOPER when you try to create a documentation file for an ASCET model element for the first time.</p>
+</div>
+<div class="paragraph">
+<p>Right-click on the BoardComputer.bd file in the Project Explorer and select <code>Linked Documentation -&gt; Create</code> from the menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_link_documentation_to_boardcomputer_bd.jpg" alt="ascet7 link documentation to boardcomputer bd">
+</div>
+</div>
+<div class="paragraph">
+<p>As no documentation configuration file is found yet, ASCET-DEVELOPER creates a new one.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_dialog_no_documentation_configuration.jpg" alt="ascet7 dialog no documentation configuration">
+</div>
+</div>
+<div class="paragraph">
+<p>You can find the <code>documentation.ini</code> file in the project directory of the BoardComputer app.</p>
+</div>
+<div class="paragraph">
+<p>You can inspect the file to learn more about the possible configurations.</p>
+</div>
+<div class="paragraph">
+<p>One additional important step is to manually create the directory where the documentation sources will be managed.
+This directory is also mentioned in the <code>documentation.ini</code> file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Description:
+# The target folder which is used to put in the generated documentation files.
+# This property is displayed in document dialog.
+targetRootFolder = ${project_loc}/documentation</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So let&#8217;s go ahead and create the documentation directory.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_documentation_directory_newly_created.jpg" alt="ascet7 documentation directory newly created">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attaching_an_asciidoc_documentation_file_to_boardcomputer_bd"><a class="anchor" href="#_attaching_an_asciidoc_documentation_file_to_boardcomputer_bd"></a>Attaching an ASCIIDoc documentation file to BoardComputer.bd</h3>
+<div class="paragraph">
+<p>Now that the infrastructure is set up, we can add a documentation to the BoardComputer.bd file.</p>
+</div>
+<div class="paragraph">
+<p>Right-click on the BoardComputer.bd file in the Project Explorer and select <code>Linked Documentation -&gt; Create</code> from the menu.</p>
+</div>
+<div class="paragraph">
+<p>Click on Finish to create the documenation file.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_link_documentation_to_boardcomputer_bd_create_document_dialog.jpg" alt="ascet7 link documentation to boardcomputer bd create document dialog">
+</div>
+</div>
+<div class="paragraph">
+<p>ASCET-DEVELOPER then automatically opens the newly created documentation file in the associated editor.</p>
+</div>
+<div class="paragraph">
+<p>Now let&#8217;s add some content.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_writing_documentation_content_in_asciidoc"><a class="anchor" href="#_writing_documentation_content_in_asciidoc"></a>Writing documentation content in ASCIIDoc</h3>
+<div class="paragraph">
+<p>Before we start writing, here are some backgrounds on ASCIIDoc, ASCET-DEVELOPER and EHANDBOOK.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/what-is-asciidoc/">What is ASCIIDoc?</a></p>
+</div>
+<div class="paragraph">
+<p>AsciiDoc belongs to the family of lightweight markup languages, the most renowned of which is Markdown.</p>
+</div>
+<div class="paragraph">
+<p>AsciiDoc is two things:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A mature[1], plain-text writing format for authoring notes, articles, documentation, books, ebooks, web pages, slide decks, blog posts, man pages and more.</p>
+</li>
+<li>
+<p>A text processor and toolchain for translating AsciiDoc documents into various formats (called backends), including HTML, DocBook, PDF and ePub.</p>
+</li>
+</ol>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>ASCET-DEVELOPER supports attaching documentation contents in ASCIIDoc format to ASCET-DEVELOPER artifacts. And EHANDBOOK supports the conversion and aggregation of ASCIIDoc documentation contents - amongst other files and formats - to an interactive documenation in EHANDBOOK format.</p>
+</div>
+<div class="paragraph">
+<p>To learn more about how to author contents in ASCIIDoc format, refer to the <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">ASCIIDoc Syntax Quick Reference</a>.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s now add some content to the ASCIIDoc file attached to BoardComputer.bd.
+You can copy &amp; paste the following content. We&#8217;ll go through it step by step below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">Welcome to the BoardComputer demo!
+
+image::ascet-developer/vCockpit.png[]
+
+== Function Definition
+
+Main entry point to compute board computer functionality.
+
+Receives the _signals_ from various _interfaces_ and computes the following:
+
+* velocity in *kmh* (v_kmh)
+* distance in *km* (dist)
+* air *temperature* (t_air)
+* average *speed* (avg_speed)
+
+== Physical Overview
+
+ehbmodelref::BoardComputer._10ms[BoardComputer._10ms]
+
+== Function Description
+
+=== Block Diagrams
+
+==== Initialization
+
+ehbmodelref::BoardComputer._init[BoardComputer._init]
+
+==== 10 ms
+
+ehbmodelref::BoardComputer._10ms[BoardComputer._10ms]
+
+ehbmodelref::BoardComputer._10ms.velocity_conversion[BoardComputer._10ms.velocity_conversion]
+ehbmodelref::BoardComputer._10ms.distance_calculation[BoardComputer._10ms.distance_calculation]
+ehbmodelref::BoardComputer._10ms.avgspeed_calculation[BoardComputer._10ms.avgspeed_calculation]
+
+==== 1000 ms
+
+ehbmodelref::BoardComputer._1000ms[BoardComputer._1000ms]
+
+=== ESDL Specification
+
+#include::../components/BoardComputer.esdl[]</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_headings"><a class="anchor" href="#_headings"></a>Headings</h4>
+<div class="paragraph">
+<p>The headings in the ASCIIDoc file govern the document structure - sections, sub-sections and sub-sub-sections (etc.)
+The nesting level of the heading is determined by the amount of indention by means of <code>=</code> characters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// A first level heading
+== Documentation
+
+// A second level heading
+=== Block Diagrams</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_paragraphs"><a class="anchor" href="#_paragraphs"></a>Paragraphs</h4>
+<div class="paragraph">
+<p>The following content consitutes a paragraph:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one blank line.
+Newlines within a paragraph are not displayed.</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_images"><a class="anchor" href="#_images"></a>Images</h4>
+<div class="paragraph">
+<p>To embed an image, use the following ASCIIDoc markup:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>image::ascet-developer/vCockpit.png[Board computer cockpit]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the static image files have to be placed relative to the ASCIIDoc source file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lists"><a class="anchor" href="#_lists"></a>Lists</h4>
+<div class="paragraph">
+<p>Unnumbered lists can be written using asterrisks <code>*</code> or dashes <code>-</code>. Here&#8217;s an example for asterrisks:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>* velocity in kmh (v_kmh)
+* distance in km (dist)
+* air temperature (t_air)
+* average speed (avg_speed)</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ehandbook_function_overviews"><a class="anchor" href="#_ehandbook_function_overviews"></a>EHANDBOOK Function Overviews</h4>
+<div class="paragraph">
+<p>You can obtain an automatically generated images for static entry point classes. These are referred to as <em>function overviews</em> in EHANDBOOK. They show the send- and receive messages at the interface of the static classes.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// A single function overview
+ehbfunctionoverview::BoardComputer[Function Overview for BoardComputer]
+
+// An image with multiple functions
+ehbfunctionoverview::VelocitySamplingM,BoardComputer,InvokeDisplayToggle[System Overview for BoardComputer app]</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ehandbook_model_reference"><a class="anchor" href="#_ehandbook_model_reference"></a>EHANDBOOK Model Reference</h4>
+<div class="paragraph">
+<p>An EHANDBOOK-specific extension of the ASCIIDoc notation is the <em>EHANDBOOK model reference</em>.
+It is used to
+a) create a screenshot of a referred graphical model element (e.g., a block diagram specification, container, etc.)
+b) create a link of the screenshot to the interactive model in EHANDBOOK-NAVIGATOR</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ehbmodelref::BoardComputer._10ms[BoardComputer._10ms]
+
+ehbmodelref::BoardComputer._10ms.velocity_conversion[BoardComputer._10ms.velocity_conversion]
+ehbmodelref::BoardComputer._10ms.distance_calculation[BoardComputer._10ms.distance_calculation]
+ehbmodelref::BoardComputer._10ms.avgspeed_calculation[BoardComputer._10ms.avgspeed_calculation]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The syntax is similar to the syntax for embedding an image:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>image::ascet-developer/vCockpit.png[]</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ehandbook_plain_text_includes"><a class="anchor" href="#_ehandbook_plain_text_includes"></a>EHANDBOOK Plain Text Includes</h4>
+<div class="paragraph">
+<p>Additionally to referencing to models and generating screenshots, you can also include any textual contents within your ASCET-DEVELOPER project using an include directive.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#include::../components/BoardComputer.esdl[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the contents of the referred file are simply included without any styling being applied to it.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altering_the_launch_configuration_and_generating_an_ehandbook_container"><a class="anchor" href="#_altering_the_launch_configuration_and_generating_an_ehandbook_container"></a>Altering the launch configuration and generating an EHANDBOOK Container</h3>
+<div class="paragraph">
+<p>In order to generate screenshots for function overviews and model references, an additional command-line parameter <code>-gensvg</code> has to be added to the launch configuration of EHANDBOOK Container-Build.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_new_launch_config_dialog_filled_gensvg.jpg" alt="ascet7 boardcomputer new launch config dialog filled gensvg">
+</div>
+</div>
+<div class="paragraph">
+<p>With these changes, we can now generate an EHANDBOOK Container.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inspecting_the_ehandbook_container_with_textual_documentation_in_ehandbook_navigator"><a class="anchor" href="#_inspecting_the_ehandbook_container_with_textual_documentation_in_ehandbook_navigator"></a>Inspecting the EHANDBOOK Container with textual documentation in EHANDBOOK-NAVIGATOR</h3>
+<div class="paragraph">
+<p>When opening the EHANDBOOK Container in EHANDBOOK-NAVIGATOR, you can that the textual contents from the ASCIIDoc file are now available within the chapter for the BoardComputer static class entry point class.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The navigation structure of the section Documentation is derived from the nesting structure of the sections in the ASCIIDoc file</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_with_adoc_screen2_toc_extract.jpg" alt="ehb nav boardcomputer with adoc screen2 toc extract">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The content is formattted accordording to the markup specified in the ASCIIDoc file</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_with_adoc_screen3_formatting.jpg" alt="ehb nav boardcomputer with adoc screen3 formatting">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>At places where an EHANDBOOK model reference has been placed, an auto-generated screenshot from ASCET-DEVELOPER has been included. This screenshot is directly linked with the interactive model hierarchy.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_with_adoc_screen4_model_screenshot_with_reference.jpg" alt="ehb nav boardcomputer with adoc screen4 model screenshot with reference">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The ESDL code which was referred to was directly included in the content.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_with_adoc_screen5.jpg" alt="ehb nav boardcomputer with adoc screen5">
+</div>
+</div>
+<div class="paragraph">
+<p>Note that all relevant features of EHANDBOOK-NAVIGATOR also work, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Label Popup in the embedded model screenshot is supported</p>
+</li>
+<li>
+<p>Model screenshots that are related to each other are directly interlinked (click on class instances or containers/statement blocks with yellow frame to navigate)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_attaching_documentation_to_the_boardcomputer_app"><a class="anchor" href="#_attaching_documentation_to_the_boardcomputer_app"></a>Attaching documentation to the BoardComputer app</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While the previously generated EHANDBOOK Container does contain function overviews and interactive models for all the static entry point classes of the BoardComputer app, it does not yet contain any textual documentation.</p>
+</div>
+<div class="paragraph">
+<p>But what is an interactive documentation without any textual documentation? You&#8217;re right - only half the truth.</p>
+</div>
+<div class="paragraph">
+<p>To complete the example, we are now attaching some textual contents.</p>
+</div>
+<div class="paragraph">
+<p>Note that EHANDBOOK supports two different styles for how to author documentation content that is attached to ASCET-DEVELOPER apps. Learn more about the two styles in section <a href="#_ascet_developer_authoring_styles">ASCET-DEVELOPER authoring styles</a>. For the tutorial, we are going to use the expert authoring mode.</p>
+</div>
+<div class="paragraph">
+<p>The rest of the chapter is structured as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_setting_up_the_documentation_infrastructure_for_the_boardcomputer_app">Setting up the documentation infrastructure</a></p>
+</li>
+<li>
+<p><a href="#_attaching_an_asciidoc_documentation_file_to_boardcomputer_bd">Attaching an ASCIIDoc documentation file</a></p>
+</li>
+<li>
+<p><a href="#_writing_documentation_content_in_asciidoc">Writing documentation content in ASCIIDoc</a></p>
+</li>
+<li>
+<p><a href="#_altering_the_launch_configuration_and_generating_an_ehandbook_container">Altering the launch configuration</a></p>
+</li>
+<li>
+<p><a href="#_inspecting_the_ehandbook_container_with_textual_documentation_in_ehandbook_navigator">Inspecting the EHANDBOOK Container with textual documentation in EHANDBOOK-NAVIGATOR</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generating_an_additional_pdf_documentation"><a class="anchor" href="#_generating_an_additional_pdf_documentation"></a>Generating an additional PDF documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK Container-Build can generate an additional PDF documentation based on the EHANDBOOK Container contents.</p>
+</div>
+<div class="paragraph">
+<p>To generate an additional PDF documentation, you have to add the command-line option <code>-pdf</code> to the launch configuration.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_new_launch_config_dialog_filled_pdf.jpg" alt="ascet7 boardcomputer new launch config dialog filled pdf">
+</div>
+</div>
+<div class="paragraph">
+<p>You can find the generated PDF file next to the EHANDBOOK Container file in folder specified for the generated results.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_ehb_cb_finished_pdf.jpg" alt="ascet7 boardcomputer ehb cb finished pdf">
+</div>
+</div>
+<div class="paragraph">
+<p>The PDF contains the same static contents as the EHANDBOOK Container.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/pdf_boardcomputer.jpg" alt="pdf boardcomputer">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applying_custom_branding_and_styling"><a class="anchor" href="#_applying_custom_branding_and_styling"></a>Applying custom branding and styling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ECU software documentation files generated with EHANDBOOK Container-Build can be customized to adhere to the coorporate identity of the documentation provider by applying  the correspinding branding and styling as well as by providing a custom title page.</p>
+</div>
+<div class="paragraph">
+<p>To organize the configuration files in ASCET-DEVELOPER, it is recommended to create a folder / directory within the workspace, e.g. <code>ehb_configs</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_ehb_configs_directory.jpg" alt="ascet7 ehb configs directory">
+</div>
+</div>
+<div class="paragraph">
+<p>The customization is achieved by passing additional configuration files to EHB-CB via the command-line interface.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_launch_config_dialog_filled_styling_branding.jpg" alt="ascet7 boardcomputer launch config dialog filled styling branding">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_headerfooter_text_and_logo"><a class="anchor" href="#_headerfooter_text_and_logo"></a>Header/Footer text and logo</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to apply a custom header and footer text and logo, you have to create a <code>branding.properties</code> file which has to be passed via the CLI option <code>-branding</code> to EHB-CB.</p>
+</div>
+<div class="paragraph">
+<p><code>-branding ${workspace_loc}\BoardComputer\ehb_configs\branding.properties</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ascet7_boardcomputer_launch_config_dialog_filled_styling_branding.jpg" alt="ascet7 boardcomputer launch config dialog filled styling branding">
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows a branding.properties file for our example ETAS BoardComputer demo app.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Relative path to header image (.png)
+header.image=./css/ETAS_Logo_Blue.png
+# Legal text to be part of the topic footer and print-outs
+footer.text = Â© ETAS GmbH reserves all rights even in the event of industrial property rights. We reserve all rights of disposal such as copying and passing on to third parties.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that this file must be saved with UTF-8 encoding.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_custom_title_page"><a class="anchor" href="#_custom_title_page"></a>Custom title page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To provide a good first visual appearance and adhere to corporate design rules, you can provide a custom title page in the form of an SVG image.
+The SVG image must have the name <code>title_page.svg</code> and be located within the directory with the styling information for EHB-CB.</p>
+</div>
+<div class="paragraph">
+<p>You can apply custom contents to the title page image. For this, placeholders have to be embedded in the SVG image. These will be replaced with contents that are provided in a <code>title_page.properties</code> file. The latter must be located in the same directory as thje <code>title_page.svg</code> file itself.</p>
+</div>
+<div class="paragraph">
+<p>For details, see the Title Page Styling Guide that comes with the documentation of EHANDBOOK Container-Build.</p>
+</div>
+<div class="paragraph">
+<p>The custom title page image with additional textual contents from the <code>title_page.properties</code> is then shown in EHB-NAV directly after opening the corresponding EHB Container.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_custom_title_page.jpg" alt="ehb nav boardcomputer custom title page">
+</div>
+</div>
+<div class="paragraph">
+<p>In the same way, the title page image is shown on the first page of the generated PDF documentation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/pdf_boardcomputer_custom_title_page.jpg" alt="pdf boardcomputer custom title page">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_styling"><a class="anchor" href="#_styling"></a>Styling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The visual appearance of both the HTML contents as well as the generated PDF from EHANDBOOK Container-Build can be customized via configuration files.
+The configuration files must be located in a styling directory (e.g., <code>css</code>) for which the path is passed to EHB-CB via the CLI option <code>-css</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>-css ${workspace_loc}\BoardComputer\ehb_configs\css</code></p>
+</div>
+<div class="paragraph">
+<p>As starting point, refer to the examples provided with EHANDBOOK Container-Build under <code>\examples\styling</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/ascet-developer/ehb_nav_boardcomputer_custom_styling.jpg" alt="ehb nav boardcomputer custom styling">
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <!--
+  <img src="../../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
+  -->
+
+  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
+  <div class="d-flex align-items-center justify-content-center flex-wrap">
+    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
+          </path>
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
+          width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
+            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
+        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  </div>
+  <div class="etas-footer-separator"></div>
+  <span>
+    <b>© ETAS 2024</b>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+  </span>
+  <span>
+    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+  </span>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../search-index.js"></script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../search-index.js"></script>
+  </body>
+</html>

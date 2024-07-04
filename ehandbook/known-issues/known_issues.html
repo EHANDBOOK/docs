@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: EHANDBOOK Docs &amp; Tutorials</title>
+    <title>Known Issues :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/known-issues/known_issues.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.8">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.0">
+<div class="nav-container" data-component="ehandbook" data-version="12.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
   </li>
@@ -389,6 +392,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
   <li class="nav-item" data-depth="5">
     <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
   </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-truth-table-block-support">Simulink Truthtable block in the documentation</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="4">
@@ -488,7 +494,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_dir_based_ehb_cb">Dir-based EHB-CB</a>
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_directory_based_ehb_cb">Dir-based EHB-CB</a>
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
@@ -672,10 +678,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="known_issues.html">Known Issues</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="known_issues_navigator.html">Navigator</a>
+    <a class="nav-link" href="#_container_build">Container-Build</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../EHANDBOOK_Container-Build_User_Guide__Known_Issues.html">Container-Build</a>
+    <a class="nav-link" href="#_navigator">Navigator</a>
   </li>
 </ul>
   </li>
@@ -687,14 +693,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.0</span>
+    <span class="version">12.1</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.0</a>
+          <a href="../index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../12.0/index.html">12.0</a>
         </li>
         <li class="version">
           <a href="../11.3/index.html">11.3</a>
@@ -739,9 +748,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">12.1</button>
   <div class="version-menu">
-    <a class="version is-current" href="known_issues.html">12.0</a>
+    <a class="version is-current" href="known_issues.html">12.1</a>
+    <a class="version" href="../12.0/known-issues/known_issues.html">12.0</a>
     <a class="version is-missing" href="../11.3/index.html">11.3</a>
     <a class="version is-missing" href="../11.2/index.html">11.2</a>
     <a class="version is-missing" href="../11.1/index.html">11.1</a>
@@ -756,16 +766,272 @@ function BoschPrivacyCallback_OnUpdate(a) {
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Known Issues</h1>
 <div class="sect1">
-<h2 id="_known_issues"><a class="anchor" href="#_known_issues"></a>Known Issues</h2>
+<h2 id="_container_build"><a class="anchor" href="#_container_build"></a>Container-Build</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_general"><a class="anchor" href="#_general"></a>General</h3>
+<div class="sect3">
+<h4 id="_issues_with_model_path_containing_special_characters"><a class="anchor" href="#_issues_with_model_path_containing_special_characters"></a>Issues with model path containing special characters</h4>
+<div class="paragraph">
+<p>Screenshots and model linking will be missing for Simulink subsystem names containing back slashes or forward slashes.
+Model linking will be missing for Simulink subsystem or ASCET hierarchy names containing dots.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_matlab_simulink"><a class="anchor" href="#_matlab_simulink"></a>MATLAB Simulink</h3>
+<div class="sect3">
+<h4 id="_simulink_blocks_with_show_block_name_option_set_to_auto_are_always_shown"><a class="anchor" href="#_simulink_blocks_with_show_block_name_option_set_to_auto_are_always_shown"></a>Simulink blocks with "Show Block Name" option set to "Auto" are always shown</h4>
+<div class="paragraph">
+<p>For Simulink blocks when "Auto" mode is on, block names are always shown. This behavior might be different when compared to Simulink.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_display_issues_with_simulink_annotation_blocks"><a class="anchor" href="#_display_issues_with_simulink_annotation_blocks"></a>Display issues with Simulink Annotation blocks</h4>
+<div class="paragraph">
+<p>Simulink Annotation blocks with rich text formatting might look a bit blurred or fuzzy in the documentation when the used text font is small or annotation block is generated without enabling rich text extraction option.For details refer <a href="../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html#simulink-rich-text-annotations-as-text" class="xref page">Simulink rich text annotations as text</a>
+When styling is applied for the text of Simulink annotation blocks, the displayed text might have different appearance. There are certain limitations in the rendering of the following stylings:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="known_issues_navigator.html" class="xref page">Navigator</a></p>
+<p>Right alignment of text</p>
 </li>
 <li>
-<p><a href="../EHANDBOOK_Container-Build_User_Guide__Known_Issues.html" class="xref page">Container-Build</a></p>
+<p>Table appearance</p>
+</li>
+<li>
+<p>Hidden text due to overlapping whitespaces</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pdf"><a class="anchor" href="#_pdf"></a>PDF</h3>
+<div class="sect3">
+<h4 id="_pdf_generation_failure"><a class="anchor" href="#_pdf_generation_failure"></a>PDF generation failure</h4>
+<div class="paragraph">
+<p>Provide output directory name and path (<code>-o</code> option) case sensitive that is in sync with OS. If case insensitive, PDF generation fails.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_navigator"><a class="anchor" href="#_navigator"></a>Navigator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 12.1.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In ASCET V6 based interactive models, EHANDBOOK-NAVIGATOR does not show "Start" and "History" states for state machines.</p>
+</li>
+<li>
+<p>When "Invisible view" info is applied to a state, EHANDBOOK-NAVIGATOR does not show the transition attached to the state.</p>
+</li>
+<li>
+<p>Formulas text is not selectable/searchable.</p>
+</li>
+<li>
+<p>Combination of styled and normal text are not searchable in Local Search. Example: Search strings containing bold and normal text does not yield search results.</p>
+</li>
+<li>
+<p>EHANDBOOK-NAVIGATOR will hang if connection to INCA is not cleared properly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In such a case, follow the procedure for disconnecting from INCA as indicated in the User Guide document.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When EHANDBOOK-NAVIGATOR is connected to INCA prior to version 7.2 SP8 and a map is modified in the experiment, the values are not updated and old values are shown.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, SP 9 onwards resolves the issue.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Highlighting of connected elements for larger number of ports requires more RAM and time.</p>
+</li>
+<li>
+<p>EHANDBOOK-NAVIGATOR shows a different icon for group tables in comparison to ASCET.</p>
+</li>
+<li>
+<p>Interaction with topics having large textual content might take more time (eg. ’Find in Current Tab’).</p>
+</li>
+<li>
+<p>Variable icon is shown in label popup for "Service" type labels .</p>
+</li>
+<li>
+<p>Signal flow highlighting is not propagated properly for "Self Class" block in collapsed state.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Trigger signal flow highlighting with "Self Class" block in expanded state.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When using <code>Find in EHANDBOOK File(s)</code> with term containing punctuation characters, scrolling and highlighting of search hit is not done. Ex: &lt;LabelName.Number&gt; (Ex: Opm.3)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use local search post topic opening or open search hits found for parameter/variable type.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When label amendment for hierarchies is performed, the following issue may occur: Ex: Open interactive model might not get directed to the appropriate level in interactive model in some cases.</p>
+</li>
+<li>
+<p>Annotated values and labels on interactive models could be overlayed by blocks in default layout.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, switch to auto layout.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Rendering for some interactive blocks across different versions of Simulink might have a different representation. (Ex: The EHANDBOOK Container is generated using different versions of MATLAB).</p>
+</li>
+<li>
+<p>Setting windows system scaling factor to greater than 100% might result in blurry text and images in textual documentation.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, switch windows system scaling factor to 100% for all monitors.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When a text occurs multiple times in the same state model, <code>Find in EHANDBOOK File(s)</code> highlights all of them in a search hit.</p>
+</li>
+<li>
+<p>Sometimes <code>Navigate in</code> action does not bring blocks to the focus area.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, click <code>Fit to View</code> from the status toolbar to bring them to focus.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Usage of unsupported Simulink toolboxes might result in corrupted interactive models.</p>
+</li>
+<li>
+<p>Usage of web fonts in EHANDBOOK container configured via commonltr.css file is not supported for EHANDBOOK Containers generated using versions older than 8.3.</p>
+</li>
+<li>
+<p>In Simulink, Inport blocks can be duplicated to so-called InportShadow blocks. InportShadow blocks are not yet fully supported in EHANDBOOK. For example, the inner label (typically a number) is missing. Furthermore, no virtual connections are established, and highlighting dependencies is not supported.</p>
+</li>
+<li>
+<p>When adjusting the size or switching editors in EHANDBOOK-NAVIGATOR, viewers can temporarily go black.</p>
+</li>
+<li>
+<p>When EHANDBOOK-NAVIGATOR is connected to INCA for live measurement, there could be a significant performance degradation leading to unresponsive UI.</p>
+</li>
+<li>
+<p>In an ASCET-DEVELOPER based interactive model, the State behavior text could overflow from the State block.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively switch to auto layout.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A screenshot based on ASCET-DEVELOPER state machine could get clipped if transitions of the state machine extend outside the state or region.</p>
+</li>
+<li>
+<p>Auto-correction of duplicate groups, functions, measurements, and characteristics for A2L files with include statements is not supported.</p>
+</li>
+<li>
+<p>Simulink models having Pixel Icon Units may not be rendered properly.</p>
+</li>
+<li>
+<p>Dangling virtual connections might be visible in the interactive model in case of a minimized application window.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, performing some navigation or re-layouting operations would fix the interactive model.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Visualization of Map graph in Label pop-ups might not work on a Windows 11-Virtual machine environment.</p>
+</li>
+<li>
+<p>Self-loop connections in interactive models may sometimes overlap on other parts of the model.</p>
+</li>
+<li>
+<p>For attachments, some icons in the Document Explorer might have a black background.</p>
+</li>
+<li>
+<p>Expand icons in interactive models may not be clickable in default layout when other blocks/labels overlap.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, blocks can be expanded using the context menu.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Model Explorer and Model Navigation Bar may show entries without labels when blocks do not have a name in the source model.</p>
+</li>
+<li>
+<p>Focus may sometimes toggle between the label popup window and the main EHANDBOOK-NAVIGATOR window.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, click on some part of the main EHANDBOOK-NAVIGATOR window.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>When opening multiple model editors showing very large models EHANDBOOK-NAVIGATOR could stop working properly due to memory consumption.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Closing tabs can restore the application.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Subsystems which only contain static documentation text might be displayed wrongly.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In case the subsystem appears empty switch from auto layout to default layout.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Open model link might open the wrong location in case there are multiple blocks with the same name.</p>
+</li>
+<li>
+<p>In case of Duplicate functions in the container, Bookmarking model will always open first function in the container and also bookmarks all function with same URI.</p>
 </li>
 </ul>
 </div>
@@ -797,7 +1063,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
   </div>
   <div class="etas-footer-separator"></div>
   <span>
-    <b>© ETAS 2023</b>
+    <b>© ETAS 2024</b>
   </span>
   <span>
     <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
@@ -805,7 +1071,8 @@ function BoschPrivacyCallback_OnUpdate(a) {
   <span>
     <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
   </span>
-</footer><script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 <script src="../../_/js/vendor/lunr.js"></script>
 <script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
