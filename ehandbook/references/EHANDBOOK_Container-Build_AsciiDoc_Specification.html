@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.1">
+<div class="nav-container" data-component="ehandbook" data-version="12.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (Aug 2024)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
   </li>
@@ -693,14 +696,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.1</span>
+    <span class="version">12.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.1</a>
+          <a href="../index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
         </li>
         <li class="version">
           <a href="../12.0/index.html">12.0</a>
@@ -751,9 +757,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">12.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.1</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.2</a>
+    <a class="version" href="../12.1/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.1</a>
     <a class="version" href="../12.0/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.0</a>
     <a class="version" href="../11.3/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.3</a>
     <a class="version" href="../11.2/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.2</a>
@@ -993,6 +1000,136 @@ Sections and subsections are then created through multiple '=' characters.</p>
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="description-list"><a class="anchor" href="#description-list"></a>Description Lists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A description list is an association list that consists of one or more terms (or sets of terms) that each have a description.</p>
+</div>
+<div class="sect2">
+<h3 id="_basic_description_list"><a class="anchor" href="#_basic_description_list"></a>Basic description list</h3>
+<div class="paragraph">
+<p>Each entry in a description list is composed of a term or phrase followed by a separator.</p>
+</div>
+<div class="paragraph">
+<p>Basic Description List Syntax: utilizing the '::'</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc"> Terms :: Description or definition of the item</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for Basic description list</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Term1::
+Description with line break.
+Term2:: Description without line break.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Term1</dt>
+<dd>
+<p>Description with line break.</p>
+</dd>
+<dt class="hdlist1">Term2</dt>
+<dd>
+<p>Description without line break.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nested_or_mixing_lists"><a class="anchor" href="#_nested_or_mixing_lists"></a>Nested or mixing lists</h3>
+<div class="paragraph">
+<p>The content of a description list in AsciiDoc can include various elements, such as description, ordered, and unordered lists. Note that the term delimiter changes from '::' to ':::' to create a nested description list.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Term1::
+  * List element 1
+  * List element 2
+Term2::
+  Nested Term:::
+    . List element 1 of Nested Term
+      * Nested list element 1
+      * Nested list element 2
+    . List element 2 of Nested Term
+      * Nested list element 1
+Term3::
+  NOTE: Description mixed with NOTE block.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Term1</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>List element 1</p>
+</li>
+<li>
+<p>List element 2</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Term2</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Nested Term</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>List element 1 of Nested Term</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nested list element 1</p>
+</li>
+<li>
+<p>Nested list element 2</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List element 2 of Nested Term</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nested list element 1</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Term3</dt>
+<dd>
+<p>NOTE: Description mixed with NOTE block.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>

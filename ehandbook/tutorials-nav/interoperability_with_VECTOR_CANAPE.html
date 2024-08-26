@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.1">
+<div class="nav-container" data-component="ehandbook" data-version="12.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (Aug 2024)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
   </li>
@@ -693,14 +696,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.1</span>
+    <span class="version">12.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.1</a>
+          <a href="../index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
         </li>
         <li class="version">
           <a href="../12.0/index.html">12.0</a>
@@ -750,9 +756,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">12.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="interoperability_with_VECTOR_CANAPE.html">12.1</a>
+    <a class="version is-current" href="interoperability_with_VECTOR_CANAPE.html">12.2</a>
+    <a class="version" href="../12.1/tutorials-nav/interoperability_with_VECTOR_CANAPE.html">12.1</a>
     <a class="version" href="../12.0/tutorials-nav/interoperability_with_VECTOR_CANAPE.html">12.0</a>
     <a class="version is-missing" href="../11.3/index.html">11.3</a>
     <a class="version is-missing" href="../11.2/index.html">11.2</a>
@@ -778,17 +785,17 @@ functions and the measurement values obtained during the calibration
 procedure.</p>
 </div>
 <div class="paragraph">
-<p>This feature provides an integrated view on the algorithm specifications of a function
-(ASCET/SIMULINK model diagram) and the values being measured in the CANape
+<p>This feature provides an integrated view of the algorithm specifications of a function
+(the ASCET/SIMULINK model diagram) and the values being measured in the CANape
 application. The values from a running CANape application for measurement variables
 are displayed directly in the interactive model within the Model Viewer of the
 EHANDBOOK-NAVIGATOR. It is also possible to configure which of the measurement variables
- depicted in the interactive model, should display the values. Starting the measurement
+ depicted in the interactive model should display the values. Starting
 and stopping the measurement of the connected CANape application directly from the
 EHANDBOOK-NAVIGATOR is also supported.</p>
 </div>
 <div class="paragraph">
-<p>This feature provides support only for Read-only mode i.e. the display of measurement value
+<p>This feature provides support only for read-only mode, i.e., the display of measurement values
 is possible only for variables already selected in the CANape application. It is not possible
 to add new variables from EHANDBOOK-NAVIGATOR to the CANape application.</p>
 </div>
@@ -801,7 +808,8 @@ to add new variables from EHANDBOOK-NAVIGATOR to the CANape application.</p>
 <td class="content">
 <div class="paragraph">
 <p>EHANDBOOK-NAVIGATOR supports connectivity for CANape V21.0.
-Currently we don&#8217;t support the full functionality of what CANape offers.</p>
+Currently, we don&#8217;t support the full functionality of what CANape offers.
+We can connect to a single configuration at a time in CANape even though there could be several configurations in the project.</p>
 </div>
 </td>
 </tr>
@@ -816,8 +824,8 @@ Currently we don&#8217;t support the full functionality of what CANape offers.</
 <td class="content">
 <div class="paragraph">
 <p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode (EHANDBOOK_NAVIGATOR_BASIC) or in Full Mode (EHANDBOOK_NAVIGATOR), connectivity for CANape
-is not supported. In order to use this feature, you need to procure an additional Add-on license (EHANDBOOK_NAVIGATOR_CANAPE). Please look at
- <a href="../ETAS_contacts.html" class="xref page">ETAS Contacts</a> on how to get an evaluation license or purchase a license.</p>
+is not supported. In order to use this feature, you need to procure an additional add-on license (EHANDBOOK_NAVIGATOR_CANAPE). Please look at
+ <a href="../ETAS_contacts.html" class="xref page">ETAS Contacts</a> for information on how to get an evaluation license or purchase a license.</p>
 </div>
 </td>
 </tr>
@@ -834,8 +842,8 @@ EHANDBOOK-NAVIGATOR V12.0 is compatible with CANape V21.0.</p>
 </div>
 <div class="paragraph">
 <p>The EHANDBOOK-NAVIGATOR may display erroneous values in an interactive
-model when the real time data will be retrieved from a CANape project!
-The real time measurement variables can be affected.
+model when real-time data will be retrieved from a CANape project!
+The real-time measurement variables can be affected.
 The correctness of the displayed value for measurement data has to be verified using a suitable tool.
 The user is responsible for correctly assigning EHB containers to corresponding hardware devices.</p>
 </div>
@@ -853,7 +861,7 @@ in establishing a link with a CANape application and acquiring values for measur
 <div class="sect2">
 <h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
 <div class="paragraph">
-<p>Prior to connect the EHANDBOOK-NAVIGATOR to a CANape application, you must first:</p>
+<p>Prior to connecting the EHANDBOOK-NAVIGATOR to a CANape application, you must first:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -881,7 +889,7 @@ an active connection with EHANDBOOK-NAVIGATOR.</p>
 <ul>
 <li>
 <p>On EHANDBOOK-NAVIGATOR, load a corresponding container and open an interactive
-model in the Model Viewer</p>
+model in the Model Viewer.</p>
 </li>
 </ul>
 </div>
@@ -948,8 +956,8 @@ the status bar.</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>CANape (Live)</code> dialog box is displayed with appropriate information. If
-all the above <a href="#_prerequisites">Prerequisites</a> are satisfied, then the image which is
+<p><code>The CANape (Live)</code> dialog box is displayed with appropriate information. If
+all the above <a href="#_prerequisites">Prerequisites</a> are satisfied, then the image
 shown below is displayed. Then the connection is established with CANape. If the
 connection is not established, an error message(s) with appropriate instructions
 are shown.</p>
@@ -962,8 +970,8 @@ are shown.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <code>Connect</code> to connect with CANape. If connection is successfully
-established, a windows notification message pops up on right bottom side of
+<p>Click <code>Connect</code> to connect with CANape. If the connection is successfully
+established, a Windows notification message pops up on right-bottom side of
 EHANDBOOK-NAVIGATOR.</p>
 </li>
 </ul>
@@ -1018,8 +1026,8 @@ is not supported.</p>
 measurement variables must be configured to display/hide values. You have the option of configuring
 a single block at a time or configuring all the blocks that are visible in the interactive model,
 displayed in the Model Viewer. This can be done through either the <code>Display Value</code> context menu
-option for individual variable or the <code>Display all values</code> button available in the status bar.
-The model blocks must be configured only after a connection has been established with CANape application.</p>
+option for individual variables or the <code>Display all values</code> button available in the status bar.
+The model blocks must be configured only after a connection has been established with the CANape application.</p>
 </div>
 <div class="paragraph">
 <p>On configuring the model blocks, EHANDBOOK-NAVIGATOR interacts with the
@@ -1136,7 +1144,7 @@ Viewer, to hide values:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Starting the visualization and stopping the measurement of CANape application
+<p>Starting the visualization and stopping the measurement of the CANape application
 using EHANDBOOK-NAVIGATOR is supported. Model blocks must be configured
 before starting the visualization.</p>
 </div>
@@ -1242,7 +1250,7 @@ has started.</p>
 &lt;Or&gt;</p>
 </li>
 <li>
-<p>In the Data menu, select <code>Stop Measurement</code> (1).<br>
+<p>In the Data menu, select <code>Stop Measuring</code> (1).<br>
 &lt;Or&gt;</p>
 </li>
 <li>
@@ -1259,7 +1267,7 @@ CANape application comprises of the following criteria:<br></p>
 <div class="ulist">
 <ul>
 <li>
-<p>CANape application passes on the decimal value to EHANDBOOK-NAVIGATOR which
+<p>The CANape application passes on the decimal value to EHANDBOOK-NAVIGATOR, which
 is displayed as it is.</p>
 </li>
 <li>
@@ -1269,7 +1277,7 @@ last digit. For example, 6.737 is rounded up to 6.74 and value 6.734 is rounded
 down to 6.73.</p>
 </li>
 <li>
-<p>There is additionally an option to remove the trailing zeroes from the received
+<p>There is additionally an option to remove the trailing zeros from the received
 value.</p>
 </li>
 </ul>
@@ -1299,8 +1307,8 @@ in CANape.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Alternatively, when another data source is connected in EHANDBOOK, the ASAP3(remote) mode in
-CANape will be switched off. All the labels which were added/measured in EHANDBOOK-NAVIGATOR
+<p>Alternatively, when another data source is connected in EHANDBOOK, the ASAP3 (remote) mode in
+CANape will be switched off. All the labels that were added/measured in EHANDBOOK-NAVIGATOR
 will be removed.</p>
 </div>
 <div class="imageblock">

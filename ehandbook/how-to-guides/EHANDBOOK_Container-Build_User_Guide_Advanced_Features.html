@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.1">
+<div class="nav-container" data-component="ehandbook" data-version="12.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (Aug 2024)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
   </li>
@@ -693,14 +696,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.1</span>
+    <span class="version">12.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.1</a>
+          <a href="../index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
         </li>
         <li class="version">
           <a href="../12.0/index.html">12.0</a>
@@ -752,9 +758,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">12.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">12.1</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">12.2</a>
+    <a class="version" href="../12.1/how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">12.1</a>
     <a class="version" href="../12.0/how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">12.0</a>
     <a class="version" href="../11.3/how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">11.3</a>
     <a class="version" href="../11.2/how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html">11.2</a>
@@ -2167,7 +2174,7 @@ If both key words ("value" and "values") are used then filtering will be a combi
 <p>In a model, you have multiple possibilities how to name a label. The tools ASCET 6 and ASCET-DEVELOPER  provide certain options to configure the composition of an element name. E.g. the element name can be appended with their parent elements and the order of the name parts can be defined.  So the name may differ from the name in the a2l file and  MCD features like INCA connectivity will not work.</p>
 </div>
 <div class="paragraph">
-<p>Therefore, EHB-CB provides the flexibility to configure the label names by using a JSON configuration file (plain ASCII, UTF8 format), so that it matches the names in A2L file. There is one single JSON file with individual configuration possibilites per model type (ASCET 6, ASCET DEVELOPER, Simulink)</p>
+<p>Therefore, EHB-CB provides the flexibility to configure the label names by using a JSON configuration file (plain ASCII, UTF8 format), so that it matches the names in A2L file. There is one single JSON file with individual configuration possibilities per model type (ASCET 6, ASCET DEVELOPER, Simulink) and also a common configuration for any model type.</p>
 </div>
 <div class="paragraph">
 <p>See sample LabelConfig.json in the sub folder .\examples\configuration of your EHB-CB installation directory.</p>
@@ -2185,6 +2192,114 @@ If both key words ("value" and "values") are used then filtering will be a combi
 </td>
 </tr>
 </table>
+</div>
+<div class="sect2">
+<h3 id="_for_all_model_types"><a class="anchor" href="#_for_all_model_types"></a>For all model types</h3>
+<div class="paragraph">
+<p>EHB-CB provides an option to add configurable and invisible label names to blocks for Simulink, ASCET and ASCET-DEVELOPER models.
+Label names can be assigned directly based on the block names (Exact replacement) or based on block name patterns (Pattern-based replacement). These replacement rules can be defined under the keyword "Common" in the label configuration JSON file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Exact replacements</strong></p>
+</div>
+<div class="paragraph">
+<p>Exact replacements are specified as key-value pairs of strings in rule groups marked with the key word "exact". They work straight-forward - the string in the key is replaced by the string in the value:</p>
+</div>
+<div class="paragraph">
+<p><strong>“Original_Name” : “New_Name”</strong></p>
+</div>
+<div class="paragraph">
+<p>With the JSON file shown below all blocks with name "Afr_rpmEngSpd" will have the label name "Afr_rpmEngSpd_modified" and all blocks with the name "Two-point-controller" will have the label name "Two-point-controller_changed".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"Common": {
+		"exact": {
+			"Afr_rpmEngSpd":"Afr_rpmEngSpd_changed",
+			"Two-point-controller":"Two-point-controller_changed"
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the same key is used again with a different value, the latest value is considered.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pattern-based replacements</strong></p>
+</div>
+<div class="paragraph">
+<p>Pattern-based replacements are specified as key value pairs of strings in rule groups marked with the key word "pattern". The keys make use of regular expressions to match strings that shall be amended. The values denote replacement strings. The latter can make use of the match groups defined in the regular expression.</p>
+</div>
+<div class="paragraph">
+<p><strong>“Target-Pattern” : “Substitute-Pattern”</strong></p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example for the Pattern-based replacement rules:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"Common": {
+		"pattern": {
+			"(.*)_write": "$1",
+			"read_(.*)": "$1"
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here, the sequence of patterns is important. If there are multiple patterns matching with a label name, the first match will be applied.
+If the single character ‘.’ is used for a regular expression it must be escaped by ‘\\’</p>
+</div>
+<div class="paragraph">
+<p>"prefix_(.*)\\.postfix" : "$1_postfix",</p>
+</div>
+<div class="paragraph">
+<p>Here a sample Internet page with further information about regular expressions in general and online testing possibilities: <a href="https://freeformatter.com/regex-tester.html" class="bare">https://freeformatter.com/regex-tester.html</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Combination of Exact and Pattern-based replacements</strong></p>
+</div>
+<div class="paragraph">
+<p>A combination of Exact and Pattern-based label configuration is also possible. In case there is an "Exact replacement" already provided for a block and there is also a match found based on the pattern, the exact label name will take the precedence.
+For example, in the below JSON file there is a label name already provided for "Afr_rpmEngSpd_write" in the "Exact replacement" section. But it also matches the pattern "(.*)_write". In this case, the label name will be "Afr_rpmEngSpd_changed".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"Common": {
+		"exact": {
+			"Afr_rpmEngSpd_write":"Afr_rpmEngSpd_changed",
+			"Two-point-controller":"Two-point-controller_changed"
+		},
+		"pattern": {
+			"(.*)_write": "$1",
+			"read_(.*)": "$1",
+			"read_(.*)_write": "$1",
+			"(.*)_middle_(.*)": "$1_$2"
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>EHANDBOOK also provides an option to configure label names for individual model languages.
+When the "Common" label configuration is used along with any model specific label configuration, the "Common" label names will take the precedence.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_for_ascet_developer"><a class="anchor" href="#_for_ascet_developer"></a>For ASCET-DEVELOPER</h3>
@@ -2269,7 +2384,6 @@ If both key words ("value" and "values") are used then filtering will be a combi
 		"elementNameFirst": false,
 		"includeModuleName": false,
 		"includeProjectName": false,
-		"includeClassInstanceName": true
 	}
 }</code></pre>
 </div>
@@ -2308,6 +2422,30 @@ If both key words ("value" and "values") are used then filtering will be a combi
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The a2l file, generated by ASCET with selected ECU target EHOOKS, has a pre-fix appended to all measurement signals and parameters.
+This prefix is configurable in the options dialog in ASCET:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">Options -&gt; Targets -&gt; EHOOKS -&gt; Name Templates: Global Namespace Prefix</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the JSON file shown below, prefix can be added to all measurement signals and parameters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+	"ASCET": {
+		"elementNameFirst": false,
+		"includeModuleName": false,
+		"includeProjectName": false,
+		"globalNamePrefix": "XY_"
+	}
+}</code></pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="label-configuration-for-Simulink"><a class="anchor" href="#label-configuration-for-Simulink"></a>For Simulink</h3>

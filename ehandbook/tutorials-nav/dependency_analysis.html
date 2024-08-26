@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.1">
+<div class="nav-container" data-component="ehandbook" data-version="12.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (Aug 2024)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
   </li>
@@ -693,14 +696,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.1</span>
+    <span class="version">12.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.1</a>
+          <a href="../index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
         </li>
         <li class="version">
           <a href="../12.0/index.html">12.0</a>
@@ -750,9 +756,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">12.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="dependency_analysis.html">12.1</a>
+    <a class="version is-current" href="dependency_analysis.html">12.2</a>
+    <a class="version" href="../12.1/tutorials-nav/dependency_analysis.html">12.1</a>
     <a class="version" href="../12.0/tutorials-nav/dependency_analysis.html">12.0</a>
     <a class="version is-missing" href="../11.3/index.html">11.3</a>
     <a class="version is-missing" href="../11.2/index.html">11.2</a>
@@ -1336,11 +1343,10 @@ highlighting.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_navigation_and_exploration_of_ascet_based_interactive"><a class="anchor" href="#_navigation_and_exploration_of_ascet_based_interactive"></a>Navigation and Exploration of ASCET Based Interactive</h2>
+<h2 id="_navigation_and_exploration_of_ascet_based_interactive_models_with_module_methods"><a class="anchor" href="#_navigation_and_exploration_of_ascet_based_interactive_models_with_module_methods"></a>Navigation and Exploration of ASCET Based Interactive Models with Module Methods</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Models with Module Methods
-Navigation and exploration of ASCET based interactive models with module methods
+<p>Navigation and exploration of ASCET based interactive models with module methods
 supports all operations with respect to expandable entities such as Navigate-
 in, Navigate-out, Model Exploration and so on. Module methods are also
 known as self classes in ASCET based interactive models.</p>
@@ -1369,162 +1375,6 @@ try to access a model in Basic Mode.</p>
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Earlier to EHANDBOOK-NAVIGATOR 5.0, you could able to view the Function Overview
-diagram or Interactive models in a different window. Now EHANDBOOKNAVIGATOR
-supports to navigate from Function Overview to Interactive models in
-the same window through Seamless function wallpaper. It helps to make the connections
-for Function Overviews and Function Specifications (ASCET/Simulink) or
-Function Implementation (C-Code) continuously which means that you can navigate
-in the function wallpaper by means of connections from Function Overviews
-to Function Specifications (ASCET/Simulink)/Function Implementation (C-Code)
-or vice-versa in a single window. The Seamless function wallpaper operation can
-be done by expanding the <span class="image"><img src="_images/seamless_function_wallpaper_icon.png" alt="seamless_function_wallpaper_icon"></span> icon which is available at the top left corner of
-every Function Overview block or the Function Specifications (ASCET/Simulink)
-or Function Implementation (C-Code) block. It is also possible to navigate in a
-seamless function wallpaper via click navigation, i.e. <code>Navigate in</code> and <code>Navigate out.</code></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/seamless_function_wallpaper.png" alt="seamless_function_wallpaper">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Function Overview entry in the TOC</p>
-</li>
-<li>
-<p>Function Implementation (C-Code) entry in the TOC</p>
-</li>
-<li>
-<p>Function Specifications (ASCET/Simulink) entry in the TOC</p>
-</li>
-<li>
-<p>Function Overview diagram in the Model Viewer</p>
-</li>
-<li>
-<p>Expand icon</p>
-</li>
-<li>
-<p>Function Implementation (C-Code) diagram in the Model Viewer</p>
-</li>
-<li>
-<p>Function Specifications (ASCET/Simulink) diagram in the Model Viewer</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>In general, it helps you to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Navigate in/out to switch between Function Overviews and Function Specifications
-(ASCET models/Simulink models)/Function Implementation (CCode
-based models) diagrams.</p>
-</li>
-<li>
-<p>Expand/collapse Function Overviews and integrate contained Function
-Specifications/Function Implementation diagrams. It provides virtual connections
-between Function Overviews and Function Specifications/
-Function Implementation blocks.</p>
-</li>
-<li>
-<p>Enables the signal flow highlighting.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_seamless_function_wallpaper_operation"><a class="anchor" href="#_seamless_function_wallpaper_operation"></a>Seamless Function Wallpaper Operation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><span class="underline">To operate the Seamless function wallpaper:</span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on Function Overviews or Function Specifications (ASCET/Simulink)
-or Function Implementation (C-Code) entry in the TOC in the Document
-Explorer.<br>
-The selected diagram is displayed in the Model Viewer.</p>
-</li>
-<li>
-<p>Click <span class="image"><img src="_images/seamless_function_wallpaper_icon.png" alt="seamless_function_wallpaper_icon"></span> icon to expand the corresponding block.<br>
-If a Function Block is expanded, you can view all the interactive models of
-that Function.<br>
-If a Function Specification (ASCET/Simulink) Block or Function Implementation
-(C-Code) Block is expanded, you can view all the ports and connections
-which are connected to that model.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can view the virtual connections which are connected in the model in Auto
-Layout mode only. The connections are not shown in the Default Layout mode.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_viewing_the_function_overview_diagram_through_an_interactive_model"><a class="anchor" href="#_viewing_the_function_overview_diagram_through_an_interactive_model"></a>Viewing the Function Overview Diagram Through an Interactive Model</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Seamless function operator helps to view the Function Overview diagram, Interactive
-models, and connections in a single window. In the same way, you can also
-view the Function Overview diagram from the Interactive models.<code>Navigate out</code>
-feature helps to view the Function Overview diagram from the Interactive models
-in the Model Viewer.</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">To view the Function Overview diagram:</span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click <span class="image"><img src="_images/Navigator_out_icon.png" alt="Navigator_out_icon"></span> in the toolbar.</p>
-</li>
-<li>
-<p>Right-click on an interactive model.<br>
-A context menu is displayed.</p>
-</li>
-<li>
-<p>Click <span class="image"><img src="_images/Navigator_out_icon_menu.png" alt="Navigator_out_icon_menu"></span><br>
-A Function Overview diagram is displayed.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_signal_flow_highlighting_or_hiding_in_the_seamless_function_wallpaper"><a class="anchor" href="#_signal_flow_highlighting_or_hiding_in_the_seamless_function_wallpaper"></a>Signal Flow Highlighting or Hiding in the Seamless Function Wallpaper</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Highlight connected elements/Hide connected elements</strong> of an input/output
-of a block in the Seamless function wallpaper helps you to view the highlighted/
-hidden elements or ports of multiple blocks in a single window. When you
-click <strong>Highlight connected elements/Hide connected elements</strong> of a port of a
-function block, the signal flow highlighting/hiding crosses the interface of the
-function block and it ceases at the simple element of the interactive block
-encountered in that path. It also highlights/hides the ports, if they are impacted.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/seamless_function_wallpaper_hiding.png" alt="seamless_function_wallpaper_hiding">
-</div>
 </div>
 </div>
 </div>
