@@ -1719,6 +1719,73 @@ This also happens, if the link contains any space characters. in this case, the 
 <p><a href="../input/Documentation/AsciiDocUserDocument.adoc">AsciiDoc Source</a></p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="support-cross-references"><a class="anchor" href="#support-cross-references"></a>Support cross references</h4>
+<div class="paragraph">
+<p>A cross reference is a link to another location within the current AsciiDoc document or in another AsciiDoc document.
+To create a cross reference, it is required to define the location where the reference will point.
+Use inline <strong>xref</strong> macro to create a reference to the location.</p>
+</div>
+<div class="sect4">
+<h5 id="_intra_fc_linking"><a class="anchor" href="#_intra_fc_linking"></a>Intra FC linking</h5>
+<div class="paragraph">
+<p>The shorthand <strong>xref</strong> is used to create a cross reference to an section that has a title within the same document.</p>
+</div>
+<div class="paragraph">
+<p>Syntax for Inter FC Linking</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Section_title[link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example, an AsciiDoc document has a section called Introduction. The reference to that section can be written as</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Introduction[Introduction]</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_inter_fc_linking"><a class="anchor" href="#_inter_fc_linking"></a>Inter FC Linking</h5>
+<div class="paragraph">
+<p>The shorthand <strong>xref</strong> is also used to create cross reference to an section that has a title in another AsciiDoc document.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Fc_name/Section_title[link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example, an AsciiDoc document has a section called Variables in the FC named Sensor.
+This section is referenced in another AsciiDoc document in the FC named Actuator.
+Reference can be written as,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Sensor/Variables[Variables]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Link text can also be customized based on requirement in both intra and inter FC linking. Example,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Introduction[Overview]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#ETAS/EHANDBOOK[FC Overview]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If no link text is provided, default section title is displayed.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
