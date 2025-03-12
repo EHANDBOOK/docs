@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
   </li>
@@ -676,7 +679,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="MDA8.html">Interoperability with MDA 8</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+    <a class="nav-link" href="live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
@@ -711,14 +717,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.4</span>
+    <span class="version">13.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.4</a>
+          <a href="../index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../12.4/index.html">12.4</a>
         </li>
         <li class="version">
           <a href="../12.3/index.html">12.3</a>
@@ -777,9 +786,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.4</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="compare.html">12.4</a>
+    <a class="version is-current" href="compare.html">13.0</a>
+    <a class="version" href="../12.4/tutorials-nav/compare.html">12.4</a>
     <a class="version" href="../12.3/tutorials-nav/compare.html">12.3</a>
     <a class="version is-missing" href="../12.2/index.html">12.2</a>
     <a class="version is-missing" href="../12.1/index.html">12.1</a>
@@ -823,7 +833,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <p>The EHANDBOOK containers are structured using the Table of Contents (TOCs). The Compare functionality identifies differences between the ToCs of the two containers and displays them in a structured tree view. This visual representation helps you grasp the overall organization and navigate easily through topics and subtopics.</p>
 </div>
 <div class="sect3">
-<h4 id="_icons_indicating_changes_the_tree_view_uses_icons_to_represent_changes_visually"><a class="anchor" href="#_icons_indicating_changes_the_tree_view_uses_icons_to_represent_changes_visually"></a>Icons Indicating Changes: The tree view uses icons to represent changes visually:</h4>
+<h4 id="_the_tree_view_uses_icons_and_arrows_to_represent_changes_visually"><a class="anchor" href="#_the_tree_view_uses_icons_and_arrows_to_represent_changes_visually"></a>The tree view uses icons and arrows to represent changes visually:</h4>
+<div class="sect4">
+<h5 id="_icons_indicating_changes"><a class="anchor" href="#_icons_indicating_changes"></a>Icons Indicating Changes:</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -835,24 +847,34 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <li>
 <p><strong>Modified</strong> <span class="image"><img src="_images/modified.gif" alt="modified"></span>: Icons show entries present in both containers but whose content has been modified.</p>
 </li>
+<li>
+<p><strong>Added-Disabled</strong> <span class="image"><img src="_images/added-disabled.gif" alt="added disabled"></span>: Icons show the entry itself do not have a content of it&#8217;s own,but a section below it is newly introduced in the right container.</p>
+</li>
+<li>
+<p><strong>Removed-Disabled</strong> <span class="image"><img src="_images/removed-disabled.gif" alt="removed disabled"></span>: Icons show the entry itself do not have a content of it&#8217;s own,but a section below it is removed in the right container.</p>
+</li>
+<li>
+<p><strong>Error</strong> <span class="image"><img src="_images/error.gif" alt="error"></span>: Icons indicate an error occured during the comparison of topics.</p>
+</li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Once a sub-entry contains modifications, all entries containing this sub-entry will also be marked as modified.</p>
 </div>
-</td>
-</tr>
-</table>
-</div>
+<div class="sect4">
+<h5 id="_arrows_indicating_changes"><a class="anchor" href="#_arrows_indicating_changes"></a>Arrows Indicating Changes:</h5>
 <div class="ulist">
 <ul>
+<li>
+<p><strong>Unchanged</strong> <span class="image"><img src="_images/unchanged_chevron.png" alt="unchanged chevron"></span>: Arrow indicates there is no change in the chapter.</p>
+</li>
+<li>
+<p><strong>Added</strong> <span class="image"><img src="_images/added_chevron.png" alt="added chevron"></span>: Arrow indicates the chapter or a sub-chapter of it, has been added.</p>
+</li>
+<li>
+<p><strong>Removed</strong> <span class="image"><img src="_images/removed_chevron.png" alt="removed chevron"></span>: Arrow indicates the chapter or a sub-chapter of it, has been removed..</p>
+</li>
+<li>
+<p><strong>Modified</strong> <span class="image"><img src="_images/modified_chevron.png" alt="modified chevron"></span>: Arrow indicates the chapter or a sub-chapter of it, has been modified..</p>
+</li>
 <li>
 <p>Filtering for changes: The tree view can be filtered to focus on specific types of changes.</p>
 </li>
@@ -891,6 +913,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
 <h3 id="_textual_comparison"><a class="anchor" href="#_textual_comparison"></a>Textual comparison</h3>
 <div class="paragraph">
@@ -910,6 +933,27 @@ If the TOC entry is available on both sides but is not identical, the difference
 <p>Yellow: content has been modified</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If an entry in the treeview is not clickable, the entry does not have a content of it&#8217;s own.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_limitation"><a class="anchor" href="#_limitation"></a>Limitation</h4>
+<div class="paragraph">
+<p>Note that with EHANDBOOK-NAVIGATOR 13.0 the documentation content will be compared based on whole paragraphs. This leads to the whole paragraphs being marked as added or removed in case of differences.
+With the next versions of EHANDBOOK-NAVIGATOR, a more detailed comparison will be possible.</p>
+</div>
 </div>
 </div>
 </div>
@@ -952,6 +996,9 @@ If the TOC entry is available on both sides but is not identical, the difference
 <li>
 <p><strong>Start the comparison</strong>: When you click the Compare button (5), the comparison will start.</p>
 </li>
+<li>
+<p><strong>Swap compared Containers</strong>: If you want to swap the currently compared containers (left and right), you can use the Swap button (12). This will exchange the containers and update the comparison.</p>
+</li>
 </ol>
 </div>
 <div class="admonitionblock note">
@@ -974,15 +1021,38 @@ If the TOC entry is available on both sides but is not identical, the difference
 <p><strong>View the TOC</strong>: Once the comparison is done, the Tree View will automatically display the TOC for both containers, showcasing their respective structures. The visual markers and icons will help you quickly recognize which topics or subtopics have been added, removed, or modified.</p>
 </li>
 <li>
-<p><strong>Explore Textual Differences</strong>: Click on any entry in the TOC to open the split-screen viewer. The left panel (6) will show the content from the left EHANDBOOK container, while the right panel (7) will display the content from the right container. Review the marked changes in the text to understand the modifications made.</p>
+<p><strong>Explore Textual Differences</strong>: Click on any entry in the TOC to open the split-screen viewer. The left panel (7) will show the content from the left EHANDBOOK container, while the right panel (8) will display the content from the right container. Review the marked changes in the text to understand the modifications made.</p>
 </li>
 <li>
-<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (8) in the split-screen viewer to move through the marked differences in the opened chapter. This feature allows you to review changes one by one, ensuring a thorough examination of the content. The currently examined difference will be highlighted by an added border (9).</p>
+<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (9) in the split-screen viewer to move through the marked differences in the opened chapter. This feature allows you to review changes one by one, ensuring a thorough examination of the content. The currently examined difference will be highlighted by an added border (10). Right to the navigation buttons you will see the total amount of difference and the index of the marked difference.</p>
 </li>
 <li>
-<p><strong>Collapse the TOC</strong>: If you prefer a larger viewing area for the textual comparison, click the collapse button (10) to hide the Tree View. This will give you a more spacious view, allowing you to focus entirely on the content.</p>
+<p><strong>Collapse the TOC</strong>: If you prefer a larger viewing area for the textual comparison, click the collapse button (11) to hide the Tree View. This will give you a more spacious view, allowing you to focus entirely on the content.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_label_popup_in_compare"><a class="anchor" href="#_label_popup_in_compare"></a>Label Popup in Compare</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To display the metadata of labels, you can open the Label Popup by clicking the label name highlighted in blue. For details see <a href="../user-interface/label_popup.html#_Label_Popup" class="xref page">Label Popup</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The information loaded from any additional files (such as A2L, HEX, DCM) will be the same in the Label Popups for corresponding labels in the left and right container.
+Externally loaded containers in compare do not support the loading of corresponding files.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -997,12 +1067,12 @@ If the TOC entry is available on both sides but is not identical, the difference
 
   <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
   <div class="d-flex align-items-center justify-content-center flex-wrap">
-    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
       title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
           <path fill="#DEE0E2" fill-rule="evenodd"
             d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
           </path>
-        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
       href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
           width="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -1012,13 +1082,13 @@ If the TOC entry is available on both sides but is not identical, the difference
   </div>
   <div class="etas-footer-separator"></div>
   <span>
-    <b>© ETAS 2024</b>
+    <b>© ETAS 2025</b>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
   </span>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>

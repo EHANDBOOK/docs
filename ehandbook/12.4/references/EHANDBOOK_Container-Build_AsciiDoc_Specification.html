@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AsciiDoc Specification :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">
+    <meta name="generator" content="Antora 3.1.10">
+<link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+      </a>
+      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+<div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="12.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../safety_and_privacy_information.html">Safety and Privacy Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../intended_use.html">Intended Use</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../target_group.html">Target Group</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../classification_of_safety_messages.html">Classification of Safety Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../safety_information.html">Safety Information</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ehb_cb_warning_messages.html">Warning Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ETAS_contacts.html">ETAS Contacts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_3.html">Version 12.3 (October 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (September 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_3.html">Version 11.3 (December 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_2.html">Version 11.2 (September 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_1.html">Version 11.1 (June 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_0.html">Version 11.0 (March 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_3.html">Version 10.3 (December 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../container_build.html">Container-Build</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_container_build.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_quick_start_demos">Quick Start Demos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-cb/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-ascet-6/contents.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-simulink/contents.html">Simulink</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-ccode/contents.html">C-Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/index.html">Explanations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/model_languages/overview.html">Model Languages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/ascet6.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow / TargetLink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/c_code.html">C-Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/automotive_standards/overview.html">Automotive Standards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_download">Download</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_installation">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/platforms.html">Supported Platforms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/platforms.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/platforms.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb_cb_features.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/index.html">How-to guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-simulink-libraries-in-ehb.html">How to configure EHB-CB for Simulink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-targetlink-models.html">How to support TargetLink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/how-to-customize-interactive-models.html">How to customize Interactive Models</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Simulink</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support">Passing Simulink library paths to EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Simulink Variant block configuration support</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-truth-table-block-support">Simulink Truthtable block in the documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ASCET-DEVELOPER</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">C-Code</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_model_depth_skip">Model Depth</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept">View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/simulink_libraries_configuration_using_simulinkView.html">Configure appearance of Simulink library blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/simulink-view-concept.html">Simulink View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks">Configuration of details shown for Simulink subsystem-based blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Configuration to hide C-Code functions based on function names</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Label-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration">Label Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment">Label Amendment</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Textual Contents</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic">ClickPic</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration">Label Table Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize EHB Containers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_directory_based_ehb_cb">Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">How to support Asian languages in EHANDBOOK generated PDF documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="other_input_formats.html">Other Input Formats</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="styling.html">Styling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigator.html">Navigator</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about_navigator.html">About Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_navigator.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_installing_navigator">Installing Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_licensing_the_software">Licensing the Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_getting_started">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_troubleshooting">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user-interface/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/menus.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/toolbar.html">Toolbars</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/document_views.html">Document Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/model_views.html">Model Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/bookmarks.html">Bookmark Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/search_views.html">Search Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/label_popup.html">Label Popup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/other_views.html">Other Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/pref_dialogs.html">Preference Dialogs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../how-to-navigator/how_to_navigator.html">How-to guides</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-nav/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interactive_models.html">Interactive Models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html">Software Function Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/searching.html">Searching</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/dependency_analysis.html">Dependency Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/devices_and_rasters.html">Devices and Rasters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/compare.html">Compare Containers</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../known-issues/known_issues.html">Known Issues</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../known-issues/known_issues.html#_container_build">Container-Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../known-issues/known_issues.html#_navigator">Navigator</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">12.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">13.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../container_build.html">Container-Build</a></li>
+    <li><a href="index.html">References</a></li>
+    <li><a href="other_input_formats.html">Other Input Formats</a></li>
+    <li><a href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a></li>
+  </ul>
+</nav>
+
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
+
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">12.4</button>
+  <div class="version-menu">
+    <a class="version" href="../../references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">13.0</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.4</a>
+    <a class="version" href="../../12.3/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.3</a>
+    <a class="version" href="../../12.2/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.2</a>
+    <a class="version" href="../../12.1/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.1</a>
+    <a class="version" href="../../12.0/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.0</a>
+    <a class="version" href="../../11.3/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.3</a>
+    <a class="version" href="../../11.2/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.2</a>
+    <a class="version" href="../../11.1/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.1</a>
+    <a class="version" href="../../11.0/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">11.0</a>
+    <a class="version" href="../../10.3/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">10.3</a>
+    <a class="version" href="../../10.2/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">10.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AsciiDoc Specification</h1>
+<div class="sect1">
+<h2 id="_asciidoc_support_in_ehandbook"><a class="anchor" href="#_asciidoc_support_in_ehandbook"></a>AsciiDoc Support in EHANDBOOK</h2>
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>AsciiDoc is a plain text markup language for writing technical content. It’s packed with semantic elements and equipped with features to modularize and reuse content. AsciiDoc content can be composed using a text editor, managed in a version control system, and published to multiple output formats.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; https://asciidoc.org/
+</div>
+</div>
+<div class="paragraph">
+<p>The Directory-based EHANDBOOK Container-Build Tool-Chain contains a converter for AsciiDoc sources. It  generates textual and graphical content for EHANDBOOK containers out of AsciiDoc files.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For EHANDBOOK, the file extension for AsciiDoc files must be either *.adoc or *.asciidoc.</p>
+</li>
+<li>
+<p>EHANDBOOK supports a subset of the full AsciiDoc syntax. Syntax elements that are not described below may also work, but are not guaranteed to work.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following AsciiDoc syntax elements are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#sections">Document Header and Section Titles</a></p>
+</li>
+<li>
+<p><a href="#formatted-text">Formatted Text</a></p>
+</li>
+<li>
+<p><a href="#lists">Lists</a></p>
+</li>
+<li>
+<p><a href="#tables">Tables</a></p>
+</li>
+<li>
+<p><a href="#images">Images</a></p>
+</li>
+<li>
+<p><a href="#includes">Include Files</a></p>
+</li>
+<li>
+<p><a href="#links">Links</a></p>
+</li>
+<li>
+<p><a href="#diagrams">Diagrams</a></p>
+</li>
+<li>
+<p><a href="#admonitions">Admonition Blocks</a></p>
+</li>
+<li>
+<p><a href="#more-delimited-blocks">More delimited block</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sections"><a class="anchor" href="#sections"></a>Document Header and Section Titles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A document header in AsciiDoc represents the title of the document.
+The document header is typically followed by content such as text, images, lists and tables. The content itself can be further structured through sections and subsections.</p>
+</div>
+<div class="paragraph">
+<p>The document header is specified using a single '=' character at the very beginning of the first line in a document.
+Sections and subsections are then created through multiple '=' characters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Document Header Text (Level 0)
+
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+==== Level 3 Section Title</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For EHANDBOOK, the document header is expected as the very first line in the AsciiDoc file that represents a documentation chapter. If the document header is not present, then name of the name of the directory in which AsciiDoc file is stored will be used as document title.</p>
+</li>
+<li>
+<p>The titles of subsections appear in the table of contents in EHANDBOOK-NAVIGATOR.</p>
+</li>
+<li>
+<p>The maximum nesting level for subsections is 6.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>More information can be found at <a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#section-titles" class="bare">https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#section-titles</a> and <a href="https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/" class="bare">https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="formatted-text"><a class="anchor" href="#formatted-text"></a>Formatted Text</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Text style syntax: framing of text by special characters</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Formatted text such as \*bold*, \_italic_, \^super^script phrase, \~sub~script phrase are supported. Nested formatting such as \*\_bold-italic_*  is also possible.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="paragraph">
+<p>Formatted text such as <strong>bold</strong>, <em>italic</em>, <sup>super</sup>script phrase, <sub>sub</sub>script phrase are supported. Nested formatting such as <strong><em>bold-italic</em></strong>  is also possible.</p>
+</div>
+<div class="paragraph">
+<p>More information can be found at <a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#formatted-text" class="bare">https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#formatted-text</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="lists"><a class="anchor" href="#lists"></a>Lists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ordered List Syntax: using the '.' character at the beginning of a new line</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>'.' Ordered list can have a list title, followed by list elements in seperate lines
+'.' In Ordered list, list elements starts with a dot '.'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ordered list can have a list title followed by list elements in separate lines</p>
+</li>
+<li>
+<p>In Ordered list, list elements starts with dot '.'</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Unordered List Syntax: using the '-' or '*' character at the beginning of a new line</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>'-' Unordered list can have a list title followed by list elements in separate lines
+'-' Unordered list element starts with hyphen '-'
+'*' Alternately Unordered list element can start with an asterisk</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unordered list can have a list title followed by list elements in separate lines.</p>
+</li>
+<li>
+<p>Unordered list element starts with hyphen '-'</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternately Unordered list element can start with an asterisk</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A blank line is required before and after a list to separate it from other blocks.</p>
+</div>
+<div class="paragraph">
+<p>More information can be found at <a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#lists" class="bare">https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#lists</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only basic ordered and unordered lists without nesting are supported in EHANDBOOK.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="description-list"><a class="anchor" href="#description-list"></a>Description Lists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A description list is an association list that consists of one or more terms (or sets of terms) that each have a description.</p>
+</div>
+<div class="sect2">
+<h3 id="_basic_description_list"><a class="anchor" href="#_basic_description_list"></a>Basic description list</h3>
+<div class="paragraph">
+<p>Each entry in a description list is composed of a term or phrase followed by a separator.</p>
+</div>
+<div class="paragraph">
+<p>Basic Description List Syntax: utilizing the '::'</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc"> Terms :: Description or definition of the item</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for Basic description list</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Term1::
+Description with line break.
+Term2:: Description without line break.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Term1</dt>
+<dd>
+<p>Description with line break.</p>
+</dd>
+<dt class="hdlist1">Term2</dt>
+<dd>
+<p>Description without line break.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nested_or_mixing_lists"><a class="anchor" href="#_nested_or_mixing_lists"></a>Nested or mixing lists</h3>
+<div class="paragraph">
+<p>The content of a description list in AsciiDoc can include various elements, such as description, ordered, and unordered lists. Note that the term delimiter changes from '::' to ':::' to create a nested description list.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Term1::
+  * List element 1
+  * List element 2
+Term2::
+  Nested Term:::
+    . List element 1 of Nested Term
+      * Nested list element 1
+      * Nested list element 2
+    . List element 2 of Nested Term
+      * Nested list element 1
+Term3::
+  NOTE: Description mixed with NOTE block.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Term1</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>List element 1</p>
+</li>
+<li>
+<p>List element 2</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Term2</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Nested Term</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>List element 1 of Nested Term</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nested list element 1</p>
+</li>
+<li>
+<p>Nested list element 2</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List element 2 of Nested Term</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nested list element 1</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Term3</dt>
+<dd>
+<p>NOTE: Description mixed with NOTE block.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tables"><a class="anchor" href="#tables"></a>Tables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Table with title has the following syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Table title
+
+|===
+|TableHead1 |TableHead2 |TableHead3
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Table title</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">TableHead1</th>
+<th class="tableblock halign-left valign-top">TableHead2</th>
+<th class="tableblock halign-left valign-top">TableHead3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 1, row 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 3, row 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 1, row 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 2, row 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cell in column 3, row 2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>More information can be found at <a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables" class="bare">https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#tables</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only simple tables are supported in EHANDBOOK (equal columns and rows, no nesting).
+The sortable headers and the filter line is added by EHANDBOOK-NAVIGATOR automatically.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="images"><a class="anchor" href="#images"></a>Images</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Images can be embedded in AsciiDoc documentation. In EHANDBOOK, model screen-shots can be linked to interactive models by providing the link to model path.</p>
+</div>
+<div class="sect2">
+<h3 id="_embed_pre_generated_images"><a class="anchor" href="#_embed_pre_generated_images"></a>Embed pre-generated images</h3>
+<div class="paragraph">
+<p>Image must be placed in the same folder as the AsciiDoc documentation or
+in a subfolder of the AsciiDoc documentation. In either case path relative to AsciiDoc documentation is expected.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax: image::VectorImage.svg[]</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/VectorImage.svg" alt="VectorImage">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pre-generated images in svg, jpg and png formats are supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pre_generated_images_linked_with_model"><a class="anchor" href="#_pre_generated_images_linked_with_model"></a>Pre-generated Images linked with Model</h3>
+<div class="paragraph">
+<p>Pre-generated image can also be linked to its corresponding hierarchy of the interactive model in EHANDBOOK NAVIGATOR.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax: image::image_name.svg[]</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/VectorImage.svg" alt="VectorImage">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ehandbook_generated_model_screenshots_linked_with_interactive_models"><a class="anchor" href="#_ehandbook_generated_model_screenshots_linked_with_interactive_models"></a>EHANDBOOK generated model screenshots linked with interactive models</h3>
+<div class="paragraph">
+<p>EHANDBOOK Container-Build can generate screenshots of model layers (i.e., ASCET diagrams or hierarchies, Simulink subsystems) and link them to the interactive model in EHANDBOOK NAVIGATOR.</p>
+</div>
+<div class="paragraph">
+<p>Syntax: <code>ehbmodelref::model_path[image_title]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ehb_generated_function_overview_image"><a class="anchor" href="#_ehb_generated_function_overview_image"></a>EHB generated Function Overview Image</h3>
+<div class="paragraph">
+<p>Syntax for one Function only: <code>ehbfunctionoverview::function_name[title]</code></p>
+</div>
+<div class="paragraph">
+<p>ehbfunctionoverview::Documentation[Title Name]</p>
+</div>
+<div class="paragraph">
+<p>Syntax for multiple functions: <code>ehbfunctionoverview::function1_name[title],function2_name[title]</code></p>
+</div>
+<div class="paragraph">
+<p>Syntax for all the functions of the container: <code>ehbfunctionoverview-all::[title]</code></p>
+</div>
+<div class="paragraph">
+<p>If target (function1_name,function2_name) contains leading, trailing or in between white spaces, then target has to be enclosed within quotes.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Syntax for multiple functions: ehbfunctionoverview::" function1_name,function2_name "[title]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="includes"><a class="anchor" href="#includes"></a>Include Files</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_inclusion_of_other_asciidoc_or_source_files"><a class="anchor" href="#_inclusion_of_other_asciidoc_or_source_files"></a>Inclusion of other AsciiDoc or source files</h3>
+<div class="paragraph">
+<p>Contents from another AsciiDoc file or other file formats can be inlined within this AsciiDoc document.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The file to be inlined must be placed in the same folder as the AsciiDoc documentation or in a subfolder of the AsciiDoc documentation. In either case path relative to AsciiDoc documentation is expected.</p>
+</li>
+<li>
+<p>To inline the content from another AsciiDoc file into the main AsciiDoc file, the name of the file to be inlined should start with an underscore '_'.</p>
+</li>
+<li>
+<p>If multiple AsciiDoc files are used without '_', the content of each file is appended in EHB in alphabetical order of the file names.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Syntax for inlining files: <code>include::_fileName.extension[]</code></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>include::./../../include/_anotherFile.asciidoc[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This content comes from the adoc file _anotherFile.asciidoc:</p>
+</div>
+<div class="paragraph">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+Donec pede justo, fringilla vel, aliquet nec,</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inclusion_of_formatted_source_code_e_g_c_code"><a class="anchor" href="#_inclusion_of_formatted_source_code_e_g_c_code"></a>Inclusion of formatted Source Code, e.g. C-Code</h3>
+<div class="paragraph">
+<p>Syntax for inlining source files:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[source,c]
+----
+include::filename.extension[]
+----</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">/*****************************************************************************************************
+ * Header File #includes
+ ****************************************************************************************************/
+#include "adb.h"
+
+/*****************************************************************************************************
+ * Function:	DECU
+ * Description: Filter ECU-internal ambient air pressure value
+ ****************************************************************************************************/
+void DFiltered(void)
+{
+	int a = 0;
+	int b = 4;
+	int c = a + b;
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Syntax highlighting is not supported in EHB.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="links"><a class="anchor" href="#links"></a>Links</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_autolink"><a class="anchor" href="#_autolink"></a>AutoLink</h3>
+<div class="paragraph">
+<p>AsciiDoc recognizes the following common URL schemes without the help of any markup:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>http/https</p>
+</li>
+<li>
+<p>file</p>
+</li>
+<li>
+<p>mailto</p>
+</li>
+<li>
+<p>ftp</p>
+</li>
+<li>
+<p>irc</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>So the below https URL automatically turn it into a hyperlink:</p>
+</div>
+<div class="paragraph">
+<p>The EHANDBOOK homepage at <a href="https://www.etas.com/ehandbook" class="bare">https://www.etas.com/ehandbook</a></p>
+</div>
+<div class="paragraph">
+<p>A link to an external file works like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">file://../input/Documentation/AsciiDocUserDocument.adoc</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A link to a network file works like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">file://sample.com/sample/sample/sample.adoc</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By clicking on any of the above links, the file will be opened with the associated tool outside of EHB-NAV.</p>
+</div>
+<div class="paragraph">
+<p>AsciiDoc also detects and autolinks standard email addresses:</p>
+</div>
+<div class="paragraph">
+<p>Email us at <a href="mailto:sales.de@etas.com">sales.de@etas.com</a> for any inquiries.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Only absolute file paths are supported in EHANDBOOK.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cutomize_link_text"><a class="anchor" href="#_cutomize_link_text"></a>Cutomize Link Text</h3>
+<div class="paragraph">
+<p>The appearance of the link can be configured. This happens by appending text or parameters, enclosed by a pair of square brackets.</p>
+</div>
+<div class="sect3">
+<h4 id="_customize_url_and_file_link_text"><a class="anchor" href="#_customize_url_and_file_link_text"></a>Customize URL and File Link Text</h4>
+<div class="paragraph">
+<p>Instead of the link itself, an alternative text can be displayed.
+Insert that text between the square brackets at the end of the URL.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://etas.com/ehandbook[Show Homepage]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will be shown as:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://etas.com/ehandbook">Show Homepage</a></p>
+</div>
+<div class="paragraph">
+<p>Since the text is subject to normal substitutions, you can apply formatting to it.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://etas.com/ehandbook"><strong>Show Homepage in bold</strong></a></p>
+</div>
+<div class="paragraph">
+<p>And out of this</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">file://../input/Documentation/AsciiDocUserDocument.adoc[AsciiDoc Source]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the following is shown:</p>
+</div>
+<div class="paragraph">
+<p><a href="file://../input/Documentation/AsciiDocUserDocument.adoc">AsciiDoc Source</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_customize_mailto_text"><a class="anchor" href="#_customize_mailto_text"></a>Customize Mailto Text</h4>
+<div class="paragraph">
+<p>For mailto, two parameters are used inside the brackets. The first parameter defines the text, which is shown as the link.
+The second parameter defines the text, which will appear in the subject field of your mail program.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">mailto:sales.de@etas.com[Contact ETAS,Request for Quotation]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="mailto:sales.de@etas.com?subject=Request+for+Quotation">Contact ETAS</a></p>
+</div>
+<div class="paragraph">
+<p>If you want to leave the linked text blank (so it falls back to the email address),
+start the attribute list with a comma so as to leave a blank slot for it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">mailto:sales.de@etas.com[,Request for Quotation]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="mailto:sales.de@etas.com?subject=Request+for+Quotation">sales.de@etas.com</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_link_macro"><a class="anchor" href="#_link_macro"></a>Link Macro</h3>
+<div class="paragraph">
+<p>The general link syntax is <strong>link:&lt;target&gt;[&lt;attrlist&gt;]</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The link macro is required, if the link does not start with a scheme recognized by AsciiDoc.
+This also happens, if the link contains any space characters. in this case, the space must be URL encoded by %20 or &amp;#32.</p>
+</div>
+<div class="paragraph">
+<p>Customize &lt;target&gt; to support model or function overview link.</p>
+</div>
+<div class="sect3">
+<h4 id="_support_model_link"><a class="anchor" href="#_support_model_link"></a>Support model link</h4>
+<div class="paragraph">
+<p>Syntax for support model linking.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ehb:model:://FCName/model_path</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ehb:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">model:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory for model link</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FCName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional, and used for inter FC model link</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">model_path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">model hierarchy path starting from project to a hierarchy</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Example for inter FC model link:</strong></p>
+</div>
+<div class="paragraph">
+<p>link:ehb:model://A_C_Afr/AirFuelRatio_Project/Main/AirFuelRatio/Main[link to ASET Afr model]</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The above target link contains FC name. So this link can be used across FC documentation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Example for intra FC model link:</strong></p>
+</div>
+<div class="paragraph">
+<p>link:ehb:model:/AirFuelRatio_Project/Main/AirFuelRatio/Main[link to ASET Afr model]</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The above target link doesn&#8217;t contain FC name. So this link can be used within FC documentation for linking.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_support_function_overview_link_using_link_macro"><a class="anchor" href="#_support_function_overview_link_using_link_macro"></a>Support function overview link using link macro</h4>
+<div class="paragraph">
+<p>Syntax for function overview linking.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ehb:functionoverview:/?functions=function1,function2</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ehb:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">functionoverview:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory for function overview link</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?functions=(key)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">function1,function2(values)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allowed valid single or multiple functions</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Example for single FC function overview link:</strong></p>
+</div>
+<div class="paragraph">
+<p>link:ehb:functionoverview:/?functions=CPT_Amf[link CPT_Amf]</p>
+</div>
+<div class="paragraph">
+<p><strong>Example for multiple FC function overview link:</strong></p>
+</div>
+<div class="paragraph">
+<p>link:ehb:functionoverview:/?functions=CPT_Amf,CPT_Afr[link CPT_Amf and CPT_Afr]</p>
+</div>
+<div class="paragraph">
+<p><em>Note:</em> If multiple function names are provided as input, they must be separated with comma (,).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">link:../input/Documentation/AsciiDocUserDocument.adoc[AsciiDoc Source]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>becomes:</p>
+</div>
+<div class="paragraph">
+<p><a href="../input/Documentation/AsciiDocUserDocument.adoc">AsciiDoc Source</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="support-cross-references"><a class="anchor" href="#support-cross-references"></a>Support cross references</h4>
+<div class="paragraph">
+<p>A cross reference is a link to another location within the current AsciiDoc document or in another AsciiDoc document.
+To create a cross reference, it is required to define the location where the reference will point.
+Use inline <strong>xref</strong> macro to create a reference to the location.</p>
+</div>
+<div class="sect4">
+<h5 id="_intra_fc_linking"><a class="anchor" href="#_intra_fc_linking"></a>Intra FC linking</h5>
+<div class="paragraph">
+<p>The shorthand <strong>xref</strong> is used to create a cross reference to an section that has a title within the same document.</p>
+</div>
+<div class="paragraph">
+<p>Syntax for Inter FC Linking</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Section_title[link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example, an AsciiDoc document has a section called Introduction. The reference to that section can be written as</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Introduction[Introduction]</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_inter_fc_linking"><a class="anchor" href="#_inter_fc_linking"></a>Inter FC Linking</h5>
+<div class="paragraph">
+<p>The shorthand <strong>xref</strong> is also used to create cross reference to an section that has a title in another AsciiDoc document.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Fc_name/Section_title[link text]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example, an AsciiDoc document has a section called Variables in the FC named Sensor.
+This section is referenced in another AsciiDoc document in the FC named Actuator.
+Reference can be written as,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Sensor/Variables[Variables]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Link text can also be customized based on requirement in both intra and inter FC linking. Example,</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#Introduction[Overview]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:#ETAS/EHANDBOOK[FC Overview]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If no link text is provided, default section title is displayed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="diagrams"><a class="anchor" href="#diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Support for Asciidoctor Diagrams in the EHANDBOOK enables rendering of plain text diagrams that are embedded in your AsciiDoc document as part of the Asciidoctor conversion process.
+Following types of Diagrams are supported in EHANDBOOK</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Formulas</p>
+</li>
+<li>
+<p>UML Graphics</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_formulas"><a class="anchor" href="#_formulas"></a>Formulas</h3>
+<div class="sect3">
+<h4 id="_simple_formula"><a class="anchor" href="#_simple_formula"></a>Simple formula</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,default]
+....
+@startmath
+f(t)=(a_0)/2 + sum_(n=1)^ooa_ncos((npit)/L)+sum_(n=1)^oo b_n\ sin((npit)/L)
+@endmath
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/default.png" alt="default">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scale_formula_with_1_5"><a class="anchor" href="#_scale_formula_with_1_5"></a>Scale formula with 1.5</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,scale1_5]
+....
+@startmath
+scale 1.5
+f(t)=(a_0)/2 + sum_(n=1)^ooa_ncos((npit)/L)+sum_(n=1)^oo b_n\ sin((npit)/L)
+@endmath
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/scale1_5.png" alt="scale1 5">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_changing_formula_images_to_svg"><a class="anchor" href="#_changing_formula_images_to_svg"></a>Changing formula images to SVG</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,latex_svg,svg]
+....
+@startlatex
+\sum_{i=0}^{n-1} (a_i + b_i^2)
+@endlatex
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/latex_svg.svg" alt="latex svg">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uml_graphics"><a class="anchor" href="#_uml_graphics"></a>UML Graphics</h3>
+<div class="sect3">
+<h4 id="_sequence_diagram"><a class="anchor" href="#_sequence_diagram"></a>Sequence Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,sequence1]
+
+....
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: Another authentication Response
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/sequence.png" alt="sequence">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_case_diagram"><a class="anchor" href="#_use_case_diagram"></a>Use Case Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,usecase2]
+....
+@startuml
+!pragma layout smetana
+
+(First usecase)
+(Another usecase) as (UC2)
+usecase UC3
+usecase (Last\nusecase) as UC4
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/usecase.png" alt="usecase">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_class_diagram"><a class="anchor" href="#_class_diagram"></a>Class Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,Class3]
+
+....
+@startuml
+!pragma layout smetana
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List &lt;|-- AbstractList
+Collection &lt;|-- AbstractCollection
+
+Collection &lt;|- List
+AbstractCollection &lt;|- AbstractList
+AbstractList &lt;|-- ArrayList
+
+class ArrayList {
+  Object[] elementData
+  size()
+}
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+
+annotation SuppressWarnings
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/class.png" alt="class">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_components_diagram"><a class="anchor" href="#_components_diagram"></a>Components Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,components]
+
+....
+@startuml
+!pragma layout smetana
+
+[AA] &lt;&lt;static lib&gt;&gt;
+[BB] &lt;&lt;shared lib&gt;&gt;
+[CC] &lt;&lt;static lib&gt;&gt;
+
+node node1
+node node2 &lt;&lt;shared node&gt;&gt;
+database Production
+
+skinparam component {
+    backgroundColor&lt;&lt;static lib&gt;&gt; DarkKhaki
+    backgroundColor&lt;&lt;shared lib&gt;&gt; Green
+}
+
+skinparam node {
+borderColor Green
+backgroundColor Yellow
+backgroundColor&lt;&lt;shared node&gt;&gt; Magenta
+}
+skinparam databaseBackgroundColor Aqua
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/components.png" alt="components">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_object_diagram"><a class="anchor" href="#_object_diagram"></a>Object Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,object]
+
+....
+@startuml
+!pragma layout smetana
+
+
+object Object01
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 &lt;|-- Object02
+Object03 *-- Object04
+Object05 o-- "4" Object06
+Object07 .. Object08 : some labels
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/object.png" alt="object">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deployment_diagram"><a class="anchor" href="#_deployment_diagram"></a>Deployment Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,deployment]
+
+....
+@startuml
+!pragma layout smetana
+
+artifact Foo1 {
+  folder Foo2
+}
+
+folder Foo3 {
+  artifact Foo4
+}
+
+frame Foo5 {
+  database Foo6
+}
+
+cloud vpc {
+  node ec2 {
+    stack stack
+  }
+}
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/deployment.png" alt="deployment">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_timing_diagram"><a class="anchor" href="#_timing_diagram"></a>Timing Diagram</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[plantuml,timing]
+
+....
+@startuml
+!pragma layout smetana
+
+robust "Web Browser" as WB
+concise "Web User" as WU
+
+@0
+WU is Idle
+WB is Idle
+
+@100
+WU -&gt; WB : URL
+WU is Waiting
+WB is Processing
+
+@300
+WB is Waiting
+
+@enduml
+....</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/timing.png" alt="timing">
+</div>
+</div>
+<div class="paragraph">
+<p>More information can be found on  <a href="https://asciidoctor.org/docs/asciidoctor-diagram/" class="bare">https://asciidoctor.org/docs/asciidoctor-diagram/</a>, <a href="https://plantuml.com/guide" class="bare">https://plantuml.com/guide</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="admonitions"><a class="anchor" href="#admonitions"></a>Admonition Blocks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Admonitions are certain statements which draws reader&#8217;s attentions out of content&#8217;s flow.
+Following Admonitions supported by EHANDBOOK documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NOTE</p>
+</li>
+<li>
+<p>TIP</p>
+</li>
+<li>
+<p>IMPORTANT</p>
+</li>
+<li>
+<p>CAUTION</p>
+</li>
+<li>
+<p>WARNING</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_admonition_paragraph_syntax"><a class="anchor" href="#_admonition_paragraph_syntax"></a>Admonition Paragraph Syntax</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The label must be uppercase and immediately followed by a colon (:).</p>
+</li>
+<li>
+<p>Separate the first line of the paragraph from the label by a single space.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Examples for Admonition Paragraph Syntax</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">NOTE: This is an example for *Note*.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">TIP: This is an example for *Tip*.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">IMPORTANT: This is an example for *Important*.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">CAUTION: This is an example for *Caution*.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">WARNING: This is an example for *Warning*.</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_admonition_block_syntax"><a class="anchor" href="#_admonition_block_syntax"></a>Admonition Block Syntax</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[NOTE]
+.This is an example for *Admonition Block Syntax*.
+
+====
+Following rules are to be followed for creating a Adomonition Block Syntax.
+
+.Set the label in an attribute list on a delimited block. The label must be uppercase.
+.Admonition styles are commonly set on example blocks. Example blocks are delimited by four equal signs (====).
+====</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="more-delimited-blocks"><a class="anchor" href="#more-delimited-blocks"></a>More delimited block</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any block can have a title. A block title is defined using a line of text above the block that starts with a dot.
+That dot cannot be followed by a space. For block images, the title is displayed below the block.
+For all other blocks, the title is typically displayed above it.
+Following Delimited Blocks are supported in EHANDBOOK:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sidebar Block</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Sidebar title
+****
+example to check sidebar block
+****</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example Block</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Example block Title
+====
+example of example block
+====</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quote Block</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[quote, Albert Einstein, Citation if any]
+A person who never made a mistake never tried anything new.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_important_notices"><a class="anchor" href="#_important_notices"></a>Important Notices</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>NOTICE</strong></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Incomplete container content due to defective or inconsistent input data</strong></p>
+</div>
+<div class="paragraph">
+<p>Content of the generated EHANDBOOK Container may be missing, if the input data used for generating the container is defective or inconsistent. Affected container contents cannot be displayed or will be displayed incorrectly in the EHANDBOOK-NAVIGATOR. Therefore, always check the log file of the EHANDBOOK Container-Build. Defective or inconsistent input data that have led to errors when converting will be tracked in the log file.</p>
+</div>
+<div class="paragraph">
+<p>The content consistency is in the responsibility of the data supplier (documentation publisher). We recommend that the data supplier develop a standard procedure for pre-processing the input data outside the EHANDBOOK Container-Build tool chain to ensure the data consistency and to reduce the workload for reviewing the input data. In addition, the pre-processing should be properly documented to ensure transparency.</p>
+</div>
+<div class="paragraph">
+<p>After generating a new container:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check the entries in the log file of the EHANDBOOK Container-Build indicating defective or inconsistent input data.</p>
+</li>
+<li>
+<p>If necessary, fix the incorrect or inconsistent input data.</p>
+</li>
+<li>
+<p>Re-build the EHANDBOOK Container.</p>
+</li>
+<li>
+<p>Only provide containers for further usage in the EHANDBOOK-NAVIGATOR,
+if the log file contains no entries, indicating any defective or inconsistent input data.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <!--
+  <img src="../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
+  -->
+
+  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
+  <div class="d-flex align-items-center justify-content-center flex-wrap">
+    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
+      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
+          </path>
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
+      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
+          width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
+            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
+        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  </div>
+  <div class="etas-footer-separator"></div>
+  <span>
+    <b>© ETAS 2025</b>
+  </span>
+  <span>
+    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
+  </span>
+  <span>
+    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
+  </span>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

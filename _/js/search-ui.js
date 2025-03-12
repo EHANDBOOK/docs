@@ -136,6 +136,13 @@
     })
     return searchResultItem
   }
+  
+  function handleHyphenatedSearch(query) {
+      if (query.startsWith('-')) {
+        return query.replace(/^-+/, '');
+      }
+      return query;
+    }
 
   function createNoResult (text) {
     var searchResultItem = document.createElement('div')
@@ -229,10 +236,11 @@
         if (e.key === 'Escape' || e.key === 'Esc') return clearSearchResults(true)
         try {
           var query = searchInput.value
-          if (!query) return clearSearchResults()
-          searchIndex(index.index, index.store, searchInput.value)
+		  var safeQuery = handleHyphenatedSearch(query);
+		  if (!safeQuery) return clearSearchResults()
+		  searchIndex(index.index, index.store, safeQuery)
         } catch (err) {
-          if (debug) console.debug('Invalid search query: ' + query + ' (' + err.message + ')')
+          if (debug) console.debug('Invalid search query: ' + safeQuery + ' (' + err.message + ')')
         }
       }, 100)
     )

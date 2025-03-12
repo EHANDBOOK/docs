@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
   </li>
@@ -676,7 +679,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../tutorials-nav/interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+    <a class="nav-link" href="../tutorials-nav/live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
@@ -711,14 +717,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.4</span>
+    <span class="version">13.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">12.4</a>
+          <a href="../index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../12.4/index.html">12.4</a>
         </li>
         <li class="version">
           <a href="../12.3/index.html">12.3</a>
@@ -778,9 +787,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.4</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.4</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">13.0</a>
+    <a class="version" href="../12.4/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.4</a>
     <a class="version" href="../12.3/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.3</a>
     <a class="version" href="../12.2/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.2</a>
     <a class="version" href="../12.1/references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">12.1</a>
@@ -1723,42 +1733,75 @@ This also happens, if the link contains any space characters. in this case, the 
 </div>
 </div>
 <div class="sect3">
-<h4 id="support-cross-references"><a class="anchor" href="#support-cross-references"></a>Support cross references</h4>
+<h4 id="support-cross-references"><a class="anchor" href="#support-cross-references"></a>Support cross references using link macro</h4>
 <div class="paragraph">
 <p>A cross reference is a link to another location within the current AsciiDoc document or in another AsciiDoc document.
 To create a cross reference, it is required to define the location where the reference will point.
-Use inline <strong>xref</strong> macro to create a reference to the location.</p>
+Use inline <strong>link</strong> macro to create a reference to the location.</p>
+</div>
+<div class="paragraph">
+<p>Syntax for cross references.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ehb:text://fcName/sectionTitle1/sectionTitle2[displayText]</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ehb:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mandatory for cross reference link</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_linking_within_same_asciidoc_file"><a class="anchor" href="#_linking_within_same_asciidoc_file"></a>Linking within same AsciiDoc file</h5>
+<div class="paragraph">
+<p>The shorthand <strong>link</strong> is used to create a cross reference to an section that has a title within the same document.</p>
+</div>
+<div class="paragraph">
+<p>Syntax for linking within same AsciiDoc file</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:ehb:text://functionName/sectionTitle1/sectionTitle2[Link to chapter within same AsciiDoc file]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example, an AsciiDoc document has a section called Introduction within the FC Afr. The reference to that section can be written as</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>link:ehb:text://Afr/Test/Introduction[Introduction]</pre>
+</div>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_intra_fc_linking"><a class="anchor" href="#_intra_fc_linking"></a>Intra FC linking</h5>
+<h5 id="_linking_between_different_asciidoc_files"><a class="anchor" href="#_linking_between_different_asciidoc_files"></a>Linking between different AsciiDoc files</h5>
 <div class="paragraph">
-<p>The shorthand <strong>xref</strong> is used to create a cross reference to an section that has a title within the same document.</p>
+<p>The shorthand <strong>link</strong> is also used to create cross reference to an section that has a title in another AsciiDoc document.</p>
 </div>
 <div class="paragraph">
-<p>Syntax for Inter FC Linking</p>
+<p>Syntax for linking between different AsciiDoc files</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>xref:#Section_title[link text]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Example, an AsciiDoc document has a section called Introduction. The reference to that section can be written as</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>xref:#Introduction[Introduction]</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_inter_fc_linking"><a class="anchor" href="#_inter_fc_linking"></a>Inter FC Linking</h5>
-<div class="paragraph">
-<p>The shorthand <strong>xref</strong> is also used to create cross reference to an section that has a title in another AsciiDoc document.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>xref:#Fc_name/Section_title[link text]</pre>
+<pre>link:ehb:text://functionName/sectionTitle1/sectionTitle2[Link to chapter of other AsciiDoc file]</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1768,24 +1811,22 @@ Reference can be written as,</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>xref:#Sensor/Variables[Variables]</pre>
+<pre>link:ehb:text://Sensor/Variables[Sensor-Variable]</pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Link text can also be customized based on requirement in both intra and inter FC linking. Example,</p>
+<p>Support for xref has been deprecated in EHANDBOOK from version 13.0. Please use the link macro instead.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>xref:#Introduction[Overview]</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>xref:#ETAS/EHANDBOOK[FC Overview]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If no link text is provided, default section title is displayed.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2305,12 +2346,12 @@ if the log file contains no entries, indicating any defective or inconsistent in
 
   <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
   <div class="d-flex align-items-center justify-content-center flex-wrap">
-    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
       title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
           <path fill="#DEE0E2" fill-rule="evenodd"
             d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
           </path>
-        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
       href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
           width="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -2320,13 +2361,13 @@ if the log file contains no entries, indicating any defective or inconsistent in
   </div>
   <div class="etas-footer-separator"></div>
   <span>
-    <b>© ETAS 2024</b>
+    <b>© ETAS 2025</b>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
   </span>
 </footer>
 <script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>

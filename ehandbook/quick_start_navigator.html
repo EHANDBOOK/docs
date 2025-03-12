@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="12.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
   </li>
@@ -676,7 +679,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="tutorials-nav/interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+    <a class="nav-link" href="tutorials-nav/live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tutorials-nav/cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
@@ -711,14 +717,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">12.4</span>
+    <span class="version">13.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">12.4</a>
+          <a href="index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="12.4/index.html">12.4</a>
         </li>
         <li class="version">
           <a href="12.3/index.html">12.3</a>
@@ -776,9 +785,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">12.4</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="quick_start_navigator.html">12.4</a>
+    <a class="version is-current" href="quick_start_navigator.html">13.0</a>
+    <a class="version" href="12.4/quick_start_navigator.html">12.4</a>
     <a class="version" href="12.3/quick_start_navigator.html">12.3</a>
     <a class="version" href="12.2/quick_start_navigator.html">12.2</a>
     <a class="version" href="12.1/quick_start_navigator.html">12.1</a>
@@ -834,7 +844,7 @@ power-saving modes that have been enabled for computer components (processor, ha
 <div class="ulist">
 <ul>
 <li>
-<p>2GHz Dual Core PC or faster x64-bit processor with SSE2 instruction set</p>
+<p>2GHz Quad Core PC or faster x64-bit processor with SSE2 instruction set</p>
 </li>
 <li>
 <p>Operating systems:</p>
@@ -863,10 +873,10 @@ power-saving modes that have been enabled for computer components (processor, ha
 </div>
 </li>
 <li>
-<p>Hard disk with a minimum of 5 GB of free space</p>
+<p>Hard disk with a minimum of 10-20 GB of free space</p>
 </li>
 <li>
-<p>DirectX 10 Graphics card with a monitor resolution of atleast 1024x576 or
+<p>DirectX 10 Graphics card with a monitor resolution of atleast 1920x1080 or
 higher</p>
 </li>
 </ul>
@@ -906,7 +916,7 @@ and Microsoft®.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>3GHz Pentium Quad Core PC or faster x64-bit processor with SSE2 instruction set</p>
+<p>3GHz Octa Core PC or faster x64-bit processor with SSE2 instruction set</p>
 </li>
 <li>
 <p>Operating systems:</p>
@@ -923,19 +933,19 @@ and Microsoft®.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Minimum 4 GB free RAM for running EHANDBOOK-NAVIGATOR</p>
+<p>Minimum 8 GB free RAM for running EHANDBOOK-NAVIGATOR</p>
 </li>
 <li>
-<p>Minimum 8 GB system RAM (64-bit) for running EHANDBOOK-NAVIGATOR in parallel with other software applications</p>
+<p>Minimum 16 GB system RAM (64-bit) for running EHANDBOOK-NAVIGATOR in parallel with other software applications</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Hard disk with a minimum of 5-10 GB of free space</p>
+<p>Hard disk with a minimum of 10-20 GB of free space</p>
 </li>
 <li>
-<p>DirectX 10 Graphics card with a monitor resolution of atleast 1024x576 or
+<p>DirectX 10 Graphics card with a monitor resolution of atleast 1920x1080 or
 higher</p>
 </li>
 <li>
@@ -1033,7 +1043,7 @@ If you specify a directory that does not exist, it is created automatically.</p>
 <h4 id="_choose_start_menu_folder_for_the_shortcut_to_create"><a class="anchor" href="#_choose_start_menu_folder_for_the_shortcut_to_create"></a>Choose Start Menu Folder for the Shortcut to create:</h4>
 <div class="paragraph">
 <p>You can specify the path to create the EHANDBOK-NAVIGATOR’s shortcut. If it is
-not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 12.4.</p>
+not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 13.0.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1068,7 +1078,7 @@ available and visible in the Windows System Tray. If it is not selected the appl
 <ul>
 <li>
 <p>Click on <code>Next</code>.<br>
-<code>Completing EHANDBOOK-NAVIGATOR 12.4 Setup</code> dialog box is displayed</p>
+<code>Completing EHANDBOOK-NAVIGATOR 13.0 Setup</code> dialog box is displayed</p>
 </li>
 </ul>
 </div>
@@ -1091,14 +1101,14 @@ available and visible in the Windows System Tray. If it is not selected the appl
 </ul>
 </div>
 <div class="paragraph">
-<p>On the Start menu, the EHANDBOOK-NAVIGATOR 12.4 folder, with the following
+<p>On the Start menu, the EHANDBOOK-NAVIGATOR 13.0 folder, with the following
 entries, is created in the ETAS program group:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>EHANDBOOK-NAVIGATOR 12.4</strong><br>
-The EHANDBOOK-NAVIGATOR 12.4 program is started.</p>
+<p><strong>EHANDBOOK-NAVIGATOR 13.0</strong><br>
+The EHANDBOOK-NAVIGATOR 13.0 program is started.</p>
 </li>
 <li>
 <p><strong>Open Getting Started</strong><br>
@@ -1165,14 +1175,14 @@ installer from the command line and by specifying additional parameters (see tab
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent installation through command line</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_12.4.0_setup.exe /S</code></p>
-<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_12.4.0_setup.exe</code>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_13.0.0_setup.exe /S</code></p>
+<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_13.0.0_setup.exe</code>
 is the name of the file which you have downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent uninstall through command line</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code> uninstall.exe /S</code></p>
-<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\ETAS\EHANDBOOK-NAVIGATOR 12.4</p></td>
+<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\ETAS\EHANDBOOK-NAVIGATOR 13.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -1199,7 +1209,7 @@ the issue.</p>
 <p>Customizing the installation directory is just an additional parameter:</p>
 </div>
 <div class="paragraph">
-<p>´EHANDBOOK-NAVIGATOR_12.4.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR12.4´</p>
+<p>´EHANDBOOK-NAVIGATOR_13.0.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR13.0´</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1211,7 +1221,7 @@ the issue.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR_12.4.0_setup.exe is the name of the file that you
+<p>EHANDBOOK-NAVIGATOR_13.0.0_setup.exe is the name of the file that you
 have downloaded.</p>
 </li>
 <li>
@@ -1378,7 +1388,7 @@ argument in the .ini file should be modified.</p>
 </div>
 <div class="paragraph">
 <p>Select <code>Add/Remove Programs</code> or <code>Programs and Features</code> in the Control
-Panel. Select <code>EHANDBOOK-NAVIGATOR 12.4</code> and click <code>Uninstall/Change</code>.</p>
+Panel. Select <code>EHANDBOOK-NAVIGATOR 13.0</code> and click <code>Uninstall/Change</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="_to_uninstall_ehandbook_navigator"><a class="anchor" href="#_to_uninstall_ehandbook_navigator"></a>To Uninstall EHANDBOOK-NAVIGATOR:</h4>
@@ -1931,17 +1941,17 @@ NAVIGATOR.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 12.4</code> icon.<br>
+<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 13.0</code> icon.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
 <p>Search <strong>EHANDBOOK-NAVIGATOR</strong> in the search field and select
-<code>EHANDBOOK-NAVIGATOR 12.4.</code><br>
+<code>EHANDBOOK-NAVIGATOR 13.0.</code><br>
     &lt;Or&gt;</p>
 </li>
 <li>
 <p>Go to <code>All apps &#8594; ETAS &#8594; EHANDBOOK-NAVIGATOR</code> folder and click on
-<code>EHANDBOOK-NAVIGATOR 12.4</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
+<code>EHANDBOOK-NAVIGATOR 13.0</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
 </li>
 </ul>
 </div>
@@ -2415,7 +2425,7 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR 12.4 supports interoperability with ETAS INCA V7
+<p>EHANDBOOK-NAVIGATOR 13.0 supports interoperability with ETAS INCA V7
 needs to be installed on the same PC for EHANDBOOK-NAVIGATOR to support INCA operations.</p>
 </li>
 <li>
@@ -2541,12 +2551,12 @@ files besides install log) the installation might stop</p></td>
 
   <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
   <div class="d-flex align-items-center justify-content-center flex-wrap">
-    <a target="_socialmedia" class="etas-social-link" href="https://www.linkedin.com/company/etas"
+    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
       title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
           <path fill="#DEE0E2" fill-rule="evenodd"
             d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
           </path>
-        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a target="_socialmedia" class="etas-social-link"
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
       href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
           width="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -2556,13 +2566,13 @@ files besides install log) the installation might stop</p></td>
   </div>
   <div class="etas-footer-separator"></div>
   <span>
-    <b>© ETAS 2024</b>
+    <b>© ETAS 2025</b>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/terms_of_use.php" target="_blank">Terms of Use / Legal Notice</a>
+    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
   </span>
   <span>
-    <a href="https://www.etas.com/en/company/privacy_policy.php" target="_blank">Privacy Policy</a>
+    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
   </span>
 </footer>
 <script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>

@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EHANDBOOK Container-Build Usage in General :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">
+    <meta name="generator" content="Antora 3.1.10">
+<link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+      </a>
+      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>
+</header>
+<div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="12.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../safety_and_privacy_information.html">Safety and Privacy Information</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../intended_use.html">Intended Use</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../target_group.html">Target Group</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../classification_of_safety_messages.html">Classification of Safety Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../safety_information.html">Safety Information</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ehb_cb_warning_messages.html">Warning Messages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ETAS_contacts.html">ETAS Contacts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_3.html">Version 12.3 (October 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (September 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_3.html">Version 11.3 (December 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_2.html">Version 11.2 (September 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_1.html">Version 11.1 (June 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_11_0.html">Version 11.0 (March 2023)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_3.html">Version 10.3 (December 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../container_build.html">Container-Build</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_container_build.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_quick_start_demos">Quick Start Demos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_container_build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-cb/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-ascet-6/contents.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-simulink/contents.html">Simulink</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/dir-ccode/contents.html">C-Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-cb/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/index.html">Explanations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/model_languages/overview.html">Model Languages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/ascet6.html">ASCET 6</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow / TargetLink</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/model_languages/c_code.html">C-Code</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/automotive_standards/overview.html">Automotive Standards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_download">Download</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_installation">Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/platforms.html">Supported Platforms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/platforms.html#_windows">Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/platforms.html#_linux">Linux</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../explanations/ehb_cb_features.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/index.html">How-to guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-simulink-libraries-in-ehb.html">How to configure EHB-CB for Simulink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-targetlink-models.html">How to support TargetLink models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/how-to-customize-interactive-models.html">How to customize Interactive Models</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Simulink</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support">Passing Simulink library paths to EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Simulink Variant block configuration support</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-truth-table-block-support">Simulink Truthtable block in the documentation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ASCET-DEVELOPER</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">C-Code</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_model_depth_skip">Model Depth</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept">View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/simulink_libraries_configuration_using_simulinkView.html">Configure appearance of Simulink library blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/simulink-view-concept.html">Simulink View Concept</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks">Configuration of details shown for Simulink subsystem-based blocks</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Configuration to hide C-Code functions based on function names</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Label-specific configurations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration">Label Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment">Label Amendment</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize Textual Contents</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic">ClickPic</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration">Label Table Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">How to customize EHB Containers</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_directory_based_ehb_cb">Dir-based EHB-CB</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">How to support Asian languages in EHANDBOOK generated PDF documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">References</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="other_input_formats.html">Other Input Formats</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="styling.html">Styling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigator.html">Navigator</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about_navigator.html">About Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../quick_start_navigator.html">Quick Start</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_installing_navigator">Installing Navigator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_licensing_the_software">Licensing the Software</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_getting_started">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../quick_start_navigator.html#_troubleshooting">Troubleshooting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../user-interface/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/menus.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/toolbar.html">Toolbars</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/document_views.html">Document Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/model_views.html">Model Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/bookmarks.html">Bookmark Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/search_views.html">Search Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/label_popup.html">Label Popup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/other_views.html">Other Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../user-interface/pref_dialogs.html">Preference Dialogs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../how-to-navigator/how_to_navigator.html">How-to guides</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-nav/index.html">Tutorials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interactive_models.html">Interactive Models</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html">Software Function Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/searching.html">Searching</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/dependency_analysis.html">Dependency Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_VECTOR_CANAPE.html">Interoperability with CANape</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/devices_and_rasters.html">Devices and Rasters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutorials-nav/compare.html">Compare Containers</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../known-issues/known_issues.html">Known Issues</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../known-issues/known_issues.html#_container_build">Container-Build</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../known-issues/known_issues.html#_navigator">Navigator</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">12.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">13.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../container_build.html">Container-Build</a></li>
+    <li><a href="index.html">References</a></li>
+    <li><a href="EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a></li>
+  </ul>
+</nav>
+
+<div class="navbar-item search hide-for-print">
+  <div id="search-field" class="field">
+    <input id="search-input" type="text" placeholder="Search the docs">
+  </div>
+</div>
+
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">12.4</button>
+  <div class="version-menu">
+    <a class="version" href="../../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">13.0</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">12.4</a>
+    <a class="version" href="../../12.3/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">12.3</a>
+    <a class="version" href="../../12.2/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">12.2</a>
+    <a class="version" href="../../12.1/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">12.1</a>
+    <a class="version" href="../../12.0/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">12.0</a>
+    <a class="version" href="../../11.3/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">11.3</a>
+    <a class="version" href="../../11.2/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">11.2</a>
+    <a class="version" href="../../11.1/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">11.1</a>
+    <a class="version" href="../../11.0/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">11.0</a>
+    <a class="version" href="../../10.3/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">10.3</a>
+    <a class="version" href="../../10.2/references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">10.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">EHANDBOOK Container-Build Usage in General</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK Container-Build offers two modes of operation: a GUI- or a command-line mode. To simplify the first usage, the GUI-mode only provides the most important input configuration parameters. If more parameters are required or the integration in an automated build process is needed, we recommend using the command-line mode.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After container generation, check the console messages and the log file for error or warning messages and examine the container content for completeness and accuracy.</p>
+</div>
+<div class="paragraph">
+<p>Follow the latest safety advice documents, delivered as separate documents within the EHANDBOOK Container-Build package.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ehandbook_container_build_usage_in_command_line_mode"><a class="anchor" href="#_ehandbook_container_build_usage_in_command_line_mode"></a>EHANDBOOK Container-Build Usage in Command-line Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please follow the steps for generating an EHANDBOOK container from the source data:</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 1:</strong> Open a command-line interpreter (CMD or PowerShell under Windows; bash under Linux) and navigate to the installation directory of the EHANDBOOK Container-Build command line application (<code>eHandbookCB.exe</code> under Windows or <code>eHandbookCB</code> under Linux).</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 2:</strong> To invoke EHANDBOOK Container-Build, appropriate command line parameters (refer the tables below) have to be provided on to the command prompt. Format: eHandbookCB.exe &lt;Option&gt;</p>
+</div>
+<div id="cmd-list" class="paragraph">
+<p>List of EHANDBOOK Container-Build command line interface (CLI) parameters:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 11%;">
+<col style="width: 19%;">
+<col style="width: 48%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-i</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of ASAM catalog file (.ccx) for ASAM-based EHB-CB or top folder of input directory for Directory-based EHB-CB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-o</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of output folder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-n</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the container to be generated. The file extension .ehb is added. Existing containers with the same name will be overwritten!</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-styling</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of folder containing the styling information (title page, fonts, company logo etc&#8230;&#8203;) For more details refer to the  <em>EHB-CB Styling Guide</em>. Without this option, a default title page is created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-gensvg</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to generate SVG image screenshots out of interactive model. For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic" class="xref page">Click Pic</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-labelamendment</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a path and file to rename variables and parameters in Simulink models.<br>
+For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment" class="xref page">Label Amendment</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-lockdir</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Option to provide path for locking directory (only required if multi instances of CB are used)</p>
+</div>
+<div class="paragraph">
+<p>For more details refer to chapter <a href="#ehandbook-cb-ini">Configurations in <code>eHandbookCB.ini</code></a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-vmargs</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to configure special configurations from the eHandbookCB.ini file via command line.</p>
+<p class="tableblock">For more details refer to chapter <a href="#ehandbook-cb-ini">Configurations in <code>eHandbookCB.ini</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-rootlevel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide path to root level file for one or more model languages. The default value for all the languages is 0.<br>
+For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping" class="xref page">Root-Level Skipping</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ugg</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use pre-generated images and interactive models from UGG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-viewtype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Option to provide a view name, for which the models and their screenshots are be generated.</p>
+</div>
+<div class="paragraph">
+<p>If this parameter is not passed, the models are generated without any views applied.</p>
+</div>
+<div class="paragraph">
+<p>For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept" class="xref page">View Concept</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-tableconfig</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a path to a JSON-file to configure the appearance of the chapter for variables and parameters and their tables.<br>
+For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration" class="xref page">Table Configuration</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-labelconfig</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a path to a JSON-file to configure the labels for Simulink blocks and buses or element names in ASCET.<br>
+For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration" class="xref page">Label Configuration</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-autosarcomposition</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the root composition from AUTOSAR. For more details refer to chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html#model-interface-data-description-in-Autosar" class="xref page">Model Interface &amp; Data Description in AUTOSAR (Classic)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ar2ehbcbinput</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generates EHB-CB input directory structure from ARXML files. For more details refer to chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html#arxml-to-EHB-CB-input-directory" class="xref page">Generation of Input Directory Structure from AUTOSAR files</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-epwd</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Password to encrypt the container</p>
+</div>
+<div class="paragraph">
+<p>For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption" class="xref page">Encryption</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-epwdf</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text enclosed with percentage character e.g. <strong>%my_secret%</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password to encrypt the container stored in the given text file. The password file is deleted after container encryption.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-componentconnectormappingfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON file containing mapping information across domains e.g. AUTOSAR to MSR.</p>
+<p class="tableblock">For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#mapping_signals_across_domain" class="xref page">Mapping signals across domain</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-genxdiovr</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to create MSR Diagnosis XDI overview table by aggregating the XDI information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-help</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show command line help documentation.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>EHB-CB command line parameters, useful for debugging purposes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 54%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-noclean</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">During conversion, temporary files are generated in a sub folder by name temp_ID (auto generated unique number) of the output directory, specified by the option <strong>-n</strong>. This option will not delete the temp folder after container generation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-debugreq</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to print extended debug messages to log file</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-nogenhtml</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to avoid pre generation of html in the container</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>EHB-CB command line parameters, only valid if optional ASCET converter add-on is included in EHB-CB tool:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 11%;">
+<col style="width: 22%;">
+<col style="width: 51%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ascetview</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes/No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of ASCET view configuration file. Mandatory when <strong>-viewtype</strong> parameter is passed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-splitApp</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>In ASCET-DEVELOPER projects, -splitapp is an option used to create functional components out of static class present in the app file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> This option works only with directory based EHB-CB.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ascetdeveloperexcludepackages</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Path to file containing list of ASCET-DEVELOPER packages that shall be excluded from processing.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> This option works only with directory based EHB-CB.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ascetdevelopernestedclasses</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Generate documentation for nested classes in ASCET-DEVELOPER apps.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> This option works only with directory based EHB-CB when the ASCET-DEVELOPER .app file is passed as input argument.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ihf</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to trigger filtering for intermediate ASCET hierarchies. For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering" class="xref page">intermediate hierarchy filtering</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-includeSourceCode</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process and store ESDL and Matlab function code blocks during container generation and show them in the EHANDBOOK-NAVIGATOR code viewer.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>EHB-CB command line parameters, only valid if optional C-code converter add-on is included in EHB-CB tool:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 11%;">
+<col style="width: 22%;">
+<col style="width: 51%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-cat</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable of special C-Code handling for external tools.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ccodeview</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes/No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of C-Code view configuration file. Mandatory when <strong>-viewtype</strong> parameter is passed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ccodemeta</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path to file with configuration information to allow the decoration of sub-routines with custom images and others. For more details refer to chapter <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration" class="xref page">C-Code Configuration</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>EHB-CB command line parameters, only valid if optional Simulink converter add-on is included in EHB-CB tool:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 19%;">
+<col style="width: 11%;">
+<col style="width: 21%;">
+<col style="width: 49%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-nomatlab</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option not to use MATLAB for enhanced rendering of Simulink models. Container generation time gets considerable faster</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simlib</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Path to root directory to all Simulink libraries. Directory may contain sub directories, too. Multiple root directories can be specified, separated by commas.</p>
+</div>
+<div class="paragraph">
+<p>Paths to all libraries required by the Simulink model must be provided, including MATLAB Simulink system libraries.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simlibfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON file containing paths to all libraries required by the Simulink model must be provided, including MATLAB Simulink system libraries.
+(see chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support " class="xref page">SIMULINK library paths support</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simulinkview</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of Simulink view configuration file to specify non-expandable blocks (see chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks" class="xref page">Configure Simulink Blocks as Non-Expandable</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-matlabpath</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Installed MATLAB path till matlab.exe to be used for generating mask data for Simulink models.</p>
+</div>
+<div class="paragraph">
+<p>(see also chapter <a href="#matlab-timeout">Timeout for MATLAB Connection</a>)</p>
+</div>
+<div class="paragraph">
+<p>In order to have proper mask generation, it is recommended to connect to the same MATLAB version in which the model is generated.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-includeMatlabFunctionCode</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process and store MATLAB function code blocks during container generation and show them in the EHANDBOOK-NAVIGATOR code viewer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-enableVariantBlockConfiguration</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process the Simulink Variant blocks during container generation, and show the active and inactive variant choices in EHANDBOOK-NAVIGATOR.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_ugg_command_line_parameters"><a class="anchor" href="#_list_of_ugg_command_line_parameters"></a>List of UGG command line parameters:</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 11%;">
+<col style="width: 19%;">
+<col style="width: 48%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-i</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Input directory for UGG artifacts generation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-o</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output directory for UGG artifacts generation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-genmaps</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to generate map files.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-viewtype</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a view name, for which the models and their screenshots are be generated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to display the version of UGG product being used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-zip</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to create a zipped file of the UGG artifacts.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-help</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Show command line help documentation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-labelconfig</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a path to a JSON-file to configure the labels to match A2L/MCD configuration.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-labelamendment</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to provide a path and file to change label names.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>UGG command line parameters, useful for debugging purposes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 54%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-isdebugreq</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to print extended debug messages to log file</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>UGG command line parameters, used along with ASCET model.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 11%;">
+<col style="width: 22%;">
+<col style="width: 51%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ascetviewfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes/No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of ASCET view configuration file. Mandatory when <strong>-viewtype</strong> parameter is passed.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>UGG command line parameters, used along with Simulink model.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 19%;">
+<col style="width: 11%;">
+<col style="width: 21%;">
+<col style="width: 49%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-nomatlab</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option not to use MATLAB for enhanced rendering of Simulink models.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simlib</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Path to root directory to all Simulink libraries. Directory may contain sub directories, too. Multiple root directories can be specified, separated by commas.</p>
+</div>
+<div class="paragraph">
+<p>Paths to all libraries required by the Simulink model must be provided, including MATLAB Simulink system libraries.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simlibfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON file containing paths to all libraries required by the Simulink model must be provided, including MATLAB Simulink system libraries.
+(see chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support " class="xref page">SIMULINK library paths support</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-simulinkviewfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of Simulink view configuration file to specify non-expandable blocks (see chapter
+<a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks" class="xref page">Configure Simulink Blocks as Non-Expandable</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-matlabpath</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Installed MATLAB path till matlab.exe to be used for generating mask data for Simulink models.</p>
+</div>
+<div class="paragraph">
+<p>(see also chapter <a href="#matlab-timeout">Timeout for MATLAB Connection</a>)</p>
+</div>
+<div class="paragraph">
+<p>In order to have proper mask generation, it is recommended to connect to the same MATLAB version in which the model is generated.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-enableVariantBlockConfiguration</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process the Simulink Variant blocks during container generation, and show the active and inactive variant choices in EHANDBOOK-NAVIGATOR.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>UGG command line parameters, used along with C-Code Model.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 11%;">
+<col style="width: 22%;">
+<col style="width: 51%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Parameter</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Optional</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Value Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-ccodeconfigfile</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path enclosed within double quotes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location of configuration file used for conversion of C-Code model.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Please refer the sample below with all mandatory parameters:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">eHandbookCB.exe <i class="conum" data-value="1"></i><b>(1)</b>
+-i "D:\TestData\Asam_Data\input\asamCC.ccx"
+-o "D:\TestData\Container\output"
+-n "DemoContainer"</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On Linux use the executable <strong>eHandbookCB</strong></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Step 3:</strong> Press Enter key.</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 4:</strong> Log information can be seen in the command prompt console.</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 5:</strong> Once the EHANDBOOK container creation is successful, the below message can be seen on the command prompt console:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">"INFO - Container creation successful! [path in which container is created]"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, the output folder contains an EHANDBOOK container (extension .ehb) by the name passed with <strong>-n</strong> argument</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ehandbook_container_build_usage_in_gui_mode"><a class="anchor" href="#_ehandbook_container_build_usage_in_gui_mode"></a>EHANDBOOK Container-Build Usage in GUI Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If the tool is executed without any command line parameter, just by double click on eHandbookCB.exe, a small GUI-window will appear. Here now, the major input parameters (but not all) can be specified in an interactive way. Mandatory entries are marked with a '*'. The intention of this feature is to simplify test and evaluation purposes.</p>
+</div>
+<div class="paragraph">
+<p>ASAM based GUI Mode:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image8.png" alt="image8">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To enable this GUI in the standard EHB-CB tool, <strong>-Dasam.cb=true</strong> has to be added in the ehandbookCB.ini file, located in the same folder as the eHandbookCB.exe.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Directory based GUI Mode:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/image9.png" alt="image9">
+</div>
+</div>
+<div class="paragraph">
+<p>Type in the mandatory information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Input location (Dir based):</strong> Select the top most folder, which contains the input files</p>
+</li>
+<li>
+<p><strong>CCX file path (ASAM based):</strong> Select the path to the ASAM CCX file</p>
+</li>
+<li>
+<p><strong>Output folder:</strong> Specify the output directory, where the container will<br>
+be generated. Of course, this directory should be separated<br>
+from the input location!</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>GUI Mode is supported only for Windows Operating System.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="paragraph">
+<p><strong>EHB file Name:</strong> Defines the name of the EHANDBOOK container, file extension .ehb is added</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Optional arguments:</p>
+</div>
+<div class="paragraph">
+<p><strong>SIMLIB path:</strong> Path outside of the input folder to exactly one root directory to all Simulink libraries used by the models in the input folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Styling folder:</strong> Location of folder containing the styling information (title page, fonts, company
+logo etc…). If nothing is specified, a default title page is generated.</p>
+</div>
+<div class="paragraph">
+<p><strong>Generate SVG:</strong> Enables auto generated model screenshots, if text input files are configured accordingly. See <a href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic" class="xref page">Click Pic</a> for more details.</p>
+</div>
+<div class="paragraph">
+<p><strong>Allow MATLAB connection:</strong> Use MATLAB for enhanced rendering of Simulink models. Matlab has to be installed on the PC. When this option is set, the container generation takes considerable more time.</p>
+</div>
+<div class="paragraph">
+<p>For more details on the input arguments, see the command line list <a href="#cmd-list">[cmd-list]</a> above</p>
+</div>
+<div class="paragraph">
+<p>Start the generation by pressing the ‘<em>Generate’</em>-button. After processing, the generated container is available then in the directory specified as output folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_container_debugging_and_content_checking"><a class="anchor" href="#_container_debugging_and_content_checking"></a>Container Debugging and Content Checking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If no container is generated, because of a fatal error, a log file in the output folder is written by the EHB-CB tool. In all other cases, irrespective of an error occurred or not, a log file with the name of the container <strong>(ContainerName.log)</strong> is placed inside the container. The log file can be read by unzipping the container with a standard zipping tool (e.g. 7-zip) or by opening the container in EHB-NAV and using the menu <em>Help&#8594;Export Log Files&#8230;&#8203;</em> .</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ehandbook-cb-ini"><a class="anchor" href="#ehandbook-cb-ini"></a>Configurations in <code>eHandbookCB.ini</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to the command line parameters, there are also some special configurations in the eHandbookCB.ini file possible. This file is located in the same directory as the eHandbookCB.exe. It is a plain text file and can be edited with any text editor.
+However user can also configure this special configurations via command-line argument "-vmargs", see the command line list <a href="#cmd-list">[cmd-list]</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_running_ehb_cb_in_multi_instance_mode"><a class="anchor" href="#_running_ehb_cb_in_multi_instance_mode"></a>Running EHB-CB in Multi Instance Mode</h3>
+<div class="paragraph">
+<p>For running EHB-CB in multi instance mode, the following have to be specified:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the following arguments for the Java Runtime Environment into the eHandbookCB.ini file:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>-Dosgi.instance.area=”dir path”</strong><br>
+(Must be different for each EHB-CB instance)</p>
+</li>
+<li>
+<p><strong>-Dosgi.configuration.area=”dir path”</strong><br>
+(Must be different for each EHB-CB instance)</p>
+</li>
+<li>
+<p><strong>-Djava.io.tmpdir=”dir path”</strong> (Optional)<br>
+Handling of temporary files. This parameter is optional, if not supplied, EHB-CB handles creation of separate temp directory created for multi-instance within @user.home\AppData\Local\Temp</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Launch of EHB-CB with the additional command line parameter: <strong>-lockDir ”dir path”</strong> (Must be identical for all EHB-CB instances)<br>
+Required to handle lock for PDF FLY as it support single instance only and other EHB-CB instance waits until the first EHB-CB instance completes the image conversion using PDF FLY.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Please refer to the sample below with parameters that need to be provided for running EHB-CB in multi instance mode:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">eHandbookCB.exe <i class="conum" data-value="1"></i><b>(1)</b>
+-i "D:\TestData\Asam_Data\input\asamCC.ccx"
+-o "D:\TestData\Container\output"
+-n "EhcbDemoContainer"
+-lockdir "D:\LockDir"
+-vmargs
+-Dosgi.instance.area=@user.home/EHANDBOOK-CB/instance
+-Dosgi.configuration.area=@user.home/EHANDBOOK-CB/configuration
+-Djava.io.tmpdir="D:\temDir"</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On Linux use the executable <strong>eHandbookCB</strong></td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>All the above parameters must be used consistently in a Batch Job Server environment. Incomplete parameter supply will result in inconsistent behavior of the EHANDBOOK Container-Build. |</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ram-usage"><a class="anchor" href="#ram-usage"></a>RAM Usage</h3>
+<div class="paragraph">
+<p>The maximum RAM memory that EHANDBOOK Container-Build is allowed to use is specified within the <code><em>-Xmx</em></code> parameter in the <code>eHandbookCB.ini</code> file.</p>
+</div>
+<div class="paragraph">
+<p>In this example, the memory limit is set to 8 GB:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-startup plugins/org.eclipse.equinox.launcher_1.5.100.v20180827-1352.jar
+--launcher.library plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.800.v20180827-1352
+--launcher.appendVmargs
+-vmargs
+-Xms256m
+-Xmx8g <i class="conum" data-value="1"></i><b>(1)</b>
+--add-modules=java.xml.bind
+-Dorg.eclipse.update.reconcile=false</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Set maximum RAM to 8 GB.
+Refer to, <a href="../explanations/ehb-cb-setup.html#system_requirements" class="xref page">System Requirements</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="matlab-connection"><a class="anchor" href="#matlab-connection"></a>MATLAB Connection</h3>
+<div class="paragraph">
+<p>In order to render the graphics of Simulink blocks appropriately, a connection to MATLAB is required.</p>
+</div>
+<div class="paragraph">
+<p>By default a connection from Container-Build to MATLAB is enabled and established when converting Simulink models. In order to prevent a connection to MATLAB, the command line option <code>-nomatlab</code> can be used.</p>
+</div>
+<div class="paragraph">
+<p>With an active MATLAB connection, images of Simulink block masks or block decorations are exported and are available as an overlay on the respective block when loaded in EHANDBOOK-NAVIGATOR.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="matlab-timeout"><a class="anchor" href="#matlab-timeout"></a>Timeout for MATLAB Connection</h3>
+<div class="paragraph">
+<p>The command line parameter <code>-matlabpath</code> uses MATLAB during the build process for Simulink mask generation. This happens via a MATLAB API connection. To ensure, that EHB-CB is not blocked, there is a configurable timeout, if the connection hangs for any reason. For this, the parameter <code>-DmatlabTimeoutThreshold=value</code> can be specified in the <code>eHandbookCB.ini</code> file. The value should be an  integer and unit corresponds to minute.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, the timeout is set to 10 minutes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DmatlabTimeoutThreshold=10</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Without any given timeout specification in the ini-file, the default is set to 5 minutes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the timeout occurs, the established MATLAB connection will be terminated immediately. The EHANDBOOK Container-Build process continues without any connection retry, therefore no more mask images are generated. An error is logged in the log file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_caching_mechanism_for_simulink_referenced_models"><a class="anchor" href="#_caching_mechanism_for_simulink_referenced_models"></a>Caching Mechanism for Simulink Referenced Models</h3>
+<div class="paragraph">
+<p>Performance of Simulink model conversion has been improved by introducing caching mechanism for referenced Simulink models. This is achieved by caching the libraries that are already converted. For this, the parameter <code>-DsimulinkLibraryCacheSize=value</code> can be specified in the <code>eHandbookCB.ini</code> file. The value should be an integer and unit corresponds to number of libraries.</p>
+</div>
+<div class="paragraph">
+<p>In this example, the cached number of library modules is set to 50:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DsimulinkLibraryCacheSize=50</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Without any given specification in the <code>eHandbookCB.ini</code> file, the default is set to cache 100 library models.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This caching has a major impact of the overall memory consumption of EHANDBOOK Container-Build. When many and/or huge libraries are cached and only a small amount of RAM is specified for EHANDBOOK Container-Build, the tool may crash with an out of memory error! In this case you have to decrease the amount of cached libraries or increase the RAM, as described in chapter <a href="#ram-usage">RAM Usage</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mask-image-gen"><a class="anchor" href="#mask-image-gen"></a>Parallelization for Simulink Mask Image Generation</h3>
+<div class="sect3">
+<h4 id="_re_start_matlab_connection_for_model_count"><a class="anchor" href="#_re_start_matlab_connection_for_model_count"></a>Re-start MATLAB Connection for Model Count</h4>
+<div class="paragraph">
+<p>We have realized that MATLAB becomes slower and slower the longer the API connection is established. So, the performance of Simulink mask generation has been improved by introducing restart of MATLAB connections. This is achieved by configuring <code>-DrestartMatlabConnectionForModelCount=value</code> which can be specified in the eHandbookCB.ini file. Value should be in integer and unit corresponds to number of models after the MATLAB connection is restated.</p>
+</div>
+<div class="paragraph">
+<p>In this example, the MATLAB connection is restarted every 30 models:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DrestartMatlabConnectionForModelCount=30</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If no restart should happen, the value has to be set to =0</p>
+</div>
+<div class="paragraph">
+<p>Without any given specification in the ini-file, the default is set to restart MATLAB connection for every 25 models.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="thread_count_for_simulink_mask_generation"><a class="anchor" href="#thread_count_for_simulink_mask_generation"></a>Thread Count for Simulink Mask Generation</h4>
+<div class="paragraph">
+<p>Performance of Simulink mask generation has been improved by using multiple CPU threads of the used PC system. Parallelization for mask generation is based on configured number of threads running on each instance of MATLAB. This is achieved by configuring <code>-DthreadCountForMaskGeneration=value</code> which can be specified in the eHandbookCB.ini file or as a command line argument -vmargs <code>-DthreadCountForMaskGeneration</code>. Value should be in integer and unit corresponds to number of CPU threads used for parallelization during mask generation.</p>
+</div>
+<div class="paragraph">
+<p>In this example, 4 CPU threads are used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DthreadCountForMaskGeneration=4</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Without a configuration for <code>-DthreadCountForMaskGeneration=value</code>, the default value is set to <strong>2 CPU threads</strong>. If value is set to 0, negative or invalid also the default is used.</p>
+</li>
+<li>
+<p>Each MATLAB instance is bound to exactly one CPU core.</p>
+</li>
+<li>
+<p>The number should be configured carefully. Keep in mind whether your system can run as many MATLAB instances as configured (availability of RAM, CPU speed, disk access speed, etc.). Otherwise you might overload your system completely if too many threads are configured.</p>
+</li>
+<li>
+<p>If you configure e.g. -DthreadCountForMaskGeneration=100, but your input to Container-Build contains only one Simulink model then Container-Build will only start one MATLAB instance.</p>
+</li>
+<li>
+<p>If you configure e.g. -DthreadCountForMaskGeneration=100, but only one CPU core is available on the machine then Container-Build will only start one MATLAB instance.</p>
+</li>
+<li>
+<p>The number of effectively used MATLAB instances will be stated in the log as: threadCountForMaskGeneration is set to &lt;SUCCESSFUL LAUNCHED NUMBER OF MATLAB INSTANCES&gt;</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_types_for_simulink_mask_image_generation_caching"><a class="anchor" href="#_types_for_simulink_mask_image_generation_caching"></a>Types for Simulink Mask Image Generation Caching</h3>
+<div class="paragraph">
+<p>Performance of Simulink mask generation has been improved by introducing a caching mechanism for Simulink mask types. Types with same mask data should be considered for caching. For this, the types of masks can be configured with <code>-DtypesForMaskGenerationCaching=type1,type2,&#8230;&#8203;</code> in the eHandbookCB.ini file.</p>
+</div>
+<div class="paragraph">
+<p>Example: If a block mask data has parameter <code>"Type"</code> with value <code>TL_out</code> or <code>TL_in</code> which are used in many blocks, such types can be cached as</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DtypesForMaskGenerationCaching=TL_out,TL_in</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the data of the mask type is different in Simulink blocks, such types should not be cached as this results in incorrect mask generation.</p>
+</div>
+<div class="paragraph">
+<p>Example: If two blocks has mask data has parameter <code>"Type"</code> with value TL_out but the mask commands are different then such types should not be cached.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="simulink-mask-decorations-as-image"><a class="anchor" href="#simulink-mask-decorations-as-image"></a>Simulink Mask Decorations as Image</h3>
+<div class="paragraph">
+<p>Not all the mask data is currently interpreted by EHANDBOOK Container-Build. To overcome this, there is a new option which exports the Simulink Mask as an image and shows them in EHANDBOOK-NAVIGATOR. The option is enabled by default, to switch to mask interpretation add the following entry in the <code>eHandbookCB.ini</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DenableSimulinkMaskInterpretation=true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the option is disabled and set to false. The Simulink mask decorations as image is currently supported only for blocks which are rectangular in shape. This option requires a MATLAB connection for the build process.
+The earlier option <code>-DenableSimulinkMaskDecorationsAsImage</code> is deprecated.</p>
+</div>
+<div class="paragraph">
+<p>With simulink mask decoration as image approach, it is possible to generate mask images for selected rectangular blocks with mask applied on them. A list of rectangular blocks with mask are identified and listed in <code>eHandbookCB.ini</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DrectangularBlocksWithMask</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, this option specifies a set of rectangular blocks with mask applied on them. This list can be further extended with additional rectangular blocks with masks on them.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Mask Icons in Simulink are not generated for Plot Commands.
+Display property of a masked block does not have plot information from MATLAB 2017a onwards. Hence mask icons are not generated for such blocks.
+Alternatively, use the option <code>-DenableSimulinkMaskInterpretation</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="simulink-rich-text-annotations-as-text"><a class="anchor" href="#simulink-rich-text-annotations-as-text"></a>Simulink Rich Text Annotations as Text</h3>
+<div class="paragraph">
+<p>Currently EHANDBOOK has some limitations on Simulink Annotations which contain rich text formatting. To overcome this, there is a new option which extracts the textual content from rich text annotations and shows them as text in EHANDBOOK-NAVIGATOR. The option can be enabled with the following option:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DsimulinkAnnotationsAsText=true</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Some rich text formattings like tables and images are currently not supported.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="name-matching"><a class="anchor" href="#name-matching"></a>Name Matching for zipped Simulink Main Files</h3>
+<div class="paragraph">
+<p>Typically, you will have only one Simulink file per sub directory (Directory Based EHB-CB) or per functional component (ASAM based EHB-CB). EHB-CB also supports multiple Simulink files, where one main model file is referencing other model files. To make this happen, all files must be zipped, where the zipped file name must match to the main model name (default behavior). There should not be any hierarchy within the zip folder.</p>
+</div>
+<div class="paragraph">
+<p>If this is not the case, you can specify one or more suffixes, which will be ignored from the zip name to still allow name matching with the main model name:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DsimulinkZipSuffix=suffix1,suffix2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This option accepts multiple suffixes with comma separated values.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_name_matching_for_simulink_model_files_with_suffix"><a class="anchor" href="#_name_matching_for_simulink_model_files_with_suffix"></a>Name matching for SIMULINK model files with suffix</h3>
+<div class="paragraph">
+<p>When there are multiple SIMULINK model files within a zip file input, this option allows name matching with the desired model file within the zip by ignoring the provided suffix from the model file names and matching the name against the zip file name.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DsimulinkModelFileSuffix=suffix1,suffix2</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> Both simulinkZipSuffix &amp; simulinkModelFileSuffix arguments can be used together to enforce name matching according to user&#8217;s preference.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mask-documentation"><a class="anchor" href="#mask-documentation"></a>Handling of Simulink Mask Documentation for library models and referenced models</h3>
+<div class="paragraph">
+<p>Mask documentation (referred as Base documentation) can be associated with a library model or a referenced model. Further uses are allowed to add an additional documentation (Referred as Custom Documentation)
+to the instance of library model or referenced model used in their model.
+In EHANDBOOK, mask documentation are indicated with tooltip as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a library block has a custom mask, then the documentation contents for the custom mask shall be shown in the tooltip.</p>
+</li>
+<li>
+<p>If a library block has a base mask, but no custom mask, then the documentation contents for the base mask shall be shown in the tooltip.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="protected-simulink-model"><a class="anchor" href="#protected-simulink-model"></a>Simulink Protected Model</h3>
+<div class="paragraph">
+<p>MATLAB provides capabilities to create protected models. In EHANDBOOK, such protected models are made non-expandable in order to maintain the confidentiality of the content.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="thread-configuration-for-PDF-Generation"><a class="anchor" href="#thread-configuration-for-PDF-Generation"></a>Thread Configuration for PDF Generation</h3>
+<div class="paragraph">
+<p>PDF generation using command line argument <code>-pdf</code> is a multithreaded operation. This operation uses all the existing logical CPU cores available on the system for conversion. This might impact the overall system performance.</p>
+</div>
+<div class="paragraph">
+<p>In order to make PDF generation more optimal, the maximum number of used threads that get spawned during PDF generation can be configured.</p>
+</div>
+<div class="paragraph">
+<p>If the number of threads configured is greater than available logical CPU cores, then all the available logical cores are utilized.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DthreadCountForPdfGeneration=4</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This option accepts integer value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="asect-models-without-ascet-project"><a class="anchor" href="#asect-models-without-ascet-project"></a>ASCET models without ASCET project component</h3>
+<div class="paragraph">
+<p>ASCET project component serves as an entry point for processing an ASCET model in EHANDBOOK. However a user might not define an ASCET project in an ASCET model. In such an instance, EHANDBOOK would consider components with names matching with the ASCET model name for processing.
+Component types which are considered for name matching and processing further are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ASCET_MODULE</p>
+</li>
+<li>
+<p>AUTOSAR_SOFTWARE_COMPONENT</p>
+</li>
+<li>
+<p>StateMachine</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This  behavior can be configured with the following argument.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DaxlFileWithNoProjectComponent</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="asect-models-with-white-list-project-components"><a class="anchor" href="#asect-models-with-white-list-project-components"></a>ASCET models with white-listed project components</h3>
+<div class="paragraph">
+<p>ASCET project specification serves as an reference for processing components in an ASCET model in EHANDBOOK. However we could generate kaom and svg for the white-listed components specified in a JSON which are not part of specification. In such an instance, EHANDBOOK would consider such components in the ASCET model name for processing.</p>
+</div>
+<div class="paragraph">
+<p>This  behavior can be configured with the following argument.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DascetGenerateAllComponents</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asam_gui_mode"><a class="anchor" href="#_asam_gui_mode"></a>ASAM GUI Mode</h3>
+<div class="paragraph">
+<p>Per default, the EHANDBOOK Container-Build tool starts with the GUI for Directory-based input data (i.e., if no command line parameters are given). To start the tool with the GUI for ASAM-based input data, the following entry has to be added in the <code>eHandbookCB.ini</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-Dasam.cb=true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miktex_tool_configuration"><a class="anchor" href="#_miktex_tool_configuration"></a>MiKTeX Tool Configuration</h3>
+<div class="paragraph">
+<p>Configure path of MiKTeX location used for TeX formula conversion. By default TB_MIKTEX_HOME environment variable is used, otherwise the location provided with this option. Refer to <a href="../explanations/ehb-cb-setup.html#_miktex" class="xref page">MiKTeX</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DmiktexEnvVariable="C:\Program Files\MiKTeX 2.9\miktex\bin\x64"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pdf_fly_tool_configuration"><a class="anchor" href="#_pdf_fly_tool_configuration"></a>PDF FLY Tool Configuration</h3>
+<div class="paragraph">
+<p>Configure path of PDF FLY location used for EPS image to SVG image conversion. By default TB_PDFFLY_HOME environment variable is used, otherwise the location provided with this option. Refer to <a href="../explanations/ehb-cb-setup.html#_pdf_fly" class="xref page">PDF FLY</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-DpdfEnvVariable="C:\ProgramData\chocolatey\lib\pdf_fly\pdf-fly-9.0.6"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <!--
+  <img src="../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
+  -->
+
+  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
+  <div class="d-flex align-items-center justify-content-center flex-wrap">
+    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
+      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+          <path fill="#DEE0E2" fill-rule="evenodd"
+            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
+          </path>
+        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
+      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
+          width="24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
+            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
+        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  </div>
+  <div class="etas-footer-separator"></div>
+  <span>
+    <b>© ETAS 2025</b>
+  </span>
+  <span>
+    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
+  </span>
+  <span>
+    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
+  </span>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
