@@ -162,6 +162,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1074,9 +1077,6 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <p>For Simulink blocks with mask images and icon transparency set to <code>transparent</code> the mask image might not be shown.</p>
 </li>
 <li>
-<p>Comparing containers generated from an A2L is not supported and may lead to errors.</p>
-</li>
-<li>
 <p>When subchapter have different names and marked as removed/added in compare tree, the content might be showing as modified.</p>
 </li>
 <li>
@@ -1090,6 +1090,15 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 </li>
 <li>
 <p>When a numbered list or its entries are removed/added in compared containers, the numbers can still be visible in the comparison results.</p>
+</li>
+<li>
+<p>The Compare Viewer might show added/removed spaces as part of figure elements when comparing EHNADBOOK containers generated before and after 11.2.</p>
+</li>
+<li>
+<p>Updating a project might take longer time if at least one container of the project was loaded before. Adding all containers at once will avoid this overhead.</p>
+</li>
+<li>
+<p>Filtering of entries in Document Explorer is disabled as long as the preloading of TOC is running. This might lead some delay until first filtering is possible. All upcoming filtering operations are fast.</p>
 </li>
 </ul>
 </div>
