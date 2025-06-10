@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.1">
+<div class="nav-container" data-component="ehandbook" data-version="13.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
   </li>
@@ -720,14 +723,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.1</span>
+    <span class="version">13.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.1</a>
+          <a href="../index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../13.1/index.html">13.1</a>
         </li>
         <li class="version">
           <a href="../13.0/index.html">13.0</a>
@@ -792,9 +798,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">13.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="dependency_analysis.html">13.1</a>
+    <a class="version is-current" href="dependency_analysis.html">13.2</a>
+    <a class="version" href="../13.1/tutorials-nav/dependency_analysis.html">13.1</a>
     <a class="version" href="../13.0/tutorials-nav/dependency_analysis.html">13.0</a>
     <a class="version" href="../12.4/tutorials-nav/dependency_analysis.html">12.4</a>
     <a class="version" href="../12.3/tutorials-nav/dependency_analysis.html">12.3</a>
@@ -969,15 +976,16 @@ hide elements connected to the inputs of a block.</p>
 <ul>
 <li>
 <p>Right-click the block that contains the required input port.<br>
-A context menu (2) displays the inputs and outputs for the block.</p>
+A context menu (2) displays the Highlight/Hide connected elements option for the block.</p>
 </li>
 <li>
-<p>Select the input port. The selected port is emphasized in red (1).</p>
+<p>Select <code>Highlight connected elements</code> to highlight the elements connected to the input port.</p>
 </li>
 <li>
-<p>Select <code>Highlight connected elements</code> to highlight the elements connected
-to the selected input port, or select <code>Hide connected elements</code> to
-hide the elements connected to the selected input port.</p>
+<p>Select the required input port in the sub-menu. The selected port is emphasized in red (1).</p>
+</li>
+<li>
+<p>Or select <code>Hide connected elements</code> to hide the elements connected to the input port.</p>
 </li>
 </ul>
 </div>
@@ -1012,15 +1020,16 @@ to the inputs of a block.<br>
 <ul>
 <li>
 <p>Right-click the block that contains the required output port.<br>
-A context menu (2) displays the inputs and outputs for the block.</p>
+A context menu (2) displays the Highlight/Hide connected elements option for the block.</p>
 </li>
 <li>
-<p>Select the output port. The selected port is emphasized in red (1).</p>
+<p>Select <code>Highlight connected elements</code> to highlight the elements connected to the output port.</p>
 </li>
 <li>
-<p>Select <code>Highlight connected elements</code> to highlight the elements connected
-from the selected output, or select <code>Hide connected elements</code> to
-hide the elements connected from the selected output.</p>
+<p>Select the required output port in the sub-menu. The selected port is emphasized in red (1).</p>
+</li>
+<li>
+<p>Or select <code>Hide connected elements</code> to hide the elements connected to the output port.</p>
 </li>
 </ul>
 </div>
@@ -1055,14 +1064,34 @@ opened in the Model Viewer to highlight/hide elements connected to the port.<br>
 <ul>
 <li>
 <p>Right-click on the input or output port label.<br>
-A context menu (2) displays for the selected input or output port.</p>
+A context menu (2) displays the Highlight/Hide connected elements option for the block.</p>
 </li>
 <li>
-<p>Select <code>Highlight connected elements</code> to highlight the elements connected
-to the selected port, or select <code>Hide connected elements</code>to hide
-the elements connected to the selected port.</p>
+<p>Select <code>Highlight connected elements</code> to highlight the elements connected to the input or output port label.</p>
+</li>
+<li>
+<p>Select the required input port in the sub-menu. The selected port is emphasized in red (1).</p>
+</li>
+<li>
+<p>Or select <code>Hide connected elements</code> to hide the elements connected to the input or output port label.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sub-menu for Highlight connected elements will only appear when there are more than one input/output ports
+associated with it. Otherwise you can simply select the option to highlight connected elements
+for single input/output port.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

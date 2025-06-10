@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.1">
+<div class="nav-container" data-component="ehandbook" data-version="13.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
   </li>
@@ -720,14 +723,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.1</span>
+    <span class="version">13.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.1</a>
+          <a href="../index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../13.1/index.html">13.1</a>
         </li>
         <li class="version">
           <a href="../13.0/index.html">13.0</a>
@@ -790,9 +796,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">13.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="known_issues.html">13.1</a>
+    <a class="version is-current" href="known_issues.html">13.2</a>
+    <a class="version" href="../13.1/known-issues/known_issues.html">13.1</a>
     <a class="version" href="../13.0/known-issues/known_issues.html">13.0</a>
     <a class="version" href="../12.4/known-issues/known_issues.html">12.4</a>
     <a class="version" href="../12.3/known-issues/known_issues.html">12.3</a>
@@ -871,7 +878,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <h2 id="_navigator"><a class="anchor" href="#_navigator"></a>Navigator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.1.</p>
+<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.2.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1077,28 +1084,22 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <p>For Simulink blocks with mask images and icon transparency set to <code>transparent</code> the mask image might not be shown.</p>
 </li>
 <li>
-<p>When subchapter have different names and marked as removed/added in compare tree, the content might be showing as modified.</p>
-</li>
-<li>
 <p>When navigating interactive models using the model explorer or navigation bar, the zoom factor is kept, but the content might not be readable.</p>
-</li>
-<li>
-<p>In the Code viewer, local search does not highlight all matching occurrences and therefore show lesser number of matches</p>
 </li>
 <li>
 <p>When comparing containers, some compare tree nodes even when marked as modified may not show any difference when viewed in split-screeen viewer.</p>
 </li>
 <li>
-<p>When a numbered list or its entries are removed/added in compared containers, the numbers can still be visible in the comparison results.</p>
-</li>
-<li>
 <p>The Compare Viewer might show added/removed spaces as part of figure elements when comparing EHNADBOOK containers generated before and after 11.2.</p>
 </li>
 <li>
-<p>Updating a project might take longer time if at least one container of the project was loaded before. Adding all containers at once will avoid this overhead.</p>
+<p>Filtering of entries in Document Explorer is disabled as long as the preloading of TOC is running. This might lead some delay until first filtering is possible. All upcoming filtering operations are fast.</p>
 </li>
 <li>
-<p>Filtering of entries in Document Explorer is disabled as long as the preloading of TOC is running. This might lead some delay until first filtering is possible. All upcoming filtering operations are fast.</p>
+<p>Different compression levels used for PNG and JPEG images might lead to difference shown in Compare Viewer without showing a real graphical difference.</p>
+</li>
+<li>
+<p>Spaces in the textual content of older containers might lead to differences shown in Compare Viewer without showing a real graphical difference.</p>
 </li>
 </ul>
 </div>

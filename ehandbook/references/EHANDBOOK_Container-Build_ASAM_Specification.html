@@ -108,7 +108,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.1">
+<div class="nav-container" data-component="ehandbook" data-version="13.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -161,6 +161,9 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
   </li>
@@ -720,14 +723,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.1</span>
+    <span class="version">13.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.1</a>
+          <a href="../index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../13.1/index.html">13.1</a>
         </li>
         <li class="version">
           <a href="../13.0/index.html">13.0</a>
@@ -792,9 +798,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">13.1</button>
+  <button class="version-menu-toggle" title="Show other versions of page">13.2</button>
   <div class="version-menu">
-    <a class="version is-current" href="EHANDBOOK_Container-Build_ASAM_Specification.html">13.1</a>
+    <a class="version is-current" href="EHANDBOOK_Container-Build_ASAM_Specification.html">13.2</a>
+    <a class="version" href="../13.1/references/EHANDBOOK_Container-Build_ASAM_Specification.html">13.1</a>
     <a class="version" href="../13.0/references/EHANDBOOK_Container-Build_ASAM_Specification.html">13.0</a>
     <a class="version" href="../12.4/references/EHANDBOOK_Container-Build_ASAM_Specification.html">12.4</a>
     <a class="version" href="../12.3/references/EHANDBOOK_Container-Build_ASAM_Specification.html">12.3</a>
@@ -1526,7 +1533,7 @@ FILE TYPE=”MDX”</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter 4)</p>
+<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter <a href="#_the_mdx_file_structure">The MDX File Structure</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1554,7 +1561,7 @@ FILE TYPE=”FSX”</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In CCX, the FC ABLOCK is referring to its FSX file ABLOCK using AREF-ID. The FSX file content is then used for textual information. (Read more in chapter 5)</p>
+<p>In CCX, the FC ABLOCK is referring to its FSX file ABLOCK using AREF-ID. The FSX file content is then used for textual information. (Read more in chapter <a href="#_the_fsx_file_structure">The FSX File Structure</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1589,7 +1596,7 @@ FILE TYPE=”EPS”, “PS”, “PDF”, “JPG”, “PNG”, “BMP”, “SV
 </div>
 <div class="paragraph">
 <p>The FILE TYPE has to match to the strings above. Later for further processing, the file format of the file itself is considered.<br>
-In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The graphic is then embedded in the textual information. The ABLOCK may also contain the sub model path to an interactive model and a link to the model file via &lt;SD GID=model”&gt;ID (Read more in chapter 6)</p>
+In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The graphic is then embedded in the textual information. The ABLOCK may also contain the sub model path to an interactive model and a link to the model file via &lt;SD GID=model”&gt;ID (Read more in chapter <a href="#_handling_of_graphics_in_ehb">Handling of Graphics in EHB</a>)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1632,7 +1639,7 @@ FILE TYPE ; (file extensions) =”AXL”; (.axl) / “SLX”; (.slx) / “MDL”
 </div>
 </div>
 <div class="paragraph">
-<p>In CCX, the FC ABLOCK is referring to its model file ABLOCK using AREF-ID. The model file is then converted into an interactive model. The model ABLOCK ID may also be referred from a graphic ABLOCK. (Read more in chapter 6.2)</p>
+<p>In CCX, the FC ABLOCK is referring to its model file ABLOCK using AREF-ID. The model file is then converted into an interactive model. The model ABLOCK ID may also be referred from a graphic ABLOCK. (Read more in chapter <a href="#_reference_model_with_user_provided_graphic">Reference Model with User provided Graphic</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1690,7 +1697,7 @@ FILE TYPE=”DIR”</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In CCX, the Root ABLOCK is referring to its LIB folder ABLOCK using AREF-ID. The library folder points to a Root directory folder structure, which is containing global library files, used in all ASCET models. (Read more in chapter 7)</p>
+<p>In CCX, the Root ABLOCK is referring to its LIB folder ABLOCK using AREF-ID. The library folder points to a root directory folder structure, which is containing global library files, used in all ASCET models. (Read more in chapter <a href="#global-library">ASCET Model Reference to global Library and other Sub-Components</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1720,7 +1727,7 @@ Refers to: FC SHORT-NAME in MDX
 </div>
 </div>
 <div class="paragraph">
-<p>This ABLOCK defines a list of FCs by using the <code>&lt;SD GID=”component”&gt;FC_Name</code> tag. The <code>&lt;SHORT-NAME&gt;</code> of the ABLOCK should correspond to the FIGURE’s <code>&lt;SHORT-NAME&gt;</code> in FSX. In addition, the &lt;SD GID FC_Name&gt; should match to the corresponding SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX. This will allow a function overview graphic at this FSX location in EHB-NAV. (Read more in chapter 6.5)</p>
+<p>This ABLOCK defines a list of FCs by using the <code>&lt;SD GID=”component”&gt;FC_Name</code> tag. The <code>&lt;SHORT-NAME&gt;</code> of the ABLOCK should correspond to the FIGURE’s <code>&lt;SHORT-NAME&gt;</code> in FSX. In addition, the &lt;SD GID FC_Name&gt; should match to the corresponding SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX. This will allow a function overview graphic at this FSX location in EHB-NAV. (Read more in chapter <a href="#_function_overview_graphic">Function Overview Graphic</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1783,9 +1790,14 @@ Add reference to the created ABLOCK from docu unit (component). Finally referenc
 </div>
 </div>
 <div class="paragraph">
-<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter 4)
-== The MDX File Structure</p>
+<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter <a href="#_the_mdx_file_structure">The MDX File Structure</a>)</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_mdx_file_structure"><a class="anchor" href="#_the_mdx_file_structure"></a>The MDX File Structure</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The MDX file contains information about variables, parameters, system constants and class instances. This meta data (like imported/exported/local, compu-method, data-type, …) of labels is stored in an internal database of the EHB container.</p>
 </div>
@@ -1916,7 +1928,6 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 			&lt;/SW-FEATURE-INTERFACES&gt;
 		&lt;/SW-FEATURE&gt;
 		...</code></pre>
-</div>
 </div>
 </div>
 <div class="sect2">
