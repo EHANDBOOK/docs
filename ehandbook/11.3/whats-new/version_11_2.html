@@ -61,42 +61,19 @@ function BoschPrivacyCallback_OnUpdate(a) {
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
-        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
       </a>
       <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search">
+        </div>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
-    </div>
-    <!--
-    <div id="topbar-nav" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
-          </div>
-        </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
-        </div>
-      </div>
-      -->
     </div>
   </nav>
 </header>
@@ -640,7 +617,6 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">EHANDBOOK</a></li>
@@ -649,31 +625,6 @@ function BoschPrivacyCallback_OnUpdate(a) {
   </ul>
 </nav>
 
-<div class="navbar-item search hide-for-print">
-  <div id="search-field" class="field">
-    <input id="search-input" type="text" placeholder="Search the docs">
-  </div>
-</div>
-
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">11.3</button>
-  <div class="version-menu">
-    <a class="version" href="../../whats-new/version_11_2.html">13.2</a>
-    <a class="version" href="../../13.1/whats-new/version_11_2.html">13.1</a>
-    <a class="version" href="../../13.0/whats-new/version_11_2.html">13.0</a>
-    <a class="version" href="../../12.4/whats-new/version_11_2.html">12.4</a>
-    <a class="version" href="../../12.3/whats-new/version_11_2.html">12.3</a>
-    <a class="version" href="../../12.2/whats-new/version_11_2.html">12.2</a>
-    <a class="version" href="../../12.1/whats-new/version_11_2.html">12.1</a>
-    <a class="version" href="../../12.0/whats-new/version_11_2.html">12.0</a>
-    <a class="version is-current" href="version_11_2.html">11.3</a>
-    <a class="version" href="../../11.2/whats-new/version_11_2.html">11.2</a>
-    <a class="version is-missing" href="../../11.1/index.html">11.1</a>
-    <a class="version is-missing" href="../../11.0/index.html">11.0</a>
-    <a class="version is-missing" href="../../10.3/index.html">10.3</a>
-    <a class="version is-missing" href="../../10.2/index.html">10.2</a>
-  </div>
-</div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -795,35 +746,15 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </main>
 </div>
 <footer class="footer">
-  <!--
-  <img src="../../../_/img/footer-etas-2.0.jpg" width="100%" height="auto">
-  -->
-
-  <h1 class="etas-footer-heading text-center">Social Media at ETAS</h1>
-  <div class="d-flex align-items-center justify-content-center flex-wrap">
-    <a class="etas-social-link" href="https://www.linkedin.com/company/etas"
-      title="Go to: LinkedIn"><i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-          <path fill="#DEE0E2" fill-rule="evenodd"
-            d="M22.000006,20.000005 L17.1377,20 L17.1377,12.9692 C17.1377,11.1289 16.377115,9.872575 14.70461,9.872575 C13.42533,9.872575 12.7139,10.72037 12.38276,11.537425 C12.258583,11.8306955 12.277986,12.239225 12.277986,12.647755 L12.277986,20.000005 L7.460961,20.000005 C7.460961,20.000005 7.5230495,7.545605 7.460961,6.413505 L12.277986,6.413505 L12.277986,8.545795 C12.562558,7.613475 14.101831,6.282875 16.558206,6.282875 C19.605711,6.282875 22.000006,8.237155 22.000006,12.445375 L22.000006,20.000005 Z M2.5896,4.7141 L2.5585555,4.7141 C1.0063455,4.7141 -4.49999999e-06,3.67549 -4.49999999e-06,2.358975 C-4.49999999e-06,1.016845 1.0360955,5.00000002e-06 2.6193505,5.00000002e-06 C4.2013105,5.00000002e-06 5.1740305,1.014285 5.2050755,2.35513 C5.2050755,3.671645 4.2013105,4.714095 2.5896005,4.714095 L2.5896,4.7141 Z M0.55491,6.41353 L4.84289,6.41353 L4.84289,20.00003 L0.55491,20.00003 L0.55491,6.41353 Z">
-          </path>
-        </svg></i> <span class="etas-sr-only">LinkedIn</span></a> <a class="etas-social-link"
-      href="https://www.youtube.com/user/etasgroup" title="Go to: YouTube"><i><svg height="17" viewBox="0 0 24 17"
-          width="24" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="m9.522 11.63495-.00075-6.7911 6.4845 3.40725-6.48375 3.383835zm14.238-7.9679s-.23475-1.66548-.954-2.3989c-.91275-.963035-1.93575-.967565-2.4045-1.02346-3.3585-.244724-8.39625-.244724-8.39625-.244724h-.0105s-5.03775 0-8.39625.244724c-.4695.0558935-1.49175.0604255-2.40525 1.02346-.71925.733415-.95325 2.3989-.95325 2.3989s-.24 1.95628-.24 3.911805v1.83392c0 1.95628.24 3.911805.24 3.911805s.234 1.66548.95325 2.3989c.9135.963035 2.11275.93282 2.64675 1.03328 1.92.1858085 8.16.243213 8.16.243213s5.043-.007553 8.4015-.252277c.46875-.056649 1.49175-.061181 2.4045-1.024215.71925-.733415.954-2.3989.954-2.3989s.24-1.955525.24-3.911805v-1.83392c0-1.955525-.24-3.911805-.24-3.911805z"
-            fill="#DEE0E2" fill-rule="evenodd" transform=""></path>
-        </svg></i> <span class="etas-sr-only">YouTube</span></a>
+  <div class="footer-right">
+    <span>© 2025 ETAS GmbH</span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
+    </span>
   </div>
-  <div class="etas-footer-separator"></div>
-  <span>
-    <b>© ETAS 2025</b>
-  </span>
-  <span>
-    <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of Use / Legal Notice</a>
-  </span>
-  <span>
-    <a href="https://www.etas.com/ww/en/data-protection-policy/">Privacy Policy</a>
-  </span>
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
