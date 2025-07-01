@@ -6,6 +6,12 @@
   var siteRootPath = config.siteRootPath || ''
   appendStylesheet(config.stylesheet)
   var searchInput = document.getElementById('search-input')
+
+  // function get called twice
+  if (searchInput.parentNode.childElementCount >= 2) {
+    return;
+  }
+
   var searchResult = document.createElement('div')
   searchResult.classList.add('search-result-dropdown-menu')
   searchInput.parentNode.appendChild(searchResult)
