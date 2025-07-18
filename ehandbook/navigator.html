@@ -85,7 +85,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.2">
+<div class="nav-container" data-component="ehandbook" data-version="13.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -162,6 +162,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
@@ -1030,14 +1035,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.2</span>
+    <span class="version">13.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">13.2</a>
+          <a href="index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="13.2/index.html">13.2</a>
         </li>
         <li class="version">
           <a href="13.1/index.html">13.1</a>
@@ -1113,9 +1121,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div>
     <p style="text-align: center; font-size: 25px;">First steps</p>
     <div style="text-align: center;  margin-top: 10px;">What do you want to start with?</div>
-    <button class="button" onclick="window.location.href = './quick_start_navigator.html';">Setup & Installation</button>
+    <div style="text-align: center;">
+        <button class="button" onclick="window.location.href = './quick_start_navigator.html';">Setup & Installation</button>
         <button class="button" onclick="window.location.href = './ehandbook_solution_overview.html';">Understand Concepts</button>
-    <button class="button" onclick="window.location.href = './tutorials-nav/index.html';">Learn about features</button>
+        <button class="button" onclick="window.location.href = './tutorials-nav/index.html';">Learn about features</button>
+    </div>
 </div>
 <!--  End content -->
 </div>
@@ -1129,99 +1139,54 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <p>Find the information you need in the links below or in the contents bar on the left.</p>
 </div>
 <!--  START content per section with text and a clickable headline and button to navigate to other chapters within the website -->
-<div style="display: flex; flex-direction: column;">
-    <div style="display: flex; ">
-        <section id="tutorials" class="column" style="margin-top:20px">
-            <div class="card" style= "height: 100%">
-                <div class="card-body">
-                    <h3 style="text-align: center">
-                        <a style="vertical-align: middle;" href="./tutorials-nav/index.html">
-                            <img class="card-image" src="_images/ETAS_Icon_Academy_Gradient_Digital.png" alt="ETAS Academy">
-                            Tutorials
-                        </a>
-                    </h3>
-                    <div class="card-text">
-                    <p>
-                        Hands-on tutorials that introduce you to EHANDBOOK-NAVIGATOR<br/>
-                    </p>
-                    <div class="card-button">
-                        <button class="button" onclick="window.location.href = './tutorials-nav/index.html';">
-                            Tutorials
-                        </button>
-                    </div>
-                </div>
+<div class="flex-container">
+    <div class="flex_item">
+        <div class="tile-header">
+            <img src="_images/ETAS_Icon_Academy_Gradient_Digital.png" alt="ETAS Academy">
+        </div>
+        <div class="tile-body">
+            <div class="tile-link"><a href="./tutorials-nav/index.html">Tutorials<i class="ph ph-arrow-up-right"></i></a>
             </div>
-        </section>
-
-        <section id="how-to-guides" class="column" style="margin-top:20px">
-            <div class="card" style= "height: 100%">
-                <div class="card-body">
-                    <h3 style="text-align: center">
-                        <a style="vertical-align: middle;" href="./how-to-navigator/how_to_navigator.html">
-                            <img class="card-image" src="_images/ETAS_Icon_Document_Gradient_Digital.png" alt="ETAS Academy">
-                            How-to guides
-                        </a>
-                    </h3>
-                    <div class="card-text">
-                        <p>
-                            Step-by-step guides that lead you through different topics<br/>
-                        </p>
-                    </div>
-                    <div class="card-button">
-                        <button class="button" onclick="window.location.href = './how-to-navigator/how_to_navigator.html';">
-                        How-to guides
-                        </button>
-                    </div>
-                </div>
+            <div class="tile-subtitle">
+                <p class="subtitle">Hands-on tutorials that introduce you to EHANDBOOK-NAVIGATOR</p>
             </div>
-        </section>
+        </div>
     </div>
-    <div style="display: flex;">
-        <section id="user-interface" class="column">
-            <div class="card" style= "height: 100%">
-                <div class="card-body">
-                    <h3 style="text-align: center">
-                        <a style="vertical-align: middle;" href="./user-interface/index.html">
-                            <img class="card-image" src="_images/ETAS_Icon_Brain_Gradient_Digital.png" alt="ETAS Academy">
-                            User Interface
-                        </a>
-                    </h3>
-                    <div class="card-text">
-                    <p>
-                        Discussion of key topics and features of EHANDBOOK-NAVIGATOR<br/>
-                    </p>
-                    </div>
-                    <div class="card-button">
-                        <button class="button" onclick="window.location.href = './user-interface/index.html';">
-                        User Interface
-                        </button>
-                    </div>
-                </div>
+    <div class="flex_item">
+        <div class="tile-header">
+            <img src="_images/ETAS_Icon_Document_Gradient_Digital.png" alt="ETAS Document">
+        </div>
+        <div class="tile-body">
+            <div class="tile-link"><a href="./how-to-navigator/how_to_navigator.html">How-to guides<i class="ph ph-arrow-up-right"></i></a>
             </div>
-        </section>
-
-        <section id="about" class="column">
-            <div class="card" style= "height: 100%">
-                <div class="card-body">
-                    <h3 style="text-align: center">
-                        <a style="vertical-align: middle;" href="./about_navigator.html">
-                            <img class="card-image" src="_images/ETAS_Icon_Brain_Gradient_Digital.png" alt="ETAS Academy">
-                            About Navigator
-                        </a>
-                    </h3>
-                    <div class="card-text">
-                    <p>
-                        Learn general knowledge about EHANDBOOK-NAVIGATOR<br/>
-                    </p>
-                    </div>
-                    <div class="card-button">
-                        <button class="button" onclick="window.location.href = './about_navigator.html';">
-                        About Navigator
-                        </button>
-                    </div>
-                </div>
+            <div class="tile-subtitle">
+                <p class="subtitle">Step-by-step guides that lead you through different topics</p>
             </div>
-        </section>
+        </div>
+    </div>
+    <div class="flex_item">
+        <div class="tile-header">
+            <img src="_images/ETAS_Icon_Brain_Gradient_Digital.png" alt="ETAS Brain">
+        </div>
+        <div class="tile-body">
+            <div class="tile-link"><a href="./user-interface/index.html">User Interface<i class="ph ph-arrow-up-right"></i></a>
+            </div>
+            <div class="tile-subtitle">
+                <p class="subtitle">Discussion of key topics and features of EHANDBOOK-NAVIGATOR</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex_item">
+        <div class="tile-header">
+            <img src="_images/ETAS_Icon_Brain_Gradient_Digital.png" alt="ETAS Brain">
+        </div>
+        <div class="tile-body">
+            <div class="tile-link"><a href="./about_navigator.html">About Navigator<i class="ph ph-arrow-up-right"></i></a>
+            </div>
+            <div class="tile-subtitle">
+                <p class="subtitle">Learn general knowledge about EHANDBOOK-NAVIGATOR</p>
+            </div>
+        </div>
     </div>
 </div>
 <!--  END content -->

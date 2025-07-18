@@ -85,7 +85,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.2">
+<div class="nav-container" data-component="ehandbook" data-version="13.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -162,6 +162,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
@@ -1030,14 +1035,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.2</span>
+    <span class="version">13.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.2</a>
+          <a href="../index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="../13.2/index.html">13.2</a>
         </li>
         <li class="version">
           <a href="../13.1/index.html">13.1</a>
@@ -1114,6 +1122,12 @@ function BoschPrivacyCallback_OnUpdate(a) {
 Model linking will be missing for Simulink subsystem or ASCET hierarchy names containing dots.</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_broken_image_for_empty_hierarchies_during_svg_generation"><a class="anchor" href="#_broken_image_for_empty_hierarchies_during_svg_generation"></a>Broken Image for Empty Hierarchies During SVG Generation</h4>
+<div class="paragraph">
+<p>When generating SVGs, if the specified model path points to a hierarchy that contains no internal blocks, the output may result in a broken image.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_matlab_simulink"><a class="anchor" href="#_matlab_simulink"></a>MATLAB Simulink</h3>
@@ -1159,7 +1173,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <h2 id="_navigator"><a class="anchor" href="#_navigator"></a>Navigator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.2.</p>
+<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.3.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1221,7 +1235,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 </div>
 </li>
 <li>
-<p>When label amendment for hierarchies is performed, the following issue may occur: Ex: Open interactive model might not get directed to the appropriate level in interactive model in some cases.</p>
+<p>When label amendment for hierarchies is performed, hierarchy names in EHANDBOOK model referece in textual documentation might not fit to the hierarchy names in interactive models. To avoid that EHANDBOOK model referece need to be adjusted accordingly.</p>
 </li>
 <li>
 <p>Annotated values and labels on interactive models could be overlayed by blocks in default layout.</p>
@@ -1272,7 +1286,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <p>When adjusting the size or switching editors in EHANDBOOK-NAVIGATOR, viewers can temporarily go black.</p>
 </li>
 <li>
-<p>When EHANDBOOK-NAVIGATOR is connected to INCA for live measurement, there could be a significant performance degradation leading to unresponsive UI.</p>
+<p>When EHANDBOOK-NAVIGATOR is connected to INCA for live measurement, there could be a significant performance degradation leading to unresponsive UI. Try restricting the displayed values to the most relevant ones to improve the performance.</p>
 </li>
 <li>
 <p>In an ASCET-DEVELOPER based interactive model, the State behavior text could overflow from the State block.</p>
@@ -1359,7 +1373,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <p>Open model link might open the wrong location in case there are multiple blocks with the same name.</p>
 </li>
 <li>
-<p>In case of Duplicate functions in the container, Bookmarking model will always open first function in the container and also bookmarks all function with same URI.</p>
+<p>In case of Duplicate functions in the container, Bookmarking model will always open first function in the container and also bookmarks all function with same location.</p>
 </li>
 <li>
 <p>For Simulink blocks with mask images and icon transparency set to <code>transparent</code> the mask image might not be shown.</p>
@@ -1371,7 +1385,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <p>When comparing containers, some compare tree nodes even when marked as modified may not show any difference when viewed in split-screeen viewer.</p>
 </li>
 <li>
-<p>The Compare Viewer might show added/removed spaces as part of figure elements when comparing EHNADBOOK containers generated before and after 11.2.</p>
+<p>The Compare Viewer might show added/removed spaces as part of figure elements when comparing EHANDBOOK containers generated before and after 11.2.</p>
 </li>
 <li>
 <p>Filtering of entries in Document Explorer is disabled as long as the preloading of TOC is running. This might lead some delay until first filtering is possible. All upcoming filtering operations are fast.</p>
@@ -1381,6 +1395,9 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 </li>
 <li>
 <p>Spaces in the textual content of older containers might lead to differences shown in Compare Viewer without showing a real graphical difference.</p>
+</li>
+<li>
+<p>Images can contain differences in meta data that are not visible. EHANDBOOK-NAVIGATOR might still mark these images as modified, even though the detailed image difference will not show any visible differences. // EHB-24036</p>
 </li>
 </ul>
 </div>

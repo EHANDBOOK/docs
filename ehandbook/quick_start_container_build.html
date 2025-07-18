@@ -85,7 +85,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.2">
+<div class="nav-container" data-component="ehandbook" data-version="13.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -162,6 +162,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
@@ -1030,14 +1035,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.2</span>
+    <span class="version">13.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">13.2</a>
+          <a href="index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="13.2/index.html">13.2</a>
         </li>
         <li class="version">
           <a href="13.1/index.html">13.1</a>
@@ -1138,7 +1146,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Unzip the download package into a directory of your choice. As standard directory, it is recommended to install ETAS tools under <code>C:\ETAS</code></p>
+<p>Unzip the download package into a directory of your choice. As standard directory, it is recommended to install ETAS tools under <code>C:\Program Files\ETAS\</code></p>
 </li>
 <li>
 <p>Run <code>EHANDBOOK-Container-Build_x.x.x_License-Management_setup.exe</code> with administrator rights</p>
@@ -1207,7 +1215,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <h3 id="_launch"><a class="anchor" href="#_launch"></a>Launch</h3>
 <div class="paragraph">
 <p>The EHANDBOOK Container-Build tool-chain provides a graphical user interface (GUI).
-To launch the GUI, navigate to the installation directory (e.g., <code>C:\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows</code>) and double-click on <code>eHandbookCB.exe</code>.</p>
+To launch the GUI, navigate to the installation directory (e.g., <code>C:\Program Files\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows</code>) and double-click on <code>eHandbookCB.exe</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1279,7 +1287,7 @@ In fact, when it comes to automating EHANDBOOK Container-Build, the command-line
 <p>Open a command window, e.g. by typing <code>cmd</code> in the Windows search field. Press btn:[Enter] to open the command window.</p>
 </li>
 <li>
-<p>Navigate to the directory where EHANDBOOK Container-Build tools are installed. E.g., <code>cd C:\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows</code>.</p>
+<p>Navigate to the directory where EHANDBOOK Container-Build tools are installed. E.g., <code>cd C:\Program Files\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows</code>.</p>
 </li>
 <li>
 <p>Run the following command to show the command-line options</p>
@@ -1320,7 +1328,7 @@ In fact, when it comes to automating EHANDBOOK Container-Build, the command-line
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cmd hljs" data-lang="cmd">C:\ETAS\EHANDBOOK-Container-Build_10.0.0-Windows\eHandbookCB.exe ^
+<pre class="highlightjs highlight"><code class="language-cmd hljs" data-lang="cmd">C:\Program Files\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows\eHandbookCB.exe ^
 -i "&lt;path to input folder&gt;" ^
 -o "&lt;path to output folder&gt;" ^
 -n "&lt;name&gt;"</code></pre>
@@ -1354,7 +1362,7 @@ will be saved as .ehbp format.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cmd hljs" data-lang="cmd">C:\ETAS\EHANDBOOK-Container-Build_10.0.0-Windows\eHandbookCB.exe ^
+<pre class="highlightjs highlight"><code class="language-cmd hljs" data-lang="cmd">C:\Program Files\ETAS\EHANDBOOK-Container-Build_&lt;Version&gt;-Windows\eHandbookCB.exe ^
 -application com.etas.ehcb.project.application ^
 -i "&lt;path to input folder&gt;" ^
 -o "&lt;path to output folder&gt;" ^
