@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ASAM-EX Format Specification :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/references/EHANDBOOK_Container-Build_ASAM_Specification.html">
-    <meta name="generator" content="Antora 3.1.12">
+    <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
@@ -58,26 +58,56 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
-        <img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
-      </a>
-      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search">
-        </div>
-      </div>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+				<img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+			</a>
+			<a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" style="margin-left: auto;" onclick="handleFeedbackClick()">Send
+				Feedback</a>
+		</div>
+	</nav>
 </header>
-<div class="analytics">
+<script>
+
+	function handleFeedbackClick() {
+		const USE_EHB_EXTERNAL = window["useEhbExternal"];
+		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
+		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+
+		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
+	}
+</script><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -1027,7 +1057,10 @@ function BoschPrivacyCallback_OnUpdate(a) {
       <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">13.3</a>
+          <a href="../../index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../../13.3/index.html">13.3</a>
         </li>
         <li class="version">
           <a href="../../13.2/index.html">13.2</a>

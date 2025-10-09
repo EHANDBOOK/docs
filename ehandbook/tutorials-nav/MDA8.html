@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Interoperability with  MDA 8 :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/tutorials-nav/MDA8.html">
-    <meta name="generator" content="Antora 3.1.12">
+    <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
@@ -58,26 +58,56 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
-        <img class="navbar-item" src="../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
-      </a>
-      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search">
-        </div>
-      </div>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+				<img class="navbar-item" src="../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+			</a>
+			<a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" style="margin-left: auto;" onclick="handleFeedbackClick()">Send
+				Feedback</a>
+		</div>
+	</nav>
 </header>
-<div class="analytics">
+<script>
+
+	function handleFeedbackClick() {
+		const USE_EHB_EXTERNAL = window["useEhbExternal"];
+		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
+		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+
+		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
+	}
+</script><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -85,7 +115,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.3">
+<div class="nav-container" data-component="ehandbook" data-version="13.4">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -162,6 +192,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
@@ -1035,14 +1070,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.3</span>
+    <span class="version">13.4</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.3</a>
+          <a href="../index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../13.3/index.html">13.3</a>
         </li>
         <li class="version">
           <a href="../13.2/index.html">13.2</a>
@@ -1140,7 +1178,7 @@ to MDA.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>11.0-13.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>11.0-13.4</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>10.0-10.3</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>9.0-9.3</code></p></td>
 </tr>
@@ -1566,6 +1604,71 @@ cleared.</p>
 <p>The <span class="image"><img src="_images/mda8_disconnect.png" alt="mda8_disconnect"></span> button will disconnect the connection between MDA 8 and
 EHANDBOOK without terminating the running instance of EHANDBOOK. Exiting
 MDA 8 or EHANDBOOK product will disconnect implicitly.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exporting_labels_to_a_lab_file"><a class="anchor" href="#_exporting_labels_to_a_lab_file"></a>Exporting Labels to a LAB File</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Exporting labels is enabled for interactive models where at least one labels is considered to be
+a valid entry for the <em>[RAMCELL]</em> section or the <em>[LABEL]</em> section of the LAB file.</p>
+</div>
+<div class="paragraph">
+<p>To allow for high compatibility the LAB file is written in the version 1.0 format which does not contain
+information on raster or device names for the labels. The LAB file content may look like the following:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/MDA8_LAB_format.png" alt="LAB_FileFormat">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Export Labels to LAB File&#8230;&#8203;</em> is placed in the <em>Data</em> main menu or it
+can be also found as a button in the toolbar at the bottom of
+the window. It&#8217;s enabled if an interactive model is opened <strong>and</strong> at least one
+label is considered a valid entry for a LAB file.
+After a click on the menu entry or the button select an existing LAB file or give the name and location of a new
+LAB file to store the labels.
+Use the lab file by adding it your existing to MDA 8 configuration.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/MDA8_LAB_menu.png" alt="LAB_Menu">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_working_with_lab_file_as_filter"><a class="anchor" href="#_working_with_lab_file_as_filter"></a>Working with LAB File as Filter</h3>
+<div class="paragraph">
+<p>When working with a measurement file containing a vast number of signals using a LAB file as filter
+allows to focus on a certain function or detail of a function.</p>
+</div>
+<div class="paragraph">
+<p>Since MDA 8 Version 8.6 additionally loading a LAB file solves this issue.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/MDA8_addfile.png" alt="Load_LabFile">
+</div>
+</div>
+<div class="paragraph">
+<p>After loading a measurement file load a LAB file too. In the <em>Variable Explorer</em> tab
+expand the <em>Custom Filter</em> and check the entry for the loaded LAB file. The LAB is used as
+a filter for the signal in the measurement file.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/MDA8_loaded_LAB_file.png" alt="Loaded_LabFile">
+</div>
+</div>
+<div class="paragraph">
+<p>This approach allows to focus on a specific set of signal even when many signal are available.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/MDA8_overview_LAB_file.png" alt="Overview_LAB_Filter">
+</div>
+</div>
 </div>
 </div>
 </div>

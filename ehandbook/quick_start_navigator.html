@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Quick Start :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/quick_start_navigator.html">
-    <meta name="generator" content="Antora 3.1.12">
+    <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
@@ -58,26 +58,56 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
 <header class="header">
-  <nav class="navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
-        <img class="navbar-item" src="../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
-      </a>
-      <a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search">
-        </div>
-      </div>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+				<img class="navbar-item" src="../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+			</a>
+			<a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" style="margin-left: auto;" onclick="handleFeedbackClick()">Send
+				Feedback</a>
+		</div>
+	</nav>
 </header>
-<div class="analytics">
+<script>
+
+	function handleFeedbackClick() {
+		const USE_EHB_EXTERNAL = window["useEhbExternal"];
+		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
+		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+
+		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
+	}
+</script><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -85,7 +115,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.3">
+<div class="nav-container" data-component="ehandbook" data-version="13.4">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -162,6 +192,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
@@ -1035,14 +1070,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.3</span>
+    <span class="version">13.4</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">13.3</a>
+          <a href="index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="13.3/index.html">13.3</a>
         </li>
         <li class="version">
           <a href="13.2/index.html">13.2</a>
@@ -1347,7 +1385,7 @@ If you specify a directory that does not exist, it is created automatically.</p>
 <h4 id="_choose_start_menu_folder_for_the_shortcut_to_create"><a class="anchor" href="#_choose_start_menu_folder_for_the_shortcut_to_create"></a>Choose Start Menu Folder for the Shortcut to create:</h4>
 <div class="paragraph">
 <p>You can specify the path to create the EHANDBOK-NAVIGATOR’s shortcut. If it is
-not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 13.3.</p>
+not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 13.4.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1382,7 +1420,7 @@ available and visible in the Windows System Tray. If it is not selected the appl
 <ul>
 <li>
 <p>Click on <code>Next</code>.<br>
-<code>Completing EHANDBOOK-NAVIGATOR 13.3 Setup</code> dialog box is displayed</p>
+<code>Completing EHANDBOOK-NAVIGATOR 13.4 Setup</code> dialog box is displayed</p>
 </li>
 </ul>
 </div>
@@ -1405,14 +1443,14 @@ available and visible in the Windows System Tray. If it is not selected the appl
 </ul>
 </div>
 <div class="paragraph">
-<p>On the Start menu, the EHANDBOOK-NAVIGATOR 13.3 folder, with the following
+<p>On the Start menu, the EHANDBOOK-NAVIGATOR 13.4 folder, with the following
 entries, is created in the ETAS program group:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>EHANDBOOK-NAVIGATOR 13.3</strong><br>
-The EHANDBOOK-NAVIGATOR 13.3 program is started.</p>
+<p><strong>EHANDBOOK-NAVIGATOR 13.4</strong><br>
+The EHANDBOOK-NAVIGATOR 13.4 program is started.</p>
 </li>
 <li>
 <p><strong>Open Getting Started</strong><br>
@@ -1479,14 +1517,14 @@ installer from the command line and by specifying additional parameters (see tab
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent installation through command line</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_13.3.0_setup.exe /S</code></p>
-<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_13.3.0_setup.exe</code>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_13.4.0_setup.exe /S</code></p>
+<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_13.4.0_setup.exe</code>
 is the name of the file which you have downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent uninstall through command line</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code> uninstall.exe /S</code></p>
-<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 13.3</p></td>
+<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 13.4</p></td>
 </tr>
 </tbody>
 </table>
@@ -1513,7 +1551,7 @@ the issue.</p>
 <p>Customizing the installation directory is just an additional parameter:</p>
 </div>
 <div class="paragraph">
-<p>´EHANDBOOK-NAVIGATOR_13.3.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR13.3´</p>
+<p>´EHANDBOOK-NAVIGATOR_13.4.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR13.4´</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1525,7 +1563,7 @@ the issue.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR_13.3.0_setup.exe is the name of the file that you
+<p>EHANDBOOK-NAVIGATOR_13.4.0_setup.exe is the name of the file that you
 have downloaded.</p>
 </li>
 <li>
@@ -1692,7 +1730,7 @@ argument in the .ini file should be modified.</p>
 </div>
 <div class="paragraph">
 <p>Select <code>Add/Remove Programs</code> or <code>Programs and Features</code> in the Control
-Panel. Select <code>EHANDBOOK-NAVIGATOR 13.3</code> and click <code>Uninstall/Change</code>.</p>
+Panel. Select <code>EHANDBOOK-NAVIGATOR 13.4</code> and click <code>Uninstall/Change</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="_to_uninstall_ehandbook_navigator"><a class="anchor" href="#_to_uninstall_ehandbook_navigator"></a>To Uninstall EHANDBOOK-NAVIGATOR:</h4>
@@ -2245,17 +2283,17 @@ NAVIGATOR.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 13.3</code> icon.<br>
+<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 13.4</code> icon.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
 <p>Search <strong>EHANDBOOK-NAVIGATOR</strong> in the search field and select
-<code>EHANDBOOK-NAVIGATOR 13.3.</code><br>
+<code>EHANDBOOK-NAVIGATOR 13.4.</code><br>
     &lt;Or&gt;</p>
 </li>
 <li>
 <p>Go to <code>All apps &#8594; ETAS &#8594; EHANDBOOK-NAVIGATOR</code> folder and click on
-<code>EHANDBOOK-NAVIGATOR 13.3</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
+<code>EHANDBOOK-NAVIGATOR 13.4</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
 </li>
 </ul>
 </div>
@@ -2729,7 +2767,7 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR 13.3 supports interoperability with ETAS INCA V7
+<p>EHANDBOOK-NAVIGATOR 13.4 supports interoperability with ETAS INCA V7
 needs to be installed on the same PC for EHANDBOOK-NAVIGATOR to support INCA operations.</p>
 </li>
 <li>
