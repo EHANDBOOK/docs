@@ -64,7 +64,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 			border: 1px solid white;
 			background-color: transparent;
 			color: white;
-			margin: 20px;
+			margin-right: 20px;
 			border-radius: 50px;
 			font-family: 'Manrope', sans-serif;
 			font-size: 14px;
@@ -85,21 +85,19 @@ function BoschPrivacyCallback_OnUpdate(a) {
 	<nav class="navbar">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
-				<img class="navbar-item" src="../../../../_/img/ETAS_Logo_White.svg" width="140" height="54" alt="">
+				<img class="navbar-item" src="../../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
 			</a>
-			<a class="navbar-item" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
 			<div class="navbar-item search hide-for-print">
 				<div id="search-field" class="field">
 					<input id="search-input" type="text" placeholder="Search" >
 				</div>
 			</div>
-			<a class="navbar-item custom-outline-button" style="margin-left: auto;" onclick="handleFeedbackClick()">Send
-				Feedback</a>
+			<a class="navbar-item custom-outline-button" onclick="handleFeedbackClick()">Feedback</a>
 		</div>
 	</nav>
 </header>
 <script>
-
 	function handleFeedbackClick() {
 		const USE_EHB_EXTERNAL = window["useEhbExternal"];
 		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
