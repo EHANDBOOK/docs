@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PDF Style Guide :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/references/EHANDBOOK_Container-Build_PDF_Styling_Guide.html">
+    <meta name="generator" content="Antora 3.1.14">
+<link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin-right: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+				<img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
+			</a>
+			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" onclick="handleFeedbackClick()">Send Feedback</a>
+		</div>
+	</nav>
+</header>
+<script>
+	function handleFeedbackClick() {
+		const USE_EHB_EXTERNAL = window["useEhbExternal"];
+		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
+		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+
+		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
+	}
+</script>
+<div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="13.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../index.html">Welcome</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety_and_privacy_information.html">Safety and Privacy Information</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../intended_use.html">Intended Use</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../target_group.html">Target Group</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../classification_of_safety_messages.html">Classification of Safety Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety_information.html">Safety Information</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb_cb_warning_messages.html">Warning Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ETAS_contacts.html">ETAS Contacts</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_3.html">Version 12.3 (October 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (September 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_3.html">Version 11.3 (December 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_2.html">Version 11.2 (September 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_1.html">Version 11.1 (June 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_0.html">Version 11.0 (March 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_3.html">Version 10.3 (December 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../container_build.html">Container-Build</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_quick_start_demos">Quick Start Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-ascet-6/contents.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-simulink/contents.html">Simulink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-ccode/contents.html">C-Code</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/overview.html">Model Languages</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/ascet6.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow / TargetLink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/c_code.html">C-Code</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/overview.html">Automotive Standards</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_download">Download</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_installation">Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html">Supported Platforms</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb_cb_features.html">Features</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-simulink-libraries-in-ehb.html">How to configure EHB-CB for Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-targetlink-models.html">How to support TargetLink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-customize-interactive-models.html">How to customize Interactive Models</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Simulink</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support">Passing Simulink library paths to EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Simulink Variant block configuration support</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-truth-table-block-support">Simulink Truthtable block in the documentation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">ASCET-DEVELOPER</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">C-Code</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_model_depth_skip">Model Depth</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept">View Concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/simulink_libraries_configuration_using_simulinkView.html">Configure appearance of Simulink library blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/simulink-view-concept.html">Simulink View Concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks">Configuration of details shown for Simulink subsystem-based blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Configuration to hide C-Code functions based on function names</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Label-specific configurations</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration">Label Configuration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment">Label Amendment</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">How to customize Textual Contents</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic">ClickPic</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration">Label Table Configuration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">How to customize EHB Containers</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_directory_based_ehb_cb">Dir-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">How to support Asian languages in EHANDBOOK generated PDF documents</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="other_input_formats.html">Other Input Formats</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="styling.html">Styling</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+    </div>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../navigator.html">Navigator</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../about_navigator.html">About Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_installing_navigator">Installing Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_licensing_the_software">Licensing the Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_getting_started">Getting Started</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_troubleshooting">Troubleshooting</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/index.html">User Interface</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/menus.html">Menus</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/toolbar.html">Toolbars</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/document_views.html">Document Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/model_views.html">Model Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/bookmarks.html">Bookmark Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/search_views.html">Search Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/label_popup.html">Label Popup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/other_views.html">Other Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../user-interface/pref_dialogs.html">Preference Dialogs</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-navigator/how_to_navigator.html">How-to guides</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/interactive_models.html">Interactive Models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html">Software Function Navigation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/searching.html">Searching</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/dependency_analysis.html">Dependency Analysis</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/devices_and_rasters.html">Devices and Rasters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/compare.html">Compare Containers</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html">Known Issues</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html#_container_build">Container-Build</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html#_navigator">Navigator</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">13.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">13.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../../13.3/index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="../../13.2/index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../../13.1/index.html">13.1</a>
+        </li>
+        <li class="version">
+          <a href="../../13.0/index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../../12.4/index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../container_build.html">Container-Build</a></li>
+    <li><a href="index.html">References</a></li>
+    <li><a href="styling.html">Styling</a></li>
+    <li><a href="EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PDF Style Guide</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ETAS EHANDBOOK solution is an interactive documentation tool set. This solution consists in 3 parts: the EHANDBOOK Container-Build tool chain for the container generation, later called EHB-CB, the container itself, which is containing the documentation data in a special format and the EHANDBOOK-NAVIGATOR, the tool to work with the containers, later called EHB-NAV.</p>
+</div>
+<div class="paragraph">
+<p>Besides container generation, a PDF document can be created in addition. The configuration details of the PDF are described in detail below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generation_of_the_pdf_document"><a class="anchor" href="#_generation_of_the_pdf_document"></a>Generation of the PDF Document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The creation of the PDF document happens as an optional post-processing step after the container generation. It is invoked by a checkbox from the GUI-version of the EHB-CB Add-on or via the command line option <strong>-pdf</strong> for the CLI-version of EHB-CB.</p>
+</div>
+<div class="paragraph">
+<p>The PDF contains two tables of contents:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Hierarchical software view of the function components (as in EHB-NAV)</p>
+</li>
+<li>
+<p>Alphabetical view of the function components</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The page sorting of the content for the function components is in order to the hierarchical software view. The same applies to the bookmarks, which are also available in the PDF.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_styling_and_pdf_customization"><a class="anchor" href="#_general_styling_and_pdf_customization"></a>General Styling and PDF Customization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The styling of the PDF is configured in a file PdfCustomization.xsl formatted as XML stylesheet. The file have to be placed in the <strong>Styling folder</strong>. The styling folder location is set in the user input dialog for GUI based EHB-CB versions or via -styling command line parameter for command line based EHB-CBs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You may use different stylings, defined in separate folders and pick the de-sired one then in the user input dialog. This can be useful for different texts and stylings for different documents, like ‘Draft’ or ‘Released’ versions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The style definitions are standardized in XSL Formatting Objects (XSL-FO).</p>
+</div>
+<div class="paragraph">
+<p>See the following standards:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.w3.org/2002/08/XSLFOsummary.html" class="bare">https://www.w3.org/2002/08/XSLFOsummary.html</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.w3.org/TR/2006/REC-xsl11-20061205" class="bare">https://www.w3.org/TR/2006/REC-xsl11-20061205</a></p>
+</div>
+<div class="paragraph">
+<p>Here is a sample structure and a subset of possible attributes of the formatting objects for the text styling:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="header_text"&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;9pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-weight"&gt;bold&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-style"&gt;italic&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="color"&gt;black&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pdf_content_customization_debug_information"><a class="anchor" href="#_pdf_content_customization_debug_information"></a>PDF Content Customization &amp; Debug Information</h3>
+<div class="paragraph">
+<p>The structure of the TOC and the amount of model hierarchies shown in the PDF can be configured in the <strong><em>eHandbookCB.ini</em></strong>, which is located in the installation directory of EHB-CB.</p>
+</div>
+<div class="paragraph">
+<p>For the ASCET Add-on for EHB-CB this is typically the ’<em>tool’</em> sub directory of the ASCET installation. (e.g. C:\ETAS\ASCET6.1\Tools\EHANDBOOK_CB\tool).</p>
+</div>
+<div class="paragraph">
+<p>Sample content of the eHandbookCB.ini:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pdf-styling/image4.png" alt="image4">
+</div>
+</div>
+<div class="sect3">
+<h4 id="model-hierarchies-printed"><a class="anchor" href="#model-hierarchies-printed"></a>Model Hierarchies printed</h4>
+<div class="paragraph">
+<p>Independent of the amount of model hierarchies shown in the text pane of the container, there can be a screenshot printed in the PDF for every model hierarchy of the model. To do so, the following line has to be set in the <strong><em>eHandbookCB.ini</em></strong>:<br>
+<strong>-DmodelSnapshotsRequired=true</strong></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sub_chapters_in_toc"><a class="anchor" href="#_sub_chapters_in_toc"></a>Sub Chapters in TOC</h4>
+<div class="paragraph">
+<p>The amount of sub chapter levels shown in the TOC of the PDF can be configured as follows:</p>
+</div>
+<div class="paragraph">
+<p><strong>-DpdfTocLevel=<em>value</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 51%;">
+<col style="width: 49%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>-DpdfTocLevel=All</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All the chapter levels will be part of table of contents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>-DpdfTocLevel=N</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>-DpdfTocLevel=5</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N chapter levels will be in table of contents</p>
+<p class="tableblock">No entry or</p>
+<p class="tableblock"><strong>-DpdfTocLevel=Default</strong></p>
+<p class="tableblock">Chapter levels as per ASCET Project will be in table of contents.</p>
+<p class="tableblock">Levels till the Function Component Name as seen in EHB-NAV text pane</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_logging_information"><a class="anchor" href="#_logging_information"></a>Logging Information</h4>
+<div class="paragraph">
+<p>For verbose logging information, the following line has to be set:<br>
+<strong>-DdebugRequired=false</strong> (default)</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_styling_taken_from_source_container"><a class="anchor" href="#_styling_taken_from_source_container"></a>Styling taken from Source Container</h3>
+<div class="paragraph">
+<p>The style of the title page, the header image and the footer text information is taken 1:1 from the container configuration. For details, please refer to the <em>container style guide for EHB-CB</em> document.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_page_styling"><a class="anchor" href="#_page_styling"></a>Page Styling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The style of all pages besides the title page can be customized with an XML stylesheet. A file with the name PdfCustomization.xsl must be placed within the <strong>Styling folder</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pdf-styling/image5.png" alt="image5">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_font_settings"><a class="anchor" href="#_default_font_settings"></a>Default Font Settings</h3>
+<div class="paragraph">
+<p>The default font of the PDF documentation can be set with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="__fo__root"&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;Arial, sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is allowed to specify a list of fonts, which will be used. The order of the font, which will be picked from the list, is from left to right. If the font is not installed on your machine, the next font from the list will be selected.</p>
+</div>
+<div class="paragraph">
+<p>A font list of ‘Arial, Helvetica, sans-serif’ would select Arial, then Helvetica and then any other sans-serif font.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_header_styling"><a class="anchor" href="#_header_styling"></a>Header Styling</h3>
+<div class="paragraph">
+<p>The style of the header like font size, font family, color and more can be defined within the attribute-set “header_text”.</p>
+</div>
+<div class="paragraph">
+<p>Sample header text style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="header_text"&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;9pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="color"&gt;black&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The header text alignment is set as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="header_align"&gt;
+
+	&lt;xsl:attribute name="text-align"&gt;left&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The header background color is set as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="odd__header"&gt;
+
+	&lt;xsl:attribute name="text-align"&gt;start&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="padding-left" select="$page-margins-left-right"/&gt;
+
+	&lt;xsl:attribute name="line-height"&gt;6mm&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="end-indent"&gt;0pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="space-after.conditionality"&gt;retain&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="background-color"&gt;#00904C &lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_footer_styling"><a class="anchor" href="#_footer_styling"></a>Footer Styling</h3>
+<div class="paragraph">
+<p>The style of the footer like font size, font family, color and more can be defined within the attribute-set “footer_text”.</p>
+</div>
+<div class="paragraph">
+<p>Sample footer text style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="footer_text"&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;9pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="color"&gt;black&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The footer text alignment is set as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="footer_align"&gt;
+
+	&lt;xsl:attribute name="text-align"&gt;left&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_section_and_subsection_text_styling"><a class="anchor" href="#_section_and_subsection_text_styling"></a>Section and Subsection Text Styling</h3>
+<div class="paragraph">
+<p>The style of the section’s title like font size, font family, color and more can be defined within the attribute-sets “topic.title”, “topic.topic.title” and “topic.topic.topic.title”.</p>
+</div>
+<div class="paragraph">
+<p>Example for the section title text style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="topic.title"&gt;
+
+	&lt;xsl:attribute name="color"&gt;#FF4400&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;1.77em&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;Arial,sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for first level subsection style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="topic.topic.title"&gt;
+
+	&lt;xsl:attribute name="color"&gt;#FF4400&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;1.77em&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;Arial,sans-serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Subsection styles can be provided within the following attribute sets:</p>
+</div>
+<div class="paragraph">
+<p>topic.title (section title)</p>
+</div>
+<div class="paragraph">
+<p>topic.topic.title (first level subsection)</p>
+</div>
+<div class="paragraph">
+<p>topic.topic.topic.title (second level subsection)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_paragraph_text_styling"><a class="anchor" href="#_paragraph_text_styling"></a>Paragraph Text Styling</h3>
+<div class="paragraph">
+<p>The style of the paragraph like font size, font family, color and more can be defined within the attribute-set “p”.</p>
+</div>
+<div class="paragraph">
+<p>Sample paragraph style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="p"&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;10pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;Times New Roman, serif&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_table_text_styling"><a class="anchor" href="#_table_text_styling"></a>Table Text Styling</h3>
+<div class="paragraph">
+<p>The style of tables like font size, font family, color and more can be defined within the attribute-set “table.data”.</p>
+</div>
+<div class="paragraph">
+<p>Sample table text style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="table.data"&gt;
+
+	&lt;xsl:attribute name="font-family"&gt;Times New Roman&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="font-size"&gt;10pt&lt;/xsl:attribute&gt;
+
+	&lt;xsl:attribute name="color"&gt;blue&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pdf-styling/image6.png" alt="image6">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_figure_styling"><a class="anchor" href="#_figure_styling"></a>Figure Styling</h3>
+<div class="paragraph">
+<p>The Figure background color can be defined within the attribute-set “fig”.</p>
+</div>
+<div class="paragraph">
+<p>Sample Figure style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;xsl:attribute-set name="fig"&gt;
+
+	&lt;xsl:attribute name="background-color"&gt;white&lt;/xsl:attribute&gt;
+
+&lt;/xsl:attribute-set&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a chapter name exceeds the page width, then chapter name overlaps with page number and not shown completely in table of contents.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_new"><a class="anchor" href="#_whats_new"></a>What’s New</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Print all hierarchies in PDF will work for all model types. See chapter <a href="#model-hierarchies-printed">Model Hierarchies printed</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-right">
+    <span>© 2025 ETAS GmbH</span>
+    <span>
+      <a href="https://www.etas.com/ww/en/corporate-information/">Corporate information</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of use / legal notice</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/data-protection-policy/">Data protection notice (privacy policy)</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-and-conditions/">Terms and Conditions</a>
+    </span>
+    <span>
+      <a href="#" onclick="showDockPrivacySettings(); return false;">Privacy settings</a>
+    </span>
+  </div>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

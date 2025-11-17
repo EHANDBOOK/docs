@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.4</a>
+          <a href="../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../13.3/index.html">13.3</a>
@@ -1179,6 +1187,73 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </div>
 <div class="paragraph">
 <p>The ihf feature is only an emergency solution and has some limitations. The better way would be to use the build-in view mechanisms of ASCET upfront, see chapter <a href="#view-concept">View Concept</a></p>
+</div>
+<div class="paragraph">
+<p><strong>JSON Configuration Format</strong></p>
+</div>
+<div class="paragraph">
+<p>The configuration is supplied as a JSON file and referenced by the <code>-ihf</code> command-line option during container generation.</p>
+</div>
+<div class="paragraph">
+<p>Each JSON entry maps one <strong>model or source file</strong> (for example, <code>.axl</code>, <code>.mdl</code>, <code>.slx</code>) to a list of <strong>hierarchies</strong> that should be retained in the interactive model view.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example JSON format</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "../Lcc/lcc.axl": [
+      "LambdaControl.Main",
+      "LambdaControl.Main.Two-point-controller",
+      "LambdaControl.Main.PID-Controller",
+      "PID_Limit_AWU.Main"
+    ]
+  },
+  {
+    "../t2t/T2t.mdl": [
+      "T2t.T2t_mdl",
+      "T2t.T2t_mdl.ThrottleValveControl",
+      "T2t.T2t_mdl.WastegateControl"
+    ]
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Concept</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each <strong>object key</strong> represents a model or subsystem file path relative to the container build input directory.</p>
+</li>
+<li>
+<p>Each <strong>array value</strong> lists the fully qualified hierarchy names (using dot notation) that should remain visible even if no graphical documentation exists.</p>
+</li>
+<li>
+<p>The specified hierarchies are treated as <strong>intermediate levels</strong> and will be displayed in Navigator as structural nodes for better traceability.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Even if a hierarchy has no image or documentation, if it is listed in the IHF JSON, it will appear as a navigable node in the final container.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Using the Configuration</strong></p>
+</div>
+<div class="paragraph">
+<p>Please refer <a href="../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html" class="xref page">EHB-CB usage in General</a></p>
 </div>
 <div class="admonitionblock note">
 <table>

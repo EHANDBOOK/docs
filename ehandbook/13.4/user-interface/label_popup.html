@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Label Popup :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/user-interface/label_popup.html">
+    <meta name="generator" content="Antora 3.1.14">
+<link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin-right: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+				<img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
+			</a>
+			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" onclick="handleFeedbackClick()">Send Feedback</a>
+		</div>
+	</nav>
+</header>
+<script>
+	function handleFeedbackClick() {
+		const USE_EHB_EXTERNAL = window["useEhbExternal"];
+		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
+		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+
+		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
+	}
+</script>
+<div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="13.4">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../index.html">Welcome</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehandbook_solution_overview.html">EHANDBOOK Solution Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety_and_privacy_information.html">Safety and Privacy Information</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../intended_use.html">Intended Use</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../target_group.html">Target Group</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../classification_of_safety_messages.html">Classification of Safety Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety_information.html">Safety Information</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb_cb_warning_messages.html">Warning Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ETAS_contacts.html">ETAS Contacts</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_3.html">Version 13.3 (July 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_2.html">Version 13.2 (June 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_1.html">Version 13.1 (April 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_0.html">Version 13.0 (March 2025)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_4.html">Version 12.4 (December 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_3.html">Version 12.3 (October 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_2.html">Version 12.2 (September 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_1.html">Version 12.1 (July 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_12_0.html">Version 12.0 (April 2024)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_3.html">Version 11.3 (December 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_2.html">Version 11.2 (September 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_1.html">Version 11.1 (June 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_11_0.html">Version 11.0 (March 2023)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_3.html">Version 10.3 (December 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_2.html">Version 10.2 (September 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_1.html">Version 10.1 (June 2022)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_10_0.html">Version 10.0 (March 2022)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../container_build.html">Container-Build</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../container_build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_quick_start_demos">Quick Start Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_container_build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-ascet-6/contents.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-simulink/contents.html">Simulink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/dir-ccode/contents.html">C-Code</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-cb/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/fundamental_concepts_of_ecu_software.html">Fundamental Concepts of ECU Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehandbook_container_build_principles.html">EHANDBOOK Container-Build Principles</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__EHB_CB_in_General.html">EHANDBOOK Container-Build in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb_cb_tools.html">Tools for generating EHANDBOOK Containers</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/overview.html">Model Languages</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/ascet_developer.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/ascet6.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/simulink_stateflow.html">Simulink / Stateflow / TargetLink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/model_languages/c_code.html">C-Code</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/overview.html">Automotive Standards</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/autosar_classic.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/automotive_standards/asam_exchange_formats.html">ASAM Exchange Formats</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_download">Download</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_installation">Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html">Supported Platforms</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/platforms.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb_cb_features.html">Features</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/EHANDBOOK_Container-Build_User_Guide__Attachments.html">Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Preparation_Steps_Dir_based_EHB_CB.html">How to prepare input data for Dir-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-simulink-libraries-in-ehb.html">How to configure EHB-CB for Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-targetlink-models.html">How to support TargetLink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-customize-interactive-models.html">How to customize Interactive Models</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Simulink</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-library-support">Passing Simulink library paths to EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#doc-block-support">Simulink DocBlocks in the documentation</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Simulink Variant block configuration support</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#simulink-truth-table-block-support">Simulink Truthtable block in the documentation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">ASCET-DEVELOPER</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_excluding_packages_for_ascet_developer">Excluding Packages for ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#include-documentation-for-nested-class-in-ascet-developer">Include Documentation for Nested Classed in ASCET-DEVELOPER</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">C-Code</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#ccode-configuration">C-Code Configuration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Visual Appearance &amp; Level of Detail</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#root-level-skipping">Root-Level Skipping</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_model_depth_skip">Model Depth</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#intermediate-hierarchy-filtering">Intermediate Hierarchy Filtering</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#view-concept">View Concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/simulink_libraries_configuration_using_simulinkView.html">Configure appearance of Simulink library blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/simulink-view-concept.html">Simulink View Concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#configure-simulink-blocks">Configuration of details shown for Simulink subsystem-based blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Configuration to hide C-Code functions based on function names</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Label-specific configurations</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration">Label Configuration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-amendment">Label Amendment</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#label-configuration-autosar">Label configuration for AUTOSAR (Classic) interface elements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">How to customize Textual Contents</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#click-pic">ClickPic</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_function_overview_diagram">Function Overview Diagrams</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#table-configuration">Label Table Configuration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">How to customize EHB Containers</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#container-encryption">Password-Protection and Encryption</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide_Advanced_Features.html#_structure_data_type_support">Structure Data Type</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html">How to add attachments</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_directory_based_ehb_cb">Dir-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/EHANDBOOK_Container-Build_User_Guide__Attachments.html#_asam_based_ehb_cb">ASAM-based EHB-CB</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-explicitly-specify-table-of-contents.html">How to explicitly specify tables of contents (Dir-based EHB-CB)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">How to support Asian languages in EHANDBOOK generated PDF documents</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html">EHANDBOOK Container-Build Usage in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_ASAM_Specification.html">ASAM Input Formats</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/other_input_formats.html">Other Input Formats</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_AsciiDoc_Specification.html">AsciiDoc Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_RTF_Specification.html">Word RTF Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_XLSX_Specification.html">Excel Format Specification</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/styling.html">Styling</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_Styling_Guide__EHB_Container.html">EHB Container Styling Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_PDF_Styling_Guide.html">PDF Styling Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_Styling_Guide__Title_Page.html">Title Page Styling Guide</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/02_definitions_and_abbreviations.html">Definitions &amp; Abbreviations</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../references/EHANDBOOK_Container-Build_User_Guide__Limitations.html">Limitations</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../explanations/supported_input_file_formats_and_versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../navigator.html">Navigator</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../about_navigator.html">About Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_installing_navigator">Installing Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_licensing_the_software">Licensing the Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_getting_started">Getting Started</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../quick_start_navigator.html#_troubleshooting">Troubleshooting</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="index.html">User Interface</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="menus.html">Menus</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="toolbar.html">Toolbars</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="document_views.html">Document Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="model_views.html">Model Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="bookmarks.html">Bookmark Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="search_views.html">Search Views</a>
+    </div>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="label_popup.html">Label Popup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="other_views.html">Other Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="pref_dialogs.html">Preference Dialogs</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../how-to-navigator/how_to_navigator.html">How-to guides</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/interactive_models.html">Interactive Models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html">Software Function Navigation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/searching.html">Searching</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/dependency_analysis.html">Dependency Analysis</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/MDA8.html">Interoperability with MDA 8</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/devices_and_rasters.html">Devices and Rasters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../tutorials-nav/compare.html">Compare Containers</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html">Known Issues</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html#_container_build">Container-Build</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/known_issues.html#_navigator">Navigator</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">13.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">13.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../../13.3/index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="../../13.2/index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../../13.1/index.html">13.1</a>
+        </li>
+        <li class="version">
+          <a href="../../13.0/index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../../12.4/index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../navigator.html">Navigator</a></li>
+    <li><a href="index.html">User Interface</a></li>
+    <li><a href="label_popup.html">Label Popup</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Label Popup</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Label popup is a feature used to display the metadata of the labels and other
+entities of Function Overview Diagrams, Interactive models, SVG images and the
+calibration parameter values.<br>
+To display the Label popup click on the label. This feature is applicable for labels
+and all other entities.<br>
+The Label popup for Curves and Maps are displayed as 2D/3D visualization of the
+plot data.<br>
+The data can be visualized in the Label popup if the variant-coded label(s) is(are)
+present in the content.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup.png" alt="Label_popup">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Label popup</p>
+</li>
+<li>
+<p>Pin window</p>
+</li>
+<li>
+<p>Close window</p>
+</li>
+<li>
+<p>Exporting functions</p>
+</li>
+<li>
+<p>Importing functions</p>
+</li>
+<li>
+<p>Show More/Less</p>
+</li>
+<li>
+<p>Annotations table</p>
+</li>
+<li>
+<p>Defining functions</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Label popup displays the Exporting Functions, Importing Functions, A2L
+Annotations, Defining functions, and Property Values of a label/entity. By default,
+the Label popup displays the Exporting/Importing/Defining functions. Click on the
+<code>More</code> hyperlink to display the Property Values. Clicking <code>Less</code> hyperlink hides the
+Property Values.<br>
+The Label popup window can be re-sized by moving the cursor over the top or
+bottom border of the window, until the cursor becomes a double-headed arrow,
+then click the left mouse button and drag as required to reduce/increase the size
+of the window.<br>
+The label popup can be pinned by clicking on <span class="image"><img src="_images/Pin.png" alt="Pin"></span> icon which is available at top-right
+corner of the Label popup. If it is pinned, then it is displayed always, even when
+any other label popup is opened or any other operation is performed in the application.
+You can minimize or maximize the Label popup window. The pinned Label
+popup can be closed by clicking <span class="image"><img src="_images/Close.png" alt="Close"></span> icon.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If a Label popup is not pinned, then it closes automatically when any other operation
+is performed in the application or when you click outside the popup area.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_NoMetaData.png" alt="Label_NoMetaData">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Label popup with message string</p>
+</li>
+<li>
+<p>Find in EHANDBOOK File(s) field</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The labels for which metadata is not available, a message string gets displayed.
+This contains a clickable link with the same label name which copies the text to
+the Find in EHANDBOOK File(s) box followed by display of search proposals.
+The data can be visualized in the Label popup if variant-coded label(s) is(are)
+present in the content</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_viewing_the_properties_of_a_label"><a class="anchor" href="#_viewing_the_properties_of_a_label"></a>Viewing the Properties of a Label</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="underline">To view the set of properties and their relevant values for a label:</span><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on a label in the Document Viewer/Interactive Model/Function Overview
+Diagram.</p>
+</li>
+<li>
+<p>The related set of properties and their relevant values are displayed in the
+Label pop-up.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_viewing_the_properties_of_a_curvemap"><a class="anchor" href="#_viewing_the_properties_of_a_curvemap"></a>Viewing the Properties of a Curve/Map</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Label popup for the Curve (CUR) displays the plot data in 2D view, for the
+Map (MAP) displays in 3D view. This helps to understand more quickly how a
+curve/map is calibrated.</p>
+</div>
+<div class="paragraph">
+<p>It takes the data from the loaded A2L (<code>*.a2l</code>) and HEX (<code>*.hex</code>, <code>*.s19</code>) or (and)
+DCM (<code>*.dcm</code>)/CDF (<code>*.cdfx</code>)/PaCo (<code>*.xml</code>) files.</p>
+</div>
+<div class="paragraph">
+<p>To load the A2L+HEX or (and) DCM/CDF/PaCo files and view the set of properties
+and their relevant values for a Map/Curve is described below:</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">To load the A2L+HEX or (and) DCM/CDF/PaCo files:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <code>Data</code> menu → <code>Measurement and Calibration Files.</code><br>
+<code>Measurement and Calibration Files</code> dialog box is displayed.</p>
+</li>
+<li>
+<p>Select the A2L+HEX or (and) DCM/CDF/PaCo files and click <code>Load</code>.<br>
+The selected A2L+HEX or (and) DCM/CDF/PaCo files are loaded.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="underline">To view the values for a Map:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on a label of the Map value (mostly ending with _MAP) in the Document
+Viewer/Interactive Model/Function Overview Diagram.
+3D view of data and the related set of properties and the annotations
+information and its relevant values in the loaded A2L+HEX or (and)
+DCM/CDF/PaCo are displayed in the Label popup as shown below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup_caliberation.png" alt="Label_popup_caliberation">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>HEX tab</p>
+</li>
+<li>
+<p>DCM/CDF/PaCo tab</p>
+</li>
+<li>
+<p>Show More/Less</p>
+</li>
+<li>
+<p>Show More/Less</p>
+</li>
+<li>
+<p>Annotations table</p>
+</li>
+<li>
+<p>Click to copy table to clipboard icon</p>
+</li>
+<li>
+<p>Values in a tabular format</p>
+</li>
+<li>
+<p>Values of calibration parameters</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If both the files (A2L+HEX and DCM/CDF/PaCo files) are loaded, you can view
+both the tabs in the Label popup window. If any one is loaded, then the corresponding
+tab only is shown in the <code>Label popup</code>.<br>
+<code>HEX</code> tab (1) displays the image which is loaded from the A2L+HEX file.
+<code>DCM/CDF/PaCo</code> tab (2) displays the image which is loaded from the
+DCM/CDF/PaCo file.<br>
+The annotations table (5) dislplays the calibration information which are available
+in the loaded .a2l file.<br>
+The values of calibration parameters which are available in the loaded .a2l and
+.hex files are displayed in a tabular view. The values can be viewed in 4 different
+formats.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Physical</p>
+</li>
+<li>
+<p>Binary</p>
+</li>
+<li>
+<p>Decimal</p>
+</li>
+<li>
+<p>Hexadecimal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default, Physical values are displayed. You can switch between these formats
+by clicking on the respective tabs which is available on the top of the label popup.
+The same can also be performed by using the keyboard shortcuts &lt;CTRL+P&gt;, &lt;
+CTRL+B&gt;, &lt;CTRL+D&gt;, and &lt;CTRL+H&gt; for physical/binary/decimal/hexadecimal
+respectively.<br>
+<span class="underline">To copy data from a calibration table:</span><br>
+You can copy the table data displayed in the label popup for a curve or map and
+paste it into Microsoft Excel.<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <span class="image"><img src="_images/Table_data_copy_icon.png" alt="Table_data_copy_icon"></span> icon (6) to copy the values.<br>
+The data will be copied to the clipboard.</p>
+</li>
+<li>
+<p>Open Microsoft Excel.</p>
+</li>
+<li>
+<p>Click on the Excel cell where you want to paste the data.</p>
+</li>
+<li>
+<p>Click &lt;CTRL+V&gt;.<br>
+The copied table will be pasted into Excel.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>a) By default, table data is represented as the US decimal number format (point
+as decimal separator) in the clipboard. Since the number format differs on languages,
+for example, the point as decimal separator is interpreted as a thousand
+separator when pasting into a German Excel application.<br>
+b) If necessary, you can configure the display of trailing zeros in Excel&#8217;s decimal
+part of the number..</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="underline">To view the values for a calibration parameter:</span><br>
+You can load any one tab at a time by selecting the corresponding tab.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <code>More</code> (4) hyperlink to display all the Property Values.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup_parameters.png" alt="Label_popup_parameters">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <code>More</code> (3) hyperlink to display the enlarged view of the image.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup_map.png" alt="Label_popup_map">
+</div>
+</div>
+<div class="paragraph">
+<p>Since it is the 3D view, EHANDBOOK allows you to rotate the view. It is also possible
+to zoom-in/zoom-out the image by using the mouse scroll. When you hover
+the mouse over the plot area, plot coordinates are displayed as shown in the
+image below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup_map_detail.png" alt="Label_popup_map_detail">
+</div>
+</div>
+<div class="paragraph">
+<p>Similarly, the set of properties and their relevant values can be seen for a Curve
+also. It is also possible to zoom-in/zoom-out the image. The coordinates are also
+shown when you hover the mouse over the plot.<br>
+<span class="underline">To view the data for a Curve:</span><br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on a label of the Curve value (mostling ending with _CUR) in the Document
+Viewer/Interactive Model/Function Overview Diagram.<br>
+2D view of data and the related set of properties and the annotations
+information and its relevant values in the loaded A2L+HEX or (and)
+DCM/CDF/PaCo are displayed in the Label popup as shown below.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Label_popup_Curve.png" alt="Label_popup_Curve">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_binary_representation_for_a_scalar_calibration_parameter"><a class="anchor" href="#_binary_representation_for_a_scalar_calibration_parameter"></a>Binary Representation for a scalar calibration parameter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="underline">To view the Binary values for a scalar calibration parameter:</span><br>
+You need to load the A2L and HEX files. Refer to <a href="#_viewing_the_properties_of_a_curvemap">Viewing the Properties of a Curve/Map</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select and click the calibration parameter in the Document Viewer/
+Interactive Model/Function Overview Diagram.<br>
+A label pop-up displays.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Physical%20Representation.png" alt="Physical Representation">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>By default, Physical values are displayed. You can switch to Binary Values
+by clicking on <span class="image"><img src="_images/Physical%20B%20Binary%20Button.png" alt="Physical B Binary Button"></span> the button which is available at the top of the label popup.<br>
+The binary values are displayed at the bottom along with the bit number. A
+set bit (1) is represented by a black circle and an unset bit (0) is represented
+by a grey circle.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Binary%20Representation.png" alt="Binary Representation">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_loading_the_topic_of_an_importingexportingdefining_function"><a class="anchor" href="#_loading_the_topic_of_an_importingexportingdefining_function"></a>Loading the Topic of an Importing/Exporting/Defining Function</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="underline">To load the topic of an Importing/Exporting/Defining function for the selected label:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the label in the Document Viewer/Interactive Model/Function Overview
+Diagram.<br>
+The related set of properties and their relevant values are displayed in the
+Label pop-up.<br>
+All the available Importing, Exporting or Defining functions for the selected
+label are displayed.</p>
+</li>
+<li>
+<p>Click on Importing/Exporting/Defining function(s) hyperlink to navigate to
+the respective Functional Components or Functions.<br>
+The topic of the selected Importing/Exporting/Defining function is loaded
+in the Document Viewer</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_display_identifier"><a class="anchor" href="#_display_identifier"></a>Display Identifier</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK-NAVIGATOR displays the label name in the Model Viewer. This label
+name could be a short name or a Display Identifier. When the Display Identifier is
+used in an EHANDBOOK Container and you load a matching A2L file, then the
+Label Pop-up displays the short name in the title. The Display Identifier is shown
+separately in the properties.<br>
+In general, the short and long name is a term in the ASAM standards:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>short name:<br>
+The label name which is displayed</p>
+</li>
+<li>
+<p>long name:<br>
+The description of a label</p>
+</li>
+<li>
+<p>Display Identifier:<br>
+The alias name of a label, this could be shown instead of a short name</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Disp_Identifier.png" alt="Disp_Identifier">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Name of the label</p>
+</li>
+<li>
+<p>Display Identifier</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you search for the label in all Find in EHANDBOOK File(s)and if the Display
+Identifier of a label is available, then search hit displays both the entries (the long
+name and the short name) in the Search Result View.<br>
+In few specific cases, the Label Pop-up displays the Display Identifier in the title
+as main label name instead of the long name. The long name is displayed in the
+"Name" field inside the Label Pop-up. When you search a label by specifying the
+long name in the Find in EHANDBOOK File(s), EHANDBOOK-NAVIGATOR displays
+the result for long names as well.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_shows_conversion_values"><a class="anchor" href="#_shows_conversion_values"></a>Shows Conversion values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The conversion property shows the COMPU_METHOD associated with the label.
+The types of COMPU_METHOD table are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>COMPU_TAB</p>
+</li>
+<li>
+<p>COMPU_VTAB</p>
+</li>
+<li>
+<p>COMPU_VTAB_RANGE</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If there is no mapping table available, then only compuMethod name is displayed.</p>
+</div>
+<div class="paragraph">
+<p><strong>COMPU_TAB</strong><br>
+The COMPU_TAB is a mapping between two numbers.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Compu_tab.png" alt="Compu_tab">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Conversion</p>
+</li>
+<li>
+<p>Show mapping values</p>
+</li>
+<li>
+<p>Back to overview</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>COMPU_VTAB</strong><br>
+The COMPU_VTAB is a mapping between number and a string.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Compu_vtab.png" alt="Compu_vtab">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Conversion</p>
+</li>
+<li>
+<p>Show mapping values</p>
+</li>
+<li>
+<p>Back to overview</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>COMPU_VTAB_RANGE</strong><br>
+The COMPU_VTAB_RANGE is a mapping between range of number and a string.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Compu_vtab_range.png" alt="Compu_vtab_range">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Conversion</p>
+</li>
+<li>
+<p>Show mapping values</p>
+</li>
+<li>
+<p>Back to overview</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_support_of_structure_data_type"><a class="anchor" href="#_support_of_structure_data_type"></a>Support of Structure Data type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK-NAVIGATOR supports the STRUCTURE data type in Simulink models
+which establishes an end-to-end signal flow across two ECU functions via labels.
+The label popup of a structure displays the structure information and its contained
+members. The label popup of a structure member displays the member
+information and links to its parent structure.<br>
+A structure is mapped to a Simulink bus and structure members are mapped to
+Simulink bus signals. Structure members are separated by a delimiter e.g. a dot.
+For example, <span class="small"><em>myStruct02</em></span> is the structure/bus name and <span class="small"><em>myStruct02.sine</em></span>
+and <span class="small"><em>myStruct02.XYZpff_lim_IntQly</em></span> are the structure members where <span class="small"><em>sine</em></span>
+and <span class="small"><em>XYZpff_lim_IntQly</em></span> are the signals of the bus, <span class="small"><em>myStruct02.</em></span></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Struct_datatype.png" alt="Struct_datatype">
+</div>
+</div>
+<div class="paragraph">
+<p>The Search proposal also shows entries for structures and structure members.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-right">
+    <span>© 2025 ETAS GmbH</span>
+    <span>
+      <a href="https://www.etas.com/ww/en/corporate-information/">Corporate information</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of use / legal notice</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/data-protection-policy/">Data protection notice (privacy policy)</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-and-conditions/">Terms and Conditions</a>
+    </span>
+    <span>
+      <a href="#" onclick="showDockPrivacySettings(); return false;">Privacy settings</a>
+    </span>
+  </div>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

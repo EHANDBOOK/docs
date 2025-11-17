@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.4</a>
+          <a href="../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../13.3/index.html">13.3</a>
@@ -1216,7 +1224,7 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 <h2 id="_navigator"><a class="anchor" href="#_navigator"></a>Navigator</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.4.</p>
+<p>This section describes the set of known problems of the released version of EHANDBOOK-NAVIGATOR 13.5.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1441,6 +1449,22 @@ When styling is applied for the text of Simulink annotation blocks, the displaye
 </li>
 <li>
 <p>Find in EHANDBOOK File(s) does return the same result for any selected filter (Starts with / Ends with / Contains / Exactly) when the search term contains Japanese text.</p>
+</li>
+<li>
+<p>Export of comments to file on network drive might not work.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, export to a file in local dive and later copy to network drive.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>While opening a saved view, the position of the viewport could deviate from the initially saved location due to changes in auto layout.</p>
+</li>
+<li>
+<p>Restarting EHANDBOOK-NAVIGATOR with an open C-code based function overview where compact view and autolayout were applied could lead to fluctuations when reopening.</p>
 </li>
 </ul>
 </div>

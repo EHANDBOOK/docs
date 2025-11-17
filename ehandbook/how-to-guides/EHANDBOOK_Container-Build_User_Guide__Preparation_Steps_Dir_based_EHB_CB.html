@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.4</a>
+          <a href="../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../13.3/index.html">13.3</a>
@@ -1436,15 +1444,53 @@ AUTOSAR information will be treated as base source with other sources compliment
 </table>
 </div>
 <div class="sect2">
-<h3 id="_generate_toc_entry_for_system_constants_from_the_metadata_a2l_mdx_c_code_excel"><a class="anchor" href="#_generate_toc_entry_for_system_constants_from_the_metadata_a2l_mdx_c_code_excel"></a>Generate TOC entry for System constants from the metadata.(A2L, MDX, C-Code, Excel)</h3>
+<h3 id="generate-system-Constant-Support"><a class="anchor" href="#generate-system-Constant-Support"></a>Generate TOC Entry for System Constants from Metadata (A2L, MDX, C-Code, Excel, Arxml)</h3>
 <div class="paragraph">
-<p>Enable the generation of a TOC (Table of Contents) entry for System Constants from the metadata (A2L, MDX, C-Code, Excel)
-by adding the following argument to your product’s .ini file:</p>
+<p>A new option is available to generate a Table of Contents (TOC) entry for System Constants from metadata sources such as A2L, MDX, C-Code, Excel, and ARXML.
+For configuration details and usage instructions, refer to the <a href="../references/EHANDBOOK_Container-Build_User_Guide__EHB_CB_Usage_In_General.html#system-Constant-Support" class="xref page">option for system constants</a> section.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">-DgenerateSystemConstants</code></pre>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For ARXML files, the <code>CONSTANT-SPECIFICATION</code> element defines a system constant and its assigned value.</p>
 </div>
+<div class="paragraph">
+<p>Each constant includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A name (<code>SHORT-NAME</code>)</p>
+</li>
+<li>
+<p>A value container (<code>VALUE-SPEC</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Currently, only the following value specification types under <code>&lt;VALUE-SPEC&gt;</code> are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>APPLICATION-VALUE-SPECIFICATION</code></p>
+</li>
+<li>
+<p><code>NUMERIC-VALUE-SPECIFICATION</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Support for additional specification types in ARXML will be handled in future releases.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

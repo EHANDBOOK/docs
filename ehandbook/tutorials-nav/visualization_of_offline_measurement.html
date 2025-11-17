@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.4</a>
+          <a href="../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../13.3/index.html">13.3</a>
@@ -1266,12 +1274,10 @@ duplicate function names in the A2L files.<br>
 <p>Click <code>Browse</code>&#8230;&#8203; to select the file.</p>
 </li>
 <li>
-<p>In case you know the A2L file encoding is either ISO-8859-1 or UTF-8 with BOM
-then choose <em>Select manually</em> from the drop-down menu. An additional drop-down menu
-appears to select the encoding of the A2L file from the drop-down list. By default, the
-highest encoding confidence level (e.g. ISO-8859-1) is pre-selected.
-If the encoding is not known or not consistent for the whole file
-then stick with <em>Detect automatically</em>.</p>
+<p>After selecting an A2L file the encoding of the content is placed in the drop-down menu.
+By default, the highest encoding confidence level (e.g. ISO-8859-1) is pre-selected.
+If the encoding is not known or it is not consistent for the whole file
+then choose <em>Detect automatically</em>.</p>
 </li>
 <li>
 <p>Type the Data file of type: <code>*.hex</code>, <code>*.s19</code> or others.<br>

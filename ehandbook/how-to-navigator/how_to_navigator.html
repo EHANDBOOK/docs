@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">13.4</a>
+          <a href="../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../13.3/index.html">13.3</a>
@@ -1429,12 +1437,10 @@ contents (TOC) and provides a graphical visualization of their dependencies.</p>
 menu or click <code>Browse</code> to select it.</p>
 </li>
 <li>
-<p>In case you know the A2L file encoding is either ISO-8859-1 or UTF-8 with BOM
-then choose <em>Select manually</em> from the drop-down menu. An additional drop-down menu
-appears to select the encoding of the A2L file from the drop-down list. By default, the
-highest encoding confidence level (e.g. ISO-8859-1) is pre-selected.
-If the encoding is not known or not consistent for the whole file
-then stick with <em>Detect automatically</em> <strong>(2)</strong>.</p>
+<p>After selecting an A2L file the encoding of the content is placed in the drop-down menu.
+By default, the highest encoding confidence level (e.g. ISO-8859-1) is pre-selected.
+If the encoding is not known or it is not consistent for the whole file
+then choose <em>Detect automatically</em> <strong>(2)</strong>.</p>
 </li>
 <li>
 <p>Select or type the location to generate the EHANDBOOK container or click
@@ -1955,7 +1961,7 @@ box is displayed. You can check and delete it.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p><strong>Define the alias names of the EHANDBOOK file</strong><br>
+<p><strong>Define the alias names of the EHANDBOOK file</strong>
 The Alias name of the EHANDBOOK file contains minimum of 2 characters and
 maximum of 5 characters. The characters must contain either the upper case
 characters (A to Z) or numbers (0 to 9) or the combination of both. The Alias
@@ -1971,7 +1977,7 @@ The changed name is updated.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Change the color flag of the EHANDBOOK file</strong><br>
+<p><strong>Change the color flag of the EHANDBOOK file</strong>
 Follow the steps to change the color flag of the EHANDBOOK file.</p>
 </div>
 <div class="ulist">
@@ -1985,6 +1991,10 @@ The predefined colors are displayed.</p>
 The selected color is assigned for that particular file.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Inspect EHANDBOOK Container-Build version</strong>
+The column "Container-Build" contains the version of Container-Build which was used to create the EHANDBOOK file.</p>
 </div>
 </div>
 </div>
@@ -2070,7 +2080,7 @@ alias name at the bottom.</p>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>NOTICE</strong><br>
+<p><strong>NOTICE</strong>
 The graphical model presentation might differ from the real ECU functionality.
 The EHANDBOOK-NAVIGATOR then may contain erroneous elements and missing
 user comments in an interactive model when displaying automatic layouts!
@@ -2089,7 +2099,7 @@ or the ETAS support to report this error.</p>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>NOTICE</strong><br>
+<p><strong>NOTICE</strong>
 The EHANDBOOK-NAVIGATOR may display erroneous connections between
 functions, that do not corresponds to the real ECU software.<br>
 The functions' interface descriptions of one ore more EHANDBOOK containers
@@ -2448,13 +2458,13 @@ models).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_working_with_bookmarks"><a class="anchor" href="#_working_with_bookmarks"></a>Working with Bookmarks</h2>
+<h2 id="_working_with_bookmarksmodel_views"><a class="anchor" href="#_working_with_bookmarksmodel_views"></a>Working with Bookmarks/Model Views</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Bookmarks feature in EHANDBOOK-NAVIGATOR allows you to store the location
+<p>Library feature in EHANDBOOK-NAVIGATOR allows you to store the location
 of the container topics, subtopics, and the interactive models for later retrieval.
-Topics containing textual content can be bookmarked.<br>
-The tasks that assist in using Bookmarks view are as follows:</p>
+Topics containing textual content can be bookmarked and the state of the model can be saved using the model views.<br>
+The tasks that assist in using Library view are as follows:</p>
 </div>
 <div class="sect2">
 <h3 id="_creating_a_bookmark"><a class="anchor" href="#_creating_a_bookmark"></a>Creating a Bookmark</h3>
@@ -2483,28 +2493,28 @@ The bookmark is created and can be accessed from the Bookmarks view.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><span class="underline">To create a bookmark for interactive model:</span></p>
 </div>
+<div class="sect2">
+<h3 id="_saving_a_model_view"><a class="anchor" href="#_saving_a_model_view"></a>Saving a Model View</h3>
 <div class="ulist">
 <ul>
 <li>
 <p>Right-click on the required interactive model or model block and select
-<code>Create Bookmark</code> in the context menu displayed.<br>
-<code>Create Bookmark</code> window is displayed.<br>
+<code>Save Model View</code> in the context menu displayed.<br>
+<code>Save Model View</code> window is displayed.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
-<p>To the right of the breadcrumb bar, click <span class="image"><img src="_images/Star_icon.png" alt="Star_icon"></span> icon.<br>
-<code>Create Bookmark</code> window is displayed.</p>
+<p>To the right of the breadcrumb bar, click <span class="image"><img src="_images/model_view.png" alt="model_view"></span> icon.<br>
+<code>Save Model View</code> window is displayed.</p>
 </li>
 <li>
 <p>Enter the <code>Name</code> and <code>Description</code> for the bookmark.<br>
 The location of the selected topic is displayed in the <code>Location</code> text box.</p>
 </li>
 <li>
-<p>Click <code>Create</code> to create the bookmark.<br>
-The bookmark is created and can be accessed from the Bookmarks view.</p>
+<p>Click <code>Create</code> to save the Model View.<br>
+The model view is saved and can be accessed from the Library view.</p>
 </li>
 </ul>
 </div>
@@ -2516,8 +2526,8 @@ The bookmark is created and can be accessed from the Bookmarks view.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When you move the mouse cursor over the bookmark name, the name and
-description about the bookmark is displayed.</p>
+<p>When you move the mouse cursor over the bookmark/model view name, the name and
+description about the bookmark/model view is displayed.</p>
 </div>
 </td>
 </tr>
@@ -2531,9 +2541,8 @@ description about the bookmark is displayed.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can bookmark the Function Overviews that contain multiple functions. The
-created bookmark will consist of a list of names corresponding to those functions.
-You can assign a name using the <code>Edit Bookmark</code> feature to modify it.</p>
+<p>You can save the Function Overviews that contain multiple functions using model view. The created location string will list the names corresponding to those functions.
+You can assign a name using the <code>Edit&#8230;&#8203;</code> feature to modify it.</p>
 </div>
 </td>
 </tr>
@@ -2563,7 +2572,7 @@ You can assign a name using the <code>Edit Bookmark</code> feature to modify it.
 <div class="ulist">
 <ul>
 <li>
-<p>In the <code>Bookmarks</code> view, right-click the bookmark you want to edit and
+<p>In the <code>Library</code> view, right-click the bookmark you want to edit and
 select <code>Edit</code> in the context menu.<br>
 <code>Edit Bookmarks</code> window is displayed.</p>
 </li>
@@ -2575,16 +2584,35 @@ The changes made to the bookmark are saved.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_deleting_a_bookmark"><a class="anchor" href="#_deleting_a_bookmark"></a>Deleting a Bookmark</h3>
+<h3 id="_editing_a_model_view"><a class="anchor" href="#_editing_a_model_view"></a>Editing a Model View</h3>
 <div class="paragraph">
-<p><span class="underline">To delete a bookmark:</span></p>
+<p><span class="underline">To edit a model view:</span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>In the <code>Bookmarks</code> view, right-click the bookmark you want to delete and
+<p>In the <code>Library</code> view, right-click the model view you want to edit and
+select <code>Edit</code> in the context menu.<br>
+<code>Edit Model View</code> window is displayed.</p>
+</li>
+<li>
+<p>Edit the <code>Name</code> and <code>Description</code> for the model view and click <code>Finish</code>.<br>
+The changes made to the model view are saved.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deleting_a_bookmarkmodel_view"><a class="anchor" href="#_deleting_a_bookmarkmodel_view"></a>Deleting a Bookmark/Model View</h3>
+<div class="paragraph">
+<p><span class="underline">To delete a bookmark/model view:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the <code>Library</code> view, right-click the bookmark/model view you want to delete and
 Select <code>Delete.</code><br>
-The bookmark is deleted.</p>
+The bookmark/model view is deleted.</p>
 </li>
 </ul>
 </div>
@@ -2597,12 +2625,12 @@ The bookmark is deleted.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In the <code>Bookmarks</code> view select <code>Create a Folder</code> in the context menu.<br>
+<p>In the <code>Library</code> view select <code>Create a Folder</code> in the context menu.<br>
 <code>Create a Folder</code> window is displayed.</p>
 </li>
 <li>
 <p>Enter the <code>Name</code> and <code>Description</code> for the folder and click <code>Finish.</code><br>
-The folder is saved in the My Bookmarks folder.</p>
+The folder is saved in the My Library folder.</p>
 </li>
 </ul>
 </div>
@@ -2628,7 +2656,7 @@ The folder is saved in the My Bookmarks folder.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You can drag and drop bookmarks to the folder. Same bookmarks can be used
+<p>You can drag and drop bookmarks/model views to the folder. Same bookmarks/model views can be used
 in multiple folders.</p>
 </div>
 </td>
@@ -2644,7 +2672,7 @@ in multiple folders.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In the <code>Bookmarks</code> view , right-click the folder you want to edit and select
+<p>In the <code>Library</code> view , right-click the folder you want to edit and select
 <code>Edit</code> in the context menu.<br>
 <code>Edit Folder</code> window is displayed.<br>
 &lt;Or&gt;</p>
@@ -2668,7 +2696,7 @@ The changes made to the folder are saved.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In the<code>Bookmarks</code> view, right-click the folder you want to delete and click
+<p>In the<code>Library</code> view, right-click the folder you want to delete and click
 <code>Delete.</code><br>
 The folder is deleted.</p>
 </li>
@@ -2676,15 +2704,15 @@ The folder is deleted.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_importing_bookmarks"><a class="anchor" href="#_importing_bookmarks"></a>Importing Bookmarks</h3>
+<h3 id="_importing_bookmarksmodel_views"><a class="anchor" href="#_importing_bookmarksmodel_views"></a>Importing Bookmarks/Model Views</h3>
 <div class="paragraph">
-<p><span class="underline">To import bookmarks to Bookmarks view:</span></p>
+<p><span class="underline">To import bookmarks/model views to Library view:</span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <code>Import Bookmarks</code> icon present in the "Bookmarks" view.<br>
-<code>Import Bookmarks</code> window is displayed.<br>
+<p>Click <code>Import Bookmarks and Model Views from library file</code> icon present in the "Library" view.<br>
+<code>Import Bookmarks and Model Views</code> window is displayed.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
@@ -2692,14 +2720,14 @@ The folder is deleted.</p>
 <code>Import</code> window is displayed.</p>
 </li>
 <li>
-<p>Select<code>Bookmarks</code> from the <code>Documentation</code> folder and then click <code>Next.</code><br>
-<code>Import Bookmarks</code> window is displayed.</p>
+<p>Select<code>Bookmarks and Model Views</code> from the <code>EHANDBOOK</code> folder and then click <code>Next.</code><br>
+<code>Import Bookmarks and Model Views</code> window is displayed.</p>
 </li>
 </ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Import_bkmrk.png" alt="Import_bkmrk">
+<img src="_images/import_modelviews.png" alt="import_modelviews">
 </div>
 </div>
 <div class="ulist">
@@ -2718,7 +2746,7 @@ select the version from the drop-down list.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Only bookmarks that you have created in the previous navigator versions are
+<p>Only bookmarks/model views that you have created in the previous navigator versions are
 displayed in the drop-down list.</p>
 </div>
 </td>
@@ -2728,12 +2756,12 @@ displayed in the drop-down list.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <code>Browse</code>and select the Bookmarks file (*.bookmarks) you want to
+<p>Click <code>Browse</code>and select the library file (*.ehblib or *.bookmarks) you want to
 import.</p>
 </li>
 <li>
 <p>Click <code>Finish.</code><br>
-The bookmarks are imported to the "Bookmarks" view.</p>
+The bookmarks/model views are imported to the "Library" view.</p>
 </li>
 </ul>
 </div>
@@ -2745,7 +2773,7 @@ The bookmarks are imported to the "Bookmarks" view.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Bookmarks are imported into a folder having the name of the *.bookmarks file.</p>
+<p>Bookmarks/model views are imported into a folder having the name of the *.bookmarks or *.ehblib file.</p>
 </div>
 </td>
 </tr>
@@ -2759,7 +2787,7 @@ The bookmarks are imported to the "Bookmarks" view.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><strong>Import Bookmarks</strong> functionality is not supported in Basic Mode of
+<p><strong>Import Bookmarks and Model Views</strong> functionality is not supported in Basic Mode of
 EHANDBOOK-NAVIGATOR. A message is displayed indicating the non-availability
 of the function in Basic Mode.</p>
 </div>
@@ -2769,18 +2797,18 @@ of the function in Basic Mode.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exporting_bookmarks"><a class="anchor" href="#_exporting_bookmarks"></a>Exporting Bookmarks</h3>
+<h3 id="_exporting_bookmarksmodel_views"><a class="anchor" href="#_exporting_bookmarksmodel_views"></a>Exporting Bookmarks/Model Views</h3>
 <div class="paragraph">
-<p><span class="underline">To export bookmarks from Bookmarks view:</span></p>
+<p><span class="underline">To export bookmarks/model views from Library view:</span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Select the Bookmark or Bookmarks folder you want to export.</p>
+<p>Select the Bookmark/model view or the folder you want to export.</p>
 </li>
 <li>
-<p>Click<code>Export Bookmarks</code>icon present in the<code>Bookmarks</code> view.<br>
-<code>Export Bookmarks</code> window is displayed.<br>
+<p>Click<code>Export Bookmarks and Model Views from library file</code>icon present in the<code>Library</code> view.<br>
+<code>Export Bookmarks and Model Views</code> window is displayed.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
@@ -2788,27 +2816,27 @@ of the function in Basic Mode.</p>
 <code>Export</code> window is displayed.</p>
 </li>
 <li>
-<p>Select <code>Bookmarks</code> from the <code>Documentation</code> folder and then click <code>Next.</code><br>
-<code>Export Bookmarks</code> window is displayed.</p>
+<p>Select <code>Bookmarks and Model Views</code> from the <code>EHANDBOOK</code> folder and then click <code>Next.</code><br>
+<code>Export Bookmarks and Model Views</code> window is displayed.</p>
 </li>
 </ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Export_bkmrk.png" alt="Export_bkmrk">
+<img src="_images/Export_modelview.png" alt="Export_modelview">
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click <code>Browse</code> and select the location for exporting the Bookmarks file.</p>
+<p>Click <code>Browse</code> and select the location for exporting the library file.</p>
 </li>
 <li>
-<p>Select or clear the Bookmarks or Bookmarks folder as required.</p>
+<p>Select or clear the Bookmarks/model views or Library folder as required.</p>
 </li>
 <li>
 <p>Click <code>Finish.</code>
-The bookmark file (*.bookmark) is exported to the selected location.</p>
+The library file (*.ehblib) is exported to the selected location.</p>
 </li>
 </ul>
 </div>
@@ -2820,7 +2848,7 @@ The bookmark file (*.bookmark) is exported to the selected location.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><strong>Export Bookmarks</strong> functionality is not supported in Basic Mode of
+<p><strong>Export Bookmarks and Model Views</strong> functionality is not supported in Basic Mode of
 EHANDBOOK-NAVIGATOR. A message is displayed indicating the non-availability
 of the function in Basic Mode.</p>
 </div>
@@ -2832,13 +2860,26 @@ of the function in Basic Mode.</p>
 <div class="sect2">
 <h3 id="_valid_or_invalid_bookmarks"><a class="anchor" href="#_valid_or_invalid_bookmarks"></a>Valid or Invalid Bookmarks</h3>
 <div class="paragraph">
-<p>My Bookmarks folder displays all the bookmarks created. This includes valid and
+<p>My Library folder displays all the bookmarks/model views created. This includes valid and
 invalid bookmarks. Valid bookmarks are highlighted and invalid bookmarks are
 grayed out. Clicking on the invalid bookmark displays the following error message.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Invalid_bookmark.png" alt="Invalid_bookmark">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validpartially_valid_or_invalid_model_views"><a class="anchor" href="#_validpartially_valid_or_invalid_model_views"></a>Valid,Partially Valid or Invalid Model Views</h3>
+<div class="paragraph">
+<p>Valid model views are highlighted and partially valid and invalid model views are
+grayed out.The partially valid model views have a warning icon attached.  Clicking on the partially valid model view displays the following error message.
+A partially valid model view can be opened,which will render the model with the available components.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Partially_valid.png" alt="Partially_valid">
 </div>
 </div>
 </div>
@@ -2850,8 +2891,8 @@ grayed out. Clicking on the invalid bookmark displays the following error messag
 <div class="paragraph">
 <p>Comments feature in EHANDBOOK-NAVIGATOR allows you to add comments to
 specific portions of Document Viewer. Comments can be added to titles, figures
-and paragraphs. You can delete a comment. Comments can also be imported
-while importing another container into it.. You can also copy the comment to clipboard,
+and paragraphs. You can delete a comment. Comments can also be imported from another EHANDBOOK container or Comments file.
+You can also copy the comment to clipboard,
 which can be used in any other application by pasting it from clipboard.</p>
 </div>
 <div class="admonitionblock note">
@@ -2863,7 +2904,7 @@ which can be used in any other application by pasting it from clipboard.</p>
 <td class="content">
 <div class="paragraph">
 <p>Comments feature in EHANDBOOK-NAVIGATOR basic mode support to write
-and save comments, but importing of comments are not allowed.</p>
+and save comments, but importing or exporting of comments is not allowed.</p>
 </div>
 </td>
 </tr>
@@ -2877,8 +2918,8 @@ and save comments, but importing of comments are not allowed.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Comments are saved within the container. It can also be extracted to a new
-EHANDBOOK container.</p>
+<p>Comments are saved within the container. It can also be extracted to a new EHANDBOOK container.
+Comments can also be exported to a Comments file.</p>
 </div>
 </td>
 </tr>
@@ -3018,6 +3059,48 @@ by clicking <code>Save</code> or <code>Save as&#8230;&#8203;</code> in the <code
 </table>
 </div>
 <div class="paragraph">
+<p><span class="underline">To export comments:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From the <code>File</code> menu, select <code>Export</code>.<br>
+<code>Export</code> window is displayed.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Export_Comments.png" alt="Import_Comments">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <code>Comments</code> from the Documentation folder and then click <code>Next</code>.<br>
+<code>Export Comments</code> window is displayed</p>
+</li>
+<li>
+<p>Select the EHANDBOOK container from which you want to export the comments.</p>
+</li>
+<li>
+<p>Click <code>Browse</code> and select the Comments file into which you want to export the comments.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/ExportComments_FileSelection.png" alt="ImportComments_FileSelection">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Finish</code> to complete exporting of comments.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p><span class="underline">To import comments:</span></p>
 </div>
 <div class="ulist">
@@ -3040,9 +3123,21 @@ by clicking <code>Save</code> or <code>Save as&#8230;&#8203;</code> in the <code
 <code>Import Comments</code> window is displayed</p>
 </li>
 <li>
-<p>Click <code>Browse</code> and select the container from which you want to import the
+<p>Click <code>Browse</code> and select the EHANDBOOK container or Comments file from which you want to import the
 comments.</p>
 </li>
+<li>
+<p>Select the EHANDBOOK container into which you want to import the comments.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/ImportComments_FileSelection.png" alt="ImportComments_FileSelection">
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Click <code>Next</code>. A summary of the comments imported is displayed. In the summary,
 a list of comments that cannot be imported to a location (error

@@ -114,7 +114,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.4">
+<div class="nav-container" data-component="ehandbook" data-version="13.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +191,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../../whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="../../whats-new/version_13_4.html">Version 13.4 (October 2025)</a>
@@ -1069,14 +1074,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.4</span>
+    <span class="version">13.5</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">13.4</a>
+          <a href="../../index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../../13.4/index.html">13.4</a>
         </li>
         <li class="version">
           <a href="../../13.3/index.html">13.3</a>
@@ -1615,6 +1623,319 @@ Notice that the input and output signals used by the system <code>function_model
 <div class="imageblock">
 <div class="content">
 <img src="../_images/dir-ccode/ehb_nav_ccode_example_3_open_interactive_model.png" alt="Interactive Model can be opened from the linked screenshot">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Setting-up-library"><a class="anchor" href="#Setting-up-library"></a>Organizing Shared Implementations with a Library Folder</h3>
+<div class="paragraph">
+<p>To manage shared C or header files (e.g., common utilities or reusable logic) used by multiple functions, consider organizing them in a dedicated library folder. This folder can reside outside the main input directory and be referenced through your C project&#8217;s build configuration.</p>
+</div>
+<div class="paragraph">
+<p>Example structure with library folder:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>└── ECU_SW_XYZ
+	├── Function1
+		├── function_1_implementation.c
+	├── Function2
+		├── function_2_implementation.c
+└──lib
+	├── shared_util.c
+	├── shared_util.h</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To make the library visible to the <strong>Container-Build</strong> toolchain, specify the folder&#8217;s path in the C-code configuration file&#8217;s <code>libraryPath</code> setting.</p>
+</div>
+<div class="sect3">
+<h4 id="_minimal_c_code_example_using_a_shared_library"><a class="anchor" href="#_minimal_c_code_example_using_a_shared_library"></a>Minimal C-Code Example Using a Shared Library</h4>
+<div class="paragraph">
+<p>Let&#8217;s illustrate how to incorporate a shared library with a minimal C-code example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Library Header (<code>lib/shared_util.h</code>)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">#ifndef SHARED_UTIL_H
+#define SHARED_UTIL_H
+
+int addValues(int a, int b);
+
+#endif</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Library Source (<code>lib/shared_util.c</code>)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">#include "shared_util.h"
+
+int addValues(int a, int b) {
+    return a + b;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Function 1 Implementation (<code>Function1/function_1_implementation.c</code>)</div>
+<p>This function demonstrates usage of the <code>shared_util</code> library.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">#include "shared_util.h"
+
+int computeMotorSpeed(void) {
+    int base = 100;
+    int offset = 20;
+
+    // Library function used here
+    return addValues(base, offset);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Function 2 Implementation (<code>Function2/function_2_implementation.c</code>)</div>
+<p>Similarly, this function also leverages the <code>shared_util</code> library.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#include "shared_util.h"
+
+int computePower(void) {
+    int voltage = 12;
+    int current = 3;
+
+    // Same library function used here
+    return addValues(voltage, current);
+}</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_impact_of_library_configuration_on_ehandbook_images"><a class="anchor" href="#_impact_of_library_configuration_on_ehandbook_images"></a>Impact of Library Configuration on EHANDBOOK Images</h5>
+<div class="paragraph">
+<div class="title">Without library configuration</div>
+<p>When the <code>addValues()</code> function is called without proper library configuration, the <strong>EHB-CB</strong> toolchain cannot locate its definition. Consequently, in the EHANDBOOK image, the function call remains unresolved and is visually represented as a "black box," indicating an unlinked dependency.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ccode/ehb_nav_without_ccode_config.png" alt="EHANDBOOK Image without Library Configuration">
+</div>
+</div>
+<div class="paragraph">
+<div class="title">With Library Configuration</div>
+<p>Once the library containing <code>addValues()</code> is correctly configured and linked, the function is fully resolved by the <strong>EHB-CB</strong> toolchain. The EHANDBOOK image then accurately displays the function within the call hierarchy, providing complete traceability and understanding of the code flow.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/dir-ccode/ehb_nav_with_ccode_config.png" alt="EHANDBOOK Image with Library Configuration">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Benefits of this Library Setup</div>
+<div class="paragraph">
+<p>This library configuration is essential for several reasons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Both functions resolve <code>addValues()</code> correctly.</p>
+</li>
+<li>
+<p>Shared logic is not duplicated in each function folder.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="CCode-Configuration"><a class="anchor" href="#CCode-Configuration"></a>Using a C-Code Configuration File</h3>
+<div class="paragraph">
+<p>The C-code configuration file defines how EHANDBOOK Container-Build interprets and processes C source code during documentation generation.</p>
+</div>
+<div class="sect3">
+<h4 id="_specifying_the_configuration_file"><a class="anchor" href="#_specifying_the_configuration_file"></a>Specifying the Configuration File</h4>
+<div class="paragraph">
+<p>Provide the configuration file using the <code>-ccodemeta</code> command-line option with the path to your XML configuration file:</p>
+</div>
+<div class="listingblock">
+<div class="title">Command syntax:</div>
+<div class="content">
+<pre>-ccodemeta "path/to/configuration.xml"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This configuration enables you to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure shared library paths</p>
+</li>
+<li>
+<p>Control diagram simplification</p>
+</li>
+<li>
+<p>Enable function inlining</p>
+</li>
+<li>
+<p>Generate hierarchical structures</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_file_structure"><a class="anchor" href="#_configuration_file_structure"></a>Configuration File Structure</h4>
+<div class="listingblock">
+<div class="title">Sample C-Code Configuration File</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;functionmetadata:FunctionMetadataRoot
+    xmlns:functionmetadata="http://www.etas.com/ehandbook/functionmetadata"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmi:version="2.0"&gt;
+
+    &lt;globalConfiguration
+        libraryPath="../lib"
+        inlineFunctions="true"
+        simplifyDiagram="true"
+        generateHierarchies="true"/&gt;
+
+&lt;/functionmetadata:FunctionMetadataRoot&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuration_parameters"><a class="anchor" href="#_configuration_parameters"></a>Configuration Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>libraryPath</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the directory containing external shared libraries. This enables EHB-CB to resolve functions or symbols not present in the main source files during analysis.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>inlineFunctions</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When set to <code>true</code>, replaces smaller or wrapper functions with their implementation body in diagrams. This creates simpler, more understandable visualizations by eliminating unnecessary function calls and clarifying control flow.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>simplifyDiagram</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes unnecessary nodes, unused ports, and intermediate blocks from control and data flow diagrams. This produces cleaner, more compact visualizations that are easier to read and understand.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>generateHierarchies</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generates hierarchical diagrams instead of flat views. Functions are organized into logical levels (function → sub-function → sub-sub-function), improving navigation and comprehension of complex code structures.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="SWAN-Logs"><a class="anchor" href="#SWAN-Logs"></a>Terminology in SWAN Debug Logs</h3>
+<div class="paragraph">
+<p>When the <code>-debugreq</code> option is enabled, EHB-CB generates detailed SWAN debug logs. These logs contain technical terms that may require clarification. This section explains the key terminology you&#8217;ll encounter in the debug output.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+SWAN is a specialized library used by EHB-CB to analyze C source code, resolve dependencies, and create documentation-ready representations of code structures.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_core_swan_terms"><a class="anchor" href="#_core_swan_terms"></a>Core SWAN Terms</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GLOBAL_DEFS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Global variables and functions that are <strong>defined</strong> in the available source files. SWAN collects these by analyzing all files, creating a unified dependency view, and cataloging all detected global definitions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GLOBAL_REFS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Locations where global variables or functions are <strong>referenced</strong> or used within the code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>RESOLVED_REFS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">References that successfully match an existing definition. For example, if SWAN finds a reference to variable <code>x</code> and locates a corresponding declaration <code>int x;</code> in the global definitions, the reference is considered <strong>resolved</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UNBOUND_REFS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Global references that cannot be matched with any available definition. These represent the remainder after resolution attempts - whatever cannot be matched becomes an unbound reference. Common causes include missing libraries, missing header files, or disabled code sections due to preprocessor directives.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_swan_process_messages"><a class="anchor" href="#_swan_process_messages"></a>SWAN Process Messages</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Terminating loop exception</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An informational message indicating that SWAN&#8217;s dependency resolution process has completed. SWAN iteratively searches for dependencies and matches definitions with references. When the process converges and no new information can be discovered, this message appears. This is <strong>not an error</strong> - it simply indicates successful completion of the resolution cycle.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Missing System Constants Error</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Occurs when source code references a system constant that cannot be resolved (typically due to missing header files, configuration files, or undefined macros). During C-file analysis, this triggers a <strong>Missing System Constant</strong> message. To resolve this issue, ensure all required constants are properly declared within your project sources, as unresolved constants may cause container generation to fail for specific C-files.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_troubleshooting_tips"><a class="anchor" href="#_troubleshooting_tips"></a>Troubleshooting Tips</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>For UNBOUND_REFS</strong>: Verify that all necessary libraries and header files are included in your project</p>
+</li>
+<li>
+<p><strong>For Missing System Constants</strong>: Check preprocessor definitions and ensure all required header files are accessible</p>
+</li>
+<li>
+<p><strong>For dependency issues</strong>: Review the complete debug log to identify missing components in your build configuration</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
