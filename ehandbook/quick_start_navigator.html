@@ -57,6 +57,15 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </script>
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
+<script async src="https://widget.kapa.ai/kapa-widget.bundle.js" data-website-id="13579591-07bc-4247-9d7e-802ab2e49701"
+	data-project-name="ETAS EHANDBOOK" data-project-color="#6306B6"
+	data-project-logo="https://images.seeklogo.com/logo-png/50/1/etas-logo-png_seeklogo-501921.png"
+	data-modal-disclaimer="The AI Assistant answers questions using the [ETAS EHANDBOOK documentation](https://ehandbook.etas.com/docs/ehandbook/index.html). Get instant answers to your EHANDBOOK questions."
+	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
+	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
+	</script>
+
 <header class="header">
 	<style>
 		.custom-outline-button {
@@ -93,20 +102,31 @@ function BoschPrivacyCallback_OnUpdate(a) {
 					<input id="search-input" type="text" placeholder="Search" >
 				</div>
 			</div>
-			<a class="navbar-item custom-outline-button" onclick="handleFeedbackClick()">Send Feedback</a>
+			<a id="ask-ai-input" class="navbar-item custom-outline-button" style="margin-left: auto;">✨ Ask AI</a>
+			<a class="navbar-item custom-outline-button" id="feedback-button">Send Feedback</a>
+			<a class="navbar-item" href="https://github.com/EHANDBOOK" target="_blank" rel="noopener">
+				<img class="navbar-item" src="../_/img/github-mark-white.svg" height="30" alt="Github Logo">
+			</a>
 		</div>
 	</nav>
 </header>
 <script>
-	function handleFeedbackClick() {
-		const USE_EHB_EXTERNAL = window["useEhbExternal"];
-		const source = USE_EHB_EXTERNAL ? "ehb" : "web";
-		const prefix = USE_EHB_EXTERNAL ? "ehbexternal:" : "";
+	document.addEventListener('DOMContentLoaded', function () {
+		const useEhbExternal = window["useEhbExternal"];
+		const source = useEhbExternal ? "ehb" : "web";
+		const prefix = useEhbExternal ? "ehbexternal:" : "";
 
-		window.open(prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source, '_blank');
-	}
-</script>
-<div class="analytics">
+
+		const href = prefix + 'https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=' + source;
+		const feedbackButton = document.getElementById("feedback-button");
+		feedbackButton.setAttribute("href", href);
+
+		if (useEhbExternal) {
+			const askAiInput = document.getElementById("ask-ai-input");
+			askAiInput.style.display = "none";
+		}
+	});
+</script><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -114,7 +134,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="13.5">
+<div class="nav-container" data-component="ehandbook" data-version="14.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -191,6 +211,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
     <button class="nav-item-toggle"></button>
     </div>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="whats-new/version_14_0.html">Version 14.0 (January 2026)</a>
+    </div>
+  </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
     <a class="nav-link" href="whats-new/version_13_5.html">Version 13.5 (November 2025)</a>
@@ -1031,6 +1056,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
   </li>
   <li class="nav-item" data-depth="3">
     <div class="nav-item-content">
+    <a class="nav-link" href="tutorials-nav/interoperability_with_ATI_VISION.html">Interoperability with ATI Vision</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
     <a class="nav-link" href="tutorials-nav/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
     </div>
   </li>
@@ -1056,12 +1086,12 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="known-issues/known_issues.html#_container_build">Container-Build</a>
+    <a class="nav-link" href="known-issues/known_issues.html#_ehandbook_container_build">Container-Build</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="known-issues/known_issues.html#_navigator">Navigator</a>
+    <a class="nav-link" href="known-issues/known_issues.html#_ehandbook_navigator">Navigator</a>
     </div>
   </li>
 </ul>
@@ -1074,14 +1104,17 @@ function BoschPrivacyCallback_OnUpdate(a) {
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">13.5</span>
+    <span class="version">14.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">13.5</a>
+          <a href="index.html">14.0</a>
+        </li>
+        <li class="version">
+          <a href="13.5/index.html">13.5</a>
         </li>
         <li class="version">
           <a href="13.4/index.html">13.4</a>
@@ -1199,9 +1232,6 @@ power-saving modes that have been enabled for computer components (processor, ha
 <div class="ulist">
 <ul>
 <li>
-<p>WINDOWS® 10 (64 bit)</p>
-</li>
-<li>
 <p>WINDOWS® 11 (64 bit)</p>
 </li>
 </ul>
@@ -1251,9 +1281,8 @@ higher</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The support of Windows 7 and 8.1 is officially stopped from ETAS GmbH
-and Microsoft®.
-Support for Windows 10 will be discontinued by both ETAS GmbH and Microsoft® by October 2025.</p>
+<p>The support of Windows 7, 8.1 and 10 is officially stopped from ETAS GmbH
+and Microsoft®.</p>
 </div>
 </td>
 </tr>
@@ -1335,7 +1364,7 @@ necessary.</p>
 <div class="sect3">
 <h4 id="_system_check"><a class="anchor" href="#_system_check"></a>System Check:</h4>
 <div class="paragraph">
-<p>Windows 10 or 11 is required to install EHANDBOOK-NAVIGATOR. If you try to install
+<p>Windows 11 is required to install EHANDBOOK-NAVIGATOR. If you try to install
 EHANDBOOK-NAVIGATOR on the PC with Windows XP, Windows 2000 or an earlier
 OS, an error message opens and the installation is aborted.
 The installer performs a system check and a window is displayed if the system
@@ -1392,7 +1421,7 @@ If you specify a directory that does not exist, it is created automatically.</p>
 <h4 id="_choose_start_menu_folder_for_the_shortcut_to_create"><a class="anchor" href="#_choose_start_menu_folder_for_the_shortcut_to_create"></a>Choose Start Menu Folder for the Shortcut to create:</h4>
 <div class="paragraph">
 <p>You can specify the path to create the EHANDBOK-NAVIGATOR’s shortcut. If it is
-not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 13.5.</p>
+not specified, it will be created as ETAS/EHANDBOK-NAVIGATOR 14.0.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1427,7 +1456,7 @@ available and visible in the Windows System Tray. If it is not selected the appl
 <ul>
 <li>
 <p>Click on <code>Next</code>.<br>
-<code>Completing EHANDBOOK-NAVIGATOR 13.5 Setup</code> dialog box is displayed</p>
+<code>Completing EHANDBOOK-NAVIGATOR 14.0 Setup</code> dialog box is displayed</p>
 </li>
 </ul>
 </div>
@@ -1450,14 +1479,14 @@ available and visible in the Windows System Tray. If it is not selected the appl
 </ul>
 </div>
 <div class="paragraph">
-<p>On the Start menu, the EHANDBOOK-NAVIGATOR 13.5 folder, with the following
+<p>On the Start menu, the EHANDBOOK-NAVIGATOR 14.0 folder, with the following
 entries, is created in the ETAS program group:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>EHANDBOOK-NAVIGATOR 13.5</strong><br>
-The EHANDBOOK-NAVIGATOR 13.5 program is started.</p>
+<p><strong>EHANDBOOK-NAVIGATOR 14.0</strong><br>
+The EHANDBOOK-NAVIGATOR 14.0 program is started.</p>
 </li>
 <li>
 <p><strong>Open Getting Started</strong><br>
@@ -1524,14 +1553,14 @@ installer from the command line and by specifying additional parameters (see tab
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent installation through command line</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_13.5.0_setup.exe /S</code></p>
-<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_13.5.0_setup.exe</code>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_14.0.0_setup.exe /S</code></p>
+<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_14.0.0_setup.exe</code>
 is the name of the file which you have downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent uninstall through command line</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code> uninstall.exe /S</code></p>
-<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 13.5</p></td>
+<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 14.0</p></td>
 </tr>
 </tbody>
 </table>
@@ -1558,7 +1587,7 @@ the issue.</p>
 <p>Customizing the installation directory is just an additional parameter:</p>
 </div>
 <div class="paragraph">
-<p>´EHANDBOOK-NAVIGATOR_13.5.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR13.5´</p>
+<p>´EHANDBOOK-NAVIGATOR_14.0.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR14.0´</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1570,7 +1599,7 @@ the issue.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR_13.5.0_setup.exe is the name of the file that you
+<p>EHANDBOOK-NAVIGATOR_14.0.0_setup.exe is the name of the file that you
 have downloaded.</p>
 </li>
 <li>
@@ -1737,7 +1766,7 @@ argument in the .ini file should be modified.</p>
 </div>
 <div class="paragraph">
 <p>Select <code>Add/Remove Programs</code> or <code>Programs and Features</code> in the Control
-Panel. Select <code>EHANDBOOK-NAVIGATOR 13.5</code> and click <code>Uninstall/Change</code>.</p>
+Panel. Select <code>EHANDBOOK-NAVIGATOR 14.0</code> and click <code>Uninstall/Change</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="_to_uninstall_ehandbook_navigator"><a class="anchor" href="#_to_uninstall_ehandbook_navigator"></a>To Uninstall EHANDBOOK-NAVIGATOR:</h4>
@@ -1907,6 +1936,10 @@ difference is that here several users share a limited number of licenses.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EHANDBOOK_NAVIGATOR_CANAPE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add-on that enables CANape interoperability features in EHANDBOOK-NAVIGATOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EHANDBOOK_NAVIGATOR_VISION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add-on that enables ATI Vision interoperability features in EHANDBOOK-NAVIGATOR</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EHANDBOOK_NAVIGATOR_COMPARE</p></td>
@@ -2286,21 +2319,21 @@ NAVIGATOR.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_windows_10_and_11"><a class="anchor" href="#_windows_10_and_11"></a>WINDOWS® 10 and 11:</h4>
+<h4 id="_windows_11"><a class="anchor" href="#_windows_11"></a>WINDOWS® 11:</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 13.5</code> icon.<br>
+<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 14.0</code> icon.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
 <p>Search <strong>EHANDBOOK-NAVIGATOR</strong> in the search field and select
-<code>EHANDBOOK-NAVIGATOR 13.5.</code><br>
+<code>EHANDBOOK-NAVIGATOR 14.0.</code><br>
     &lt;Or&gt;</p>
 </li>
 <li>
 <p>Go to <code>All apps &#8594; ETAS &#8594; EHANDBOOK-NAVIGATOR</code> folder and click on
-<code>EHANDBOOK-NAVIGATOR 13.5</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
+<code>EHANDBOOK-NAVIGATOR 14.0</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
 </li>
 </ul>
 </div>
@@ -2317,7 +2350,7 @@ NAVIGATOR.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The support of Windows 7 and 8.1 is officially stopped from ETAS GmbH
+<p>The support of Windows 7, 8.1 and 10 is officially stopped from ETAS GmbH
 and Microsoft®.</p>
 </div>
 </td>
@@ -2774,7 +2807,7 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR 13.5 supports interoperability with ETAS INCA V7
+<p>EHANDBOOK-NAVIGATOR 14.0 supports interoperability with ETAS INCA V7
 needs to be installed on the same PC for EHANDBOOK-NAVIGATOR to support INCA operations.</p>
 </li>
 <li>
@@ -2895,7 +2928,7 @@ files besides install log) the installation might stop</p></td>
 </div>
 <footer class="footer">
   <div class="footer-right">
-    <span>© 2025 ETAS GmbH</span>
+    <span>© 2026 ETAS GmbH</span>
     <span>
       <a href="https://www.etas.com/ww/en/corporate-information/">Corporate information</a>
     </span>
