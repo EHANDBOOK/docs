@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Tools for generating EHANDBOOK Containers :: EHANDBOOK Docs &amp; Tutorials</title>
-    <link rel="canonical" href="https://ehandbook.etas.com/docs/ehandbook/explanations/ehb_cb_tools.html">
+    <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/explanations/ehb_cb_tools.html">
     <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
@@ -90,10 +90,39 @@ function BoschPrivacyCallback_OnUpdate(a) {
 			background-color: white;
 			color: #164293;
 		}
+
+		.github-link {
+			position: relative;
+		}
+
+		.github-link img {
+			padding-right: 5px;
+			transition: opacity 0.2s ease-in-out;
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.github-link .github-icon-show {
+			opacity: 0;
+		}
+
+		.github-link .github-icon-hide {
+			opacity: 1;
+		}
+
+		.github-link:hover .github-icon-hide {
+			opacity: 0;
+		}
+
+		.github-link:hover .github-icon-show {
+			opacity: 1;
+		}
 	</style>
 	<nav class="navbar">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="https://ehandbook.etas.com/docs/index.html">
+			<a class="navbar-item" href="https://docs.etas.com/ehandbook/index.html">
 				<img class="navbar-item" src="../../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
 			</a>
 			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
@@ -104,8 +133,11 @@ function BoschPrivacyCallback_OnUpdate(a) {
 			</div>
 			<a id="ask-ai-input" class="navbar-item custom-outline-button" style="margin-left: auto;">✨ Ask AI</a>
 			<a class="navbar-item custom-outline-button" id="feedback-button">Send Feedback</a>
-			<a class="navbar-item" href="https://github.com/EHANDBOOK" target="_blank" rel="noopener">
-				<img class="navbar-item" src="../../../_/img/github-mark-white.svg" height="30" alt="Github Logo">
+			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
+				rel="noopener" style="padding-left: 38px;">
+				<img class="github-icon-show" src="../../../_/img/github-mark-black.svg" height="20" alt="GH">
+				<img class="github-icon-hide" src="../../../_/img/github-mark-white.svg" height="20" alt="GH">
+				GitHub
 			</a>
 		</div>
 	</nav>
@@ -126,8 +158,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 			askAiInput.style.display = "none";
 		}
 	});
-</script>
-<div class="analytics">
+</script><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
