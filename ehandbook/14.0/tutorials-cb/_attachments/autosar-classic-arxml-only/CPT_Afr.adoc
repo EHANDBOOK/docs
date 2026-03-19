@@ -1,5 +1,0 @@
-= CPT_Afr
-
-== Component Overview
-
-ehbfunctionoverview::CPT_Afr[Component Overview for CPT_Afr]
