@@ -1,0 +1,11 @@
+= Function Documentation
+
+== Function Overview
+
+ehbfunctionoverview::"Function_1"[Function_1]
+
+== Function Description
+
+This ECU function takes the signals a and b as inputs and returns the sum as signal result. 
+
+ehbmodelref::"Module/Main"[Module/Main]
