@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ASAM Exchange Format: CCX Structure :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-cb-references/spec-asam-ccx-structure.html">
+    <meta name="generator" content="Antora 3.1.14">
+<link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin-right: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+
+		.github-link {
+			position: relative;
+		}
+
+		.github-link img {
+			padding-right: 5px;
+			transition: opacity 0.2s ease-in-out;
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.github-link .github-icon-show {
+			opacity: 0;
+		}
+
+		.github-link .github-icon-hide {
+			opacity: 1;
+		}
+
+		.github-link:hover .github-icon-hide {
+			opacity: 0;
+		}
+
+		.github-link:hover .github-icon-show {
+			opacity: 1;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://docs.etas.com/ehandbook/index.html">
+				<img class="navbar-item" src="../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
+			</a>
+			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" id="feedback-button" href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
+			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
+				rel="noopener" style="padding-left: 38px;">
+				<img class="github-icon-show" src="../../_/img/github-mark-black.svg" height="20" alt="GH">
+				<img class="github-icon-hide" src="../../_/img/github-mark-white.svg" height="20" alt="GH">
+				GitHub
+			</a>
+		</div>
+	</nav>
+</header><div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="14.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../index.html">Welcome</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehandbook-solution-overview.html">EHANDBOOK Solution Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety-and-privacy-information.html">Safety and Privacy Information</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../intended-use.html">Intended Use</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../target-group.html">Target Group</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../classification-of-safety-messages.html">Classification of Safety Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety-information.html">Safety Information</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/ehb-cb-warning-messages.html">Warning Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ETAS-contacts.html">ETAS Contacts</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/navigator.html">Navigator</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/about-navigator.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_installing_navigator">Installing Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_licensing_the_software">Licensing the Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_getting_started">Getting Started</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_troubleshooting">Troubleshooting</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <span class="nav-text"><a href="https://www.youtube.com/playlist?list=PLdK8AlEjocsX3lrfL0TUT24buW16oagWL" target="_blank" rel="noopener">Introduction Videos</a></span>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/navigator.html">What&#8217;s New</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/index.html">User Interface</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/menus.html">Menus</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/toolbar.html">Toolbars</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/document_views.html">Document Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/model_views.html">Model Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/search_views.html">Search Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/label_popup.html">Label Popup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/other_views.html">Other Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/pref_dialogs.html">Preference Dialogs</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Project and file management</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-an-ehandbook-project.html">Create an EHANDBOOK project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-ehandbook-file-or-project.html">Load an EHANDBOOK file or project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-ehandbook-file-or-project-through-file-explorer.html">Load an EHANDBOOK file or project through File Explorer</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-multiple-ehandbook-files-through-file-explorer.html">Load multiple EHANDBOOK files through File Explorer</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-changes.html">Save changes</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-as.html">Save as</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Conversion and export</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-a2l-file.html">Load an A2L file</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-to-pdf.html">Export to PDF</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-log-files.html">Export log files</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-extract-content-of-ehandbook-container.html">Extract content of an EHANDBOOK container</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-annotate-values-from-a2l-hex-dcm-cdf-files.html">Annotate values from A2L/HEX/DCM/CDF files</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Multi-container projects</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-manage-multiple-ehandbook-files-overview.html">Manage multiple EHANDBOOK files</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-replace-ehandbook-file-in-project.html">Replace an EHANDBOOK file in a project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-remove-ehandbook-file-from-project.html">Remove an EHANDBOOK file from a project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-define-alias-and-color-in-manage-project.html">Define alias and color in Manage Project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-multiple-ehandbook-files.html">Identify content source across multiple EHANDBOOK files</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Bookmarks and model views</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-a-bookmark.html">Create a bookmark</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-a-model-view.html">Save a model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-bookmark.html">Edit a bookmark</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-model-view.html">Edit a model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-a-bookmark-or-model-view.html">Delete a bookmark or model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-a-library-folder.html">Create a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-library-folder.html">Edit a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-a-library-folder.html">Delete a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-import-bookmarks-and-model-views.html">Import bookmarks and model views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-bookmarks-and-model-views.html">Export bookmarks and model views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-interpret-bookmark-and-model-view-validity.html">Interpret bookmark and model view validity</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Comments and model explorer</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-add-comments.html">Add comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-comments.html">Delete comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-copy-comments-to-clipboard.html">Copy comments to clipboard</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-comments-in-container.html">Save comments in a container</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-comments.html">Export comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-import-comments.html">Import comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-model-comments.html">Comment on interactive models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-asciidoc-references-from-model-explorer.html">Create AsciiDoc references from Model Explorer</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Navigation, search, and shortcuts</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-use-navigation-history.html">Use navigation history</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-filter-and-sort-keyboard-shortcuts.html">Filter and sort keyboard shortcuts</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-change-search-highlight-colors.html">Change search highlight colors</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-configure-bookmark-and-comment-icons.html">Configure bookmark and comment icons</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-filter-and-refine-search-results.html">Filter and refine search results</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Attachments</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-add-an-attachment.html">Add an attachment</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-an-attachment.html">Delete an attachment</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Composite and legacy guides</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-comments.html">Manage comments end-to-end</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how_to_navigator.html">Work with EHANDBOOK-NAVIGATOR (legacy)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/interactive_models.html">Interactive Models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/software_function_navigation.html">Software Function Navigation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/searching.html">Searching</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/dependency_analysis.html">Dependency Analysis</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/MDA8.html">Interoperability with MDA 8</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/interoperability_with_ATI_VISION.html">Interoperability with ATI Vision</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/devices_and_rasters.html">Devices and Rasters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-tutorials/compare.html">Compare Containers</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-faq/index.html">FAQ</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/ehb-nav-known-issues.html">Known Issues</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/container-build.html">Container-Build</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/container-build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_quick_start_demos">Quick Start Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/container-build.html">What&#8217;s New</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-ascet-6/contents.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-simulink/contents.html">Simulink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-ccode/contents.html">C-Code</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/fundamental-concepts-of-ecu-software.html">Fundamental Concepts of ECU Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehandbook-container-build-principles.html">EHANDBOOK Container-Build Principles</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-in-general.html">EHANDBOOK Container-Build in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-tools.html">Tools for generating EHANDBOOK Containers</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/incremental-ehb-cb-with-ugg.html">Incremental Build Workflow with UGG</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/overview.html">Model Languages</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/ascet-developer.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/ascet-6.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/simulink-stateflow.html">Simulink / Stateflow / TargetLink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/c-code.html">C-Code</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/overview.html">Automotive Standards</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/autosar-classic.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/asam-exchange-formats.html">ASAM Exchange Formats</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_download">Download</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_installation">Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html">Supported Platforms</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/supported-input-file-formats-and-versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-features.html">Features</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-attachments.html">Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-prepare-dir-based-input.html">Prepare input for directory-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-set-up-incremental-builds-with-ugg.html">Set up incremental builds for continuous integration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-simulink-libraries-in-ehb.html">Configure EHB-CB for Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-targetlink-models.html">Support TargetLink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-customize-interactive-models.html">Customize interactive models</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Simulink</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-library-support">Pass Simulink library paths to EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Support Simulink Variant block configuration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">ASCET-DEVELOPER</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ascet-developer-documentation.html#ascet-developer-exclude">Exclude packages for ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ascet-developer-documentation.html#ascet-developer-nested">Include documentation for nested classes in ASCET-DEVELOPER</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">C-Code</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ccode-visualization.html#ccode-configuration">Configure C-Code visualization</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Visual appearance and detail level</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#root-level-skipping">Configure root-level skipping</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#model-depth-skip">Configure model depth</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#intermediate-hierarchy-filtering">Configure intermediate hierarchy filtering</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-view-visibility.html#view-concept">Understand the view concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-simulink-library-block-appearance.html">Configure appearance of Simulink library blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-view-concept.html">Understand the Simulink view concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-view-visibility.html#configure-simulink-blocks">Configure details shown for Simulink subsystem-based blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Hide C-Code functions by function name</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Label-specific configuration</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-names.html">Configure label names</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-amend-label-names.html">Amend label names</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-names.html#label-configuration-autosar">Configure labels for AUTOSAR (Classic) interface elements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Textual content customization</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-interactive-graphics.html#click-pic">Create ClickPic graphics</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-interactive-graphics.html">Create function overview diagrams</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-tables.html">Configure label tables</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">EHB container customization</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html">Configure password protection and encryption</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html">Configure structure data type support</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html">Provide attachments</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html#dir-based-ehb-cb">Directory-based EHB-CB attachments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html#asam-based-ehb-cb">ASAM-based EHB-CB attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-explicitly-specify-table-of-contents.html">Specify tables of contents explicitly (directory-based EHB-CB)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">Support Asian languages in EHANDBOOK-generated PDF documents</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-usage-general.html">EHB-CB Usage in General</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-usage-cli-parameters-ehb-cb.html">EHB-CB CLI Parameters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-usage-cli-parameters-ugg.html">UGG CLI Parameters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-usage-ini-general.html">INI Configuration (General)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-usage-ini-simulink-matlab.html">INI Configuration (Simulink and MATLAB)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-exchange-overview.html">ASAM Exchange Format Overview</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-ccx-structure.html">ASAM CCX Structure and ABLOCK Usage</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-mdx-structure.html">ASAM MDX File Structure</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-fsx-and-graphics.html">ASAM FSX and Graphics</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-model-references.html">ASCET and Simulink Model References</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asam-links-and-attachments.html">Links and Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="overview-directory-based-input-formats.html">Directory-based EHB-CB</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-asciidoc-format.html">AsciiDoc Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-rtf-format.html">Word RTF Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="spec-xlsx-format.html">Excel Format Specification</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="overview-styling.html">Styling</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-styling-container.html">EHB Container Styling</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-styling-pdf.html">PDF Styling</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="guide-styling-title-page.html">Title Page Styling</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="reference-definitions-abbreviations.html">Definitions &amp; Abbreviations</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="reference-limitations.html">Limitations</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-faq/index.html">FAQ</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/ehb-cb-known-issues.html">Known Issues</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">14.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">14.1</a>
+        </li>
+        <li class="version">
+          <a href="../14.0/index.html">14.0</a>
+        </li>
+        <li class="version">
+          <a href="../13.5/index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../13.3/index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="../13.2/index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../13.1/index.html">13.1</a>
+        </li>
+        <li class="version">
+          <a href="../13.0/index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../12.4/index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../ehb-cb/container-build.html">Container-Build</a></li>
+    <li><a href="index.html">References</a></li>
+    <li><a href="spec-asam-exchange-overview.html">ASAM Exchange Format Overview</a></li>
+    <li><a href="spec-asam-ccx-structure.html">ASAM CCX Structure and ABLOCK Usage</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">ASAM Exchange Format: CCX Structure</h1>
+<div class="sect1">
+<h2 id="_the_asam_formats_in_particular"><a class="anchor" href="#_the_asam_formats_in_particular"></a>The ASAM Formats in particular</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In principle, there are 3 different type of files, CCX, MDX and FSX. Per project, there is exactly on CCX file and typically per function one MDX and FSX file.<br>
+In the context of EHB, the CCX contains the table(s) of contents, all FCs with their references to FSX&amp;MDX and the model locations. The FSX contains the text chapters with their texts and graphics and the MDX contains all label definitions and interfaces.</p>
+</div>
+<div class="paragraph">
+<p>Component naming conventions for EHANDBOOK:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FC = function component, smallest software unit, which contains one Simulink or ASCET model</p>
+</li>
+<li>
+<p>BC = base component, which contains multiple FCs</p>
+</li>
+<li>
+<p>GC = group component, which contains multiple BCs</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>BCs and GCs allowing to design a hierarchical structure of the components, which is later on seen in the table of contents in NAV.</p>
+</div>
+<div class="sect2">
+<h3 id="_supported_asam_versions"><a class="anchor" href="#_supported_asam_versions"></a>Supported ASAM Versions</h3>
+<div class="paragraph">
+<p>EHB-CB supports ASAM CC in V3.0.0, ASAM FSX in V1.1.0 and ASAM MDX in V1.3.0. in their corresponding DTD versions. The supported encoding file format is UTF-8.</p>
+</div>
+<div class="paragraph">
+<p>The keywords and objects of ASAM were read according to the standard, but interpreted to the needs of EHB. The support is limited to the use cases relevant to EHB and restricted to basic functionalities only.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_ccx_file_structure"><a class="anchor" href="#_the_ccx_file_structure"></a>The CCX File Structure</h3>
+<div class="paragraph">
+<p>The CCX file structure for EHANDBOOK consists of a chain list of ABLOCKs, which refer other ABLOCKs using the AREF tag ID-REF value: &lt;AREF ID-REF=â€uniqueID-Noâ€/&gt;.</p>
+</div>
+<div class="paragraph">
+<p>These ABLOCKs can be broadly classified and understood as Root ABLOCK, TOC ABLOCK, Components ABLOCKs (GC, BC, FC) and leaf ABLOCK (which is not having further reference to another ABLOCK)</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image_4.png" alt="image 4">
+</div>
+<div class="title">Figure 1. ABLOCK Referencing Mechanism for EHB in CCX</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_catalog_and_root_ablock_usage"><a class="anchor" href="#_catalog_and_root_ablock_usage"></a>Catalog and Root ABLOCK Usage</h3>
+<div class="paragraph">
+<p>The CCX file starts with the CATALOG entry and a root block:</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample Catalog entry and Root ABLOCK header in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;CATALOG F-CM-TOOL-ID="$Id: catalog_V3_0_0.sl.dtd,v 1.1"&gt;
+	&lt;SHORT-NAME /&gt;
+	&lt;AREF ID-REF="EHB_Container" /&gt;
+	&lt;ABLOCKS&gt;
+		&lt;ABLOCK ID="EHB_Container"&gt;
+	...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The catalog entry has an AREF tag, which refers to the root ABLOCK.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Root ABLOCK
+Referred from: &lt;CATALOG&gt; block with &lt;AREF ID-REF="EHB_Container"/&gt;
+Refers to: TOC ABLOCKs/Special ABLOCKs</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Root ABLOCK provides info for the title page in EHB and refers the TOC ABLOCKS. Besides references to the TOCs, there are also some special general references to the following elements possible:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Global MDX file (see chapter <a href="spec-asam-mdx-structure.html#one-global-mdx-file" class="xref page">One global MDX File</a>)</p>
+</li>
+<li>
+<p>Global CDF file (see chapter <a href="#cdf-ablock-usage">CDF ABLOCK Usage</a>)</p>
+</li>
+<li>
+<p>ASCET Library (see chapter <a href="spec-asam-model-references.html#global-library" class="xref page">ASCET Model Reference to global Library and other Sub-Components</a>)</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_the_title_page_and_project_information"><a class="anchor" href="#_the_title_page_and_project_information"></a>The Title Page and Project Information</h4>
+<div class="paragraph">
+<p>The root ABLOCK contains the information about the project creation date, language, short-name, long-name, variant, etc. inside SDG tag which are used to create the title page for the container.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample Root ABLOCK in CCX for SD GID tags</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Root ABLOCK --&gt;
+&lt;ABLOCK ID="EHB_Container"&gt;
+	&lt;SHORT-NAME&gt;ehbContainer&lt;/SHORT-NAME&gt;
+	&lt;DESC /&gt;
+	&lt;SDGS&gt;
+		&lt;SDG GID="global"&gt;
+			&lt;SD GID="view"&gt;Detailed&lt;/SD&gt;
+			&lt;SD GID="project_class"&gt;PVER&lt;/SD&gt;
+			&lt;SD GID="project_longname"&gt;FlexECU-G1 Turbo&lt;/SD&gt;
+			&lt;SD GID="project_shortname"&gt;EHB_Demo_Container&lt;/SD&gt;
+			&lt;SD GID="project_date"&gt;2019-07-31 10:39:00&lt;/SD&gt;
+			&lt;SD GID="Project_variant"&gt;V7.1.1&lt;/SD&gt;
+			&lt;SD GID="Project_revision"&gt;3&lt;/SD&gt;
+			&lt;SD GID="info_pver"&gt;EHANDBOOK Demo&lt;/SD&gt;
+			&lt;SD GID="doc_class"&gt;SWCALDOC&lt;/SD&gt;
+			&lt;SD GID="language"&gt;DE&lt;/SD&gt;
+			&lt;SD GID="hide_component"&gt;true&lt;/SD&gt;
+			&lt;SD GID="condition"&gt;true&lt;/SD&gt;
+			&lt;SD GID="confidential_level_2"&gt;false&lt;/SD&gt;
+			&lt;SD GID="doctype_text"&gt;Software Documentation&lt;/SD&gt;
+			&lt;SD GID="legal_note"&gt;This document contains confidential information. Disclosure is prohibited without the written consent of ETAS GmbH.&lt;/SD&gt;
+			&lt;SD GID="MATLAB_LIB_PATH"&gt;C:\Simulink\M160&lt;/SD&gt;
+		&lt;/SDG&gt;
+	&lt;/SDGS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The tag <code>&lt;SD GID="MATLAB_LIB_PATH"&gt;</code> is used to include global library files for Simulink models. For details, see chapter <a href="spec-asam-model-references.html#simulink-model-reference" class="xref page">Simulink Model Reference to external Library</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The title page, the general font styling, the company logo and the footer text are configurable in the separate CSS and branding.properties files. Please refer to the document <em>Title Page Style Guide for EHB-CB</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_reference_to_tocs"><a class="anchor" href="#_reference_to_tocs"></a>Reference to TOCs</h4>
+<div class="paragraph">
+<p>The different tables of content (TOCs), defined in separate ABLOCKS, are referenced also in the root ABLOCK.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sample Root ABLOCK fraction with TOC references in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Root ABLOCK --&gt;
+&lt;ABLOCK ID="EHB_Container"&gt;
+	&lt;SHORT-NAME&gt;ehbContainer&lt;/SHORT-NAME&gt;
+	&lt;DESC /&gt;
+	&lt;AREFS&gt;
+		&lt;AREF ID-REF="ID_00000"&gt;fcAlpha_axl&lt;/AREF&gt;
+		&lt;AREF ID-REF="ID_00002"&gt;fcAlpha_mdl&lt;/AREF&gt;
+		&lt;AREF ID-REF="ID_00003"&gt;architectureView_mdl&lt;/AREF&gt;
+	&lt;/AREFS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image_6.png" alt="image 6">
+</div>
+<div class="title">Figure 2. Sample view in EHB-NAV for multiple TOCs</div>
+</div>
+<div class="paragraph">
+<p>The references of the TOC ABLOCKs are visualized in EHB-NAV Document Explorer as shown in the figure below:</p>
+</div>
+<div class="paragraph">
+<p>This will allow multiple TOCs, either with a different content or with the same content, but structured in a different way (e.g. alphabetical order and SW structure order)</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_toc_ablock_usage"><a class="anchor" href="#_toc_ablock_usage"></a>TOC ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>TOC ABLOCK
+Referred from: Root ABLOCK
+Refers to: Component ABLOCKs (BC, GC or directly to FC)
+The TOC ABLOCK refer the ABLOCKs which are components (FC, BC, GC, â€¦)
+&lt;CATEGORY&gt;TOC</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample TOC ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ABLOCK ID="ID_00003"&gt;
+	&lt;SHORT-NAME&gt;architectureView_mdl&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME /&gt;
+	&lt;DESC&gt;SW architecture view (Simulink models)&lt;/DESC&gt;
+	&lt;CATEGORY&gt;TOC&lt;/CATEGORY&gt;
+	&lt;AREFS&gt;
+		&lt;AREF ID-REF="ID_001000" /&gt;
+		&lt;AREF ID-REF="ID_0000301" /&gt;
+		&lt;AREF ID-REF="ID_0000302" /&gt;
+		&lt;AREF ID-REF="ID_002000" /&gt;
+	&lt;/AREFS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A TOC block refers other structural blocks (BCs, GCs) or directly FCs.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image_7.png" alt="image 7">
+</div>
+<div class="title">Figure 3. ABLOCK referencing principle in CCX for EHB</div>
+</div>
+<div class="paragraph">
+<p>A group of components in specific order forms the TOC. For example, the components can be grouped in alphabetical order.</p>
+</div>
+<div class="paragraph">
+<p>A TOC ABLOCK sample with no further references to structure ABLOCKS visualized in EHB-NAV Document Explorer:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image_8.png" alt="image 8">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structure_ablock_usage"><a class="anchor" href="#_structure_ablock_usage"></a>Structure ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Structure ABLOCK
+Referred from: TOC ABLOCK
+Refers to: another structure ABLOCK â€“ GC ABLOCK or FC ABLOCK
+The BC have references to FCâ€™s. The category of Base Component is BC.
+&lt;CATEGORY&gt;BC or GC</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A TOC ABLOCK sample with references to structure ABLOCKS visualized in EHB-NAV Document Explorer:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image9.png" alt="image9">
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Structure ABLOCK (GC) â€œAir Pathâ€ in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- TOC Structure ABLOCK --&gt;
+&lt;ABLOCK ID="ID_0000301"&gt;
+	&lt;SHORT-NAME&gt;Air Path&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME&gt;Air Path&lt;/LONG-NAME&gt;
+	&lt;DESC&gt;Air Path&lt;/DESC&gt;
+	&lt;CATEGORY&gt;GC&lt;/CATEGORY&gt;
+	&lt;AREFS&gt;
+		&lt;AREF ID-REF="ID_003000" /&gt;
+		&lt;AREF ID-REF="ID_004000" /&gt;
+		&lt;AREF ID-REF="ID_005000" /&gt;
+		&lt;AREF ID-REF="ID_006000" /&gt;
+		&lt;AREF ID-REF="ID_007000" /&gt;
+		&lt;AREF ID-REF="ID_007067" /&gt;
+		&lt;AREF ID-REF="ID_007077" /&gt;
+	&lt;/AREFS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fc_ablock_usage"><a class="anchor" href="#_fc_ablock_usage"></a>FC ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>FC ABLOCK
+Referred from: TOC or Component ABLOCKs â€“ BC ABLOCK, GC ABLOCK
+Refers to: leaf ABLOCK (Those ABLOCKs that refers to the actual file of information and will not refer to further ABLOCKs)
+&lt;CATEGORY&gt;FC</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample FC ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- FC ABLOCK --&gt;
+&lt;ABLOCK ID="ID_005000"&gt;
+	&lt;SHORT-NAME&gt;Iac_mdl&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME&gt;Ignition Angle Calculation&lt;/LONG-NAME&gt;
+	&lt;DESC&gt;Iac - Ignition Angle Calculation&lt;/DESC&gt;
+	&lt;CATEGORY&gt;FC&lt;/CATEGORY&gt;
+	&lt;AREFS&gt;
+		&lt;AREF ID-REF="ID_050011"/&gt;
+		&lt;AREF ID-REF="ID_050022"/&gt;
+		&lt;AREF ID-REF="ID_050033"/&gt;
+		&lt;AREF ID-REF="ID_050044"/&gt;
+	&lt;/AREFS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the building block of CCX file, which has the references to actual files, source of information for the container. Each of the FC has <code>&lt;SHORT-NAME&gt;</code>, <code>&lt;LONG-NAME&gt;</code>, <code>&lt;DESC&gt;</code> (description) and <code>&lt;CATEGORY&gt;</code>. The category name is FC. As a TOC entry, the content of the &lt;DESC&gt; tag is shown in EHB-NAV later.</p>
+</div>
+<div class="paragraph">
+<p>A FC ABLOCK sample visualized in EHB-NAV Document Explorer:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image10.png" alt="image10">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fc_to_files_mapping"><a class="anchor" href="#_fc_to_files_mapping"></a>FC to Files Mapping</h4>
+<div class="paragraph">
+<p>FC ABLOCK can refer to leaf ABLOCKs, which are defining the name and location of a file (1.-5.) or a function list for a function overview (6.):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>MDX ABLOCK &#8594; path to MDX file</p>
+</li>
+<li>
+<p>FSX ABLOCK &#8594; path to FSX file</p>
+</li>
+<li>
+<p>Graphic ABLOCK &#8594; path to a graphic file</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>References to static graphics</p>
+</li>
+<li>
+<p>References to extracted graphics from model with some information about the path and sub-model path.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Model ABLOCK (AXL/MDL,SLX/C-CODE) &#8594; path to model file</p>
+</li>
+<li>
+<p>Other ABLOCK &#8594; path to other files for that component like XDI file, CDF,..</p>
+</li>
+<li>
+<p>Function Overview ABLOCK &#8594; list of FC names</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>All file paths specified in &lt;FILE&gt; must be relative to the CCX file!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Referencing method between CCX and external files</strong></p>
+</div>
+<div class="listingblock">
+<div class="title">FC ABLOCK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- FC ABLOCK --&gt;
+&lt;ABLOCK ID="ID_005000"&gt;
+	&lt;SHORT-NAME&gt;Iac_mdl&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME&gt;Ignition Angle Calculation&lt;/LONG-NAME&gt;
+	&lt;DESC&gt;Iac - Ignition Angle Calculation&lt;/DESC&gt;
+	&lt;CATEGORY&gt;FC&lt;/CATEGORY&gt;
+	&lt;AREFS&gt;
+		&lt;AREF ID-REF="ID_050011"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+		&lt;AREF ID-REF="ID_050022"/&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+		&lt;AREF ID-REF="ID_050033"/&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+		&lt;AREF ID-REF="ID_050044"/&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+	&lt;/AREFS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reference to <a href="#fsx-ablock">FSX ABLOCK</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Reference to <a href="#mdx-ablock">MDX ABLOCK</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Reference to <a href="#graphic-ablock">Graphic ABLOCK</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Reference to <a href="#model-ablock">Model ABLOCK</a></td>
+</tr>
+</table>
+</div>
+<div id="fsx-ablock" class="listingblock">
+<div class="title">FSX ABLOCK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- FSX ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050011"&gt;
+	&lt;SHORT-NAME&gt;iac_fsx&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;TDOC&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="FSX"&gt;Iac_mdl\_doc\iac.fsx&lt;/FILE&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reference to FSX file</td>
+</tr>
+</table>
+</div>
+<div id="mdx-ablock" class="listingblock">
+<div class="title">MDX ABLOCK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- MDX ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050022"&gt;
+	&lt;SHORT-NAME&gt;iac_mdx&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;TDATA-S&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="MDX"&gt;Iac_mdl\_doc\iac.mdx&lt;/FILE&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reference to MDX file</td>
+</tr>
+</table>
+</div>
+<div id="graphic-ablock" class="listingblock">
+<div class="title">Graphic ABLOCK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Graphic ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050033"&gt;
+	&lt;SHORT-NAME&gt;Iac_graph1&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;PIC-D&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="JPG"&gt;Iac_mdl\_pic\iac_asSVG.svg&lt;/FILE&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reference to SVG file</td>
+</tr>
+</table>
+</div>
+<div id="model-ablock" class="listingblock">
+<div class="title">Model ABLOCK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Model ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050044"&gt;
+	&lt;SHORT-NAME&gt;iac_mdl&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;MODEL&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="MDL"&gt;Iac_mdl\Iac.mdl&lt;/FILE&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Reference to Simulink model *.mdl file</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/image_5.png" alt="image 5">
+</div>
+<div class="title">Figure 4. Referencing Method between CCX and external files</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mdx_ablock_usage"><a class="anchor" href="#_mdx_ablock_usage"></a>MDX ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>MDX ABLOCK
+Referred from: FC ABLOCK / Root ABLOCK
+Refers to: none
+&lt;CATEGORY&gt;TDATA-S or TDATA-PRO
+FILE TYPE=â€MDXâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample MDX ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- MDX ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050022"&gt;
+	&lt;SHORT-NAME&gt;iac_mdx&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;TDATA-S&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="MDX"&gt;Iac_mdl\_doc\iac.mdx&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter <a href="spec-asam-mdx-structure.html" class="xref page">The MDX File Structure</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fsx_ablock_usage"><a class="anchor" href="#_fsx_ablock_usage"></a>FSX ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>FSX ABLOCK
+Referred from: FC ABLOCK
+Refers to: none
+&lt;CATEGORY&gt;TDOC
+FILE TYPE=â€FSXâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample FSX ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- FSX ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050011"&gt;
+	&lt;SHORT-NAME&gt;iac_fsx&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;TDOC&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="FSX"&gt;Iac_mdl\_doc\iac.fsx&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the FC ABLOCK is referring to its FSX file ABLOCK using AREF-ID. The FSX file content is then used for textual information. (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">The FSX File Structure</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_graphic_ablock_usage"><a class="anchor" href="#_graphic_ablock_usage"></a>Graphic ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Graphic ABLOCK
+Referred from: FC ABLOCK
+Refers to: none
+&lt;CATEGORY&gt;PIC-D
+FILE TYPE=â€EPSâ€, â€œPSâ€, â€œPDFâ€, â€œJPGâ€, â€œPNGâ€, â€œBMPâ€, â€œSVGâ€, â€œGIFâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Graphic ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Graphic ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050033"&gt;
+	&lt;SHORT-NAME&gt;Iac.Iac_mdl&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;PIC-D&lt;/CATEGORY&gt;
+	&lt;SDGS&gt;
+		&lt;SDG GID="modeldata"&gt;
+			&lt;SD GID="model"&gt;ID_050044&lt;/SD&gt;
+			&lt;SD GID="submodel-path"&gt;Iac/Iac_mdl&lt;/SD&gt;
+		&lt;/SDG&gt;
+	&lt;/SDGS&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="JPG"&gt;Iac_mdl\_pic\iac_asSVG.svg&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The FILE TYPE has to match to the strings above. Later for further processing, the file format of the file itself is considered.<br>
+In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The graphic is then embedded in the textual information. The ABLOCK may also contain the sub model path to an interactive model and a link to the model file via &lt;SD GID=modelâ€&gt;ID (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Handling of Graphics in EHB</a>)</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>File type PDF, PS or EPS images are processed as SVG image files. Remaining file formats are copied as is.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_model_ablock_usage"><a class="anchor" href="#_model_ablock_usage"></a>Model ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Model ABLOCK
+Referred from: FC ABLOCK
+Refers to: none
+&lt;CATEGORY&gt;MODEL
+FILE TYPE ; (file extensions) =â€AXLâ€; (.axl) / â€œSLXâ€; (.slx) / â€œMDLâ€; (.mdl) / â€œUGGâ€; (.ugg) / â€œC-CODEâ€; (.zip) (The zip should contain c and header files) /
+â€MATLABâ€; (.zip)/â€APPâ€; (.app)</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Model ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Model ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050044"&gt;
+	&lt;SHORT-NAME&gt;iac_mdl&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;MODEL&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="MDL"&gt;Iac_mdl\Iac.mdl&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the FC ABLOCK is referring to its model file ABLOCK using AREF-ID. The model file is then converted into an interactive model. The model ABLOCK ID may also be referred from a graphic ABLOCK. (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Reference Model with User provided Graphic</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cdf-ablock-usage"><a class="anchor" href="#cdf-ablock-usage"></a>CDF ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>CDF ABLOCK
+Referred from: FC ABLOCK or Root ABLOCK +
+Refers to: none
+&lt;CATEGORY&gt;TDATA
+FILE TYPE=â€CDFâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample CDF ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- CDF ABLOCK --&gt;
+&lt;ABLOCK ID="ID_00004"&gt;
+	&lt;SHORT-NAME&gt;globalCdfCdfx&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME&gt;globalCdfCdfx longname&lt;/LONG-NAME&gt;
+	&lt;CATEGORY&gt;TDATA&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="CDF"&gt;_global\CDM.CDFX&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the FC ABLOCK is referring to its CDF file ABLOCK using AREF-ID. There is also a global referring from the Root ABLOCK possible. The CDX file content is then used to show the values of parameters and system constants in EHB-NAV.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lib_ablock_usage_for_ascet_only"><a class="anchor" href="#_lib_ablock_usage_for_ascet_only"></a>LIB ABLOCK Usage (For ASCET only)</h3>
+<div class="literalblock">
+<div class="content">
+<pre>LIB ABLOCK
+Referred from: Root ABLOCK +
+Refers to: none
+&lt;CATEGORY&gt;LIB
+FILE TYPE=â€DIRâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample ASCET Lib ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- LIB ABLOCK --&gt;
+&lt;ABLOCK ID="ID_000001"&gt;
+	&lt;SHORT-NAME&gt;Services_ID1&lt;/SHORT-NAME&gt;
+	&lt;LONG-NAME&gt;Global model library&lt;/LONG-NAME&gt;
+	&lt;CATEGORY&gt;LIB&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="DIR"&gt;..\LibDir&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the Root ABLOCK is referring to its LIB folder ABLOCK using AREF-ID. The library folder points to a root directory folder structure, which is containing global library files, used in all ASCET models. (Read more in chapter <a href="spec-asam-model-references.html#global-library" class="xref page">ASCET Model Reference to global Library and other Sub-Components</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_function_overview_ablock_usage"><a class="anchor" href="#_function_overview_ablock_usage"></a>Function Overview ABLOCK Usage</h3>
+<div class="literalblock">
+<div class="content">
+<pre>Function Overview ABLOCK
+Referred from: FSX by FIGURE-SHORT-NAME
+Refers to: FC SHORT-NAME in MDX
+&lt;CATEGORY&gt;PIC-FO
+&lt;SDG GID=â€œfunction_overviewâ€</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Function Overview ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Function Overview ABLOCK --&gt;
+&lt;ABLOCK ID="EpmXfn"&gt;
+	&lt;SHORT-NAME&gt;Epm Function Overview&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;PIC-FO&lt;/CATEGORY&gt;
+	&lt;SDGS&gt;
+		&lt;SDG GID="function_overview"&gt;
+			&lt;SD GID="component"&gt;Epm&lt;/SD&gt;
+		&lt;/SDG&gt;
+	&lt;/SDGS&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This ABLOCK defines a list of FCs by using the <code>&lt;SD GID=â€componentâ€&gt;FC_Name</code> tag. The <code>&lt;SHORT-NAME&gt;</code> of the ABLOCK should correspond to the FIGUREâ€™s <code>&lt;SHORT-NAME&gt;</code> in FSX. In addition, the &lt;SD GID FC_Name&gt; should match to the corresponding SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX. This will allow a function overview graphic at this FSX location in EHB-NAV. (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Function Overview Graphic</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_arxml_ablock_usage"><a class="anchor" href="#_arxml_ablock_usage"></a>ARXML ABLOCK Usage</h3>
+<div class="paragraph">
+<p>As an alternative to MDX, EHB-CB supports AUTOSAR Classic meta-data information as input. Here function interface descriptions has to be defined in an AUTOSAR file (.arxml), which then has be referenced in the catalog file (CCX).</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> ARXML ABLOCK
+Referred from: Root ABLOCK
+ Refers to: ARXML containing Software interface declaration, Components, Compositions
+ &lt;CATEGORY&gt;SWCompo
+ FILE TYPE=â€ARXMLâ€</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create an ABLOCK with category SWCompo, which references to .arxml file(s) containing function interface description.
+Add reference to the created ABLOCK from main ABLOCK for the EHB Container</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/Global_Arxml_Reference.png" alt="Global Arxml Reference">
+</div>
+<div class="title">Figure 5. Sample ARXML ABLOCK referenced from Root ABLOCK in CCX</div>
+</div>
+<div class="paragraph">
+<p>Alternatively AUTOSAR data (in the form of ARXML)can be referenced from a component to which it belongs.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> ARXML ABLOCK
+Referred from: Component ABLOCK
+ Refers to: ARXML containing Software interface declaration, Components, Compositions
+ &lt;CATEGORY&gt;SWCD
+ FILE TYPE=â€ARXMLâ€</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Create an ABLOCK with category SWCD, which references to .arxl file(s) containing function interface description.
+Add reference to the created ABLOCK from docu unit (component). Finally reference the docu unit in main ABLOCK for EHB container</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asam-spec/Component_level_Arxml.png" alt="Component level Arxml">
+</div>
+<div class="title">Figure 6. Sample ARXML ABLOCK referenced from a component ABLOCK in CCX</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample MDX ABLOCK in CCX</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- MDX ABLOCK --&gt;
+&lt;ABLOCK ID="ID_050022"&gt;
+	&lt;SHORT-NAME&gt;iac_mdx&lt;/SHORT-NAME&gt;
+	&lt;CATEGORY&gt;TDATA-S&lt;/CATEGORY&gt;
+	&lt;FILES&gt;
+		&lt;FILE TYPE="MDX"&gt;Iac_mdl\_doc\iac.mdx&lt;/FILE&gt;
+	&lt;/FILES&gt;
+&lt;/ABLOCK&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID (TDATA-S). There is also a global referring from the Root ABLOCK possible (TDATA-PRO). The relevant MDX file content is used for the model interface data and label information. To allow this, the &lt;SHORT-NAME&gt; of the FC ABLOCK must match to the SW-FEATURE &lt;SHORT-NAME&gt; in the MDX file. (Read more in chapter <a href="spec-asam-mdx-structure.html" class="xref page">The MDX File Structure</a>)</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-right">
+    <span>© 2026 ETAS GmbH</span>
+    <span>
+      <a href="https://www.etas.com/ww/en/corporate-information/">Corporate information</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of use / legal notice</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/data-protection-policy/">Data protection notice (privacy policy)</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-and-conditions/">Terms and Conditions</a>
+    </span>
+    <span>
+      <a href="#" onclick="showDockPrivacySettings(); return false;">Privacy settings</a>
+    </span>
+  </div>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

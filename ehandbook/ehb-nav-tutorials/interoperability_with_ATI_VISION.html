@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Live measurement with ATI Vision :: EHANDBOOK Docs &amp; Tutorials</title>
+    <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-nav-tutorials/interoperability_with_ATI_VISION.html">
+    <meta name="generator" content="Antora 3.1.14">
+<link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<script>
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(
+         {"brand":" ",
+          "businessSector":"BBM",
+          "businessUnit":"ETAS",
+          "division":"ETAS",
+          "event":"Page Meta",
+          "name":"ETAS",
+          "pageCountry":"DE",
+          "pageId":"413042516",
+          "pageLanguage":"en",
+          "pageName":"EHANDBOOK Docs & Tutorials",
+          "pageTemplate":"T_HomePage",
+          "version":"5.5.1"
+         }
+        ); 
+ </script>
+<!-- Google Tag Manager -->
+<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T95LQHLT');
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.marketing && dataLayer.push({
+		event: "bosch_privacy_update_marketing_on"
+	})
+}
+</script>
+<script>
+function BoschPrivacyCallback_OnUpdate(a) {
+	a.analysis && dataLayer.push({
+		event: "bosch_privacy_update_analysis_on"
+	})
+}
+</script>
+<!-- End Google Tag Manager -->  </head>
+  <body class="article">
+<header class="header">
+	<style>
+		.custom-outline-button {
+			display: inline-flex;
+			border: 1px solid white;
+			background-color: transparent;
+			color: white;
+			margin-right: 20px;
+			border-radius: 50px;
+			font-family: 'Manrope', sans-serif;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 27px;
+			align-self: center;
+		}
+
+		.custom-outline-button:hover {
+			background-color: white;
+			color: #164293;
+		}
+
+		.github-link {
+			position: relative;
+		}
+
+		.github-link img {
+			padding-right: 5px;
+			transition: opacity 0.2s ease-in-out;
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.github-link .github-icon-show {
+			opacity: 0;
+		}
+
+		.github-link .github-icon-hide {
+			opacity: 1;
+		}
+
+		.github-link:hover .github-icon-hide {
+			opacity: 0;
+		}
+
+		.github-link:hover .github-icon-show {
+			opacity: 1;
+		}
+	</style>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://docs.etas.com/ehandbook/index.html">
+				<img class="navbar-item" src="../../_/img/ETAS_Logo_White.svg" width="64" height="16" alt="">
+			</a>
+			<a class="navbar-item title" href="#">EHANDBOOK Docs &amp; Tutorials</a>
+			<div class="navbar-item search hide-for-print">
+				<div id="search-field" class="field">
+					<input id="search-input" type="text" placeholder="Search" >
+				</div>
+			</div>
+			<a class="navbar-item custom-outline-button" id="feedback-button" href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
+			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
+				rel="noopener" style="padding-left: 38px;">
+				<img class="github-icon-show" src="../../_/img/github-mark-black.svg" height="20" alt="GH">
+				<img class="github-icon-hide" src="../../_/img/github-mark-white.svg" height="20" alt="GH">
+				GitHub
+			</a>
+		</div>
+	</nav>
+</header><div class="analytics">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div>
+<div class="body">
+<div class="nav-container" data-component="ehandbook" data-version="14.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">EHANDBOOK</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../index.html">Welcome</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehandbook-solution-overview.html">EHANDBOOK Solution Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety-and-privacy-information.html">Safety and Privacy Information</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../intended-use.html">Intended Use</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../target-group.html">Target Group</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../classification-of-safety-messages.html">Classification of Safety Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../safety-information.html">Safety Information</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/ehb-cb-warning-messages.html">Warning Messages</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../privacy.html">Privacy</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../copyrights.html">Copyright</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ETAS-contacts.html">ETAS Contacts</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/navigator.html">Navigator</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/navigator.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/about-navigator.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_installing_navigator">Installing Navigator</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_licensing_the_software">Licensing the Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_getting_started">Getting Started</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav/quick-start-navigator.html#_troubleshooting">Troubleshooting</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <span class="nav-text"><a href="https://www.youtube.com/playlist?list=PLdK8AlEjocsX3lrfL0TUT24buW16oagWL" target="_blank" rel="noopener">Introduction Videos</a></span>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/navigator.html">What&#8217;s New</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/index.html">User Interface</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/menus.html">Menus</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/toolbar.html">Toolbars</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/document_views.html">Document Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/model_views.html">Model Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/search_views.html">Search Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/label_popup.html">Label Popup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/other_views.html">Other Views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-user-interface/pref_dialogs.html">Preference Dialogs</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Project and file management</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-an-ehandbook-project.html">Create an EHANDBOOK project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-ehandbook-file-or-project.html">Load an EHANDBOOK file or project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-ehandbook-file-or-project-through-file-explorer.html">Load an EHANDBOOK file or project through File Explorer</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-multiple-ehandbook-files-through-file-explorer.html">Load multiple EHANDBOOK files through File Explorer</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-changes.html">Save changes</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-as.html">Save as</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Conversion and export</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-load-an-a2l-file.html">Load an A2L file</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-to-pdf.html">Export to PDF</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-log-files.html">Export log files</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-extract-content-of-ehandbook-container.html">Extract content of an EHANDBOOK container</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-annotate-values-from-a2l-hex-dcm-cdf-files.html">Annotate values from A2L/HEX/DCM/CDF files</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Multi-container projects</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-manage-multiple-ehandbook-files-overview.html">Manage multiple EHANDBOOK files</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-replace-ehandbook-file-in-project.html">Replace an EHANDBOOK file in a project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-remove-ehandbook-file-from-project.html">Remove an EHANDBOOK file from a project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-define-alias-and-color-in-manage-project.html">Define alias and color in Manage Project</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-multiple-ehandbook-files.html">Identify content source across multiple EHANDBOOK files</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Bookmarks and model views</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-a-bookmark.html">Create a bookmark</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-a-model-view.html">Save a model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-bookmark.html">Edit a bookmark</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-model-view.html">Edit a model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-a-bookmark-or-model-view.html">Delete a bookmark or model view</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-a-library-folder.html">Create a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-edit-a-library-folder.html">Edit a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-a-library-folder.html">Delete a folder</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-import-bookmarks-and-model-views.html">Import bookmarks and model views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-bookmarks-and-model-views.html">Export bookmarks and model views</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-interpret-bookmark-and-model-view-validity.html">Interpret bookmark and model view validity</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Comments and model explorer</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-add-comments.html">Add comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-comments.html">Delete comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-copy-comments-to-clipboard.html">Copy comments to clipboard</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-save-comments-in-container.html">Save comments in a container</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-export-comments.html">Export comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-import-comments.html">Import comments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-model-comments.html">Comment on interactive models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-create-asciidoc-references-from-model-explorer.html">Create AsciiDoc references from Model Explorer</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Navigation, search, and shortcuts</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-use-navigation-history.html">Use navigation history</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-filter-and-sort-keyboard-shortcuts.html">Filter and sort keyboard shortcuts</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-change-search-highlight-colors.html">Change search highlight colors</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-configure-bookmark-and-comment-icons.html">Configure bookmark and comment icons</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-filter-and-refine-search-results.html">Filter and refine search results</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Attachments</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-add-an-attachment.html">Add an attachment</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-delete-an-attachment.html">Delete an attachment</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Composite and legacy guides</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how-to-work-with-comments.html">Manage comments end-to-end</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-how-to-guides/how_to_navigator.html">Work with EHANDBOOK-NAVIGATOR (legacy)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="interactive_models.html">Interactive Models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="software_function_navigation.html">Software Function Navigation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="software_function_navigation.html#_seamless_function_wallpaper">Seamless Function Wallpaper</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="software_function_navigation.html#_ecu_software_function_navigation">ECU Software Function Navigation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="searching.html">Searching</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="dependency_analysis.html">Dependency Analysis</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="interoperability_with_ETAS_INCA.html">Interoperability with INCA</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="MDA8.html">Interoperability with MDA 8</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="live_measurement_with_VECTOR_CANAPE.html">Live measurement with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="cursor_synchronization_with_VECTOR_CANAPE.html">Cursor synchronization with CANape</a>
+    </div>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="interoperability_with_ATI_VISION.html">Interoperability with ATI Vision</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="visualization_of_offline_measurement.html">Visualization of Offline Measurement</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="devices_and_rasters.html">Devices and Rasters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="compare.html">Compare Containers</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-nav-faq/index.html">FAQ</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/ehb-nav-known-issues.html">Known Issues</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/container-build.html">Container-Build</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/container-build.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_download_installation_license_setup">Download, Installation &amp; License Setup</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_quick_start_demos">Quick Start Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_graphical_user_interface_gui">Graphical User Interface (GUI)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/quick-start-container-build.html#_command_line_interface_cli">Command-Line Interface (CLI)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../whats-new/container-build.html">What&#8217;s New</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/ascet-developer/contents.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-ascet-6/contents.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-simulink/contents.html">Simulink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/dir-ccode/contents.html">C-Code</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-tutorials/autosar-classic-arxml-only/contents.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/fundamental-concepts-of-ecu-software.html">Fundamental Concepts of ECU Software</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehandbook-container-build-principles.html">EHANDBOOK Container-Build Principles</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-in-general.html">EHANDBOOK Container-Build in General</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-tools.html">Tools for generating EHANDBOOK Containers</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/incremental-ehb-cb-with-ugg.html">Incremental Build Workflow with UGG</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/overview.html">Model Languages</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/ascet-developer.html">ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/ascet-6.html">ASCET 6</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/simulink-stateflow.html">Simulink / Stateflow / TargetLink</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/model_languages/c-code.html">C-Code</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/overview.html">Automotive Standards</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/autosar-classic.html">AUTOSAR (Classic)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/automotive_standards/asam-exchange-formats.html">ASAM Exchange Formats</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html">Setup &amp; Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_system_requirements">System Requirements</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_download">Download</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_installation">Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#installation-windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#installation-linux">Linux</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_common_for_windows_and_linux">Common for Windows and Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_electronic_licenses">Electronic Licenses</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_license_features_overview">License Features Overview</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_evaluation_licenses">Evaluation Licenses</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_license_management_installation">License Management Installation</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-setup.html#additional-third-party-tools">Additional Third Party Tools</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html">Supported Platforms</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html#_windows">Windows</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/platforms.html#_linux">Linux</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/supported-input-file-formats-and-versions.html">Supported Input File Formats and Versions</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-features.html">Features</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-explanations/ehb-cb-attachments.html">Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/index.html">How-to guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-prepare-dir-based-input.html">Prepare input for directory-based EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-set-up-incremental-builds-with-ugg.html">Set up incremental builds for continuous integration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-simulink-libraries-in-ehb.html">Configure EHB-CB for Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-targetlink-models.html">Support TargetLink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-customize-interactive-models.html">Customize interactive models</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Simulink</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-library-support">Pass Simulink library paths to EHB-CB</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-variant-block-configuration-for-simulink-models.html">Support Simulink Variant block configuration</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">ASCET-DEVELOPER</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ascet-developer-documentation.html#ascet-developer-exclude">Exclude packages for ASCET-DEVELOPER</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ascet-developer-documentation.html#ascet-developer-nested">Include documentation for nested classes in ASCET-DEVELOPER</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">C-Code</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-ccode-visualization.html#ccode-configuration">Configure C-Code visualization</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Visual appearance and detail level</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#root-level-skipping">Configure root-level skipping</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#model-depth-skip">Configure model depth</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-model-entry-levels.html#intermediate-hierarchy-filtering">Configure intermediate hierarchy filtering</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-view-visibility.html#view-concept">Understand the view concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-simulink-library-block-appearance.html">Configure appearance of Simulink library blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-view-concept.html">Understand the Simulink view concept</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-view-visibility.html#configure-simulink-blocks">Configure details shown for Simulink subsystem-based blocks</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-hide-c-code-functions-based-on-function-names.html">Hide C-Code functions by function name</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <span class="nav-text">Label-specific configuration</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-names.html">Configure label names</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-amend-label-names.html">Amend label names</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-names.html#label-configuration-autosar">Configure labels for AUTOSAR (Classic) interface elements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">Textual content customization</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-interactive-graphics.html#click-pic">Create ClickPic graphics</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-interactive-graphics.html">Create function overview diagrams</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-configure-label-tables.html">Configure label tables</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <span class="nav-text">EHB container customization</span>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html">Configure password protection and encryption</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html">Configure structure data type support</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html">Provide attachments</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html#dir-based-ehb-cb">Directory-based EHB-CB attachments</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-provide-attachments.html#asam-based-ehb-cb">ASAM-based EHB-CB attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-explicitly-specify-table-of-contents.html">Specify tables of contents explicitly (directory-based EHB-CB)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-support-asian-languages-in-ehb-generated-pdf-documents.html">Support Asian languages in EHANDBOOK-generated PDF documents</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-usage-general.html">EHB-CB Usage in General</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-usage-cli-parameters-ehb-cb.html">EHB-CB CLI Parameters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-usage-cli-parameters-ugg.html">UGG CLI Parameters</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-usage-ini-general.html">INI Configuration (General)</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-usage-ini-simulink-matlab.html">INI Configuration (Simulink and MATLAB)</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-exchange-overview.html">ASAM Exchange Format Overview</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-ccx-structure.html">ASAM CCX Structure and ABLOCK Usage</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-mdx-structure.html">ASAM MDX File Structure</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-fsx-and-graphics.html">ASAM FSX and Graphics</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-model-references.html">ASCET and Simulink Model References</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asam-links-and-attachments.html">Links and Attachments</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/overview-directory-based-input-formats.html">Directory-based EHB-CB</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-asciidoc-format.html">AsciiDoc Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-rtf-format.html">Word RTF Specification</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/spec-xlsx-format.html">Excel Format Specification</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/overview-styling.html">Styling</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-styling-container.html">EHB Container Styling</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-styling-pdf.html">PDF Styling</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/guide-styling-title-page.html">Title Page Styling</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/reference-definitions-abbreviations.html">Definitions &amp; Abbreviations</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-references/reference-limitations.html">Limitations</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-faq/index.html">FAQ</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../known-issues/ehb-cb-known-issues.html">Known Issues</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">EHANDBOOK</span>
+    <span class="version">14.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../index.html">EHANDBOOK</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">14.1</a>
+        </li>
+        <li class="version">
+          <a href="../14.0/index.html">14.0</a>
+        </li>
+        <li class="version">
+          <a href="../13.5/index.html">13.5</a>
+        </li>
+        <li class="version">
+          <a href="../13.4/index.html">13.4</a>
+        </li>
+        <li class="version">
+          <a href="../13.3/index.html">13.3</a>
+        </li>
+        <li class="version">
+          <a href="../13.2/index.html">13.2</a>
+        </li>
+        <li class="version">
+          <a href="../13.1/index.html">13.1</a>
+        </li>
+        <li class="version">
+          <a href="../13.0/index.html">13.0</a>
+        </li>
+        <li class="version">
+          <a href="../12.4/index.html">12.4</a>
+        </li>
+        <li class="version">
+          <a href="../12.3/index.html">12.3</a>
+        </li>
+        <li class="version">
+          <a href="../12.2/index.html">12.2</a>
+        </li>
+        <li class="version">
+          <a href="../12.1/index.html">12.1</a>
+        </li>
+        <li class="version">
+          <a href="../12.0/index.html">12.0</a>
+        </li>
+        <li class="version">
+          <a href="../11.3/index.html">11.3</a>
+        </li>
+        <li class="version">
+          <a href="../11.2/index.html">11.2</a>
+        </li>
+        <li class="version">
+          <a href="../11.1/index.html">11.1</a>
+        </li>
+        <li class="version">
+          <a href="../11.0/index.html">11.0</a>
+        </li>
+        <li class="version">
+          <a href="../10.3/index.html">10.3</a>
+        </li>
+        <li class="version">
+          <a href="../10.2/index.html">10.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">EHANDBOOK</a></li>
+    <li><a href="../ehb-nav/navigator.html">Navigator</a></li>
+    <li><a href="index.html">Tutorials</a></li>
+    <li><a href="interoperability_with_ATI_VISION.html">Interoperability with ATI Vision</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Live measurement with ATI Vision</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK-NAVIGATOR has the capability to establish a connection with a
+Vision project and provides a closer link between models representing the
+functions and, the measurement and calibration values obtained during the calibration or testing procedure.</p>
+</div>
+<div class="paragraph">
+<p>This feature provides an integrated view of the algorithm specifications of a function
+(the ASCET/SIMULINK model diagram) and the values being measured in the Vision
+application. The values from a running Vision application for measurement variables
+are displayed directly in the interactive model within the Model Viewer of the
+EHANDBOOK-NAVIGATOR. It is also possible to configure which of the measurement variables
+ depicted in the interactive model should display the values. Starting
+and stopping the measurement of the connected Vision application directly from the
+EHANDBOOK-NAVIGATOR is also supported.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode (EHANDBOOK_NAVIGATOR_BASIC) or in Full Mode (EHANDBOOK_NAVIGATOR), connectivity for Vision
+is not supported. In order to use this feature, you need to procure an additional add-on license (EHANDBOOK_NAVIGATOR_VISION). Please look at
+ <a href="../ETAS-contacts.html" class="xref page">ETAS Contacts</a> for information on how to get an evaluation license or purchase a license.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Compatibility of EHANDBOOK-NAVIGATOR with ATI Vision:</strong><br>
+EHANDBOOK-NAVIGATOR V14.0 is tested and compatible with Vision versions 7.0.1 and Vision 7.0.2</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>NOTICE</strong></p>
+</div>
+<div class="paragraph">
+<p>The EHANDBOOK-NAVIGATOR may display erroneous values in an interactive
+model when real-time data will be retrieved from the Vision project!
+The real-time measurement variables can be affected.
+The correctness of the displayed value for measurement data has to be verified using a suitable tool.
+The user is responsible for correctly assigning EHB containers to corresponding hardware devices.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_read_only_and_edit_project_mode"><a class="anchor" href="#_read_only_and_edit_project_mode"></a>Read only and Edit project mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vision EHANDBOOK connection operates in two modes ,"Read only" and "Edit project".</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In "Read only" mode the measurement values are only displayed only for the data items which are already part of the connected Vision project. The existing Vision project screen setup is not edited or disturbed.
+Once the Vision and EHANDBOOK connection is established, no new data can be included for measurement. Adding additional data items in the Vision project screen also has no effect in the inclusion.
+If additional data items are to be configured for measurement then Vision must be reconnected.</p>
+</li>
+<li>
+<p>In the "Edit project" mode the measurement values are displayed for all valid data items. The labels which are configured to display on EHANDBOOK-NAVIGATOR are added to the Vision project screen in parallel.
+Labels can be added for measurement at any time during an active Vision and EHANDBOOK connection. Altering the Vision screens during the measurement will cause inconsistencies.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_live_mode.png" alt="Vision_live_mode">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connecting_to_vision"><a class="anchor" href="#_connecting_to_vision"></a>Connecting to Vision</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Connecting to a running Vision application and a loaded project is the first step
+in establishing a link with EHANDBOOK NAVIGATOR to acquire values for the data items.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>Prior to connect the EHANDBOOK-NAVIGATOR to a Vision project, you must
+first:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Start ATI Vision 7.0.x.</p>
+</li>
+<li>
+<p>Create/load a valid project.</p>
+</li>
+<li>
+<p>Configure devices with appropriate strategy.</p>
+</li>
+<li>
+<p>Create/load necessary screens and control objects for measurements.</p>
+</li>
+<li>
+<p>Start EHANDBOOK NAVIGATOR and load a corresponding EHANDBOOK container.</p>
+</li>
+<li>
+<p>Open an interactive model in the Model Viewer.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is your responsibility to set up a suitable Vision project and application.
+EHANDBOOK-NAVIGATOR establishes a connection to the selected project workspace
+and application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="underline">To connect to an existing Vision application:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <code>Data</code> menu and select <code>Vision (Live)</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_data.png" alt="Vision_data_menu">
+</div>
+</div>
+<div class="paragraph">
+<p>&lt;Or&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <code>Vision (Live)</code> in the <code>Data Source</code> drop-down menu on
+the status bar.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_datasource.png" alt="Vision_data_source">
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>Vision (Live)</code> dialog box is displayed with appropriate information. If
+all the above <a href="#_prerequisites">Prerequisites</a> are satisfied, then the image
+shown below is displayed. The connection can then be established with Vision by clicking "Connect". If the
+connection is not established, an error message(s) with appropriate instructions
+are shown. Make the suggested changes to connect successfully.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_connect.png" alt="Vision_connection">
+</div>
+</div>
+<div class="paragraph">
+<p>"Read only mode" checkbox for displaying values for data items which are part of existing Vision project screens.
+<a href="#_read_only_and_edit_project_mode">Read only and Edit project mode</a> details.
+If the Vision project screens has few thousands of labels, the model navigation (incase of deeply nested hierarchy) is faster if the check box is checked. It will be much slower for the same model, if the checkbox is unselected.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Connect</code> to connect with Vision.</p>
+</li>
+<li>
+<p>Once connected, you will see Vision (Live) active in the data source drop down. Now choose the blue icon <code>Link EHANDBOOK containers to hardware devices</code>.
+Here choose the device which is also active for measurement in the Vision project. EHANDBOOK-NAVIGATOR recognizes only 'Enabled' devices in the Vision device manager window for connection.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_device.png" alt="Vision_device_selection">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_multi_device.png" alt="Vision_multi_device_selection">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is the user&#8217;s responsibility to set up a suitable Vision project and devices.
+EHANDBOOK-NAVIGATOR establishes a connection to the selected project and enabled valid device.
+Only <code>one device</code> is paired with a connection to one EHANDBOOK container.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A single connection established with Vision is applicable for all the interactive
+models displayed in multiple Model Viewers.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_model_blocks_to_showhide_values"><a class="anchor" href="#_configuring_model_blocks_to_showhide_values"></a>Configuring Model Blocks to Show/Hide Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before starting the visualization of measurement variables and calibration parameters,
+the model blocks representing measurement variables and calibration
+parameters must be configured to show/hide values. You have the option of configuring
+a single block at a time or configuring all the blocks that are visible in the
+interactive model, displayed in the Model Viewer. The model blocks can be configured
+only after a connection has been established with a Vision project.</p>
+</div>
+<div class="paragraph">
+<p>If the connection is established in “Read only mode" then configuration can be done only for those data items which are added on the screens of opened Vision project.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_displayvalue.png" alt="Vision_Display_value">
+</div>
+</div>
+<div class="paragraph">
+<p>Right-click on the measurement variable or calibration parameter and if <code>Display Value</code> option is present then it means it can be configured to measure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_displayvalue2.png" alt="Vision_Display_value_disabled">
+</div>
+</div>
+<div class="paragraph">
+<p>Right-click on the measurement variable or calibration parameter and if <code>Display Value</code> option is disabled with a message <code>not available in current datasource</code> then it cannot be measured.</p>
+</div>
+<div class="paragraph">
+<p>To configure a single measurement variable or calibration parameter to
+show/hide value:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Right-click on the measurement variable or calibration parameter block you
+want to configure.<br>
+A context menu is displayed.</p>
+</li>
+<li>
+<p>Select <code>Display Value</code> to configure the block to display the value of the
+measurement variable or calibration parameter.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Select <code>Hide Value</code> to configure the block to hide the value of the measurement
+variable or calibration parameter.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To configure all the blocks, visible in the interactive model displayed in the Model
+Viewer, to show values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Display all values</code> in the Status bar.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Go to <code>Data</code> menu, select <code>Display all Values</code>.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Press &lt;CTRL+SHIFT+D&gt;.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To configure all the blocks, visible in the interactive model displayed in the Model
+Viewer, to hide values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Hide all values</code> in the Status bar.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Go to <code>Data</code> menu, select <code>Hide all Values</code>.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Press &lt;CTRL+SHIFT+H&gt;.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_starting_the_visualization"><a class="anchor" href="#_starting_the_visualization"></a>Starting the Visualization</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_start.png" alt="Vision_Online">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start Visualization feature in Data Menu</p>
+</li>
+<li>
+<p>Start Visualization button in the Status bar</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Setting the Vision project online or offline using EHANDBOOK-NAVIGATOR is supported.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">To start the visualization:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Start Visualization</code> (2) in the Status bar.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>In the <code>Data</code> menu, select <code>Start Visualization</code>.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Press <code>F11</code>. The Vision project is now online and the
+values for the configured blocks are being displayed and periodically
+updated.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Values for measurement variables are updated at a different rate in
+EHANDBOOK-NAVIGATOR when compared to the Vision project experiment. Values are fetched every 500ms.
+Values are not updated in real-time and might not reflect the actual value at a certain
+point in time.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you configure blocks of interactive models in multiple Model Viewers, visualization
+of values occurs simultaneously in all the loaded interactive models.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stopping_the_measurement"><a class="anchor" href="#_stopping_the_measurement"></a>Stopping the Measurement</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_stop.png" alt="Vision_Offline">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop Measurement in Data Menu</p>
+</li>
+<li>
+<p>Stop Measurement button in the Status bar</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>It is possible to set the Vision project offline only if the visualization has started.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">To stop the measurement:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <code>Stop Measurement</code> (2) in the Status bar.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>In the Data menu, select <code>Stop Measurement</code> (1).<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Press <strong>F9</strong>. The latest values measured in the Vision project is displayed in the Model Viewer.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_disconnecting_from_the_running_vision_project"><a class="anchor" href="#_disconnecting_from_the_running_vision_project"></a>Disconnecting from the Running Vision project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is possible to disconnect from the Vision project to which EHANDBOOK-NAVIGATOR
+has already established a connection.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_disconnect1.png" alt="Vision_disconnect1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_disconnect2.png" alt="Vision_disconnect2">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="underline">To disconnect the running Vision project:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <code>Data</code> menu and select <code>None</code>.<br>
+&lt;Or&gt;</p>
+</li>
+<li>
+<p>Select <code>None</code> in the <code>Data Source</code> drop-down menu on the Status bar.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alternatively, when another data source is connected in EHANDBOOK, all the labels that were added/measured in EHANDBOOK-NAVIGATOR
+will be removed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Vision_remove.png" alt="Vision_remove">
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-right">
+    <span>© 2026 ETAS GmbH</span>
+    <span>
+      <a href="https://www.etas.com/ww/en/corporate-information/">Corporate information</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-of-use-legal-notice/">Terms of use / legal notice</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/data-protection-policy/">Data protection notice (privacy policy)</a>
+    </span>
+    <span>
+      <a href="https://www.etas.com/ww/en/terms-and-conditions/">Terms and Conditions</a>
+    </span>
+    <span>
+      <a href="#" onclick="showDockPrivacySettings(); return false;">Privacy settings</a>
+    </span>
+  </div>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
