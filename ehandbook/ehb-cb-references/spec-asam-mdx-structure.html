@@ -7,7 +7,8 @@
     <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-cb-references/spec-asam-mdx-structure.html">
     <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
-<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." />
+<meta name="generator" content="Individual elements were generated with the support of AI (e.g., ChatGPT, Midjourney)." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
         window.dataLayer = window.dataLayer || []; window.dataLayer.push(
          {"brand":" ",
@@ -57,6 +58,18 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </script>
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
+<script async src="https://widget.kapa.ai/kapa-widget.bundle.js" data-website-id="13579591-07bc-4247-9d7e-802ab2e49701"
+	data-project-name="ETAS EHANDBOOK" data-project-color="#6306B6"
+	data-project-logo="https://images.seeklogo.com/logo-png/50/1/etas-logo-png_seeklogo-501921.png"
+	data-modal-disclaimer="The AI Assistant answers questions using the [ETAS EHANDBOOK documentation](https://docs.etas.com/ehandbook/index.html). Get instant answers to your EHANDBOOK questions.
+&#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
+Do not rely solely on AI tools for important decisions. 
+Perform careful and independent quality check to reliably evaluate the output of AI models."
+	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
+	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
+	</script>
+
 <header class="header">
 	<style>
 		.custom-outline-button {
@@ -122,6 +135,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 					<input id="search-input" type="text" placeholder="Search" >
 				</div>
 			</div>
+			<a id="ask-ai-input" class="navbar-item custom-outline-button" style="margin-left: auto;">✨ Ask AI</a>
 			<a class="navbar-item custom-outline-button" id="feedback-button" href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
 			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
 				rel="noopener" style="padding-left: 38px;">
@@ -1490,7 +1504,7 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 <p>Furthermore, the MDX content is used for properties view, label pop-up, auto-tagging and search proposal dialog in EHB-NAV.</p>
 </div>
 <div class="paragraph">
-<p>Another NAV feature supported using MDX information is the â€œFunction Overviewâ€. It provides mapping between the FCâ€™s in the whole container and how all the element labels are related. This works name based.</p>
+<p>Another NAV feature supported using MDX information is the “Function Overview”. It provides mapping between the FC’s in the whole container and how all the element labels are related. This works name based.</p>
 </div>
 <div class="paragraph">
 <p>Example in EHB-NAV:</p>
@@ -1610,7 +1624,7 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 </ol>
 </div>
 <div class="paragraph">
-<p>The structure name and member names must match to the Simulink bus names. Structures are defined in the global data dictionary in the same way as other variables or parameters, but in a hierarchical construct. Variable with CATEGORY â€œSTRUCTUREâ€ contains &lt;SW-VARIABLES&gt; tag under which other variables are defined. This head SW-VARIABLE becomes the â€˜structureâ€™ and the children SW-VARIABLEs become members to it.</p>
+<p>The structure name and member names must match to the Simulink bus names. Structures are defined in the global data dictionary in the same way as other variables or parameters, but in a hierarchical construct. Variable with CATEGORY “STRUCTURE” contains &lt;SW-VARIABLES&gt; tag under which other variables are defined. This head SW-VARIABLE becomes the ‘structure’ and the children SW-VARIABLEs become members to it.</p>
 </div>
 <div class="listingblock">
 <div class="title">Sample MDX snippet for a struct in the global data dictionary</div>
@@ -1651,10 +1665,10 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 <p><strong>Naming convention and rules:</strong></p>
 </div>
 <div class="paragraph">
-<p>In the above example SW-VARIABLE <em>subBus</em> becomes the â€˜structureâ€™ and SW-VARIABLE <em>chirp</em> and <em>sine</em> become its members. Internally in EHANDBOOK we store the members along with its structure name, for example â€œ_subBus.chirp_â€ and â€œ_subBus.sine_â€.</p>
+<p>In the above example SW-VARIABLE <em>subBus</em> becomes the ‘structure’ and SW-VARIABLE <em>chirp</em> and <em>sine</em> become its members. Internally in EHANDBOOK we store the members along with its structure name, for example “<em>subBus.chirp</em>” and “<em>subBus.sine</em>”.</p>
 </div>
 <div class="paragraph">
-<p>The delimiter â€˜.â€™ dot is used for combining the structure and member names.</p>
+<p>The delimiter ‘.’ dot is used for combining the structure and member names.</p>
 </div>
 <div class="paragraph">
 <p>SW-VARIABLE structure cannot contain another SW-VARIABLE structure inside it. Nesting of structures are not allowed as per the MDX specifications (see mdx_v1.3.0.xsd).</p>
@@ -1684,10 +1698,10 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 </div>
 </div>
 <div class="paragraph">
-<p>SW-VARAIBLE of category STRUCTURE are referenced to a SW-FEATURE using the &lt;SW-FEATURE-INTERFACES&gt; with â€œIMPORTâ€, â€œEXPORTâ€ categories or &lt;SW-FEATURE-OWNED-ELEMENT-SETS&gt; (=local). From the above example <em>subBus</em> will be treated as local for the SW-FEATURE under which it is defined.</p>
+<p>SW-VARAIBLE of category STRUCTURE are referenced to a SW-FEATURE using the &lt;SW-FEATURE-INTERFACES&gt; with “IMPORT”, “EXPORT” categories or &lt;SW-FEATURE-OWNED-ELEMENT-SETS&gt; (=local). From the above example <em>subBus</em> will be treated as local for the SW-FEATURE under which it is defined.</p>
 </div>
 <div class="paragraph">
-<p>EHANDBOOK does not derive the relation between the SW-FEATURE and the structure members. Users have to explicitly add an entry of a <em>structure.member</em> in the REFERENCES for establishing the import/export category. For example <em>subBus.sine</em> wonâ€™t appear as local in the EHANBDOOK context unless the user enters <em>subBus.sine</em> as a SW-VARIABLE-REF.</p>
+<p>EHANDBOOK does not derive the relation between the SW-FEATURE and the structure members. Users have to explicitly add an entry of a <em>structure.member</em> in the REFERENCES for establishing the import/export category. For example <em>subBus.sine</em> won’t appear as local in the EHANBDOOK context unless the user enters <em>subBus.sine</em> as a SW-VARIABLE-REF.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1696,7 +1710,7 @@ All chapter-, header- and column-names or amount of columns can be specified.</p
 <p>In CCX, the FC ABLOCK is referring to its MDX file ABLOCK using AREF-ID. The reference from the FC ABLOCK in CCX to its related content in the MDX file is done by <code>&lt;SHORT-NAME&gt;</code>. The SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX must be same as the FC <code>&lt;SHORT-NAME&gt;</code> in the CCX file.</p>
 </div>
 <div class="paragraph">
-<p>The result in EHB-NAV is the standard chapter â€œSystemconstant-Parameter-Variable-Classinstance-Structure â€œ with the corresponding table to appear, as shown below:</p>
+<p>The result in EHB-NAV is the standard chapter “Systemconstant-Parameter-Variable-Classinstance-Structure “ with the corresponding table to appear, as shown below:</p>
 </div>
 <div class="paragraph">
 <p><strong>Referencing method between CCX and individual MDX per FC</strong></p>

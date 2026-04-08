@@ -7,7 +7,8 @@
     <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-cb-references/spec-asam-ccx-structure.html">
     <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
-<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." />
+<meta name="generator" content="Individual elements were generated with the support of AI (e.g., ChatGPT, Midjourney)." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
         window.dataLayer = window.dataLayer || []; window.dataLayer.push(
          {"brand":" ",
@@ -57,6 +58,18 @@ function BoschPrivacyCallback_OnUpdate(a) {
 </script>
 <!-- End Google Tag Manager -->  </head>
   <body class="article">
+<script async src="https://widget.kapa.ai/kapa-widget.bundle.js" data-website-id="13579591-07bc-4247-9d7e-802ab2e49701"
+	data-project-name="ETAS EHANDBOOK" data-project-color="#6306B6"
+	data-project-logo="https://images.seeklogo.com/logo-png/50/1/etas-logo-png_seeklogo-501921.png"
+	data-modal-disclaimer="The AI Assistant answers questions using the [ETAS EHANDBOOK documentation](https://docs.etas.com/ehandbook/index.html). Get instant answers to your EHANDBOOK questions.
+&#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
+Do not rely solely on AI tools for important decisions. 
+Perform careful and independent quality check to reliably evaluate the output of AI models."
+	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
+	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
+	</script>
+
 <header class="header">
 	<style>
 		.custom-outline-button {
@@ -122,6 +135,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 					<input id="search-input" type="text" placeholder="Search" >
 				</div>
 			</div>
+			<a id="ask-ai-input" class="navbar-item custom-outline-button" style="margin-left: auto;">✨ Ask AI</a>
 			<a class="navbar-item custom-outline-button" id="feedback-button" href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
 			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
 				rel="noopener" style="padding-left: 38px;">
@@ -1497,7 +1511,7 @@ In the context of EHB, the CCX contains the table(s) of contents, all FCs with t
 <div class="sect2">
 <h3 id="_the_ccx_file_structure"><a class="anchor" href="#_the_ccx_file_structure"></a>The CCX File Structure</h3>
 <div class="paragraph">
-<p>The CCX file structure for EHANDBOOK consists of a chain list of ABLOCKs, which refer other ABLOCKs using the AREF tag ID-REF value: &lt;AREF ID-REF=â€uniqueID-Noâ€/&gt;.</p>
+<p>The CCX file structure for EHANDBOOK consists of a chain list of ABLOCKs, which refer other ABLOCKs using the AREF tag ID-REF value: &lt;AREF ID-REF=”uniqueID-No”/&gt;.</p>
 </div>
 <div class="paragraph">
 <p>These ABLOCKs can be broadly classified and understood as Root ABLOCK, TOC ABLOCK, Components ABLOCKs (GC, BC, FC) and leaf ABLOCK (which is not having further reference to another ABLOCK)</p>
@@ -1694,7 +1708,7 @@ The TOC ABLOCK refer the ABLOCKs which are components (FC, BC, GC, â€¦)
 <pre>Structure ABLOCK
 Referred from: TOC ABLOCK
 Refers to: another structure ABLOCK â€“ GC ABLOCK or FC ABLOCK
-The BC have references to FCâ€™s. The category of Base Component is BC.
+The BC have references to FC’s. The category of Base Component is BC.
 &lt;CATEGORY&gt;BC or GC</pre>
 </div>
 </div>
@@ -1707,7 +1721,7 @@ The BC have references to FCâ€™s. The category of Base Component is BC.
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Sample Structure ABLOCK (GC) â€œAir Pathâ€ in CCX</div>
+<div class="title">Sample Structure ABLOCK (GC) “Air Path” in CCX</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- TOC Structure ABLOCK --&gt;
 &lt;ABLOCK ID="ID_0000301"&gt;
@@ -1959,7 +1973,7 @@ Refers to: leaf ABLOCK (Those ABLOCKs that refers to the actual file of informat
 Referred from: FC ABLOCK / Root ABLOCK
 Refers to: none
 &lt;CATEGORY&gt;TDATA-S or TDATA-PRO
-FILE TYPE=â€MDXâ€</pre>
+FILE TYPE=”MDX”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -1987,7 +2001,7 @@ FILE TYPE=â€MDXâ€</pre>
 Referred from: FC ABLOCK
 Refers to: none
 &lt;CATEGORY&gt;TDOC
-FILE TYPE=â€FSXâ€</pre>
+FILE TYPE=”FSX”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2015,7 +2029,7 @@ FILE TYPE=â€FSXâ€</pre>
 Referred from: FC ABLOCK
 Refers to: none
 &lt;CATEGORY&gt;PIC-D
-FILE TYPE=â€EPSâ€, â€œPSâ€, â€œPDFâ€, â€œJPGâ€, â€œPNGâ€, â€œBMPâ€, â€œSVGâ€, â€œGIFâ€</pre>
+FILE TYPE=”EPS”, “PS”, “PDF”, “JPG”, “PNG”, “BMP”, “SVG”, “GIF”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2039,7 +2053,7 @@ FILE TYPE=â€EPSâ€, â€œPSâ€, â€œPDFâ€, â€œJPGâ�
 </div>
 <div class="paragraph">
 <p>The FILE TYPE has to match to the strings above. Later for further processing, the file format of the file itself is considered.<br>
-In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The graphic is then embedded in the textual information. The ABLOCK may also contain the sub model path to an interactive model and a link to the model file via &lt;SD GID=modelâ€&gt;ID (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Handling of Graphics in EHB</a>)</p>
+In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The graphic is then embedded in the textual information. The ABLOCK may also contain the sub model path to an interactive model and a link to the model file via &lt;SD GID=model”&gt;ID (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Handling of Graphics in EHB</a>)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2064,8 +2078,8 @@ In CCX, the FC ABLOCK is referring to any graphic file ABLOCK using AREF-ID. The
 Referred from: FC ABLOCK
 Refers to: none
 &lt;CATEGORY&gt;MODEL
-FILE TYPE ; (file extensions) =â€AXLâ€; (.axl) / â€œSLXâ€; (.slx) / â€œMDLâ€; (.mdl) / â€œUGGâ€; (.ugg) / â€œC-CODEâ€; (.zip) (The zip should contain c and header files) /
-â€MATLABâ€; (.zip)/â€APPâ€; (.app)</pre>
+FILE TYPE ; (file extensions) =”AXL”; (.axl) / “SLX”; (.slx) / “MDL”; (.mdl) / “UGG”; (.ugg) / “C-CODE”; (.zip) (The zip should contain c and header files) /
+”MATLAB”; (.zip)/”APP”; (.app)</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2093,7 +2107,7 @@ FILE TYPE ; (file extensions) =â€AXLâ€; (.axl) / â€œSLXâ€; (.
 Referred from: FC ABLOCK or Root ABLOCK +
 Refers to: none
 &lt;CATEGORY&gt;TDATA
-FILE TYPE=â€CDFâ€</pre>
+FILE TYPE=”CDF”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2122,7 +2136,7 @@ FILE TYPE=â€CDFâ€</pre>
 Referred from: Root ABLOCK +
 Refers to: none
 &lt;CATEGORY&gt;LIB
-FILE TYPE=â€DIRâ€</pre>
+FILE TYPE=”DIR”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2151,7 +2165,7 @@ FILE TYPE=â€DIRâ€</pre>
 Referred from: FSX by FIGURE-SHORT-NAME
 Refers to: FC SHORT-NAME in MDX
 &lt;CATEGORY&gt;PIC-FO
-&lt;SDG GID=â€œfunction_overviewâ€</pre>
+&lt;SDG GID=“function_overview”</pre>
 </div>
 </div>
 <div class="listingblock">
@@ -2170,7 +2184,7 @@ Refers to: FC SHORT-NAME in MDX
 </div>
 </div>
 <div class="paragraph">
-<p>This ABLOCK defines a list of FCs by using the <code>&lt;SD GID=â€componentâ€&gt;FC_Name</code> tag. The <code>&lt;SHORT-NAME&gt;</code> of the ABLOCK should correspond to the FIGUREâ€™s <code>&lt;SHORT-NAME&gt;</code> in FSX. In addition, the &lt;SD GID FC_Name&gt; should match to the corresponding SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX. This will allow a function overview graphic at this FSX location in EHB-NAV. (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Function Overview Graphic</a>)</p>
+<p>This ABLOCK defines a list of FCs by using the <code>&lt;SD GID=”component”&gt;FC_Name</code> tag. The <code>&lt;SHORT-NAME&gt;</code> of the ABLOCK should correspond to the FIGURE’s <code>&lt;SHORT-NAME&gt;</code> in FSX. In addition, the &lt;SD GID FC_Name&gt; should match to the corresponding SW-FEATURE <code>&lt;SHORT-NAME&gt;</code> in MDX. This will allow a function overview graphic at this FSX location in EHB-NAV. (Read more in chapter <a href="spec-asam-fsx-and-graphics.html" class="xref page">Function Overview Graphic</a>)</p>
 </div>
 </div>
 <div class="sect2">
@@ -2184,7 +2198,7 @@ Refers to: FC SHORT-NAME in MDX
 Referred from: Root ABLOCK
  Refers to: ARXML containing Software interface declaration, Components, Compositions
  &lt;CATEGORY&gt;SWCompo
- FILE TYPE=â€ARXMLâ€</pre>
+ FILE TYPE=”ARXML”</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2206,7 +2220,7 @@ Add reference to the created ABLOCK from main ABLOCK for the EHB Container</p>
 Referred from: Component ABLOCK
  Refers to: ARXML containing Software interface declaration, Components, Compositions
  &lt;CATEGORY&gt;SWCD
- FILE TYPE=â€ARXMLâ€</pre>
+ FILE TYPE=”ARXML”</pre>
 </div>
 </div>
 <div class="paragraph">
