@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1481,6 +1489,84 @@ Perform careful and independent quality check to reliably evaluate the output of
 </aside>
 <article class="doc">
 <h1 class="page">What&#8217;s New</h1>
+<div class="sect1">
+<h2 id="_version_14_2_june_2026"><a class="anchor" href="#_version_14_2_june_2026"></a>Version 14.2 (June 2026)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Commented-Simulink-and-Stateflow-Elements"><strong>New Feature:</strong> Improved Rendering of Commented Simulink and Stateflow Elements</a></p>
+</li>
+<li>
+<p><a href="#Custom-Table-CSS-Classes"><strong>New Feature:</strong> Custom Table CSS Classes</a></p>
+</li>
+<li>
+<p><a href="#Extended-Support-for-MATLAB-2024b-and-2025b-Blocks"><strong>Improvement:</strong> Extended Support for MATLAB 2024b and 2025b Blocks</a></p>
+</li>
+<li>
+<p><a href="#Enhanced-Container-Health-Report-Visualizations"><strong>Improvement:</strong> Enhanced Container Health Report Visualization</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Commented-Simulink-and-Stateflow-Elements"><a class="anchor" href="#Commented-Simulink-and-Stateflow-Elements"></a>Improved Rendering of Commented Simulink and Stateflow Elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rendering of commented Simulink and Stateflow elements has been enhanced in EHANDBOOK Navigator. Commented blocks, states, transitions, signal lines, and labels are now consistently displayed in gray-out mode, improving visual consistency with the MATLAB/Simulink editor and making inactive model elements easier to identify.
+For additional info, <a href="../ehb-cb-how-to-guides/rendering_of_commented_simulink_and__stateflow_blocks.html" class="xref page">Rendering of Commented Simulink and Stateflow Blocks</a></p>
+</div>
+<div class="paragraph">
+<p>Git-hub demo link: <a href="https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_SL_Enhanced" class="bare">https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_SL_Enhanced</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Custom-Table-CSS-Classes"><a class="anchor" href="#Custom-Table-CSS-Classes"></a>Custom Table CSS Classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Support for custom table CSS classes has been added. Predefined classes such as .custom-table-input, .custom-table-output, .custom-table-constants, and .custom-table-calib are available with default styling and can be overridden in commonltr.css using the -styling option. Users can also define and apply their own custom table classes for additional styling flexibility.</p>
+</div>
+<div class="paragraph">
+<p>For additional information, refer <a href="../ehb-cb-references/spec-asciidoc-format.html#advanced_tables" class="xref page">Advanced Table</a></p>
+</div>
+<div class="paragraph">
+<p>Git-hub demo link: <a href="https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc" class="bare">https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Extended-Support-for-MATLAB-2024b-and-2025b-Blocks"><a class="anchor" href="#Extended-Support-for-MATLAB-2024b-and-2025b-Blocks"></a>Extended Support for MATLAB 2024b and 2025b Blocks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK now supports additional blocks introduced in MATLAB 2024b and 2025b. Support has been added for the following blocks:</p>
+</div>
+<div class="paragraph">
+<p>simulink/Matrix Operations/Array Processing Subsystem
+simulink/Matrix Operations/Expand Scalar
+simulink/Matrix Operations/Pixel Processing Subsystem
+simulink/User Defined Functions/Python Code</p>
+</div>
+<div class="paragraph">
+<p>This enhancement improves compatibility and integration with newer MATLAB/Simulink model features.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Enhanced-Container-Health-Report-Visualizations"><a class="anchor" href="#Enhanced-Container-Health-Report-Visualizations"></a>Enhanced Container Health Report Visualization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The HTML Log Analyzer health summary has been enhanced with a graphical health report for improved readability and quicker analysis of container conversion quality.</p>
+</div>
+<div class="paragraph">
+<p>The updated report replaces the previous numeric-only health score with a color-coded visualization that highlights conversion success, warnings, and errors in a more intuitive format. The report now provides a clearer overview of overall container health and conversion status.</p>
+</div>
+<div class="paragraph">
+<p>For details please refer <a href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html#html-container-report" class="xref page">HTML Enhancements</a>.</p>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_version_14_1_march_2026"><a class="anchor" href="#_version_14_1_march_2026"></a>Version 14.1 (March 2026)</h2>
 <div class="sectionbody">

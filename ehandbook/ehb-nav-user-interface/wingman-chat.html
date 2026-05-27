@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>✨ Wingman Chat (Preview) :: EHANDBOOK Docs &amp; Tutorials</title>
+    <title>✨ Wingman Chat :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-nav-user-interface/wingman-chat.html">
     <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1481,7 +1489,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">✨ Wingman Chat (Preview)</h1>
+<h1 class="page">✨ Wingman Chat</h1>
 <div id="preamble">
 <div class="sectionbody">
 <img style="float: right; position: relative; top: -100px;" src="_images/wingman-icon.svg" alt="ETAS Academy" width="100">
@@ -1499,27 +1507,12 @@ Perform careful and independent quality check to reliably evaluate the output of
 <h2 id="_initial_configuration"><a class="anchor" href="#_initial_configuration"></a>Initial Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For configuration details, refer to <a href="pref_dialogs.html#_wingman_preview" class="xref page">Wingman Preferences</a>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Wingman is currently in preview and must be enabled by adding <code>-Dcom.etas.mex.ai.enable=true</code> to the end of the
-<code>EHANDBOOK-NAVIGATOR.ini</code> file. It resides right next to the <code>EHANDBOOK-NAVIGATOR.exe</code> file in the installation directory. You might be required to have elevated permissions to edit this file.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>For configuration details, refer to <a href="pref_dialogs.html#ref_preferences_wingman" class="xref page">Wingman Preferences</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_indexing_the_container"><a class="anchor" href="#_indexing_the_container"></a>Indexing the container</h2>
+<h2 id="ref_container_indexing"><a class="anchor" href="#ref_container_indexing"></a>Indexing containers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Wingman answers questions based on the currently loaded EHANDBOOK container.</p>
@@ -1561,7 +1554,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="sectionbody">
 <div class="paragraph">
 <p>Wingman <strong>can access all textual information</strong> in the currently loaded EHANDBOOK container.
-Additionally, it has access to details about variables such as measurement signals and calibration parameters as well as details about functions / software components.</p>
+Additionally, it has access to details about variables such as <strong>measurement signals</strong> and <strong>calibration parameters</strong> as well as details about <strong>functions/software components</strong>.
+Simulink models are also read and understood by the AI, but with a more basic understanding as a starting point.</p>
 </div>
 <div class="paragraph">
 <p>Wingman responses are grounded in the loaded EHANDBOOK container context. This helps reduce the risk of irrelevant or hallucinated answers that can occur when generic AI assistants do not have sufficient domain context.</p>
@@ -1574,7 +1568,7 @@ Additionally, it has access to details about variables such as measurement signa
 </div>
 <div class="paragraph">
 <p>Wingman does <strong>not have access</strong> to information outside the loaded EHANDBOOK container.
-Also, it does not interpret images or diagrams.</p>
+Also, it does not read and interpret images.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1584,8 +1578,25 @@ Also, it does not interpret images or diagrams.</p>
 <div class="paragraph">
 <p>For best results, ask specific questions and include function, variable, or subsystem names from your EHANDBOOK container.</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Being an AI-powered assistant, Wingman may not always provide accurate nor complete answers.
+It serves as a decent tool for basic searching, exploration and understanding.
+For reliable and complete search results, rely on the built-in search functionality instead.
+Furthermore, you should always verify critical information in the source documentation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
-<h3 id="_example_questions"><a class="anchor" href="#_example_questions"></a>Example questions</h3>
+<h3 id="_example_queries"><a class="anchor" href="#_example_queries"></a>Example queries</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1596,6 +1607,9 @@ Also, it does not interpret images or diagrams.</p>
 </li>
 <li>
 <p>Explain how &#8230;&#8203; works in detail.</p>
+</li>
+<li>
+<p>I need to calibrate <code>ABC</code>. Which characteristics may I tune to increase its value?</p>
 </li>
 <li>
 <p>&#8230;&#8203;</p>
@@ -1635,7 +1649,9 @@ Also, it does not interpret images or diagrams.</p>
 <h2 id="_enriching_wingmans_knowledge_with_source_code"><a class="anchor" href="#_enriching_wingmans_knowledge_with_source_code"></a>Enriching Wingman&#8217;s knowledge with source code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can enrich the assistant&#8217;s knowledge by attaching source code for the components in your container. That&#8217;s as easy as attaching a file called <code>src.zip</code> to any chapter in the document. It doesn&#8217;t need to be only the source code for this specific chapter.</p>
+<p>You can enrich the assistant&#8217;s knowledge by attaching source code for the components in your container. This is as easy as attaching a file called <code>src.zip</code> to any chapter in the document.
+It does not need to be the source code for this specific chapter only, but can contain source code for the entire container.
+This is especially useful for ASCET or C code models, where Wingman is not yet able to read and interpret the model information directly from the EHANDBOOK container.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1645,7 +1661,7 @@ Also, it does not interpret images or diagrams.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The approach for how source code can be added to the EHANDBOOK container is still being developed, so expect some changes in the future. For now, the <code>src.zip</code> file can be added to any chapter, and Wingman will be able to use the source code information for answering questions related to the container.</p>
+<p>The approach for how source code can be added to the EHANDBOOK container is still being developed, so expect some changes in the future.</p>
 </div>
 </td>
 </tr>
@@ -1675,11 +1691,20 @@ Press <kbd>Enter</kbd> or click the send arrow to submit your prompt.</p>
 </li>
 <li>
 <p><strong>Clear history</strong>:
-Use the eraser icon in the top bar to clear the current chat session.</p>
+Use the broom icon 🧹 in the top bar to clear the current chat session.</p>
+</li>
+<li>
+<p><strong>Rebuild index</strong>:
+Use the refresh icon 🔄 in the top bar to rebuild the index of the currently loaded EHANDBOOK container.</p>
 </li>
 <li>
 <p><strong>Feedback action</strong>:
-Use the speech bubble icon 💬 in the top bar to open the feedback dialog.</p>
+Use the envelope icon ✉️ in the top bar to open the feedback dialog.</p>
+</li>
+<li>
+<p><strong>Warning box</strong>:
+There are a few requirements for Wingman to be enabled, such as having a container loaded and indexed, and having the LLM endpoint configured and reachable.
+If there are any more steps for you to complete, they will be displayed (and updated) in the warning box right above the chat area.</p>
 </li>
 </ul>
 </div>
@@ -1697,7 +1722,7 @@ Use the speech bubble icon 💬 in the top bar to open the feedback dialog.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In the Wingman toolbar, click the feedback icon (speech bubble 💬).</p>
+<p>In the Wingman toolbar, click the feedback icon (envelope ✉️).</p>
 </li>
 <li>
 <p>The <code>Wingman Feedback</code> dialog is displayed.</p>

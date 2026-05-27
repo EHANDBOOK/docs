@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1505,10 +1513,10 @@ Perform careful and independent quality check to reliably evaluate the output of
 </div>
 </div>
 <div class="sect1">
-<h2 id="matlab-timeout"><a class="anchor" href="#matlab-timeout"></a>Timeout for MATLAB Connection</h2>
+<h2 id="matlab-api-timeout"><a class="anchor" href="#matlab-api-timeout"></a>Timeout for MATLAB API Communication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The command line parameter <code>-matlabpath</code> uses MATLAB during the build process for Simulink mask generation. This happens via a MATLAB API connection. To ensure, that EHB-CB is not blocked, there is a configurable timeout, if the connection hangs for any reason. For this, the parameter <code>-DmatlabTimeoutThreshold=value</code> can be specified in the <code>eHandbookCB.ini</code> file. The value should be an  integer and unit corresponds to minute.</p>
+<p>The command line parameter <code>-matlabpath</code> uses MATLAB during the build process for Simulink mask generation. This happens via a MATLAB API connection. To ensure, that EHB-CB is not blocked, there is a configurable timeout for the communication with the MATLAB API, if it hangs for any reason. For this, the parameter <code>-DmatlabTimeoutThreshold=value</code> can be specified in the <code>eHandbookCB.ini</code> file. The value should be an  integer and unit corresponds to minute.</p>
 </div>
 <div class="paragraph">
 <p>In the following example, the timeout is set to 10 minutes:</p>
@@ -1534,6 +1542,25 @@ Perform careful and independent quality check to reliably evaluate the output of
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="matlab-startup-timeout"><a class="anchor" href="#matlab-startup-timeout"></a>Timeout for MATLAB Instance Startup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To ensure, that EHB-CB is not blocked, there is a configurable timeout for the startup of MATLAB instances, if the startup hangs for any reason. For this, the parameter <code>-Dmatlab.proxy.timeout=value</code> can be specified in the <code>eHandbookCB.ini</code> file. The value should be an integer and the unit corresponds to milliseconds.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, the timeout is set to 6 minutes (360000 milliseconds):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-Dmatlab.proxy.timeout=360000</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Without any given timeout specification in the ini-file, the default is set to 3 minutes (180000 milliseconds).</p>
 </div>
 </div>
 </div>

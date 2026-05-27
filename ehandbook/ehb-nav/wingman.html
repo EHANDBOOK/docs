@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>✨ Wingman (Preview) :: EHANDBOOK Docs &amp; Tutorials</title>
+    <title>✨ Wingman :: EHANDBOOK Docs &amp; Tutorials</title>
     <link rel="canonical" href="https://docs.etas.com/ehandbook/ehandbook/ehb-nav/wingman.html">
     <meta name="generator" content="Antora 3.1.14">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1470,7 +1478,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   <ul>
     <li><a href="../index.html">EHANDBOOK</a></li>
     <li><a href="navigator.html">Navigator</a></li>
-    <li><a href="wingman.html">✨ Wingman (Preview)</a></li>
+    <li><a href="wingman.html">✨ Wingman</a></li>
   </ul>
 </nav>
 
@@ -1480,23 +1488,35 @@ Perform careful and independent quality check to reliably evaluate the output of
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">✨ Wingman (Preview)</h1>
+<h1 class="page">✨ Wingman</h1>
 <div id="preamble">
 <div class="sectionbody">
 <img style="float: right; position: relative; top: -100px;" src="_images/wingman-icon.svg" alt="ETAS Academy" width="100">
 <div class="paragraph">
-<p>Wingman is an AI-powered assistant integrated into EHANDBOOK-NAVIGATOR that helps you explore the currently loaded EHANDBOOK container more efficiently.</p>
-</div>
-<div class="paragraph">
-<p>You can ask questions in natural language and receive context-aware answers based on container content, such as variables, functions, and parameters.</p>
-</div>
-<div class="paragraph">
-<p>This reduces manual searching through complex documentation and helps you find relevant information faster.</p>
+<p>Wingman is an AI-powered assistant integrated into EHANDBOOK-NAVIGATOR that helps you explore the currently loaded EHANDBOOK container more efficiently.
+You can ask questions in natural language and receive context-aware answers based on container content, such as variables, functions, and parameters.
+This reduces manual searching through complex documentation and helps you find relevant information faster.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/ehb_nav_wingman.png" alt="Wingman in EHANDBOOK-NAVIGATOR">
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In order to use Wingman and other AI features, you need to procure the add-on license <code>EHANDBOOK_NAVIGATOR_AI</code>.
+For further information, check out <a href="quick-start-navigator.html#_license_features_overview" class="xref page">License Feature Overview</a>.
+Please <a href="../ETAS-contacts.html" class="xref page">contact ETAS</a> for information on how to get an evaluation license or purchase a full license.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1504,19 +1524,13 @@ Perform careful and independent quality check to reliably evaluate the output of
 <h2 id="_why_wingman"><a class="anchor" href="#_why_wingman"></a>Why Wingman</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ECU software documentation can be extensive and complex, often spanning thousands of pages. Generic AI chat assistants are often not capable of handling this context, especially when large documentation sets exceed practical context windows.</p>
+<p>ECU software documentation can be extensive and complex, often spanning thousands of pages. Generic AI chat assistants are often not capable of handling this context, especially when large documentation sets exceed practical context windows.
+Wingman addresses this by answering natural-language questions directly inside EHANDBOOK-NAVIGATOR based on the currently loaded EHANDBOOK container.</p>
 </div>
 <div class="paragraph">
-<p>Wingman addresses this by answering natural-language questions directly inside EHANDBOOK-NAVIGATOR based on the currently loaded EHANDBOOK container.</p>
-</div>
-<div class="paragraph">
-<p>Technically, Wingman follows a Retrieval-Augmented Generation (RAG) approach: relevant content is first retrieved from the loaded EHANDBOOK container and then used as context for answer generation.</p>
-</div>
-<div class="paragraph">
-<p>By grounding responses in retrieved project-specific documentation, this approach helps reduce hallucination risk compared to generic, non-grounded chat interactions.</p>
-</div>
-<div class="paragraph">
-<p>As a result, teams can find information faster, reduce manual navigation effort, and understand ECU software behavior more efficiently in day-to-day engineering workflows.</p>
+<p>Technically, Wingman follows a Retrieval-Augmented Generation (RAG) approach: relevant content is first retrieved from the loaded EHANDBOOK container and then used as context for answer generation.
+By grounding responses in retrieved project-specific documentation, this approach helps reduce hallucination risk compared to generic, non-grounded chat interactions.
+As a result, teams can find information faster, reduce manual navigation effort, and understand ECU software behavior more efficiently in day-to-day engineering workflows.</p>
 </div>
 </div>
 </div>
@@ -1524,13 +1538,24 @@ Perform careful and independent quality check to reliably evaluate the output of
 <h2 id="_data_ip_and_deployment_control"><a class="anchor" href="#_data_ip_and_deployment_control"></a>Data, IP, and deployment control</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Wingman is designed for enterprise environments where protection of software know-how and operational control are essential.</p>
+<p>Wingman is designed for enterprise environments where protection of software know-how and operational control are essential.
+This is achieved through deployment concepts in which customers control the configured LLM endpoint and related usage model, helping align AI adoption with internal compliance and cost requirements.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>EHANDBOOK containers can be delivered in encrypted form to support controlled sharing of documentation content.</p>
+<p>EHANDBOOK containers can be delivered in <a href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html#container-encryption" class="xref page">encrypted form</a> to support controlled sharing of documentation content.
+Wingman will not be able to access content from <a href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html#container-encryption" class="xref page">encrypted containers</a>.
+In fact, the chat and all LLM interactions are blocked if an encrypted container is loaded.</p>
 </div>
-<div class="paragraph">
-<p>Wingman also supports deployment concepts in which customers control the configured LLM endpoint and related usage model, helping align AI adoption with internal compliance and cost requirements.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1541,7 +1566,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 <ul>
 <li>
 <p><strong>Context-grounded answers</strong>:
-Wingman answers questions using the currently loaded EHANDBOOK container context, including variables, functions, parameters, and software component information.</p>
+Wingman answers questions using the currently loaded EHANDBOOK container context, including variables, functions, parameters, and software component information and source code.
+It even has a basic understanding of Simulink models.</p>
 </li>
 <li>
 <p><strong>Retrieval-Augmented Generation (RAG)</strong>:
@@ -1561,11 +1587,13 @@ You can ask questions in different languages and receive responses in your prefe
 </li>
 <li>
 <p><strong>Integrated engineering workflow</strong>:
-Wingman is available in a dedicated tab in EHANDBOOK-NAVIGATOR, so you can work with models and chat in parallel.</p>
+Wingman is available in a dedicated tab in EHANDBOOK-NAVIGATOR, so you can work with models and chat in parallel.
+You can even detach the chat from the main application window and use it standalone.</p>
 </li>
 <li>
 <p><strong>Optional knowledge enrichment</strong>:
-Wingman can use additional source code context when the latter is available in the EHANDBOOK container content. This allows for more detailed answers about software behavior.</p>
+Wingman can use additional source code context when the latter is available in the EHANDBOOK container content.
+This allows for more detailed answers about software behavior.</p>
 </li>
 </ul>
 </div>
@@ -1580,7 +1608,7 @@ Wingman can use additional source code context when the latter is available in t
 <p><a href="../ehb-nav-user-interface/wingman-chat.html" class="xref page">Wingman Chat</a> explains how to use Wingman chat.</p>
 </li>
 <li>
-<p><a href="../ehb-nav-user-interface/pref_dialogs.html#_wingman_preview" class="xref page">Wingman Preferences</a> describes how to enable Wingman in EHANDBOOK-NAVIGATOR.</p>
+<p><a href="../ehb-nav-user-interface/pref_dialogs.html#ref_preferences_wingman" class="xref page">Wingman Preferences</a> describes how to enable Wingman in EHANDBOOK-NAVIGATOR.</p>
 </li>
 </ul>
 </div>

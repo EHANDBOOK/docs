@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1606,7 +1614,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="sect2">
 <h3 id="_textual_comparison"><a class="anchor" href="#_textual_comparison"></a>Textual comparison</h3>
 <div class="paragraph">
-<p>You can open the content of the two compared containers by clicking on any entry in the tree view. The contents will be displayed side-by-side with synchronized scrolling. EHANDBOOK will always display the content as it is in the respective container.
+<p>You can open the content of the two compared containers by clicking on any entry in the tree view. The contents will be displayed side-by-side with synchronized scrolling. Text content in lists, tables, paragraphs and topics are compared and displayed. EHANDBOOK will always display the content as it is in the respective container.
 If the content is unmodified, both sides will look the same. If the entry has been added in the right container, its content will only be visible on the right side, while the left side remains empty. On the other hand, if the content has been removed, it will only be visible on the left side, while the right side remains empty.
 If the TOC entry is available on both sides but is not identical, the differences will be marked using a colored highlighting as follows.</p>
 </div>
@@ -1637,43 +1645,50 @@ If the TOC entry is available on both sides but is not identical, the difference
 </tr>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_image_comparison"><a class="anchor" href="#_image_comparison"></a>Image Comparison</h4>
-<div class="paragraph">
-<p>Within the compared content, images are marked with a colored border if some difference has been detected between left container and right container.
-As with the other content, the color indicates:</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="sect2">
+<h3 id="_image_comparison"><a class="anchor" href="#_image_comparison"></a>Image Comparison</h3>
+<div class="paragraph">
+<p>For images that contain modifications EHANDBOOK-NAVIGATOR offers a functionality to show details on where the differences are located within the images. There are two ways to see the differences:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Red: image has been removed</p>
+<p>Click on the <code>Open detailed comparison</code> button located on top of the image.</p>
 </li>
 <li>
-<p>Green: image has been added</p>
+<p>Right-click on the image to see the context menu. Select <code>Open detailed comparison</code>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Image_Comparison.png" alt="Image Comparison">
+</div>
+</div>
+<div class="paragraph">
+<p>This opens a new tab which displays a layover of the two compared images where the differences are highlighted. The color used for this highlighting can be configured in the preferences.</p>
+</div>
+<div class="paragraph">
+<p>The image comparison view provides three display modes, selected via the buttons at the top of the image:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Detailed_image_comparison_view.png" alt="Detailed Image Comparison View">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Show left</strong> – Displays the image from the <strong>left container</strong>.</p>
 </li>
 <li>
-<p>Yellow: image has been modified</p>
+<p><strong>Show right</strong> – Displays the image from the <strong>right container</strong>.</p>
 </li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For images that contain modifications EHANDBOOK-NAVIGATOR offers a functionality to show details on where the differences are located within the images.
-On right-click, a context menu is available. Select  "Show detailed differences" to open a new tab which displays a layover of the two compared images where the differences are highlighted. The color used for this highlighting can be configured in the preferences.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Images can contain differences in meta data that are not visible. EHANDBOOK-NAVIGATOR can still categorize these images as modified, even though the detailed image difference will not show any visible differences.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
+<li>
+<p><strong>Show differences</strong> – Highlights the <strong>detailed differences</strong> between the two images.</p>
+</li>
+</ol>
 </div>
 <div class="sect3">
 <h4 id="_limitation"><a class="anchor" href="#_limitation"></a>Limitation</h4>
@@ -1689,7 +1704,13 @@ With the next versions of EHANDBOOK-NAVIGATOR, a more detailed comparison will b
 <h2 id="_navigating_through_the_differences"><a class="anchor" href="#_navigating_through_the_differences"></a>Navigating through the differences</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The split-screen viewer features navigation buttons that allow you to move through differences one at a time. This functionality is particularly useful for detailed reviews, as it ensures you can focus on each change without losing track of their position. The currently reviewed difference will be marked using an additional border around the colored highlighting indicating the type of change.</p>
+<p>The split-screen viewer features navigation buttons that allow you to move through differences in a group at a time. A border around the differences are drawn on both sides to group them logically. This functionality is particularly useful for detailed reviews for modifications, as it ensures the focus on all changes within a group on both sides.</p>
+</div>
+<div class="sect2">
+<h3 id="_counting_differences"><a class="anchor" href="#_counting_differences"></a>Counting differences</h3>
+<div class="paragraph">
+<p>The summation of differences on both sides are displayed while navigating through group of differences. 1 - 4 / 7 indicates that there are 4 differences in the current navigated group of differences. 5 / 7 indicates there is only one difference in the current grouping and this is mostly added or removed. Also if there is a difference in the type of list(unordered , ordered) then the difference is counted 1.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1770,7 +1791,8 @@ With the next versions of EHANDBOOK-NAVIGATOR, a more detailed comparison will b
 </div>
 </li>
 <li>
-<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (9) in the split-screen viewer to move through the marked differences in the opened chapter. This feature allows you to review changes one by one, ensuring a thorough examination of the content. The currently examined difference will be highlighted by an added border (10). Right to the navigation buttons you will see the total amount of difference and the index of the marked difference.</p>
+<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (9) in the split-screen viewer to move through the marked and grouped differences in the opened chapter. This feature allows you to review changes one group at a time, ensuring a thorough examination of the content on both sides. The currently examined differences on both sides will be highlighted by an added border(10). Right to the navigation buttons you will see the total amount of difference and total number of marked difference in the group.
+Additionally all the differences in the marked group are all highlighted for a quick and visible focus (14).</p>
 </li>
 <li>
 <p><strong>Collapse the TOC</strong>: If you prefer a larger viewing area for the textual comparison, click the collapse button (11) to hide the Tree View. This will give you a more spacious view, allowing you to focus entirely on the content.</p>

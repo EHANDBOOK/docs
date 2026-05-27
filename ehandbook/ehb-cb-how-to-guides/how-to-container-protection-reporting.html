@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1637,8 +1645,9 @@ The report is created in the specified <strong>output directory</strong>.</p>
 <div class="paragraph">
 <p>It contains two panels:</p>
 </div>
-<div class="sect4">
-<h5 id="_issues_summary"><a class="anchor" href="#_issues_summary"></a>Issues Summary</h5>
+</div>
+<div class="sect3">
+<h4 id="_issues_summary"><a class="anchor" href="#_issues_summary"></a>Issues Summary</h4>
 <div class="paragraph">
 <p>The <strong>Issues Summary</strong> provides a quick overview of detected issues.</p>
 </div>
@@ -1667,7 +1676,7 @@ The report is created in the specified <strong>output directory</strong>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Total Number of Warnings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Warnings generated during container conversion.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warnings generated during container generation.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Total Issues</p></td>
@@ -1678,43 +1687,115 @@ The report is created in the specified <strong>output directory</strong>.</p>
 <div class="paragraph">
 <p>This section helps users quickly assess the severity of problems in the container.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The metrics <strong>Total Number of Errors</strong>, <strong>Broken Images</strong> and <strong>Total Number of Warnings</strong> are interactive links. Selecting one of these metrics opens the <strong>Detailed Log View</strong> and automatically filters the log entries according to the selected issue type.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_container_health_report"><a class="anchor" href="#_container_health_report"></a>Container Health Report</h4>
+<div class="paragraph">
+<p>The <strong>Container Health Report</strong> provides an overview of the conversion quality of the generated container.
+It helps identify documentation units that were converted successfully and those that require attention due to warnings or errors.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/user-guide/html_report_score_calculation.png" alt="html report score calculation">
+</div>
 </div>
 <div class="sect4">
-<h5 id="_key_metrics"><a class="anchor" href="#_key_metrics"></a>Key Metrics</h5>
+<h5 id="_health_score_calculation"><a class="anchor" href="#_health_score_calculation"></a>Health Score Calculation</h5>
 <div class="paragraph">
-<p>The <strong>Key Metrics</strong> panel summarizes issues related to function components.</p>
+<p>The <strong>Container Health Score</strong> is calculated based on the number of documentation units, warnings, and errors generated during conversion.</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_formula"><a class="anchor" href="#_formula"></a>Formula</h5>
 <div class="paragraph">
-<p>Example metrics include:</p>
+<p>The health score is computed using the following formula:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Score = Total Documentation Units
+    	- (Documentation Units with Errors × 1.0)
+    	- (Documentation Units with Warnings × 0.5)
+
+Final Percentage = (Score / Total Documentation Units) × 100</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_status_classification"><a class="anchor" href="#_status_classification"></a>Status Classification</h5>
+<div class="paragraph">
+<p>Based on the calculated health score percentage, the container status is determined as follows:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Metric</th>
-<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Health Score</th>
+<th class="tableblock halign-left valign-top">Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Total Documentation Units with Issues</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Documentation Units affected by errors or warnings.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;= 80%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Healthy</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation Units Converted with Errors</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation Units that were converted but contain errors.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&gt;= 60% and &lt; 80%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Needs Attention</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation Units Converted with Warnings</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Documentation Units converted successfully but with warnings.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt; 60%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Critical</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect4">
+<h5 id="_example"><a class="anchor" href="#_example"></a>Example</h5>
 <div class="paragraph">
-<p>These metrics help identify problematic components in the model.</p>
+<p>For the report shown above:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Total Documentation Units: <code>38</code></p>
+</li>
+<li>
+<p>Documentation Units with Errors: <code>10</code></p>
+</li>
+<li>
+<p>Documentation Units with Warnings: <code>1</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Calculation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Score = 38 - (10 × 1.0) - (1 × 0.5)
+      = 27.5
+
+Final Percentage = (27.5 / 38) × 100
+                 = 72%</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since the final percentage is between <code>60%</code> and <code>80%</code>, the status is displayed as: <strong>Needs Attention</strong></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1723,7 +1804,9 @@ The report is created in the specified <strong>output directory</strong>.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The metrics <strong>Components Converted with Errors</strong> and <strong>Components Converted with Warnings</strong> are interactive links. Selecting one of these metrics opens the <strong>Detailed Log View</strong> and automatically filters the log entries according to the selected issue type.
+<div class="paragraph">
+<p>Click the <strong>information icon (i)</strong> in the <strong>Container Health Report</strong> to open a pop-up dialog that displays the detailed <strong>Health Score Calculation</strong> formula used to compute the container health percentage and status.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -1996,6 +2079,39 @@ In some cases, the hint also contains hyperlinks to relevant <strong>EHANDBOOK d
 <p>Microsoft Edge</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>HTML Report Coverage for Different Container Generation Flows:</p>
+</div>
+<div class="paragraph">
+<p>The HTML report generated during container creation does not uniformly include logs from all flows.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For Direct Container Generation (Directory-based and ASAM-based), the HTML report includes all relevant logs.</p>
+</li>
+<li>
+<p>For the UGG + iCB flow, the HTML report includes only the iCB logs. Logs generated during the UGG (model conversion) step are not included in the HTML report.</p>
+</li>
+<li>
+<p>For the UGG-only flow, no HTML report is generated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As a result, in scenarios involving UGG (either standalone or as part of UGG + iCB), the HTML report does not represent the complete set of logs. Users must refer to the original UGG log files separately to access full information.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

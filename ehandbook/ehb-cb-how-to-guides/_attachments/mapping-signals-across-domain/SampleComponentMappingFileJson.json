@@ -1,4 +1,6 @@
-[
+{
+  "connectionType": "CONNECTOR_ONLY",
+  "connectors": [
     {
       "exported": {
         "port": "result",
@@ -10,3 +12,4 @@
       }
     }
   ]
+}

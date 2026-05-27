@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1504,6 +1512,9 @@ Perform careful and independent quality check to reliably evaluate the output of
 <p><a href="how-to-support-simulink-libraries-in-ehb.html" class="xref page">Configure EHB-CB for Simulink models</a></p>
 </li>
 <li>
+<p><a href="how-to-handle-mat-file-initialization.html" class="xref page">Handle .mat file initialization in Simulink models</a></p>
+</li>
+<li>
 <p><a href="how-to-support-targetlink-models.html" class="xref page">Support TargetLink models</a></p>
 </li>
 </ul>
@@ -1513,105 +1524,10 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="sect1">
 <h2 id="_interactive_model_customization"><a class="anchor" href="#_interactive_model_customization"></a>Interactive model customization</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>How to customize interactive models:</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="simulink"><a class="anchor" href="#simulink"></a>Simulink</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="how-to-simulink-integration.html#simulink-library-support" class="xref page">Passing Simulink library paths to EHB-CB</a></p>
-</li>
-<li>
-<p><a href="how-to-simulink-integration.html#doc-block-support" class="xref page">Simulink DocBlocks in the documentation</a></p>
-</li>
-<li>
-<p><a href="how-to-support-variant-block-configuration-for-simulink-models.html" class="xref page">Simulink Variant block configuration support</a></p>
-</li>
-<li>
-<p><a href="how-to-simulink-integration.html#simulink-truth-table-block-support" class="xref page">Simulink Truthtable block in the documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ascet-developer"><a class="anchor" href="#ascet-developer"></a>ASCET-DEVELOPER</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-to-ascet-developer-documentation.html#ascet-developer-exclude" class="xref page">Excluding Packages for ASCET-DEVELOPER</a></p>
-</li>
-<li>
-<p><a href="how-to-ascet-developer-documentation.html#ascet-developer-nested" class="xref page">Include Documentation for Nested Classed in ASCET-DEVELOPER</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="c-code"><a class="anchor" href="#c-code"></a>C-Code</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-to-ccode-visualization.html#ccode-configuration" class="xref page">C-Code Configuration</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="visual-appearance"><a class="anchor" href="#visual-appearance"></a>Visual Appearance &amp; Level of Detail</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-to-configure-model-entry-levels.html#root-level-skipping" class="xref page">Root-Level Skipping</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-model-entry-levels.html#model-depth-skip" class="xref page">Model Depth</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-model-entry-levels.html#intermediate-hierarchy-filtering" class="xref page">Intermediate Hierarchy Filtering</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-view-visibility.html#view-concept" class="xref page">View Concept</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-simulink-library-block-appearance.html" class="xref page">Configure appearance of Simulink library blocks</a></p>
-</li>
-<li>
-<p><a href="how-to-simulink-view-concept.html" class="xref page">Simulink View Concept</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-view-visibility.html#configure-simulink-blocks" class="xref page">Configuration of details shown for Simulink subsystem-based blocks</a></p>
-</li>
-<li>
-<p><a href="how-to-hide-c-code-functions-based-on-function-names.html" class="xref page">Configuration to hide C-Code functions based on function names</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="label-specific-configurations"><a class="anchor" href="#label-specific-configurations"></a>Label-specific configurations</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-to-configure-label-names.html#label-configuration" class="xref page">Label Configuration</a></p>
-</li>
-<li>
-<p><a href="how-to-amend-label-names.html#label-amendment" class="xref page">Label Amendment</a></p>
-</li>
-<li>
-<p><a href="how-to-configure-label-names.html#label-configuration-autosar" class="xref page">Label configuration for AUTOSAR (Classic) interface elements</a></p>
+<p><a href="how-to-customize-interactive-models.html" class="xref page">Customize Interactive Models</a></p>
 </li>
 </ul>
 </div>

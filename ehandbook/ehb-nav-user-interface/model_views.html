@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1602,38 +1610,6 @@ model in the Model Viewer.</p>
 displays blank names. When you hover the mouse over the blank name, a tool tip
 displays "No label info available in source model" for the same.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode, then a dummy model is
-displayed in <strong>Model Viewer</strong>. The same dummy model is displayed whenever you
-try to access a model in Basic Mode.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode, then a dummy model is
-displayed in <strong>Model Viewer</strong>. The same dummy model is displayed whenever you
-try to access a model in Basic Mode.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Wrong, incomplete or missing container content in the "Document Explorer"
 and the "Model Explorer" area in the EHANDBOOK-NAVIGATOR main screen!</p>
@@ -1683,7 +1659,7 @@ the producer of the container to fix this errors.</p>
  of the container must check the source files from where the container
 was created. If the source files are correct and the appearance of the error is
 reproducible, the producer of the container must contact the local sales
-representative or the ETAS support to report this error.</p>
+representative or the <a href="../ETAS-contacts.html" class="xref page">ETAS support</a> to report this error.</p>
 </div>
 </div>
 </div>
@@ -1974,28 +1950,6 @@ model.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode, then a dummy model is
-displayed in Model Viewer. The same dummy model is displayed whenever you
-try to access a model in Basic Mode. The functionalities of Model can be performed
-on the dummy model available in Basic Mode.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/UI_Basicmd1_new.png" alt="Basic Mode">
-</div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_context_menu"><a class="anchor" href="#_context_menu"></a>Context Menu</h3>
@@ -2139,27 +2093,6 @@ view the Model Viewer and the Function Overview Diagrams properly.</p>
 </td>
 </tr>
 </table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you are using EHANDBOOK-NAVIGATOR in Basic Mode, then a dummy Function
- Overview diagram is displayed. The same dummy Function Overview diagram
- is displayed whenever you try to access a Function Overview diagram.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Basic_funcovrw.png" alt="Basic Model Function Overview">
-</div>
 </div>
 <div class="sect2">
 <h3 id="_component_overview_diagram"><a class="anchor" href="#_component_overview_diagram"></a>Component Overview diagram</h3>

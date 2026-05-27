@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1903,12 +1911,111 @@ Term3::
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Only simple tables are supported in EHANDBOOK (equal columns and rows, no nesting).
-The sortable headers and the filter line is added by EHANDBOOK-NAVIGATOR automatically.</p>
+<p>EHANDBOOK supports standard and advanced AsciiDoc table layouts including merged rows, merged columns, combined span layouts, and nested tables.</p>
+</div>
+<div class="paragraph">
+<p>The sortable headers and filter line are automatically added by EHANDBOOK-NAVIGATOR for supported table layouts.</p>
+</div>
+<div class="paragraph">
+<p>Complex merged table structures may have limitations for advanced interactive operations such as sorting and filtering.</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+<div class="sect2">
+<h3 id="advanced_tables"><a class="anchor" href="#advanced_tables"></a>Advanced Tables</h3>
+<div class="paragraph">
+<p>EHANDBOOK also supports advanced AsciiDoc table layouts including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Merged columns using colspan syntax</p>
+</li>
+<li>
+<p>Merged rows using rowspan syntax</p>
+</li>
+<li>
+<p>Combined row and column spans</p>
+</li>
+<li>
+<p>Nested tables inside table cells</p>
+</li>
+<li>
+<p>Custom table styling using roles and CSS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example for merged columns:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">|===
+|A |B |C
+
+2+|Merged Column
+|C2
+|===</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for merged rows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">|===
+|A |B |C
+
+.2+|Row Span
+|B2
+|C2
+
+|B3
+|C3
+|===</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example for nested tables:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">|===
+|Outer Cell
+
+a|
+[cols="1,1"]
+!===
+!Nested A !Nested B
+!1 !2
+!===
+
+|===</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Representation in EHANDBOOK-NAVIGATOR:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/asciidoc-spec/ComplexTables_Asciidoc.png" alt="ComplexTables Asciidoc">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Merged rows and columns are preserved during rendering.</p>
+</li>
+<li>
+<p>Nested tables are rendered inside parent tables.</p>
+</li>
+<li>
+<p>Combined span layouts are supported without losing table structure.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -2215,7 +2322,7 @@ Insert that text between the square brackets at the end of the URL.</p>
 <p>the following is shown:</p>
 </div>
 <div class="paragraph">
-<p><a href="file://../input/Documentation/asciidoc-user-document.adoc">AsciiDoc Source</a></p>
+<p><a href="demo-asciidoc-endpoint.html" class="xref page">AsciiDoc Source</a>[AsciiDoc Source]</p>
 </div>
 </div>
 <div class="sect3">
@@ -2396,14 +2503,28 @@ This also happens, if the link contains any space characters. in this case, the 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">link:../input/Documentation/asciidoc-user-document.adoc[AsciiDoc Source]</code></pre>
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">link:../input/Documentation/asciidoc-user-document.adoc[AsciiDoc]</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>becomes:</p>
 </div>
 <div class="paragraph">
-<p><a href="../input/Documentation/asciidoc-user-document.adoc">AsciiDoc Source</a></p>
+<p><a href="demo-asciidoc-endpoint.html" class="xref page">AsciiDoc Source</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The link above is for demonstration purposes only and does not provide any functionality.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">

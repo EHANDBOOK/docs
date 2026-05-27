@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.0 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -153,7 +153,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.1">
+<div class="nav-container" data-component="ehandbook" data-version="14.2">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -246,7 +246,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="2">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman (Preview)</a>
+    <a class="nav-link" href="../ehb-nav/wingman.html">✨ Wingman</a>
     </div>
   </li>
   <li class="nav-item" data-depth="2">
@@ -1053,6 +1053,11 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="5">
     <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-handle-mat-file-initialization.html">Handle .mat file initialization in Simulink models</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#doc-block-support">Include Simulink DocBlocks in documentation</a>
     </div>
   </li>
@@ -1393,14 +1398,17 @@ Perform careful and independent quality check to reliably evaluate the output of
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.1</span>
+    <span class="version">14.2</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.1</a>
+          <a href="../index.html">14.2</a>
+        </li>
+        <li class="version">
+          <a href="../14.1/index.html">14.1</a>
         </li>
         <li class="version">
           <a href="../14.0/index.html">14.0</a>
@@ -1531,7 +1539,7 @@ The preferences dialog box displays the following preferences:</p>
 <p>Secure Storage</p>
 </li>
 <li>
-<p><a href="#_wingman_preview">Wingman</a></p>
+<p><a href="#ref_preferences_wingman">Wingman</a></p>
 </li>
 </ul>
 </div>
@@ -1737,10 +1745,8 @@ the default cache size is 5.</p>
 <ul>
 <li>
 <p>In the field <strong>Maximum number of containers to be cached</strong> (2), set the
-maximum number of containers that can be cached. Loading more con-
-tainers than the maximum number allowed removes previously loaded
-containers from the cache so that only the set maximum number of con-
-tainers are cached.</p>
+maximum number of containers that can be cached. Loading more containers than
+the maximum number allowed removes previously loaded containers from the cache.</p>
 </li>
 <li>
 <p>Click <code>Apply</code>. The new cache preferences will be applied during the next
@@ -1871,7 +1877,7 @@ hardware acceleration.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_wingman_preview"><a class="anchor" href="#_wingman_preview"></a>✨ Wingman (Preview)</h2>
+<h2 id="ref_preferences_wingman"><a class="anchor" href="#ref_preferences_wingman"></a>✨ Wingman</h2>
 <div class="sectionbody">
 <table class="tableblock frame-none grid-none stretch">
 <colgroup>
@@ -1934,7 +1940,8 @@ For network settings to take effect, you must close and restart EHANDBOOK-NAVIGA
 </table>
 </div>
 <div class="paragraph">
-<p>For local proxies, typical values for address/host and port are <code>127.0.0.1</code> and <code>3128</code>.</p>
+<p>For local proxies, typical values for address/host and port are <code>127.0.0.1</code> and <code>3128</code>, respectively.
+Authentication is usually not required for local proxies.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1948,7 +1955,13 @@ For network settings to take effect, you must close and restart EHANDBOOK-NAVIGA
 <p>Go to <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Preferences</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Wingman</b></span>.</p>
 </li>
 <li>
+<p>Select the LLM <code>Provider Type</code> from the dropdown list.</p>
+</li>
+<li>
 <p>Enter the <code>Endpoint URL</code>.</p>
+</li>
+<li>
+<p>Enter the <code>Model/Deployment Name</code>.</p>
 </li>
 <li>
 <p>Enter the <code>API Key</code>.</p>
@@ -1964,6 +1977,14 @@ For network settings to take effect, you must close and restart EHANDBOOK-NAVIGA
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>We currently support OpenAI and Azure OpenAI as LLM providers, but you can also connect to other providers that are compatible with OpenAI APIs.</p>
+</div>
+<div class="paragraph">
+<p>Additional optional settings may be required depending on the selected provider type and infrastructure behind.
+This is especially the case for on-premises or private cloud deployments, where additional parameters may be needed to connect to the configured endpoint.
+Kindly reach out to your IT department or ETAS support if you need assistance with the required settings for your specific deployment.</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1972,11 +1993,16 @@ For network settings to take effect, you must close and restart EHANDBOOK-NAVIGA
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If your network requires a proxy, configure proxy settings in <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Preferences</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Network connection</b></span> before testing the Wingman connection. Refer to the previous section for details.</p>
+<p>If your network requires a proxy, configure proxy settings in <span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Preferences</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Network connection</b></span> before testing the Wingman connection.
+Refer to the previous section for details.</p>
 </div>
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>For easier setup and configuration sharing within teams, Wingman preferences can be exported and imported using the buttons in the preferences dialog.
+The API key will be encrypted when exporting preferences and decrypted upon import, allowing you to share connection settings without exposing sensitive information.</p>
 </div>
 </div>
 </div>
@@ -2176,24 +2202,24 @@ tons displayed for the hierarchical blocks in the interactive models.</p>
 </li>
 <li>
 <p>To view the buttons permanently, select <code>Show buttons permanently
-for all hierarchical blocks that can be expanded/collapse</code>d (2).</p>
+for all hierarchical blocks that can be expanded/collapsed</code> (2).</p>
 </li>
 <li>
-<p>To hide the buttons, clear <code>Show buttons permanently for all hier-
-archical blocks that can be expanded/collapsed</code> (2).</p>
+<p>To hide the buttons, clear <code>Show buttons permanently for all
+hierarchical blocks that can be expanded/collapsed</code> (2).</p>
 </li>
 <li>
 <p>You can choose to show/hide different shaded background colors for
 nested blocks in hierarchical models.</p>
 </li>
 <li>
-<p>To enable different shaded background colors for nested blocks hier-
-archical models, select <code>Show different shaded background colors for
+<p>To enable different shaded background colors for nested blocks
+hierarchical models, select <code>Show different shaded background colors for
 nested blocks in hierarchical models</code> (3).</p>
 </li>
 <li>
-<p>To disable different shaded background colors for nested blocks in hier-
-archical models, clear <code>Show different shaded background colors for
+<p>To disable different shaded background colors for nested blocks in
+hierarchical models, clear <code>Show different shaded background colors for
 nested blocks in hierarchical models</code> (3).</p>
 </li>
 <li>
