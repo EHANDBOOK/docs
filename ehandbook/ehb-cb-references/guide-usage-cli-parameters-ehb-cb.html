@@ -1483,7 +1483,7 @@ Perform careful and independent quality check to reliably evaluate the output of
     <li><a href="guide-usage-cli-parameters-ehb-cb.html">EHB-CB CLI Parameters</a></li>
   </ul>
 </nav>
-
+<!-- Empty to allow override in Antora sites -->
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1779,7 +1779,7 @@ For more details refer to chapter <a href="../ehb-cb-how-to-guides/how-to-config
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-includeSourceCode</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process and store ESDL, Matlab function and C code blocks during container generation and show them in the EHANDBOOK-NAVIGATOR code viewer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Option to process and store ESDL, Matlab function and C code blocks during container generation and show them in the EHANDBOOK-NAVIGATOR code viewer. The previously available <strong>"-includeMatlabFunctionCode"</strong> argument has been removed and superseded by -includeSourceCode.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1886,12 +1886,6 @@ For more details refer to chapter <a href="../ehb-cb-how-to-guides/how-to-config
 <div class="paragraph">
 <p>In order to have proper mask generation, it is recommended to connect to the same MATLAB version in which the model is generated.</p>
 </div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-includeMatlabFunctionCode</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>(deprecated)</strong> Option to process and store MATLAB function code blocks during container generation and show them in the EHANDBOOK-NAVIGATOR code viewer. Use <strong>-includeSourceCode</strong> instead.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>-enableVariantBlockConfiguration</strong></p></td>

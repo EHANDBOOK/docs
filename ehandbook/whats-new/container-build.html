@@ -1481,7 +1481,7 @@ Perform careful and independent quality check to reliably evaluate the output of
     <li><a href="container-build.html">What&#8217;s New</a></li>
   </ul>
 </nav>
-
+<!-- Empty to allow override in Antora sites -->
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -1505,6 +1505,9 @@ Perform careful and independent quality check to reliably evaluate the output of
 </li>
 <li>
 <p><a href="#Enhanced-Container-Health-Report-Visualizations"><strong>Improvement:</strong> Enhanced Container Health Report Visualization</a></p>
+</li>
+<li>
+<p><a href="#Documentation-Update"><strong>Improvement:</strong> Documentation Update</a></p>
 </li>
 </ul>
 </div>
@@ -1564,6 +1567,21 @@ simulink/User Defined Functions/Python Code</p>
 </div>
 <div class="paragraph">
 <p>For details please refer <a href="../ehb-cb-how-to-guides/how-to-container-protection-reporting.html#html-container-report" class="xref page">HTML Enhancements</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Documentation-Update"><a class="anchor" href="#Documentation-Update"></a>Documentation Update: Command Line Argument Change</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Using the CLI parameter <strong>"-includeSourceCode"</strong>, EHANDBOOK Container-Build can integrate code artefacts from various sources into EHANDBOOK Container files. In previous versions, ESDL code blocks from ASCET models as well as code listings within Simulink blocks (e.g., S-functions) were supported. With EHANDBOOK 14.2.0, also C-Code sources are supported. In the Document Explorer, code artefacts will be shown as part of the documentation unit they belong to. Their content is shown in the Code Viewer of EHANDBOOK-NAVIGATOR.</p>
+</li>
+<li>
+<p>The command line option <strong>"-includeMatlabFunctionCode"</strong> is no longer supported. Use <strong>"-includeSourceCode"</strong> instead. For details on the supported command line arguments and usage examples, refer <a href="../ehb-cb-references/guide-usage-cli-parameters-ehb-cb.html" class="xref page">EHANDBOOK Container-Build CLI Parameters</a>.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
