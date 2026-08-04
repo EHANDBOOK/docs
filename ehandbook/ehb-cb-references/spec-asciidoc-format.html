@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.3 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -145,7 +145,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 			</a>
 		</div>
 	</nav>
-</header><div class="analytics">
+</header>
+<div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -153,7 +154,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.2">
+<div class="nav-container" data-component="ehandbook" data-version="14.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -315,7 +316,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="3">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    <a class="nav-link" href="../ehb-nav-user-interface/library.html">Library Views</a>
     </div>
   </li>
   <li class="nav-item" data-depth="3">
@@ -1071,6 +1072,11 @@ Perform careful and independent quality check to reliably evaluate the output of
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
     </div>
   </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/rendering_of_commented_simulink_and__stateflow_blocks.html">Rendering of Commented Simulink and Stateflow Blocks</a>
+    </div>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="4">
@@ -1392,20 +1398,135 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html">Container-Build Toolbox for Simulink</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/about.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/quick-start.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/installation.html">Installation Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/system-requirements.html">System Requirements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/getting-started.html">Getting Started: Your First EHANDBOOK Container</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/toolbox-architecture.html">Architecture and Integration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/index.html">How-to Guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-generate-container.html">Generate a Container for Your Simulink Model</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-customize-toolbox.html">Customize the Container-Build Toolbox for Simulink</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/toolbox-features.html">Toolbox Features Reference</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/menu-and-interface.html">Toolbox Menu and Interface Reference</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-faq/index.html">FAQ</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
 </ul>
   </nav>
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.2</span>
+    <span class="version">14.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.2</a>
+          <a href="../index.html">14.3</a>
+        </li>
+        <li class="version">
+          <a href="../14.2/index.html">14.2</a>
         </li>
         <li class="version">
           <a href="../14.1/index.html">14.1</a>
@@ -1562,6 +1683,9 @@ Perform careful and independent quality check to reliably evaluate the output of
 </li>
 <li>
 <p><a href="#more-delimited-blocks">More delimited block</a></p>
+</li>
+<li>
+<p><a href="#text-color-support">Text Color Support</a></p>
 </li>
 </ul>
 </div>
@@ -3098,6 +3222,231 @@ example of example block
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[quote, Albert Einstein, Citation if any]
 A person who never made a mistake never tried anything new.</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="text-color-support"><a class="anchor" href="#text-color-support"></a>Text Color Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>EHANDBOOK supports text color styling in AsciiDoc content through the use of color roles.</p>
+</div>
+<div class="paragraph">
+<p>Color roles allow users to highlight important information, distinguish different types of content, and improve readability by applying predefined colors to text. Color styling can be applied to standalone text as well as text used within paragraphs, lists, tables, links, and other supported inline formatting.</p>
+</div>
+<div class="paragraph">
+<p>The feature supports a predefined set of standard AsciiDoc color names. When a supported color role is specified, the corresponding color is applied to the text in the generated output.</p>
+</div>
+<div class="sect2">
+<h3 id="_supported_colors"><a class="anchor" href="#_supported_colors"></a>Supported Colors</h3>
+<div class="paragraph">
+<p>The following standard AsciiDoc color names are supported:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">aqua</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">black</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">blue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fuchsia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gray</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">green</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maroon</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">olive</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">purple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">red</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">silver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">teal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">white</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yellow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h3>
+<div class="paragraph">
+<p>Apply a color role to text using the following syntax:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[blue]#This text appears in blue#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The enclosed text is displayed using the blue color.</p>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="paragraph">
+<p><code>red</code>: Specifies the color role to be applied to the text.</p>
+</div>
+<div class="paragraph">
+<p><code>This text appears in red</code>: The content that should be displayed using the specified color is enclosed within the <code>#</code> characters.</p>
+</div>
+<div class="paragraph">
+<p>Color roles can also be used within a paragraph:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">This sentence contains [blue]#blue# and [green]#green# text.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: This sentence contains blue and green text.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_combining_colors_with_other_formatting"><a class="anchor" href="#_combining_colors_with_other_formatting"></a>Combining Colors with Other Formatting</h3>
+<div class="sect3">
+<h4 id="_bold_text"><a class="anchor" href="#_bold_text"></a>Bold Text</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[red]#Bold red text#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The text is displayed in the red color and bold formatting is preserved.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_italic_text"><a class="anchor" href="#_italic_text"></a>Italic Text</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[blue]#Italic blue text#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The text is displayed in the blue color and italic formatting is preserved.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_underline_text"><a class="anchor" href="#_underline_text"></a>Underline Text</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[underline red]#Underline red text#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The text is displayed with both red color and underline formatting.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_links"><a class="anchor" href="#_links"></a>Links</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">link:https://www.example.com[[green]#Open Link#]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The link text is displayed using the green color.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lists"><a class="anchor" href="#_lists"></a>Lists</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">* [red]#High Priority#
+* [green]#Completed#
+* [blue]#Information#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The specified colors are applied to the corresponding list items.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_table_cells"><a class="anchor" href="#_table_cells"></a>Table Cells</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">|===
+|Status |Description
+
+|[red]#ERROR#
+|An error occurred
+
+|[green]#SUCCESS#
+|Operation completed successfully
+
+|[blue]#INFO#
+|Informational message
+|===</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The specified colors are applied to the corresponding text within the table cells.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_superscript"><a class="anchor" href="#_superscript"></a>Superscript</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[blue]#x^2^#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The text is displayed using the specified color and blue formatting is preserved.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_subscript"><a class="anchor" href="#_subscript"></a>Subscript</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[green]#H~2~O#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result: The text is displayed using the green color and subscript formatting is preserved.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unsupported_colors"><a class="anchor" href="#_unsupported_colors"></a>Unsupported Colors</h3>
+<div class="paragraph">
+<p>If an unsupported color is specified, the color styling is ignored and the text is rendered using the default formatting.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">[pink]#This text uses an unsupported color#
+
+[orange]#This text uses an unsupported color#</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In these cases, the text is displayed without color styling.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Git-hub demo link: <a href="https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc" class="bare">https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc</a></p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

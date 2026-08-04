@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.3 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -145,7 +145,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 			</a>
 		</div>
 	</nav>
-</header><div class="analytics">
+</header>
+<div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -153,7 +154,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.2">
+<div class="nav-container" data-component="ehandbook" data-version="14.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -315,7 +316,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="3">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    <a class="nav-link" href="../ehb-nav-user-interface/library.html">Library Views</a>
     </div>
   </li>
   <li class="nav-item" data-depth="3">
@@ -1071,6 +1072,11 @@ Perform careful and independent quality check to reliably evaluate the output of
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
     </div>
   </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/rendering_of_commented_simulink_and__stateflow_blocks.html">Rendering of Commented Simulink and Stateflow Blocks</a>
+    </div>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="4">
@@ -1392,20 +1398,135 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html">Container-Build Toolbox for Simulink</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/about.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/quick-start.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/installation.html">Installation Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/system-requirements.html">System Requirements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/getting-started.html">Getting Started: Your First EHANDBOOK Container</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/toolbox-architecture.html">Architecture and Integration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/index.html">How-to Guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-generate-container.html">Generate a Container for Your Simulink Model</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-customize-toolbox.html">Customize the Container-Build Toolbox for Simulink</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/toolbox-features.html">Toolbox Features Reference</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/menu-and-interface.html">Toolbox Menu and Interface Reference</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-faq/index.html">FAQ</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
 </ul>
   </nav>
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.2</span>
+    <span class="version">14.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.2</a>
+          <a href="../index.html">14.3</a>
+        </li>
+        <li class="version">
+          <a href="../14.2/index.html">14.2</a>
         </li>
         <li class="version">
           <a href="../14.1/index.html">14.1</a>
@@ -1606,10 +1727,117 @@ Perform careful and independent quality check to reliably evaluate the output of
 </ul>
 </div>
 </li>
+<li>
+<p>Filter Differences: Click on settings button (5) to open the settings panel. The following filter options are available:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ignore Whitespace: Hides differences that consist only of whitespace changes.</p>
+</li>
+<li>
+<p>Text changes: Shows or hides text differences.</p>
+</li>
+<li>
+<p>Table changes: Shows or hides table differences.</p>
+</li>
+<li>
+<p>Image changes: Shows or hides image differences.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Progress bar and cancel button: The progress bar (6) at the bottom tool bar indicates the percentage of comparison that is completed at that point in time.This also provides you the option to cancel the comparison in progress.</p>
+</li>
+<li>
+<p>Progress icon: The progress icon (7) on the compare tree indicates that the comparison is yet to be completed for that particular FC. The icon disappears as soon as the comparison of the FC is complete.</p>
+</li>
 </ol>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_use_the_compare_functionality"><a class="anchor" href="#_how_to_use_the_compare_functionality"></a>How to Use the Compare Functionality</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/Compare_Viewer.png" alt="Compare Viewer">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Load or choose EHANDBOOK Containers</strong>: First, ensure that both EHANDBOOK containers you wish to compare are already loaded in the ETAS EHANDBOOK-NAVIGATOR by opening the <code>Manage Project&#8230;&#8203;</code> dialog (1). Alternatively, EHANDBOOK containers can be chosen without being part of an EHANDBOOK project using the option <code>Choose EHANDBOOK Container&#8230;&#8203;</code> inside the dropdown menus (4).</p>
+</li>
+<li>
+<p><strong>Open the "Compare" perspective</strong>: It can be opened via the View menu (2) or use the button (3) in the main toolbar.</p>
+</li>
+<li>
+<p><strong>Select Containers</strong>: Utilize the dropdown menus (4) at the top of the comparison perspective to select the two EHANDBOOK containers you want to compare. The left container will be treated as a reference, and differences will be marked accordingly.</p>
+</li>
+<li>
+<p><strong>Start the comparison</strong>: When you click the Compare button (6), the comparison will start.</p>
+</li>
+<li>
+<p><strong>Swap compared Containers</strong>: If you want to swap the currently compared containers (left and right), you can use the Swap button (5). This will exchange the containers and update the comparison.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Depending on the size of the containers, this might take some time.A popup dialog will inform you about the progress of the comparison. The comparison can be aborted by clicking on the cancel button, which will stop the comparison at the next possible step.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>View the TOC</strong>: Once the comparison is done, the Tree View will automatically display the TOC for both containers, showcasing their respective structures. The visual markers and icons will help you quickly recognize which topics or subtopics have been added, removed, or modified.</p>
+</li>
+<li>
+<p><strong>Explore Textual Differences</strong>: Click on any entry in the TOC to open the split-screen viewer. The left panel (7) will show the content from the left EHANDBOOK container, while the right panel (8) will display the content from the right container. Review the marked changes in the text to understand the modifications made.</p>
+</li>
+<li>
+<p><strong>Filter Differences</strong>: Click on settings button (11) next to the filter entries to open the settings panel. The following filter options(12) are available:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><strong>Ignore Whitespace:</strong> Hides differences that consist only of whitespace changes.</p>
+</li>
+<li>
+<p><strong>Text changes:</strong> Shows or hides text differences.</p>
+</li>
+<li>
+<p><strong>Table changes:</strong> Shows or hides table differences.</p>
+</li>
+<li>
+<p><strong>Image changes:</strong> Shows or hides image differences.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (9) in the split-screen viewer to move through the marked and grouped differences in the opened chapter. This feature allows you to review changes one group at a time, ensuring a thorough examination of the content on both sides. The currently examined differences on both sides will be highlighted by an added border(10). Right to the navigation buttons you will see the total amount of difference and total number of marked difference in the group.
+Additionally all the differences in the marked group are all highlighted for a quick and visible focus (13).</p>
+</li>
+<li>
+<p><strong>Resizing handle</strong>: If you prefer a larger viewing area for the textual comparison, you can adjust the width of the tree View. This will give you a more spacious view, allowing you to focus entirely on the content.</p>
+</li>
+<li>
+<p><strong>ClickPic</strong>: Compare also supports clickpic functionality.For more details on clickpic <a href="../ehb-cb-how-to-guides/how-to-interactive-graphics.html#click-pic" class="xref page">ClickPic</a></p>
+</li>
+</ol>
 </div>
 <div class="sect2">
 <h3 id="_textual_comparison"><a class="anchor" href="#_textual_comparison"></a>Textual comparison</h3>
@@ -1690,13 +1918,6 @@ If the TOC entry is available on both sides but is not identical, the difference
 </li>
 </ol>
 </div>
-<div class="sect3">
-<h4 id="_limitation"><a class="anchor" href="#_limitation"></a>Limitation</h4>
-<div class="paragraph">
-<p>Note that with EHANDBOOK-NAVIGATOR 13.0 the documentation content will be compared based on whole paragraphs. This leads to the whole paragraphs being marked as added or removed in case of differences.
-With the next versions of EHANDBOOK-NAVIGATOR, a more detailed comparison will be possible.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1719,85 +1940,6 @@ With the next versions of EHANDBOOK-NAVIGATOR, a more detailed comparison will b
 <div class="sectionbody">
 <div class="paragraph">
 <p>To ensure good usability, you can customize the colors used to highlight the differences in your preferences.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_how_to_use_the_compare_functionality"><a class="anchor" href="#_how_to_use_the_compare_functionality"></a>How to Use the Compare Functionality</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/Compare_Viewer.png" alt="Compare Viewer">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Load or choose EHANDBOOK Containers</strong>: First, ensure that both EHANDBOOK containers you wish to compare are already loaded in the ETAS EHANDBOOK-NAVIGATOR by opening the <code>Manage Project&#8230;&#8203;</code> dialog (1). Alternatively, EHANDBOOK containers can be chosen without being part of an EHANDBOOK project using the option <code>Choose EHANDBOOK Container&#8230;&#8203;</code> inside the dropdown menus (4).</p>
-</li>
-<li>
-<p><strong>Open the "Compare" perspective</strong>: It can be opened via the View menu (2) or use the button (3) in the main toolbar.</p>
-</li>
-<li>
-<p><strong>Select Containers</strong>: Utilize the dropdown menus (4) at the top of the comparison perspective to select the two EHANDBOOK containers you want to compare. The left container will be treated as a reference, and differences will be marked accordingly.</p>
-</li>
-<li>
-<p><strong>Start the comparison</strong>: When you click the Compare button (6), the comparison will start.</p>
-</li>
-<li>
-<p><strong>Swap compared Containers</strong>: If you want to swap the currently compared containers (left and right), you can use the Swap button (5). This will exchange the containers and update the comparison.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Depending on the size of the containers, this might take some time.A popup dialog will inform you about the progress of the comparison. The comparison can be aborted by clicking on the cancel button, which will stop the comparison at the next possible step.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>View the TOC</strong>: Once the comparison is done, the Tree View will automatically display the TOC for both containers, showcasing their respective structures. The visual markers and icons will help you quickly recognize which topics or subtopics have been added, removed, or modified.</p>
-</li>
-<li>
-<p><strong>Explore Textual Differences</strong>: Click on any entry in the TOC to open the split-screen viewer. The left panel (7) will show the content from the left EHANDBOOK container, while the right panel (8) will display the content from the right container. Review the marked changes in the text to understand the modifications made.</p>
-</li>
-<li>
-<p><strong>Filter Differences</strong>: Click on settings button (12) next to navigation buttons to open the settings panel. The following filter options(13) are available:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p><strong>Ignore Whitespace:</strong> Hides differences that consist only of whitespace changes.</p>
-</li>
-<li>
-<p><strong>Text changes:</strong> Shows or hides text differences.</p>
-</li>
-<li>
-<p><strong>Table changes:</strong> Shows or hides table differences.</p>
-</li>
-<li>
-<p><strong>Image changes:</strong> Shows or hides image differences.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><strong>Navigate Through Differences</strong>: Use the navigation buttons (9) in the split-screen viewer to move through the marked and grouped differences in the opened chapter. This feature allows you to review changes one group at a time, ensuring a thorough examination of the content on both sides. The currently examined differences on both sides will be highlighted by an added border(10). Right to the navigation buttons you will see the total amount of difference and total number of marked difference in the group.
-Additionally all the differences in the marked group are all highlighted for a quick and visible focus (14).</p>
-</li>
-<li>
-<p><strong>Collapse the TOC</strong>: If you prefer a larger viewing area for the textual comparison, click the collapse button (11) to hide the Tree View. This will give you a more spacious view, allowing you to focus entirely on the content.</p>
-</li>
-</ol>
 </div>
 </div>
 </div>

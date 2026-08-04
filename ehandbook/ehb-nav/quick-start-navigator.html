@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.3 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -145,7 +145,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 			</a>
 		</div>
 	</nav>
-</header><div class="analytics">
+</header>
+<div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -153,7 +154,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.2">
+<div class="nav-container" data-component="ehandbook" data-version="14.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -315,7 +316,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="3">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    <a class="nav-link" href="../ehb-nav-user-interface/library.html">Library Views</a>
     </div>
   </li>
   <li class="nav-item" data-depth="3">
@@ -1071,6 +1072,11 @@ Perform careful and independent quality check to reliably evaluate the output of
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
     </div>
   </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/rendering_of_commented_simulink_and__stateflow_blocks.html">Rendering of Commented Simulink and Stateflow Blocks</a>
+    </div>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="4">
@@ -1392,20 +1398,135 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html">Container-Build Toolbox for Simulink</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/about.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/quick-start.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/installation.html">Installation Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/system-requirements.html">System Requirements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/getting-started.html">Getting Started: Your First EHANDBOOK Container</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/toolbox-architecture.html">Architecture and Integration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/index.html">How-to Guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-generate-container.html">Generate a Container for Your Simulink Model</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-customize-toolbox.html">Customize the Container-Build Toolbox for Simulink</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/toolbox-features.html">Toolbox Features Reference</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/menu-and-interface.html">Toolbox Menu and Interface Reference</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-faq/index.html">FAQ</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
 </ul>
   </nav>
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.2</span>
+    <span class="version">14.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.2</a>
+          <a href="../index.html">14.3</a>
+        </li>
+        <li class="version">
+          <a href="../14.2/index.html">14.2</a>
         </li>
         <li class="version">
           <a href="../14.1/index.html">14.1</a>
@@ -1721,7 +1842,7 @@ If you specify a directory that does not exist, it is created automatically.</p>
 <h4 id="_choose_start_menu_folder_for_the_shortcut_to_create"><a class="anchor" href="#_choose_start_menu_folder_for_the_shortcut_to_create"></a>Choose Start Menu Folder for the Shortcut to create:</h4>
 <div class="paragraph">
 <p>You can specify the path to create the EHANDBOOK-NAVIGATOR’s shortcut. If it is
-not specified, it will be created as ETAS/EHANDBOOK-NAVIGATOR 14.2.</p>
+not specified, it will be created as ETAS/EHANDBOOK-NAVIGATOR 14.3.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1756,7 +1877,7 @@ available and visible in the Windows System Tray. If it is not selected the appl
 <ul>
 <li>
 <p>Click on <code>Next</code>.<br>
-<code>Completing EHANDBOOK-NAVIGATOR 14.2 Setup</code> dialog box is displayed</p>
+<code>Completing EHANDBOOK-NAVIGATOR 14.3 Setup</code> dialog box is displayed</p>
 </li>
 </ul>
 </div>
@@ -1779,14 +1900,14 @@ available and visible in the Windows System Tray. If it is not selected the appl
 </ul>
 </div>
 <div class="paragraph">
-<p>On the Start menu, the EHANDBOOK-NAVIGATOR 14.2 folder, with the following
+<p>On the Start menu, the EHANDBOOK-NAVIGATOR 14.3 folder, with the following
 entries, is created in the ETAS program group:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>EHANDBOOK-NAVIGATOR 14.2</strong><br>
-The EHANDBOOK-NAVIGATOR 14.2 program is started.</p>
+<p><strong>EHANDBOOK-NAVIGATOR 14.3</strong><br>
+The EHANDBOOK-NAVIGATOR 14.3 program is started.</p>
 </li>
 <li>
 <p><strong>Open Getting Started</strong><br>
@@ -1853,14 +1974,14 @@ installer from the command line and by specifying additional parameters (see tab
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent installation through command line</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_14.2.0_setup.exe /S</code></p>
-<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_14.2.0_setup.exe</code>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EHANDBOOK-NAVIGATOR_14.3.0_setup.exe /S</code></p>
+<p class="tableblock">Note: <code>EHANDBOOK-NAVIGATOR_14.3.0_setup.exe</code>
 is the name of the file which you have downloaded</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Silent uninstall through command line</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code> uninstall.exe /S</code></p>
-<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 14.2</p></td>
+<p class="tableblock">Note: <code>uninstall.exe</code> is located in the installation directory typically at C:\Program Files\ETAS\EHANDBOOK-NAVIGATOR 14.3</p></td>
 </tr>
 </tbody>
 </table>
@@ -1887,7 +2008,7 @@ the issue.</p>
 <p>Customizing the installation directory is just an additional parameter:</p>
 </div>
 <div class="paragraph">
-<p>´EHANDBOOK-NAVIGATOR_14.2.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR14.2´</p>
+<p>´EHANDBOOK-NAVIGATOR_14.3.0_setup.exe /S /D=C:\Custom\EHANDBOOK-NAVIGATOR14.3´</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1899,7 +2020,7 @@ the issue.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR_14.2.0_setup.exe is the name of the file that you
+<p>EHANDBOOK-NAVIGATOR_14.3.0_setup.exe is the name of the file that you
 have downloaded.</p>
 </li>
 <li>
@@ -2066,7 +2187,7 @@ argument in the .ini file should be modified.</p>
 </div>
 <div class="paragraph">
 <p>Select <code>Add/Remove Programs</code> or <code>Programs and Features</code> in the Control
-Panel. Select <code>EHANDBOOK-NAVIGATOR 14.2</code> and click <code>Uninstall/Change</code>.</p>
+Panel. Select <code>EHANDBOOK-NAVIGATOR 14.3</code> and click <code>Uninstall/Change</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="_to_uninstall_ehandbook_navigator"><a class="anchor" href="#_to_uninstall_ehandbook_navigator"></a>To Uninstall EHANDBOOK-NAVIGATOR:</h4>
@@ -2436,10 +2557,12 @@ found in the online help of the ETAS License Manager.</p>
 <div class="sect2">
 <h3 id="_request_an_evaluation_license"><a class="anchor" href="#_request_an_evaluation_license"></a>Request an Evaluation License</h3>
 <div class="paragraph">
-<p>If you have not added a license file in the License Manager, you cannot work with
-the EHANDBOOK-NAVIGATOR product. You need to obtain a valid license file to
-operate it. You can send a mail to ETAS sales (see <a href="../ETAS-contacts.html" class="xref page">ETAS Contacts</a>) to obtain an Evaluation License.
-ETAS sales will generate an evaluation license and send it to you which will be valid for another 3 months of time.</p>
+<p>To get started with EHANDBOOK-NAVIGATOR, add a valid license file in the ETAS License Manager. After adding the license file, EHANDBOOK-NAVIGATOR is ready to use. An evaluation license provides access to all features and add-ons of EHANDBOOK-NAVIGATOR.</p>
+</div>
+<div class="paragraph">
+<p>You can send a mail to ETAS sales (see <a href="../ETAS-contacts.html" class="xref page">ETAS Contacts</a>) to obtain an Evaluation License.
+ETAS sales will generate an evaluation license and send it to you which will be valid for another 3 months of time.
+You can also visit the link <a href="https://www.etas.com/ww/en/downloads/software-downloads-overview/ehandbook-navigator-free-trial-version/">EHANDBOOK-NAVIGATOR – Free Trial Version</a> to obtain the license.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2602,17 +2725,17 @@ NAVIGATOR.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 14.2</code> icon.<br>
+<p>On the Desktop, double-click <code>EHANDBOOK-NAVIGATOR 14.3</code> icon.<br>
 &lt;Or&gt;</p>
 </li>
 <li>
 <p>Search <strong>EHANDBOOK-NAVIGATOR</strong> in the search field and select
-<code>EHANDBOOK-NAVIGATOR 14.2.</code><br>
+<code>EHANDBOOK-NAVIGATOR 14.3.</code><br>
     &lt;Or&gt;</p>
 </li>
 <li>
 <p>Go to <code>All apps &#8594; ETAS &#8594; EHANDBOOK-NAVIGATOR</code> folder and click on
-<code>EHANDBOOK-NAVIGATOR 14.2</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
+<code>EHANDBOOK-NAVIGATOR 14.3</code> icon, if it is pinned on the <code>Start</code> Menu.<br></p>
 </li>
 </ul>
 </div>
@@ -2848,7 +2971,7 @@ The selected file(s) are displayed in the <code>Manage EHANDBOOK Project</code> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + C&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Copies selected content in Bookmarks, Model Viewer and Document Viewer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copies selected content in Library, Model Viewer and Document Viewer</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + V&gt;</p></td>
@@ -2864,7 +2987,7 @@ The selected file(s) are displayed in the <code>Manage EHANDBOOK Project</code> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + A&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Marks all content in the Document Viewer, Bookmarks View, Document Explorer View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks all content in the Document Viewer, Library View, Document Explorer View</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + H&gt;</p></td>
@@ -2900,16 +3023,16 @@ The selected file(s) are displayed in the <code>Manage EHANDBOOK Project</code> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + B&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Switches to Bookmarks View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switches to Library View</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + PG UP&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Switches between Model Viewer, Document Viewer, and Document Explorer View, Only available when one of Document Explorer View, or Model Explorer View, or Bookmarks View is selected. In general, it sSwitches between all the three views</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switches between Model Viewer, Document Viewer, and Document Explorer View, Only available when one of Document Explorer View, or Model Explorer View, or Library View is selected. In general, it sSwitches between all the three views</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + PG DN&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Switches between Model Viewer, Document Viewer, and Document Explorer View, Only available when one of Document Explorer View, or
-Model Explorer View, or Bookmarks View is selected. In general, it sSwitches between all the three views</p></td>
+Model Explorer View, or Library View is selected. In general, it sSwitches between all the three views</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + F8&gt;</p></td>
@@ -2921,11 +3044,11 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;ALT + F&gt; &lt;I&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Imports Bookmark or Comments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Imports Bookmark and Model Views or Comments</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;ALT + F&gt; &lt;E&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exports Bookmark or Comments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exports Bookmark and Model Views or Comments</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;ALT + F&gt;</p></td>
@@ -3041,7 +3164,7 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + ENTER&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">To open multiple tabs from document explorer or bookmarks view or global search result view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To open multiple tabs from Document Explorer or Library View or Search Result View</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&lt;CTRL + Left mouse click&gt;</p></td>
@@ -3086,7 +3209,7 @@ Model Explorer View, or Bookmarks View is selected. In general, it sSwitches bet
 <div class="ulist">
 <ul>
 <li>
-<p>EHANDBOOK-NAVIGATOR 14.2 supports interoperability with ETAS INCA V7
+<p>EHANDBOOK-NAVIGATOR 14.3 supports interoperability with ETAS INCA V7
 needs to be installed on the same PC for EHANDBOOK-NAVIGATOR to support INCA operations.</p>
 </li>
 <li>

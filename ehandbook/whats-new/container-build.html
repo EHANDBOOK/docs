@@ -65,7 +65,7 @@ function BoschPrivacyCallback_OnUpdate(a) {
 &#10;&#10;Disclaimer: This is an AI-powered assistant. AI tools can provide incorrect or misleading information. 
 Do not rely solely on AI tools for important decisions. 
 Perform careful and independent quality check to reliably evaluate the output of AI models."
-	data-modal-example-questions="What's new in 14.2 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
+	data-modal-example-questions="What's new in 14.3 release?,Why to use EHANDBOOK?,How to get started with Container-Build?,How to get a license?"
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
@@ -145,7 +145,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 			</a>
 		</div>
 	</nav>
-</header><div class="analytics">
+</header>
+<div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -153,7 +154,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 <!-- End Google Tag Manager (noscript) -->
 </div>
 <div class="body">
-<div class="nav-container" data-component="ehandbook" data-version="14.2">
+<div class="nav-container" data-component="ehandbook" data-version="14.3">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -315,7 +316,7 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
   <li class="nav-item" data-depth="3">
     <div class="nav-item-content">
-    <a class="nav-link" href="../ehb-nav-user-interface/bookmarks.html">Bookmark Views</a>
+    <a class="nav-link" href="../ehb-nav-user-interface/library.html">Library Views</a>
     </div>
   </li>
   <li class="nav-item" data-depth="3">
@@ -1071,6 +1072,11 @@ Perform careful and independent quality check to reliably evaluate the output of
     <a class="nav-link" href="../ehb-cb-how-to-guides/how-to-simulink-integration.html#simulink-truth-table-block-support">Include Simulink truth table blocks in documentation</a>
     </div>
   </li>
+  <li class="nav-item" data-depth="5">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cb-how-to-guides/rendering_of_commented_simulink_and__stateflow_blocks.html">Rendering of Commented Simulink and Stateflow Blocks</a>
+    </div>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="4">
@@ -1392,20 +1398,135 @@ Perform careful and independent quality check to reliably evaluate the output of
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html">Container-Build Toolbox for Simulink</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/index.html#how-the-documentation-is-organized">How the documentation is organized</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/about.html">About</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/quick-start.html">Quick Start</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/installation.html">Installation Guide</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/system-requirements.html">System Requirements</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/index.html">Tutorials</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-tutorials/getting-started.html">Getting Started: Your First EHANDBOOK Container</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/index.html">Explanations</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-explanations/toolbox-architecture.html">Architecture and Integration</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/index.html">How-to Guides</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-generate-container.html">Generate a Container for Your Simulink Model</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-how-to-guides/how-to-customize-toolbox.html">Customize the Container-Build Toolbox for Simulink</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/index.html">References</a>
+    <button class="nav-item-toggle"></button>
+    </div>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/toolbox-features.html">Toolbox Features Reference</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-references/menu-and-interface.html">Toolbox Menu and Interface Reference</a>
+    </div>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl/demos.html">Demos</a>
+    </div>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <div class="nav-item-content">
+    <a class="nav-link" href="../ehb-cbtbx-sl-faq/index.html">FAQ</a>
+    </div>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
 </ul>
   </nav>
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">EHANDBOOK</span>
-    <span class="version">14.2</span>
+    <span class="version">14.3</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">EHANDBOOK</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">14.2</a>
+          <a href="../index.html">14.3</a>
+        </li>
+        <li class="version">
+          <a href="../14.2/index.html">14.2</a>
         </li>
         <li class="version">
           <a href="../14.1/index.html">14.1</a>
@@ -1489,6 +1610,154 @@ Perform careful and independent quality check to reliably evaluate the output of
 </aside>
 <article class="doc">
 <h1 class="page">What&#8217;s New</h1>
+<div class="sect1">
+<h2 id="_version_14_3_august_2026"><a class="anchor" href="#_version_14_3_august_2026"></a>Version 14.3 (August 2026)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ehandbook_container_build_14_3_0_whats_new_release_overview"><a class="anchor" href="#_ehandbook_container_build_14_3_0_whats_new_release_overview"></a>EHANDBOOK Container-Build 14.3.0 - What&#8217;s New &amp; Release Overview</h3>
+<div class="paragraph">
+<p>Welcome to EHANDBOOK Container-Build version 14.3.0! This release brings significant enhancements to Simulink model visualization, AUTOSAR integration capabilities, and AsciiDoc documentation rendering.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Simulink Line Shapes &amp; Annotation Support"><strong>Enhancements:</strong> Simulink Line Shapes &amp; Annotation Support</a></p>
+</li>
+<li>
+<p><a href="#Searchable-mask-text-for-simulink-blocks"><strong>Improvement:</strong> Searchable Mask Text for Simulink Blocks</a></p>
+</li>
+<li>
+<p><a href="#Active-Variant-Subsystem-Connections"><strong>Improvement:</strong> Active Variant Subsystem Connections</a></p>
+</li>
+<li>
+<p><a href="#support-for-autosar-ecu-abstraction-application-components"><strong>New Feature:</strong> Support for AUTOSAR ECU Abstraction Application Components</a></p>
+</li>
+<li>
+<p><a href="#support-for-autosar-shared-parameters"><strong>Enhancements:</strong> Support for AUTOSAR Shared Parameters</a></p>
+</li>
+<li>
+<p><a href="#asciiDoc-text-color-styling"><strong>New Feature:</strong> AsciiDoc Text Color Styling</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_simulink_integration_matlab_add_on"><a class="anchor" href="#_simulink_integration_matlab_add_on"></a>Simulink Integration &amp; MATLAB Add-on</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_simulink_line_shapes_annotation_support_enhancement"><a class="anchor" href="#_simulink_line_shapes_annotation_support_enhancement"></a>Simulink Line Shapes &amp; Annotation Support (Enhancement)</h3>
+<div class="paragraph">
+<p>Enhanced model visualization in EHandbook Navigator (EHB-NAV) to correctly render custom annotation line connections, line formatting (color and thickness), and Simulink line shapes even when Annotation blocks contain tables or share identical names.</p>
+</div>
+<div class="paragraph">
+<p>Demo: <a href="https://github.com/EHANDBOOK/ehandbook-cb-demos" class="bare">https://github.com/EHANDBOOK/ehandbook-cb-demos</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> The Flex ECU demo container has been updated with a Simulink line shape example in the AFR FC to demonstrate this capability.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Before and After</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Before</th>
+<th class="tableblock halign-left valign-top">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/simulink_line_shapes_before.png" alt="simulink_line_shapes_before" width="400">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/simulink_line_shapes_after.png" alt="simulink_line_shapes_after" width="400">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="Searchable-mask-text-for-simulink-blocks"><a class="anchor" href="#Searchable-mask-text-for-simulink-blocks"></a>Searchable Mask Text (Improvement)</h3>
+<div class="paragraph">
+<p>Expanded the mask decoration algorithm to support disp() command on Simulink masked blocks, making descriptive text on blocks fully searchable and clickable within EHB.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Active-Variant-Subsystem-Connections"><a class="anchor" href="#Active-Variant-Subsystem-Connections"></a>Active Variant Subsystem Connections</h3>
+<div class="paragraph">
+<p>Improved support for Variant Subsystems by establishing proper signal connections to active variant choices, ensuring signal highlighting and navigation function correctly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_autosar_enhancements"><a class="anchor" href="#_autosar_enhancements"></a>AUTOSAR Enhancements</h3>
+
+</div>
+<div class="sect2">
+<h3 id="support-for-autosar-ecu-abstraction-application-components"><a class="anchor" href="#support-for-autosar-ecu-abstraction-application-components"></a>ECU Abstraction Component Support</h3>
+<div class="paragraph">
+<p>Extended Container-Build support to import, process, validate, and generate containers for AUTOSAR ECU Abstraction Application components (ECUAbstractionSwComponentType) without manual workarounds.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-for-autosar-shared-parameters"><a class="anchor" href="#support-for-autosar-shared-parameters"></a>Shared Parameters in Parameter Tables</h3>
+<div class="paragraph">
+<p>Enhanced EHB parameter tables to parse ARXML, identify shared parameters (ParameterDataPrototype) referenced across multiple modules, include them alongside local parameters, and clearly distinguish their origin and defining context.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation_asciidoc_support"><a class="anchor" href="#_documentation_asciidoc_support"></a>Documentation &amp; AsciiDoc Support</h3>
+
+</div>
+<div class="sect2">
+<h3 id="asciiDoc-text-color-styling"><a class="anchor" href="#asciiDoc-text-color-styling"></a>Text Formatting &amp; Styling</h3>
+<div class="paragraph">
+<p>Added robust support for text color styling and underline formatting in AsciiDoc documents, ensuring warnings, highlights, and custom-styled notes maintain proper visual hierarchy.
+This enhancement improves documentation readability while maintaining compatibility with supported AsciiDoc formatting.</p>
+</div>
+<div class="paragraph">
+<p>For additional information, refer to <a href="../ehb-cb-references/spec-asciidoc-format.html#text-color-support" class="xref page">Text Color Support</a></p>
+</div>
+<div class="paragraph">
+<p>GitHub demo: <a href="https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc/Output" class="bare">https://github.com/EHANDBOOK/ehandbook-cb-demos/tree/master/Demo_EHBCB_DirBased_AsciiDoc/Output</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Before and After</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Before</th>
+<th class="tableblock halign-left valign-top">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/NoTextColorSupport.png" alt="NoTextColorSupport" width="400">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="_images/TextColorSupport.png" alt="TextColorSupport" width="400">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_version_14_2_june_2026"><a class="anchor" href="#_version_14_2_june_2026"></a>Version 14.2 (June 2026)</h2>
 <div class="sectionbody">
@@ -2314,7 +2583,7 @@ Please refer <a href="../ehb-cb-how-to-guides/how-to-configure-label-names.html#
 <div class="sect2">
 <h3 id="generate-multi-level-ToC-for-autosar-input-data"><a class="anchor" href="#generate-multi-level-ToC-for-autosar-input-data"></a>Improvements in generation of input directory structure from AUTOSAR files</h3>
 <div class="paragraph">
-<p>Directory based EHANDBOOK Container-Build with 'ar2ehbcbinput' option can now additionally generate multi level table of contents yaml file for Autosar based input data.
+<p>Directory-Based EHANDBOOK Container-Build with 'ar2ehbcbinput' option can now additionally generate multi level table of contents yaml file for Autosar based input data.
 <a href="../ehb-cb-tutorials/autosar-classic-arxml-only/contents.html#arxml-to-EHB-CB-input" class="xref page">Generate directory structure from AUTOSAR .arxml files</a></p>
 </div>
 </div>
@@ -2403,7 +2672,7 @@ Please refer <a href="../ehb-cb-how-to-guides/how-to-configure-label-names.html#
 <div class="sect2">
 <h3 id="support-for-PDF-images-in-documentation"><a class="anchor" href="#support-for-PDF-images-in-documentation"></a>Support for PDF images in documentation</h3>
 <div class="paragraph">
-<p>Documentation can contain images in PDF format. Such images are processed as SVG image and shown in EHANDBOOK documentation This feature is currently available with ASAM based product only.</p>
+<p>Documentation can contain images in PDF format. Such images are processed as SVG image and shown in EHANDBOOK documentation This feature is currently available with ASAM-Based product only.</p>
 </div>
 </div>
 <div class="sect2">
