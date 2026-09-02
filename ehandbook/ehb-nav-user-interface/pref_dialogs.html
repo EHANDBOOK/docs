@@ -8,7 +8,8 @@
     <meta name="generator" content="Antora 3.1.15">
 <link rel="stylesheet" href="../../_/css/site.css"><meta name="google-site-verification" content="mfKBt0wfNBtka8h8wXUAPCyQYhGivOlt78Zmd7t_pj0" />
 <meta name="description" content="Documentation, tutorials and release notes of etas EHANDBOOK, EHANDBOOK-NAVIGATOR and EHANDBOOK Container-Build." />
-<meta name="generator" content="Individual elements were generated with the support of AI (e.g., ChatGPT, Midjourney)." /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
+<meta name="generator" content="Individual elements were generated with the support of AI (e.g., ChatGPT, Midjourney)." />
+<meta name="DXSext.wtg_lang" content="en" /><link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon"><!-- Data Layer -->
 <script>
         window.dataLayer = window.dataLayer || []; window.dataLayer.push(
          {"brand":" ",
@@ -69,6 +70,42 @@ Perform careful and independent quality check to reliably evaluate the output of
 	data-button-hide="true" data-modal-override-open-id="ask-ai-input" data-mcp-enabled="true"
 	data-mcp-server-url="https://etas-ehandbook.mcp.kapa.ai" data-mcp-button-text="Connect to AI Tools">
 	</script>
+
+<script>
+	const useEhbExternal = window["useEhbExternal"]
+	const prefix = "ehbexternal:";
+
+	window.onload = adjustForOfflineDocumentation;
+
+	function adjustForOfflineDocumentation() {
+		if (useEhbExternal) {
+			[...document.querySelectorAll("a[href]")]
+				.filter(link => {
+					const href = link.getAttribute("href");
+					return Boolean(href)
+						&& (href.startsWith("http") || href.startsWith("www") || href.includes("_attachments"))
+						&& !href.startsWith("http://localhost");
+				})
+				.forEach(element => {
+					element.href = prefix + element.href
+					element.removeAttribute("target");
+				});
+			const feedbackButton = document.getElementById("feedback-button");
+			feedbackButton.setAttribute("href", feedbackButton.getAttribute("href").replace("source=web", "source=ehb"));
+			toggleWhatsNewVideos();
+			const askAiInput = document.getElementById("ask-ai-input");
+			if (askAiInput) {
+				askAiInput.style.display = "none";
+			}
+		}
+	}
+
+	function toggleWhatsNewVideos() {
+		document.querySelectorAll('.youtubeVideo, .githubVideo').forEach(element => {
+			element.hidden = !element.classList.contains('githubVideo');
+		});
+	}
+</script>
 
 <header class="header">
 	<style>
@@ -136,7 +173,8 @@ Perform careful and independent quality check to reliably evaluate the output of
 				</div>
 			</div>
 			<a id="ask-ai-input" class="navbar-item custom-outline-button" style="margin-left: auto;">✨ Ask AI</a>
-			<a class="navbar-item custom-outline-button" id="feedback-button" href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
+			<a class="navbar-item custom-outline-button" id="feedback-button"
+				href="https://etas.qualtrics.com/jfe/form/SV_3EEfhHWkIMt9pUa?source=web">Send Feedback</a>
 			<a class="navbar-item custom-outline-button github-link" href="https://github.com/EHANDBOOK" target="_blank"
 				rel="noopener" style="padding-left: 38px;">
 				<img class="github-icon-show" src="../../_/img/github-mark-black.svg" height="20" alt="GH">
@@ -145,8 +183,7 @@ Perform careful and independent quality check to reliably evaluate the output of
 			</a>
 		</div>
 	</nav>
-</header>
-<div class="analytics">
+</header><div class="analytics">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
 	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95LQHLT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -2300,6 +2337,9 @@ Authentication is usually not required for local proxies.</p>
 <p>Set <code>Token Limit</code> according to the configured model.</p>
 </li>
 <li>
+<p>Set other optional parameters as required by the selected provider/endpoint.</p>
+</li>
+<li>
 <p>Click <b class="button">Test Connection</b> to validate connectivity.</p>
 </li>
 <li>
@@ -2307,8 +2347,25 @@ Authentication is usually not required for local proxies.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>We currently support OpenAI and Azure OpenAI as LLM providers, but you can also connect to other providers that are compatible with OpenAI APIs.</p>
+<p>Keep the <code>Disable TLS certificate verification</code> checkbox cleared unless it is required by the configured endpoint. Enabling it prevents EHANDBOOK-NAVIGATOR from verifying that the endpoint presents a trusted certificate, which makes the connection vulnerable to man-in-the-middle attacks. An attacker could intercept the API key and the data exchanged with the LLM. Some endpoints within corporate networks or locally running LLMs may require this option because their certificates cannot be validated by EHANDBOOK-NAVIGATOR. In that case, enable it only when you trust the endpoint and the network, and consult your IT department if you are unsure.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We currently support OpenAI and Azure OpenAI as LLM providers, but you can also connect to others that are compatible with
+OpenAI&#8217;s API. Be aware, however, that some models may not be compatible with Wingman even though their APIs match. If the chat
+shows unexpected behavior, please try with another model (from another provider). We <strong>have mainly tested and recommend GPT models</strong>
+from OpenAI.</p>
 </div>
 <div class="paragraph">
 <p>Additional optional settings may be required depending on the selected provider type and infrastructure behind.
